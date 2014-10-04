@@ -53,7 +53,7 @@ function findAnchor(jumpToArr){
   return dir;
 }
 function scrollToElement(ele) {
-    $('html,body').animate({scrollTop: ele.offset().top-50, duration: 400});
+    $('html,body').animate({scrollTop: ele.offset().top-50, duration: 300});
 }
 function clamp(arg,start,end){
   if(arg<start){
