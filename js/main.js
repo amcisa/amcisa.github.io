@@ -7,7 +7,6 @@ var main={
   anchorArr:["section"],
   minWidth:992 //this is set in the css
 };
-
 $(document).ready(function(){
   var scroll =0;
   var anchor=findAnchor(main.anchorArr);
@@ -35,8 +34,9 @@ $(document).ready(function(){
   });
 
   //No support for firefox 
+
   $('body').bind('wheel mousewheel', function(e){
-    if (curwidth>=minwidth){
+    if (curwidth>=minwidth ){
       scrollNext(e);
       //console.log("No prob");
       return false;
@@ -53,7 +53,7 @@ function findAnchor(jumpToArr){
   return dir;
 }
 function scrollToElement(ele) {
-    $('html,body').animate({scrollTop: ele.offset().top-50, duration: 300});
+    $('html,body').animate({scrollTop: ele.offset().top-50, duration: 300}).clearQueue();
 }
 function clamp(arg,start,end){
   if(arg<start){
