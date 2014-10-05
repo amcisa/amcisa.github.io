@@ -4,26 +4,37 @@ block title
   title Halloween
 
 block content
-  h1 NTU Halloween
-  p Come on and join in the fun this halloween!    
-  .col-md-4
-    .box-sh
-      img(src="../img/ntu.halloween.sweets.png")
-    h2 Sweets!   
-  .col-md-4
-    .box-sh
-      img(src="../img/ntu.halloween.games.png")
-    h2 Games!  
-  .col-md-4
-    .box-sh
-      img(src="http://placehold.it/300")
-    h2 Costumes!
+  .panel.panel-warning.section
+    .panel-heading
+      h1 NTU halloween!  
+    .panel-body 
+      .col-md-4
+        .box-sh
+          img(src="../img/ntu.halloween.sweets.png")
+        h2 Sweets!   
+      .col-md-4
+        .box-sh
+          img(src="../img/ntu.halloween.games.png")
+        h2 Games!  
+      .col-md-4
+        .box-sh
+          img(src="../img/ntu.halloween.costume.png")
+        h2 Costumes!  
+  .panel.panel-danger.section
+    .panel-heading
+      h1 Come on and join in the fun this halloween!  
+    .panel-body 
+      .question
+        h1 Date  : 30 October
+        h1 Time  : 8.00 p.m. - 10 p.m.
+        h1 Venue : NTU HSS Foyer 
+  
 
 
 
 //Custom Carousel 
 block carousel
-  #myCarousel.carousel
+  #myCarousel.carousel.section
     //Round page indicators
     ol.carousel-indicators
       li(data-target="#myCarousel",data-slide-to="0",class="active")
@@ -32,9 +43,8 @@ block carousel
     //Wrapper for inner slides
     .carousel-inner
       .item.active
-        img(src="http://placehold.it/2100x1400")
-        .carousel-caption
-          h1 First
+        img(src="../img/ntu.halloween.poster.png")
+        h1 NTU Halloween
     //Buttons to slide right or left
     a(class="carousel-control left" href="#myCarousel" data-slide="prev") 
       span(class="glyphicon glyphicon-chevron-left")

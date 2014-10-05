@@ -8,8 +8,12 @@ from watchdog.events import LoggingEventHandler,FileSystemEventHandler
 import server
 
 class JadeHandler(FileSystemEventHandler):
+   def __init__(self, path,*args, **kwargs):
+      super().__init__()
+      self.path=path
+   
    def renderJade(self):
-      p=Popen("rpost.bat",cwd="./",shell=True)
+      p=Popen(self.path,cwd="./",shell=True)
       stdout, stderr = p.communicate()
       return p
    def on_created(self,event):
@@ -34,10 +38,14 @@ def startLogger():
       observer.stop()
    observer.join()
 
-if __name__ == "__main__":
-   jade_handler  = JadeHandler()   
+def startRender(path,batfile):
+   jade_handler  = JadeHandler(batfile)   
    renderer = Observer()
-   renderer.schedule(jade_handler, "post", recursive=True)
+   renderer.schedule(jade_handler, path, recursive=True)
    renderer.start()
+
+if __name__ == "__main__":
    server.serve()
+   startRender("post","rpost.bat")
+   startRender("events/14-15","revent.bat")
    startLogger()

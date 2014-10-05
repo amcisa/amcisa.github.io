@@ -1,0 +1,41 @@
+extends ./amc.talent.layout.jade
+
+block title
+  title talent
+
+block content
+  .panel.panel-success.section
+    .panel-heading
+      h1 NTU Talent Show!  
+    .panel-body 
+      a(href="https://www.facebook.com/media/set/?set=oa.731244720291737&type=1")
+        h1 Photos here everyone!
+      .question        
+        h3 一年一度的 Talent Night即将引爆，为各位新一年的大学生活拉开序幕！
+        h3 你拥有什么talent，无论是唱歌、跳舞、戏剧或者是其它才华， Talent Night无任欢迎！ 
+        h3 大胆秀出自己的才艺，发掘自我吧！还在考虑什么？赶快报名吧！
+        h1 Date  : 23 / 08 /14
+        h1 Time  : 6.30 p.m. - 11.00 p.m.
+        h1 Venue : NTU LT 19
+  
+
+
+
+//Custom Carousel 
+block carousel
+  #myCarousel.carousel.section
+    //Round page indicators
+    ol.carousel-indicators
+      li(data-target="#myCarousel",data-slide-to="0",class="active")
+      li(data-target="#myCarousel",data-slide-to="1")
+      li(data-target="#myCarousel",data-slide-to="2")
+    //Wrapper for inner slides
+    .carousel-inner
+      .item.active
+        img(src="../img/amc.talent.poster.png")
+        h1 AMCISA Talent Night
+    //Buttons to slide right or left
+    a(class="carousel-control left" href="#myCarousel" data-slide="prev") 
+      span(class="glyphicon glyphicon-chevron-left")
+    a(class="carousel-control right" href="#myCarousel" data-slide="next")
+      span(class="glyphicon glyphicon-chevron-right")
