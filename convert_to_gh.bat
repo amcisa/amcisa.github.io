@@ -15,5 +15,5 @@ rd /S /Q /.git
 del .gitignore
 del .gitattributes
 del *.py 
-del *.bat
+del r*.bat
 pause
