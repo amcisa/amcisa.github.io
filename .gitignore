@@ -1,7 +1,8 @@
 #Ignored Files
 /img/originals
-/__pycache__
 /data
+*.pyc
+/__pycache__
 # Logs
 logs
 *.log
