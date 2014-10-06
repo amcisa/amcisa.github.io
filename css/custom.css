@@ -1,8 +1,13 @@
 body {
+  font-family: "Source Sans Pro",Calibri,Candara,Arial,sans-serif;
   font-size: 18px;
   width:100%;
   text-align: center;
   margin-top:50px;
+}
+body,h1,h2,h3,h4,h5,h6{
+  font-family: "Noto Sans CJK SC",Calibri,Candara,Arial,sans-serif;
+  font-weight: 100;
 }
 img{
   max-width: 100%;
