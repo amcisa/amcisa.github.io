@@ -16,4 +16,5 @@ del .gitignore
 del .gitattributes
 del *.py 
 del *.bat
+del *.md
 pause
