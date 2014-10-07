@@ -4,9 +4,8 @@ var toc={
 };
 
 $(document).ready(function(){
-  echo(main.scroll);
   insertTOC("panel");
-  insertAnchor("panel-heading")
+  insertAnchor("panel-heading");
   clickScrollTo(main);
 });
 
@@ -21,8 +20,7 @@ function insertTOC(classType){
 
 function insertAnchor(classType){
   $("."+classType+":not(.toc-head)").each(function(){
-    var id = prettyID($(this).text());
-    toc.anchorList.push(id);
+    toc.anchorList.push(prettyID($(this).text()));
     var html ="<a href=\"\" class=\"toc-a\"><div>"+$(this).text()+"</div></a>";
     $(".toc-body").append(html);
   });
