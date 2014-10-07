@@ -23,13 +23,13 @@ function insertAnchor(classType){
   $("."+classType+":not(.toc-head)").each(function(){
     var id = prettyID($(this).text());
     toc.anchorList.push(id);
-    var html ="<a href=\"\"><div>"+$(this).text()+"</div></a>";
+    var html ="<a href=\"\" class=\"toc-a\"><div>"+$(this).text()+"</div></a>";
     $(".toc-body").append(html);
   });
 }
 
 function clickScrollTo(state){
-  $("a").click(function(){
+  $(".toc-a").click(function(){
     state.scroll=toc.anchorList.indexOf(prettyID($(this).text()))+1;
     scrollToElement(state.anchorList[state.scroll]);
     return false;
