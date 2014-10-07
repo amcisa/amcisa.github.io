@@ -11,7 +11,7 @@ cd ..
 rd /S /Q data
 rd /S /Q __pycache__
 rd /S /Q post
-rd /S /Q /.git
+rd /S /Q .git
 del .gitignore
 del .gitattributes
 del *.py 
