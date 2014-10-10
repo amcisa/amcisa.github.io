@@ -42,9 +42,7 @@ img{
 .panel-heading>a:hover{
   color:white;
 }
-.ico-large{
-  font-size: 10em;
-}
+
 .container-fluid{
   padding-left: 0px;
   padding-right: 0px;
@@ -109,6 +107,26 @@ img{
 .carousel>img{
   min-width: 100%;
 }
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
 .item h1{
   float:left;
   position: absolute;
@@ -132,4 +150,26 @@ img{
   position: fixed;
   bottom: 0px;
   width: 100%;
+}
+
+.red{
+  color:rgb(237, 119, 119);
+}
+.yellow{
+  color:rgb(260, 222, 109);
+}
+.green{
+  color:rgb(188, 223, 138);
+}
+.blue{
+  color:rgb(148, 192, 204);
+}
+.ico-large{
+  font-size: 10em;
+}
+.ico-mid{
+  font-size: 5em;
+}
+.ico-small{
+  font-size: 2em;
 }

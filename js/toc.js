@@ -21,7 +21,7 @@ function insertTOC(classType){
 function insertAnchor(classType){
   $("."+classType+":not(.toc-head)").each(function(){
     toc.anchorList.push(prettyID($(this).text()));
-    var html ="<a href=\"\" class=\"toc-a\"><div>"+$(this).text()+"</div></a>";
+    var html ="<a href=\"\" class=\"toc-a\"><div><h3>"+$(this).text()+"</h3></div></a>";
     $(".toc-body").append(html);
   });
 }
