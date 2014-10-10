@@ -1,0 +1,49 @@
+extends ./ntu.halloween.layout.jade
+
+block title
+  title Home
+
+block styles
+  link(rel="stylesheet",href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css")
+  link(rel="stylesheet",href="ntu.halloween.css/bootstrap-image-gallery.min.css")
+
+block content
+  .panel.panel-info
+    .panel-heading
+      h1 Photo Gallery
+    .panel-body
+      #links
+        a(href="../img/14-15/amc.talent/poster.png", title="Talent night",data-gallery)
+          img(src="../img/14-15/amc.talent/logo.png", alt="Talent night")
+        a(href="../img/14-15/ntu.halloween/poster.png", title="Halloween",data-gallery)
+          img(src="../img/14-15/ntu.halloween/logo.png", alt="Halloween")
+        a(href="../img/14-15/nus.ammaf/poster.png", title="AMMAF",data-gallery)
+          img(src="../img/14-15/nus.ammaf/logo.png", alt="AMMAF")
+
+block carousel  
+  #blueimp-gallery.blueimp-gallery
+    .slides
+    h3.title
+    a.prev ‹
+    a.next ›
+    a.close ×
+    a.play-pause
+    ol.indicator
+    .modal.fade
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type='button', aria-hidden='true') ×
+            h4.modal-title
+          .modal-body.next
+          .modal-footer
+            button.btn.btn-default.pull-left.prev(type='button')
+              i.glyphicon.glyphicon-chevron-left
+              | Previous
+            button.btn.btn-primary.next(type='button')
+              | Next
+              i.glyphicon.glyphicon-chevron-right
+
+block script
+  script(src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js")
+  script(src="ntu.halloween.js/bootstrap-image-gallery.min.js")

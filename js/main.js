@@ -27,7 +27,8 @@ function mouseScrollNext(e, state){
 }
 function mousePageScroll(state){ 
   //only use auto scroll when width is right
-  var curwidth=state.anchorList[0].width();
+  echo(state.anchorList);
+  var curwidth=state.anchorList[0] ? state.anchorList[0].width() : $("body").width();
   $(window).resize(function(){
     curwidth=state.anchorList[0].width();
   });
