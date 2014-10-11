@@ -19,31 +19,28 @@ block content
       h2 NTU Main Committee
     .panel-body
       //img(src="http://placehold.it/500")
-      table.table.table-striped.table-hover.section
-        thead(style="background:rgb(255,0,57);color:white;").section
+      table.table.table-striped.table-hover
+        thead(style="background:rgb(255,0,57);color:white;")
           tr 
+            //- Temporary for no pix
+            th 职位
+            th 名字
             th 职位
             th 名字
         tbody
-          +line(["会长","萧征源"])
-          +line(["副会长","李凯文"])
-          +line(["文书","黄佳娴"])
-          +line(["财政","梁詠诗"])
-          +line(["总务","蔡长智"])
-          +line(["总务","邓奕靖"])
-          +line(["编辑","陈晓瑜"])
-          +line(["编辑","陈淑琪"])
-          +line(["节策","刘存全"])
-          +line(["节策","罗巧雯"])
+          +line(["会长","萧征源","副会长","李凯文"])
+          +line(["文书","黄佳娴","财政","梁詠诗"])
+          +line(["总务","蔡长智","总务","邓奕靖"])
+          +line(["编辑","陈晓瑜","编辑","陈淑琪"])
+          +line(["网持","陈富浩","网持","张毅盛"])
+          +line(["节策","刘存全","节策","罗巧雯"])
           +line(["节策","陈伟杰"])
-          +line(["网持","陈富浩"])
-          +line(["网持","张毅盛"])
   .panel.panel-info.section
     .panel-heading
       h2 NUS Main Committee
     .panel-body
-      img(src="img/nus.maincomm.png")
-      table.table.table-striped.table-hover.section
+      //img(src="img/nus.maincomm.png")
+      table.table.table-striped.table-hover
         thead(style="background:rgb(255,117,24);color:white;")
           tr 
             th 职位

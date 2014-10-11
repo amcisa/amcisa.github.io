@@ -49,7 +49,7 @@ function findClass(jumpToArr){
   return dir;
 }
 function scrollToElement(ele) {
-    $('html,body').animate({scrollTop: ele.offset().top-50, duration: 400}).clearQueue();
+    $('html,body').animate({scrollTop: ele.offset().top-50, duration: 450}).clearQueue();
 }
 function clamp(arg,start,end){
   return arg<start ? start : (arg>end ? end : arg);
