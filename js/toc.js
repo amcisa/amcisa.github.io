@@ -7,7 +7,19 @@ $(document).ready(function(){
   insertTOC("panel");
   insertAnchor("panel-heading");
   clickScrollTo(main);
+  insertBackToTop();
 });
+
+function insertBackToTop(){
+  var html="<li><a href=\"#\">Back To Top</a></li>";
+  echo($(".navbar-right").html());
+  $(".navbar-right li:first").before(html);
+  echo($(".navbar-right").html());
+  $(".navbar-right:contains(Back To Top)").click(function(){
+    main.scroll=0;
+    scrollToElement($("html"));
+  })
+}
 
 function insertTOC(classType){
   var html="<div class=\"panel panel-success section\">"+
