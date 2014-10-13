@@ -68,6 +68,10 @@ img{
 @media (min-width: 768px){
   .navbar-nav.navbar-right:last-child {
     margin-right: 0px;
+    padding-right: 10px;
+  }
+  .navbar-nav.navbar-left{
+    padding-left: 20px;
   }
 }
 .navbar-default{
