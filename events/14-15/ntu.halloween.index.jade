@@ -4,56 +4,40 @@ block title
   title Halloween
 
 block content
-  .panel.panel-warning.section
-    .panel-heading
-      h1 NTU halloween!  
-    .panel-body 
-      .col-md-4
-        .box-sh
-          img(src="../img/14-15/ntu.halloween/sweets.png")
-        h2 Sweets!   
-      .col-md-4
-        .box-sh
-          img(src="../img/14-15/ntu.halloween/games.png")
-        h2 Games!  
-      .col-md-4
-        .box-sh
-          img(src="../img/14-15/ntu.halloween/costume.png")
-        h2 Costumes!  
   .panel.panel-danger.section
     .panel-heading
-      h1 Come on and join in the fun this halloween!  
+      h1 大家一起来halloween吧!  
     .panel-body 
       .question
         h1
           span.fa.fa-fw.fa-clock-o.red &nbsp;
-          | Date : 26th October
+          | 活动日期 : 26th October
         h1 
           span.fa.fa-fw.fa-calendar.yellow &nbsp;
-          | Time : 8.00 p.m. - 10 p.m.
+          | 活动时间 : 8.00 p.m. - 10 p.m.
         h1 
           span.fa.fa-fw.fa-bullhorn.green &nbsp;
-          | Register before : 17th October
+          | 截至日期 : 17th October
         h1 
           span.fa.fa-fw.fa-building.blue &nbsp;
-          | Venue : 
+          | 活动地点 : 
           span.fa.fa-magic 
-          | Muahaha
-  
-
-
+          | 咳咳咳
 
 //Custom Carousel 
 block carousel
-  #myCarousel.carousel.section
+  #myCarousel.carousel.slide.carousel-fade.section
     //Round page indicators
     ol.carousel-indicators
       li(data-target="#myCarousel",data-slide-to="0",class="active")
       li(data-target="#myCarousel",data-slide-to="1")
-      li(data-target="#myCarousel",data-slide-to="2")
+      //li(data-target="#myCarousel",data-slide-to="2")
     //Wrapper for inner slides
     .carousel-inner
       .item.active
+        img(src="../img/14-15/ntu.halloween/live (13).jpg")
+        h1 我们等你
+      .item
         img(src="../img/14-15/ntu.halloween/poster.png")
         h1 NTU Halloween
     //Buttons to slide right or left
