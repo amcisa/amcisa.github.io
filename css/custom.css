@@ -177,3 +177,16 @@ img{
 .ico-small{
   font-size: 2em;
 }
+.ico-timeline{
+  top:13px;
+  position: relative;
+}
+.timeline-poster>img{
+  width:100%;
+  padding: auto;
+}
+.timeline-poster{
+  max-width: 400px;
+  border: 2px solid black;
+  margin:auto;
+}
