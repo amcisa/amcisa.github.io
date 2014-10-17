@@ -10,6 +10,8 @@
     <link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/cosmo/bootstrap.min.css" rel="stylesheet"/>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="./css/custom.css" rel="stylesheet"/>
+    <link href="./css/timeline.css" rel="stylesheet"/>
+    <link href="./css/app.css" rel="stylesheet"/>
     <!--Default navigation bar-->
     <div class="navbar-default navbar-fixed-top">
       <div class="navbar-header">
@@ -18,93 +20,79 @@
       <div class="navbar-collapse collapse navbar-responsive-collapse">
         <div class="nav navbar-nav navbar-left"><a href="index.html"><img src="./img/amc.header.logo.full.png"/></a></div>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="index.html">主页</a></li>
-          <li><a href="about.html">关于我们</a></li>
-          <li><a href="events.html">活动全集</a></li>
-          <li><a href="services.html">服务全集</a></li>
+          <li><a href="index.html" class="poster-btn">本会主页</a></li>
+          <li><a href="#" class="services-btn">服务全集</a></li>
+          <li><a href="#" class="events-btn">活动全集</a></li>
           <li><a href="contact.html">联络我们</a></li>
         </ul>
       </div>
     </div>
     <!--This is where our main content is inserted into.-->
-    <div id="myCarousel" class="carousel slide carousel-fade section">
-      <!--Round page indicators-->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <!--Wrapper for inner slides-->
-      <div class="carousel-inner"> 
-        <div class="item active"><img src="img/14-15/ntu.halloween/live (13).jpg"/>
-          <h1>NTU Halloween</h1>
-        </div>
-        <div class="item"><img src="img/14-15/amc.talent/poster.png"/>
-          <h1>NUS/NTU Talent Night</h1>
-        </div>
-        <div class="item"><img src="img/14-15/nus.ammaf/poster.png"/>
-          <h1>NUS 中秋晚会    </h1>
+    <div class="wrapper">
+      <!--poster-->
+      <div id="poster-label" class="poster">
+        <div class="ps-img"><img src="./img/14-15/ntu.halloween/poster.photo.jpg"/>
+          <div class="ps-cover"></div>
         </div>
       </div>
-      <!--Buttons to slide right or left--><a href="#myCarousel" data-slide="prev" class="carousel-control left"> <span class="glyphicon glyphicon-chevron-left"></span></a><a href="#myCarousel" data-slide="next" class="carousel-control right"><span class="glyphicon glyphicon-chevron-right"></span></a>
-    </div>
-    <div class="content">
-      <div class="panel panel-info section">
-        <div class="panel-heading">
-          <h1>关于我们</h1>
-        </div>
-        <div class="panel-body">
-          <div class="col-md-3"></div>
-          <div class="col-md-6"><h2>留新大马独中生联谊会 (<strong>AMCISA</strong>)</h2>
+      <div class="ps-well">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <h1>留新大马独中联谊会</h1>
+          <h3>Association of Malaysian Chinese Independent School Alumni</h3>
+          <div class="btn btn-dark services-btn"> 
+            <h3>#服务全集</h3>
+          </div>
+          <div class="btn btn-dark events-btn"> 
+            <h3>#活动全集</h3>
+          </div><p>&nbsp;</p>
 
-<h4>Association of Malaysian Chinese Independent School Alumni</h4>
-
-<p>&nbsp;</p>
-
-<p>成立于1983年，由就读于新加坡国立大学(<strong>NUS</strong>)以及南洋理工大学(<strong>NTU</strong>)的独中生毕业生组成。 本联谊会主要维系及增进独中生之间的感情，与董教总及各独中保持联络提供新加坡大学的最新资料，协助新生适应大学生。联谊会执委团希望帮助每一位到新加坡求学的学生，提供一个归属感给他们。每年AMCISA除了办如中秋晚会或新春晚会等的活动，我们还会在七月中旬办一个<strong>迎新营</strong>，协助即将前来大学的独中生们处理学生证的申请、身体检查、贷款等繁杂手续。</p>
+<p>成立于1983年，由就读于新加坡国立大学(<strong>NUS</strong>)以及南洋理工大学(<strong>NTU</strong>)的独中生毕业生组成。 本联谊会主要维系及增进独中生之间的感情，与董教总及各独中保持联络提供新加坡大学的最新资料，协助新生适应大学生。每年AMCISA除了办如中秋晚会或新春晚会等的活动，我们还会在七月中旬办一个<strong>迎新营</strong>，协助即将前来大学的独中生们处理学生证的申请、身体检查、贷款等繁杂手续。</p>
 
 <!--
 每年AMCISA都会在七月中旬办一个__迎新营__， 让即将前来大学的独中生更快适应大学生活。在迎新营中学长姐会协助学弟妹们处理学生证的申请、身体检查、贷款等繁杂手续。希望所有即将前来新加坡留学的同学们都可以加入我们这个大家庭，而且通过这个迎新营同学们将会认识到来自不同地区的应届的独中生，往日也较容易融入大学生活。
 同学们或校方如果有任何疑问，可联络我们或到我们的面书讨论区留言提问。我们非常愿意解答同学们的一切疑惑。
 -->
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+      <!--All events-->
+      <div id="events-label" class="container grey-bg full-pg">
+        <h1>近期活动</h1>
+        <div class="col-md-4">
+          <div class="row box-sh"><img src="http://placehold.it/300x300"/></div>
+          <div class="row">
+            <h4 class="green">活动更新</h4>
+            <h1>#NTU Halloween </h1>
           </div>
-          <div class="col-md-3"></div>
+        </div>
+        <div class="col-md-4">
+          <div class="row box-sh"><img src="http://placehold.it/300x300"/></div>
+          <div class="row">
+            <h4 class="green">活动更新</h4>
+            <h1>#NUS 中秋晚会</h1>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row box-sh"><img src="http://placehold.it/300x300"/></div>
+          <div class="row">
+            <h4 class="red">资料更新</h4>
+            <h1>升学咨询</h1>
+          </div>
         </div>
       </div>
-      <div class="panel panel-primary section">
-        <div class="panel-heading"><a href="events.html">
-            <h1>近期活动</h1></a></div>
-        <div class="panel-body"><a href="events/ntu.halloween.index.html">    
-            <div class="col-md-4">
-              <div class="box-sh"><img src="img/14-15/ntu.halloween/logo.png"/></div>
-              <h2>#NTU Halloween</h2>
-            </div></a><a href="http://goo.gl/Rkexwc">
-            <div class="col-md-4">
-              <div class="box-sh"><img src="img/14-15/nus.ammaf/logo.png"/></div>
-              <h2>#NUS 中秋晚会</h2>
-            </div></a><a href="events/amc.talent.index.html">
-            <div class="col-md-4">
-              <div class="box-sh"><img src="img/14-15/amc.talent/logo.png"/></div>
-              <h2>#Amcisa Talent Night</h2>
-            </div></a></div>
-      </div>
-      <div class="panel panel-info section">
-        <div class="panel-heading"><a href="services.html">
-            <h1>热门服务</h1></a></div>
-        <div class="panel-body">
-          <div class="container-fluid"><a href="events.html">
-              <div class="col-md-3"><span class="fa fa-share-alt-square ico-large red"></span>
-                <h3>活动注册</h3>
-              </div></a><a href="working.html">
-              <div class="col-md-3"> <span class="fa fa-binoculars ico-large yellow"></span>
-                <h3>课程点评</h3>
-              </div></a><a href="working.html">
-              <div class="col-md-3"><span class="fa fa-cloud-download ico-large green"></span>
-                <h3>刊物下载</h3>
-              </div></a><a href="student.html">
-              <div class="col-md-3"><span class="fa fa-pencil-square ico-large blue"></span>
-                <h3>升学资讯</h3>
-              </div></a></div>
+      <!--All services-->
+      <div id="services-label" class="container grey-bg full-pg">
+        <h1>服务全集</h1><br/>
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 red txt-shadow"><span class="fa fa-compass ico-large"></span>
+            <h2>升学资讯</h2>
+          </div>
+          <div class="col-md-3 yellow txt-shadow"><span class="fa fa-book ico-large"></span>
+            <h2>课程点评</h2>
+          </div>
+          <div class="col-md-3"></div>
         </div>
       </div>
     </div>
@@ -113,7 +101,7 @@
     <!--Utility scripts-->
     <script src="js/jquery-1.11.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!--script(src="js/main.js")-->
     <script src="js/googlepage.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

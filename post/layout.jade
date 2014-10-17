@@ -2,10 +2,9 @@
   Base layout for the page. 
   blocks can be added for additional and conditional content
 
-mixin navlink(name,link,icon)
+mixin navlink(name,link,icon, className)
   li
-    a(href=link)
-      = name
+    a(href=link)&attributes(attributes)= name
 
 doctype html5
 html
@@ -15,10 +14,12 @@ html
     meta(name="viewport",content="width=device-width,initial-scale=1")
   block title
   body
+
     link(href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/cosmo/bootstrap.min.css", rel="stylesheet")
     link(href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", rel="stylesheet")
     link(href="./css/custom.css", rel="stylesheet")
-    block styles
+    link(href="./css/timeline.css", rel="stylesheet")
+    link(href="./css/app.css", rel="stylesheet")
 
     //Default navigation bar
     .navbar-default.navbar-fixed-top
@@ -33,17 +34,14 @@ html
           a(href="index.html")
             img(src="./img/amc.header.logo.full.png")
         ul.nav.navbar-nav.navbar-right
-          +navlink("主页","index.html")
-          +navlink("关于我们","about.html")
-          +navlink("活动全集","events.html")
-          +navlink("服务全集","services.html")
+          +navlink("本会主页","index.html")(class="poster-btn")
+          +navlink("服务全集","#")(class="services-btn")
+          +navlink("活动全集","#")(class="events-btn")
           +navlink("联络我们","contact.html")
 
     //This is where our main content is inserted into.
 
-    block carousel
-    .content
-      block content
+    block content
 
     //.footer 
     //  h5 Made in bootstrap
@@ -51,7 +49,6 @@ html
     //Utility scripts
     script(src="js/jquery-1.11.0.js")
     script(src="js/bootstrap.min.js")
-    //script(src="js/main.js")
     script(src="js/googlepage.js")
     block script
 

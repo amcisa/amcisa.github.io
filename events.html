@@ -11,6 +11,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="./css/custom.css" rel="stylesheet"/>
     <link href="./css/timeline.css" rel="stylesheet"/>
+    <link href="./css/app.css" rel="stylesheet"/>
     <!--Default navigation bar-->
     <div class="navbar-default navbar-fixed-top">
       <div class="navbar-header">
@@ -19,90 +20,45 @@
       <div class="navbar-collapse collapse navbar-responsive-collapse">
         <div class="nav navbar-nav navbar-left"><a href="index.html"><img src="./img/amc.header.logo.full.png"/></a></div>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="index.html">主页</a></li>
-          <li><a href="about.html">关于我们</a></li>
-          <li><a href="events.html">活动全集</a></li>
-          <li><a href="services.html">服务全集</a></li>
+          <li><a href="index.html" class="poster-btn">本会主页</a></li>
+          <li><a href="#" class="services-btn">服务全集</a></li>
+          <li><a href="#" class="events-btn">活动全集</a></li>
           <li><a href="contact.html">联络我们</a></li>
         </ul>
       </div>
     </div>
     <!--This is where our main content is inserted into.-->
-    <div class="content">
-      <div class="container">
-        <div class="page-header">
-          <h1 id="timeline">活动时标</h1>
-        </div>
-        <ul class="timeline">
-          <li>
-            <div class="timeline-badge primary"><i class="fa fa-paper-plane ico-timeline">         </i></div><a href="events/ntu.halloween.index.html" class="timeline-panel">
-              <div class="timeline-heading">
-                <h4 class="timeline-title">#NTU Halloween</h4>
-                <p><small class="text-muted"><i class="fa fa-clock-o"></i>26/10/2014</small></p>
-              </div>
-              <div class="timeline-body">           
-                <p>Come on and join in the fun this halloween!</p>
-                <div class="timeline-poster"><img src="img/14-15/ntu.halloween/poster.photo.jpg"/></div>
-              </div></a>
-          </li>
-          <li>
-            <div class="timeline-badge danger"><i class="fa fa-bell ico-timeline"> </i></div>
-            <div class="timeline-panel">
-              <div class="timeline-heading"><a href="student.html">
-                  <h4 class="timeline-title">我们的升学资讯在线上了！</h4></a>
-                <p><small class="text-muted"><span class="fa fa-clock-o"></span>12/10/2014</small></p>
-              </div>
-              <div class="timeline-body">
-                <p><a href="student.html">点击此处进入升学资讯</a></p>
-                <p>
-                                  
-                  　为了让新生能更容易找到所需要的资料，我们重新整理了升学咨询。希望能得到大家能<a href="contact.html">提供意见，以改进这个服务。</a>
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="timeline-inverted">
-            <div class="timeline-badge info"><i class="fa fa-cab ico-timeline">         </i></div><a href="http://goo.gl/Rkexwc" class="timeline-panel">
-              <div class="timeline-heading">
-                <h4 class="timeline-title">#NUS 中秋晚会</h4>
-                <p><small class="text-muted"><i class="fa fa-clock-o"></i>14/9/2014</small></p>
-              </div>
-              <div class="timeline-body">           
-                <p>Mooncake festival</p>
-                <div class="timeline-poster"><img src="img/14-15/nus.ammaf/poster.png"/></div>
-              </div></a>
-          </li>
-          <li class="timeline-inverted">
-            <div class="timeline-badge warning"><i class="fa fa-paper-plane ico-timeline">         </i></div><a href="http://goo.gl/Z6U9lP" class="timeline-panel">
-              <div class="timeline-heading">
-                <h4 class="timeline-title">#NTU 感恩的季节</h4>
-                <p><small class="text-muted"><i class="fa fa-clock-o"></i>1/9/2014</small></p>
-              </div>
-              <div class="timeline-body">           
-                <p>前来感恩</p>
-                <div class="timeline-poster"><img src="img/14-15/ntu.ganen/poster.png"/></div>
-              </div></a>
-          </li>
-          <li>
-            <div class="timeline-badge success"><i class="fa fa-child ico-timeline">         </i></div><a href="events/amc.talent.index.html" class="timeline-panel">
-              <div class="timeline-heading">
-                <h4 class="timeline-title">#AMCISA Talent Night</h4>
-                <p><small class="text-muted"><i class="fa fa-clock-o"></i>23/8/2014</small></p>
-              </div>
-              <div class="timeline-body">           
-                <p>Show off your talents tonight</p>
-                <div class="timeline-poster"><img src="img/14-15/amc.talent/poster.png"/></div>
-              </div></a>
-          </li>
-        </ul>
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h1>活动全集</h1>
       </div>
+      <div class="panel-body"><a href="events/ntu.halloween.index.html">    
+          <div class="col-md-4">
+            <div class="box-sh"><img src="img/14-15/ntu.halloween/logo.png"/></div>
+            <h2>#NTU Halloween</h2>
+          </div></a><a href="http://goo.gl/Rkexwc">
+          <div class="col-md-4">
+            <div class="box-sh"><img src="img/14-15/nus.ammaf/logo.png"/></div>
+            <h2>#NUS 中秋晚会</h2>
+          </div></a><a href="events/amc.talent.index.html">
+          <div class="col-md-4">
+            <div class="box-sh"><img src="img/14-15/amc.talent/logo.png"/></div>
+            <h2>#Amcisa Talent Night</h2>
+          </div></a><a href="http://goo.gl/Z6U9lP">    
+          <div class="col-md-4">
+            <div class="box-sh"><img src="img/14-15/ntu.ganen/logo.png"/></div>
+            <h2>#NTU 感恩的季节</h2>
+          </div></a><a href="events/nus.telok.index.html">    
+          <div class="col-md-4">
+            <div class="box-sh"><img src="img/14-15/nus.telok/logo.png"/></div>
+            <h2>#NUS Telok Bangah Run</h2>
+          </div></a></div>
     </div>
     <!--.footer -->
     <!--  h5 Made in bootstrap-->
     <!--Utility scripts-->
     <script src="js/jquery-1.11.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!--script(src="js/main.js")-->
     <script src="js/googlepage.js"></script>
   </body>
 </html>

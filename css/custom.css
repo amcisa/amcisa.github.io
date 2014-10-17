@@ -77,7 +77,7 @@ img{
 .navbar-default{
   position: fixed;
   z-index: 100;
-  background: rgba(255,255,255,0.95);
+  background: rgba(255,255,255,0.97);
   box-shadow: 0px 3px 3px rgba(0,0,0,0.3);
 }
 .navbar-default .navbar-nav>li>a {
@@ -176,17 +176,4 @@ img{
 }
 .ico-small{
   font-size: 2em;
-}
-.ico-timeline{
-  top:13px;
-  position: relative;
-}
-.timeline-poster>img{
-  width:100%;
-  padding: auto;
-}
-.timeline-poster{
-  max-width: 400px;
-  border: 2px solid black;
-  margin:auto;
 }

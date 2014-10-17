@@ -4,78 +4,136 @@ block title
   title Home
 
 block content
-  .panel.panel-info.section
-    .panel-heading
-      h1 关于我们
-    .panel-body
+  .wrapper
+    //poster
+    .poster#poster-label
+      .ps-img
+        img(src="./img/14-15/ntu.halloween/poster.photo.jpg")
+        .ps-cover
+    .ps-well
       .col-md-3
       .col-md-6
+        h1 留新大马独中联谊会
+        h3 Association of Malaysian Chinese Independent School Alumni
+        .btn.btn-dark.services-btn 
+          h3 #服务全集
+        .btn.btn-dark.events-btn 
+          h3 #活动全集
         include:markdown includes/amcisa_profile.md
       .col-md-3
-  .panel.panel-primary.section
-    .panel-heading
-      a(href="events.html")
-        h1 近期活动
-    .panel-body
-      a(href="events/ntu.halloween.index.html")     
-        .col-md-4
-          .box-sh
-            img(src="img/14-15/ntu.halloween/logo.png")
-          h2 #NTU Halloween
-      a(href="http://goo.gl/Rkexwc")
-        .col-md-4
-          .box-sh
-            img(src="img/14-15/nus.ammaf/logo.png") 
-          h2 #NUS 中秋晚会
-      a(href="events/amc.talent.index.html")
-        .col-md-4
-          .box-sh
-            img(src="img/14-15/amc.talent/logo.png")
-          h2 #Amcisa Talent Night
-  .panel.panel-info.section
-    .panel-heading
-      a(href="services.html")
-        h1 热门服务
-    .panel-body
-      .container-fluid
-        a(href="events.html")
-          .col-md-3
-            span.fa.fa-share-alt-square.ico-large.red
-            h3 活动注册
-        a(href="working.html")
-          .col-md-3 
-            span.fa.fa-binoculars.ico-large.yellow
-            h3 课程点评
-        a(href="working.html")
-          .col-md-3
-            span.fa.fa-cloud-download.ico-large.green
-            h3 刊物下载
-        a(href="student.html")
-          .col-md-3
-            span.fa.fa-pencil-square.ico-large.blue
-            h3 升学资讯
+    //All events
+    .container.grey-bg.full-pg#events-label
+      h1 近期活动
+      .col-md-4
+        .row.box-sh
+          img(src="http://placehold.it/300x300")
+        .row
+          h4.green 活动更新
+          h1 #NTU Halloween 
+      .col-md-4
+        .row.box-sh
+          img(src="http://placehold.it/300x300")
+        .row
+          h4.green 活动更新
+          h1 #NUS 中秋晚会
+      .col-md-4
+        .row.box-sh
+          img(src="http://placehold.it/300x300")
+        .row
+          h4.red 资料更新
+          h1 升学咨询
+    
+    //All services
+    .container.grey-bg.full-pg#services-label
+      h1 服务全集
+      br
+      .row
+        .col-md-3
+        .col-md-3.red.txt-shadow
+          span.fa.fa-compass.ico-large
+          h2 升学资讯
+        .col-md-3.yellow.txt-shadow
+          span.fa.fa-book.ico-large
+          h2 课程点评
+        .col-md-3
+  //-
+    .container.grey-bg.full-pg#events-label
+      .page-header
+          h1#timeline 活动时标
+        ul.timeline
+          li
+            .timeline-badge.primary
+              i.fa.fa-paper-plane.ico-timeline          
+            a(href="events/ntu.halloween.index.html").timeline-panel
+              .timeline-heading
+                h1.timeline-title Halloween@NTU #2014 
+                p
+                  small.text-muted
+                    i.fa.fa-clock-o
+                    | 26/10/2014
+              .timeline-body            
+                p Come on and join in the fun this halloween!
+                .timeline-poster
+                  img(src="img/14-15/ntu.halloween/poster.photo.jpg")
+          li.timeline-inverted
+            .timeline-badge.danger
+              i.fa.fa-bell.ico-timeline 
+            .timeline-panel
+              .timeline-heading
+                a(href="student.html")
+                  h2.timeline-title 我们的升学资讯在线上了！
+                p
+                  small.text-muted
+                    span.fa.fa-clock-o
+                    | 12/10/2014
+              .timeline-body
+                p
+                  a(href="student.html") 点击此处进入升学资讯
+                p                 
+                  |　为了让新生能更容易找到所需要的资料，我们重新整理了升学咨询。希望能得到大家能
+                  a(href="contact.html")提供意见，以改进这个服务。
+          li.timeline
+            .timeline-badge.info
+              i.fa.fa-cab.ico-timeline          
+            a(href="http://goo.gl/Rkexwc").timeline-panel
+              .timeline-heading
+                h1.timeline-title 中秋晚会@NUS #2014
+                p
+                  small.text-muted
+                    i.fa.fa-clock-o
+                    | 14/9/2014
+              .timeline-body            
+                p Mooncake festival
+                .timeline-poster
+                  img(src="img/14-15/nus.ammaf/poster.png")
+          li.timeline-inverted
+            .timeline-badge.warning
+              i.fa.fa-paper-plane.ico-timeline          
+            a(href="http://goo.gl/Z6U9lP").timeline-panel
+              .timeline-heading
+                h1.timeline-title 感恩的季节@NTU #2014
+                p
+                  small.text-muted
+                    i.fa.fa-clock-o
+                    | 1/9/2014
+              .timeline-body            
+                p 前来感恩
+                .timeline-poster
+                  img(src="img/14-15/ntu.ganen/poster.png")
+          li
+            .timeline-badge.success
+              i.fa.fa-child.ico-timeline          
+            a(href="events/amc.talent.index.html").timeline-panel
+              .timeline-heading
+                h1.timeline-title Talent Night@NTU #AMCISA #2014
+                p
+                  small.text-muted
+                    i.fa.fa-clock-o
+                    | 23/8/2014
+              .timeline-body            
+                p Show off your talents tonight
+                .timeline-poster
+                  img(src="img/14-15/amc.talent/poster.png")
 
-//Custom Carousel 
-block carousel
-  #myCarousel.carousel.slide.carousel-fade.section
-    //Round page indicators
-    ol.carousel-indicators
-      li(data-target="#myCarousel",data-slide-to="0",class="active")
-      li(data-target="#myCarousel",data-slide-to="1")
-      li(data-target="#myCarousel",data-slide-to="2")
-    //Wrapper for inner slides
-    .carousel-inner  
-      .item.active
-        img(src="img/14-15/ntu.halloween/live (13).jpg")
-        h1 NTU Halloween
-      .item
-        img(src="img/14-15/amc.talent/poster.png")
-        h1 NUS/NTU Talent Night
-      .item
-        img(src="img/14-15/nus.ammaf/poster.png")
-        h1 NUS 中秋晚会    
-    //Buttons to slide right or left
-    a(class="carousel-control left" href="#myCarousel" data-slide="prev") 
-      span(class="glyphicon glyphicon-chevron-left")
-    a(class="carousel-control right" href="#myCarousel" data-slide="next")
-      span(class="glyphicon glyphicon-chevron-right")
+block script
+  script(src="js/index.js")

@@ -1,0 +1,114 @@
+.btn-dark{
+  background: rgba(0,0,0,0.5);
+  margin:0px;
+}
+.btn-dark:hover{
+  background: rgba(0,0,0,0.9);
+}
+.poster {
+  position: relative;
+  max-width:100%;
+  max-height: 100%;
+}
+.poster>.ps-img{
+  position: relative;
+  top: 0px;
+  max-height: 100%;
+  overflow: hidden;
+}
+.poster>.ps-img>img{
+  max-height:100%;
+  width:100%;
+}
+.inverse{
+  background: rgba(0,0,0,1);
+  color:white;
+}
+.txt-shadow{
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+.ps-well{
+  top: 50px;
+  z-index: 40;
+  color: black;
+  background-color: white;
+}
+@media(min-width: 992px){
+  .poster>.ps-img>img{
+    filter: blur(7px);
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(7px);
+  }
+  .poster>.ps-img>.ps-cover{
+    position: absolute;
+    top: 0px;
+    opacity: 0.28;
+    background-color: black;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+  }
+  .full-pg{
+    min-height: 100%;
+    min-width: 100%;
+  }
+  .ps-well{
+    position: absolute;
+    color:white;
+    background-color: rgba(0,0,0,0);
+  }
+}
+@media(max-width: 992px){
+  .container{
+    margin-top: 50px;
+  }
+}
+/*Font Awesome Icon Controls*/
+.ico-large{
+  font-size: 10em;
+}
+.ico-mid{
+  font-size: 5em;
+}
+.ico-small{
+  font-size: 2em;
+}
+
+/*Color overlay*/
+.red{
+  color:rgb(237, 119, 119);
+}
+.yellow{
+  color:rgb(260, 222, 109);
+}
+.green{
+  color:rgb(188, 223, 138);
+}
+.blue{
+  color:rgb(148, 192, 204);
+}
+
+/*Timeline overrides*/
+.grey-bg{
+  background: rgba(0,0,0,0.8);
+  color: white;
+}
+.timeline-panel{
+  background-color: rgba(255,255,255,0.85);
+}
+.timeline-body{
+  color:black;
+}
+.ico-timeline{
+  top:13px;
+  position: relative;
+}
+.timeline-poster>img{
+  width:100%;
+  padding: auto;
+}
+.timeline-poster{
+  max-width: 400px;
+  border: 2px solid black;
+  margin:auto;
+}
