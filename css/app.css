@@ -13,6 +13,42 @@ p{
   font-family: "Source Sans Pro", "Microsoft JhengHei";
   font-weight: inherit;
 }
+@media (min-width: 768px){
+  .navbar-nav.navbar-right:last-child {
+    margin-right: 0px;
+    padding-right: 10px;
+  }
+  .navbar-nav.navbar-left{
+    padding-left: 20px;
+  }
+}
+.navbar-default{
+  position: fixed;
+  z-index: 100;
+  background: rgba(255,255,255,0.97);
+  box-shadow: 0px 3px 3px rgba(0,0,0,0.3);
+}
+.navbar-default .navbar-nav>li>a {
+  color: rgba(0,0,0,1);
+}
+.navbar-default .navbar-brand {
+  color: rgb(0,0,0);
+  padding-left: 14.5px;
+  padding-top: 12px;
+}
+.navbar-default .navbar-brand:hover {
+  color: rgb(255,255,255);
+  background: rgb(0,0,0);
+}
+.navbar-toggle{
+  background: rgb(0,0,0);
+}
+.navbar-toggle .icon-bar:hover{
+  background: rgba(255,255,255,0.84);
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background:rgba(0,0,0,0.7);
+}
 .grey-bg{
   background: rgba(0,0,0,0.8);
   color: white;
@@ -58,7 +94,7 @@ p{
 }
 .qa-panel{
   border: 2px solid black;
-  background: rgb(211,211,211);
+  background: rgb(255,255,255);
 }
 
 @media(min-width: 992px){
