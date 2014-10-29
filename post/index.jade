@@ -18,9 +18,24 @@ block content
         .btn.btn-dark.services-btn 
           h3 #服务全集
         .btn.btn-dark.events-btn 
-          h3 #活动全集
+          h3 #近期活动
         include:markdown includes/amcisa_profile.md
       .col-md-3
+
+    //All services
+    .container.grey-bg.full-pg#services-label
+      h1 服务全集
+      br
+      .row
+        .col-md-3
+        a(href="student.html").col-md-3.red.txt-shadow
+          span.fa.fa-compass.ico-large
+          h2 升学资讯
+        .col-md-3.yellow.txt-shadow
+          span.fa.fa-book.ico-large
+          h2 课程点评
+        .col-md-3
+
     //All events
     .container.grey-bg.full-pg#events-label
       h1 近期活动
@@ -42,98 +57,6 @@ block content
         .row
           h4.red 资料更新
           h1 升学咨询
-    
-    //All services
-    .container.grey-bg.full-pg#services-label
-      h1 服务全集
-      br
-      .row
-        .col-md-3
-        .col-md-3.red.txt-shadow
-          span.fa.fa-compass.ico-large
-          h2 升学资讯
-        .col-md-3.yellow.txt-shadow
-          span.fa.fa-book.ico-large
-          h2 课程点评
-        .col-md-3
-  //-
-    .container.grey-bg.full-pg#events-label
-      .page-header
-          h1#timeline 活动时标
-        ul.timeline
-          li
-            .timeline-badge.primary
-              i.fa.fa-paper-plane.ico-timeline          
-            a(href="events/ntu.halloween.index.html").timeline-panel
-              .timeline-heading
-                h1.timeline-title Halloween@NTU #2014 
-                p
-                  small.text-muted
-                    i.fa.fa-clock-o
-                    | 26/10/2014
-              .timeline-body            
-                p Come on and join in the fun this halloween!
-                .timeline-poster
-                  img(src="img/14-15/ntu.halloween/poster.photo.jpg")
-          li.timeline-inverted
-            .timeline-badge.danger
-              i.fa.fa-bell.ico-timeline 
-            .timeline-panel
-              .timeline-heading
-                a(href="student.html")
-                  h2.timeline-title 我们的升学资讯在线上了！
-                p
-                  small.text-muted
-                    span.fa.fa-clock-o
-                    | 12/10/2014
-              .timeline-body
-                p
-                  a(href="student.html") 点击此处进入升学资讯
-                p                 
-                  |　为了让新生能更容易找到所需要的资料，我们重新整理了升学咨询。希望能得到大家能
-                  a(href="contact.html")提供意见，以改进这个服务。
-          li.timeline
-            .timeline-badge.info
-              i.fa.fa-cab.ico-timeline          
-            a(href="http://goo.gl/Rkexwc").timeline-panel
-              .timeline-heading
-                h1.timeline-title 中秋晚会@NUS #2014
-                p
-                  small.text-muted
-                    i.fa.fa-clock-o
-                    | 14/9/2014
-              .timeline-body            
-                p Mooncake festival
-                .timeline-poster
-                  img(src="img/14-15/nus.ammaf/poster.png")
-          li.timeline-inverted
-            .timeline-badge.warning
-              i.fa.fa-paper-plane.ico-timeline          
-            a(href="http://goo.gl/Z6U9lP").timeline-panel
-              .timeline-heading
-                h1.timeline-title 感恩的季节@NTU #2014
-                p
-                  small.text-muted
-                    i.fa.fa-clock-o
-                    | 1/9/2014
-              .timeline-body            
-                p 前来感恩
-                .timeline-poster
-                  img(src="img/14-15/ntu.ganen/poster.png")
-          li
-            .timeline-badge.success
-              i.fa.fa-child.ico-timeline          
-            a(href="events/amc.talent.index.html").timeline-panel
-              .timeline-heading
-                h1.timeline-title Talent Night@NTU #AMCISA #2014
-                p
-                  small.text-muted
-                    i.fa.fa-clock-o
-                    | 23/8/2014
-              .timeline-body            
-                p Show off your talents tonight
-                .timeline-poster
-                  img(src="img/14-15/amc.talent/poster.png")
 
 block script
   script(src="js/index.js")

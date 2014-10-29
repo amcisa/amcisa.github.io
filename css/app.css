@@ -1,3 +1,22 @@
+body {
+  font-size: 18px;
+  width:100%;
+  text-align: center;
+  margin-top:50px;
+}
+body,h1,h2,h3,h4,h5,h6{
+  font-family: "Source Sans Pro", "Microsoft Yahei","微软雅黑", STHeiti, 
+               "华文黑体",Calibri,Candara,Arial,sans-serif;
+  font-weight: inherit;
+}
+p{
+  font-family: "Source Sans Pro", "Microsoft JhengHei";
+  font-weight: inherit;
+}
+.grey-bg{
+  background: rgba(0,0,0,0.8);
+  color: white;
+}
 .btn-dark{
   background: rgba(0,0,0,0.5);
   margin:0px;
@@ -33,6 +52,15 @@
   color: black;
   background-color: white;
 }
+.grey-bg{
+  background: rgba(0,0,0,0.8);
+  color: white;
+}
+.qa-panel{
+  border: 2px solid black;
+  background: rgb(211,211,211);
+}
+
 @media(min-width: 992px){
   .poster>.ps-img>img{
     filter: blur(7px);
@@ -58,11 +86,37 @@
     background-color: rgba(0,0,0,0);
   }
 }
+
 @media(max-width: 992px){
-  .container{
-    margin-top: 50px;
+  .ps-well{
+    position: relative;
+    top:0px;
+    margin-bottom:0px;
+    color:white;
+    background-color: rgba(0,0,0,0.8);
   }
 }
+
+/*Modifiers*/
+.align-left{
+  text-align: left;
+}
+.hide{
+  display: none;
+}
+.show{
+  display: inherit;
+}
+.fillx{
+  min-width: 100%;
+}
+.filly{
+  min-height: 100%;
+}
+.underline:hover{
+  text-decoration: underline;  
+}
+
 /*Font Awesome Icon Controls*/
 .ico-large{
   font-size: 10em;
@@ -78,37 +132,36 @@
 .red{
   color:rgb(237, 119, 119);
 }
+.red:hover{
+  color:rgb(237, 119, 119);
+}
 .yellow{
+  color:rgb(260, 222, 109);
+}
+.yellow:hover{
   color:rgb(260, 222, 109);
 }
 .green{
   color:rgb(188, 223, 138);
 }
+.green:hover{
+  color:rgb(188, 223, 138);
+}
 .blue{
   color:rgb(148, 192, 204);
 }
-
-/*Timeline overrides*/
-.grey-bg{
-  background: rgba(0,0,0,0.8);
-  color: white;
+.blue:hover{
+  color:rgb(148, 192, 204);
 }
-.timeline-panel{
-  background-color: rgba(255,255,255,0.85);
+.white{
+  color:rgb(255, 255, 255);
 }
-.timeline-body{
-  color:black;
+.white:hover{
+  color:rgb(255, 255, 255);
 }
-.ico-timeline{
-  top:13px;
-  position: relative;
+.black{
+  color:rgb(0,0,0);
 }
-.timeline-poster>img{
-  width:100%;
-  padding: auto;
-}
-.timeline-poster{
-  max-width: 400px;
-  border: 2px solid black;
-  margin:auto;
+.black:hover{
+  color:rgb(0,0,0);
 }

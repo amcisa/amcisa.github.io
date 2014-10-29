@@ -16,62 +16,31 @@ block title
   title FAQ
 
 block content
-  //All the questions come here
-  .panel.panel-primary.section
-    .panel-heading
-      h3 Student Pass
-    .panel-body
-      .question
-        include:markdown includes/student_pass.md
-
-  .panel.panel-info.section
-    .panel-heading
-      h3 新生营
-    .panel-body
-      .question
-        include:markdown includes/amcisa_FOC.md
-
-  .panel.panel-danger.section
-    .panel-heading
-      h3 Tuition Fee Loan (TFL) 1
-    .panel-body
-      .question
-        include:markdown includes/tuition_fee_loan_1.md
-
-  .panel.panel-danger.section
-    .panel-heading
-      h3 Tuition Fee Loan (TFL) 2
-    .panel-body
-      .question
-        include:markdown includes/tuition_fee_loan_2.md
-
-  .panel.panel-success.section
-    .panel-heading
-      h3 体检
-    .panel-body
-      .question
-        include:markdown includes/medic_exam.md
-
-  .panel.panel-warning.section
-    .panel-heading
-      h3 银行户口
-    .panel-body
-      .question
-        include:markdown includes/bank_account.md
-
-  .panel.panel-primary.section
-    .panel-heading
-      h3 住宿 1
-    .panel-body
-      .question
-        include:markdown includes/accomodation_1.md
-
-  .panel.panel-primary.section
-    .panel-heading
-      h3 住宿 2
-    .panel-body
-      .question
-        include:markdown includes/accomodation_2.md
+  .container.grey-bg.fillx
+    h1 常问问题
+  .container.grey-bg.fillx
+    .col-md-2
+    .col-md-8.qa-panel.align-left.black
+    .col-md-2
+  .container.grey-bg.fillx.filly.align-left
+    .row
+      .col-md-1
+      .col-md-5
+        br
+        include includes/accomodation.jade
+      .col-md-5
+        br
+        include includes/bank_account.jade
+      .col-md-1
+    .row
+      .col-md-1
+      .col-md-5
+        br
+        //include includes/accomodation.jade
+      .col-md-5
+        br
+        //include includes/bank_account.jade
+      .col-md-1
 
 block script
-  script(src="js/toc.js")
+  script(src="js/student.js")

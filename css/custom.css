@@ -1,14 +1,4 @@
-body {
-  font-size: 18px;
-  width:100%;
-  text-align: center;
-  margin-top:50px;
-}
-body,h1,h2,h3,h4,h5,h6{
-  font-family: "Source Sans Pro", STXihei, "华文细黑","Microsoft Yahei","微软雅黑", STHeiti, 
-               "华文黑体",Calibri,Candara,Arial,sans-serif;
-  font-weight: inherit;
-}
+
 img{
   max-width: 100%;
   height: auto;
