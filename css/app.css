@@ -99,7 +99,7 @@ p{
 .topic>h1{
   border-bottom: 2px solid white;
   border-bottom-width: thick;
-  width: 50%;
+  width: 70%;
 }
 @media(min-width: 992px){
   .poster>.ps-img>img{

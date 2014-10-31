@@ -15,7 +15,8 @@ function redirectUp(){
   $(".qa-li>h3").click(function(){
     var html =  "<h3>Q : "+$(this).find($(":not(i)")).html()
                 +"</h3>\n<h3>A : </h3>"+$(this).next().html()+"<br>";
-    echo(html);    
+    var parent=$(this).parentsUntil(".container");
+    $(".qa-panel-container").insertBefore(parent[parent.length-1]);
     $(".qa-panel").html(html).hide().slideToggle();
     scrollToElement($(".qa-panel"));
   });
