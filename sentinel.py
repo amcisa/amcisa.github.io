@@ -18,10 +18,10 @@ class JadeHandler(FileSystemEventHandler):
       return p
    def on_created(self,event):
       print("File created ->"+event.src_path)
-      self.renderJade()
+      if event.src_path[-3:].lower()!="tmp": self.renderJade()
    def on_modified(self,event):
       print("File modified ->"+event.src_path)
-      self.renderJade()
+      if event.src_path[-3:].lower()!="tmp": self.renderJade()
 
 def startLogger():
    logging.basicConfig(level=logging.INFO,
@@ -45,7 +45,7 @@ def startRender(path,batfile):
    renderer.start()
 
 if __name__ == "__main__":
-   server.serve(7000)
+   server.serve(8000)
    startRender("post","rpost.bat")
    startRender("events/14-15","revent.bat")
    startLogger()

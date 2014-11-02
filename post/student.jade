@@ -1,15 +1,3 @@
-//-
-  The following block is the one to copy when update is needed.
-  Use markdown for long paragraphs.
-  Also available: primary, success, warning, danger, default, info.
-  
-  .panel.panel-primary 
-    .paneheading
- 
-        | Prospecitve Students
-    .panel-body
-      | Long text comes here 
-
 extends ./layout.jade
 
 block title
@@ -41,9 +29,18 @@ block content
       .col-md-5.topic
         br
         include ../includes/amcisa_FOC.jade
-      .col-md-5
+      .col-md-5.topic
         br
         include ../includes/tuition_fee_loan.jade
+      .col-md-1
+    .row
+      .col-md-1
+      .col-md-5.topic
+        br
+        include ../includes/medic_exam.jade
+      .col-md-5.topic
+        br
+        include ../includes/student_pass.jade
       .col-md-1
 
 block script

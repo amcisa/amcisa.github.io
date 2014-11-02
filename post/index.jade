@@ -26,7 +26,7 @@ block content
     .container.grey-bg.full-pg#services-label
       h1 常用服务
       br
-      .row
+      .row.bottom-margin
         .col-md-3
         a(href="student.html").col-md-3.red.txt-shadow
           span.fa.fa-compass.ico-large
@@ -35,28 +35,64 @@ block content
           span.fa.fa-book.ico-large
           h2 课程点评
         .col-md-3
+      .row
+        .col-md-3
+        .col-md-3.blue.txt-shadow
+          span.fa.fa-paper-plane.ico-large
+          h2 活动注册
+        .col-md-3.green.txt-shadow
+          span.fa.fa-download.ico-large
+          h2 刊物下载
+        .col-md-3
 
     //All events
     .container.grey-bg.full-pg#events-label
-      h1 近期活动
-      .col-md-4
-        .row.box-sh
-          img(src="http://placehold.it/300x300")
-        .row
-          h4.green 活动更新
-          h1 #NTU Halloween 
-      .col-md-4
-        .row.box-sh
-          img(src="http://placehold.it/300x300")
-        .row
-          h4.green 活动更新
-          h1 #NUS 中秋晚会
-      .col-md-4
-        .row.box-sh
-          img(src="http://placehold.it/300x300")
-        .row
-          h4.red 资料更新
-          h1 升学咨询
+      .row
+        .col-md-3
+        .col-md-6.border-bottom-light
+          h1 近期活动
+        .col-md-3
+      .row
+        .col-md-3
+        .col-md-2.top-margin
+          img(src="img/14-15/ntu.halloween/amhallo.thumb.png")
+        .col-md-4.align-left
+          .row.zero-margin
+            .col-md-10
+              a(href="#").white.underline
+                h1 #NTU Amhallo
+            .col-md-2
+              h4.red 活动更新
+          .row
+            p 2014年10月26日，当晚上7点30分的钟声响起，我们将在远处的古堡，等待着您与南瓜车的光临。
+        .col-md-3
+      .row
+        .col-md-3
+        .col-md-6.border-bottom-light
+        .col-md-3
+      .row
+        .col-md-3
+        .col-md-2.top-margin
+          img(src="img/14-15/nus.ammaf/logo.png")
+        .col-md-4.align-left
+          .row.zero-margin
+            .col-md-10
+              a(href="#").white.underline
+                h1 #NUS 中秋晚会
+            .col-md-2
+              h4.red 活动更新
+          .row
+            p
+              | 配合今年的主题“AM的心代表月亮，CI奔到月球天堂，SA下一样的月光”，许多有趣的活动将给我们带来不一样的惊喜，
+              | 包括吃月饼柚子赏月、猜灯谜、心心相印、嫦娥追玉兔等等。
+        .col-md-3
+      .row
+        .col-md-3
+        .col-md-6.border-bottom-light
+        .col-md-3
+      
+
+      
 
 block script
   script(src="js/index.js")

@@ -156,10 +156,26 @@ p{
 .underline:hover{
   text-decoration: underline;  
 }
+.zero-margin{
+  margin: 0px;
+}
+.bottom-margin{
+  margin-bottom: 10px;
+}
+.top-margin{
+  margin-top: 10px;
+}
+.border-bottom{
+  border-bottom: 2px solid white;
+  border-bottom-width: thick;
+}
+.border-bottom-light{
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+}
 
 /*Font Awesome Icon Controls*/
 .ico-large{
-  font-size: 10em;
+  font-size: 9em;
 }
 .ico-mid{
   font-size: 5em;
