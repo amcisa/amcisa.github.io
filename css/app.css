@@ -49,10 +49,6 @@ p{
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background:rgba(0,0,0,0.7);
 }
-.grey-bg{
-  background: rgba(0,0,0,0.8);
-  color: white;
-}
 .btn-dark{
   background: rgba(0,0,0,0.5);
   margin:0px;
@@ -89,7 +85,7 @@ p{
   background-color: white;
 }
 .grey-bg{
-  background: rgba(0,0,0,0.8);
+  background: rgb(60,60,60);
   color: white;
 }
 .qa-panel{
@@ -220,4 +216,7 @@ p{
 }
 .black:hover{
   color:rgb(0,0,0);
+}
+.bg-dimgrey{
+  background: rgb(105,105,105);
 }
