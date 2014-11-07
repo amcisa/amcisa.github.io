@@ -1,5 +1,5 @@
 function scrollToElement(ele) {
-    $('html,body').animate({scrollTop: ele.offset().top-50, duration: 350}).clearQueue();
+    $('html,body').animate({scrollTop: ele.offset().top-50, duration: 300}).clearQueue();
     return false;
 }
 function echo(){

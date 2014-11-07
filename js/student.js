@@ -10,9 +10,11 @@ function redirectUp(){
                 +"</h3>\n<h3>A : </h3>"+$(this).next().html()+"<br>";
     var parent=$(this).parentsUntil(".container");
     $(".qa-panel-container").insertBefore(parent[parent.length-1]);
+    scrollToElement($(".qa-panel"));
+    $(".qa-panel").html(html);
+    /*
     $(".qa-panel").fadeOut(function() {
       $(this).html(html);
-    }).fadeIn();
-    scrollToElement($(".qa-panel"));
+    }).fadeIn();*/
   });
 }
