@@ -122,6 +122,9 @@ p{
     color:white;
     background-color: rgba(0,0,0,0);
   }
+  .fixed{
+    position: fixed;
+  }
 }
 
 @media(max-width: 992px){
