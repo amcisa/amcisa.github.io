@@ -10,7 +10,6 @@
     <link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/cosmo/bootstrap.min.css" rel="stylesheet"/>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="./css/custom.css" rel="stylesheet"/>
-    <link href="./css/timeline.css" rel="stylesheet"/>
     <link href="./css/app.css" rel="stylesheet"/>
     <!--Default navigation bar-->
     <div class="navbar-default navbar-fixed-top">
@@ -21,8 +20,8 @@
         <div class="nav navbar-nav navbar-left"><a href="index.html"><img src="./img/amc.header.logo.full.png"/></a></div>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="index.html" class="poster-btn">本会主页</a></li>
-          <li><a href="#" class="services-btn">服务全集</a></li>
-          <li><a href="#" class="events-btn">活动全集</a></li>
+          <li><a href="index.html#service" class="services-btn">服务全集</a></li>
+          <li><a href="index.html#event" class="events-btn">最新活动</a></li>
           <li><a href="contact.html">联络我们</a></li>
         </ul>
       </div>
@@ -56,7 +55,7 @@
         <div class="row">
           <div class="col-md-3"></div>
           <div class="col-md-6 border-bottom-light">
-            <h1>常用服务</h1>
+            <h1 id="service">常用服务</h1>
           </div>
           <div class="col-md-3"></div>
         </div>
@@ -64,17 +63,7 @@
           <div class="col-md-3"></div><a href="student.html" class="col-md-3 red txt-shadow"><span class="fa fa-compass ico-large"></span>
             <h2>升学资讯</h2></a>
           <div class="col-md-3 yellow txt-shadow"><span class="fa fa-book ico-large"></span>
-            <h2>课程点评</h2>
-          </div>
-          <div class="col-md-3"></div>
-        </div>
-        <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-3 blue txt-shadow"><span class="fa fa-paper-plane ico-large"></span>
-            <h2>活动注册</h2>
-          </div>
-          <div class="col-md-3 green txt-shadow"><span class="fa fa-download ico-large"></span>
-            <h2>刊物下载</h2>
+            <h2>课程简介</h2>
           </div>
           <div class="col-md-3"></div>
         </div>
@@ -83,13 +72,8 @@
       <div id="events-label" class="container grey-bg full-pg">
         <div class="row">
           <div class="col-md-3"></div>
-          <div class="col-md-6 border-bottom-light"></div>
-          <div class="col-md-3"></div>
-        </div>
-        <div class="row">
-          <div class="col-md-3"></div>
           <div class="col-md-6 border-bottom-light">
-            <h1>近期活动</h1>
+            <h1 id="event">近期活动</h1>
           </div>
           <div class="col-md-3"></div>
         </div>
@@ -98,7 +82,7 @@
           <div class="col-md-2 top-margin"><img src="img/14-15/ntu.halloween/amhallo.thumb.png"/></div>
           <div class="col-md-4 align-left">
             <div class="row zero-margin">
-              <div class="col-md-10"><a href="#" class="white underline">
+              <div class="col-md-10"><a href="events/ntu.halloween.index.html" class="white underline">
                   <h1>#NTU Amhallo</h1></a></div>
               <div class="col-md-2">
                 <h4 class="red">活动更新</h4>
@@ -120,7 +104,7 @@
           <div class="col-md-2 top-margin"><img src="img/14-15/nus.ammaf/logo.png"/></div>
           <div class="col-md-4 align-left">
             <div class="row zero-margin">
-              <div class="col-md-10"><a href="#" class="white underline">
+              <div class="col-md-10"><a href="http://amcisa.org/wp/nus-amcisa-%E4%B8%AD%E7%A7%8B%E6%99%9A%E4%BC%9A/" class="white underline">
                   <h1>#NUS 中秋晚会</h1></a></div>
               <div class="col-md-2">
                 <h4 class="red">活动更新</h4>
@@ -140,6 +124,35 @@
           <div class="col-md-6 border-bottom-light"></div>
           <div class="col-md-3"></div>
         </div>
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-2 top-margin"><img src="img/14-15/amc.talent/logo.png"/></div>
+          <div class="col-md-4 align-left">
+            <div class="row zero-margin">
+              <div class="col-md-10"><a href="events/amc.talent.index.html" class="white underline">
+                  <h1>#AMCISA 才华之夜</h1></a></div>
+              <div class="col-md-2">
+                <h4 class="red">活动更新</h4>
+              </div>
+            </div>
+            <div class="row">
+              <p>
+                一年一度的 Talent Night即将引爆，为各位新一年的大学生活拉开序幕！
+                你拥有什么talent，无论是唱歌、跳舞、戏剧或者是其它才华， Talent Night无任欢迎！ 
+                大胆秀出自己的才艺，发掘自我吧！还在考虑什么？赶快报名吧！
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6 border-bottom-light"></div>
+          <div class="col-md-3"></div>
+        </div>
+        <!--Link to all events-->
+        <div class="row"><a href="events.html">
+            <h2>活动全集</h2></a></div>
       </div>
     </div>
     <!--.footer -->
@@ -148,6 +161,14 @@
     <script src="js/jquery-1.11.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/googlepage.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/util.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        pageScrollTo("events");
+        pageScrollTo("services");
+        pageScrollTo("poster");
+        return false;
+      })
+    </script>
   </body>
 </html>

@@ -1,12 +1,30 @@
 extends ./ntu.halloween.layout.jade
 
 block title
-  title Contact Us
+  title 更新
 
 block content
-  .panel.panel-warning.section
-    .panel-heading
-      h1 展望未来!
-    .panel-body
-      span.fa.fa-spinner.fa-spin.ico-large.blue
-      h1 材料提炼中。。。
+  .container.grey-bg.full-pg
+    .row
+      h1 活动更新
+    .row
+      .col-md-2
+        ul.nav.nav-pills.nav-stacked
+          li.active
+            a(href='#xuanchuan', data-toggle='tab', aria-expanded='true') Amhallo 宣传活动
+          li
+            a(href='#halloffame', data-toggle='tab', aria-expanded='false') 金榜题名
+          li
+            a(href='#houji', data-toggle='tab', aria-expanded='false') Amhallo 后记
+      .col-md-9
+        #myTabContent.tab-content
+          #xuanchuan.tab-pane.fade.active.in
+            .align-left
+              include:markdown ../14-15.includes/ntu.halloween.xuanchuan.md
+          #halloffame.tab-pane.fade
+            .align-left
+              include ../14-15.includes/ntu.halloween.halloffame.jade
+          #houji.tab-pane.fade
+            .align-left
+              include:markdown ../14-15.includes/ntu.halloween.houji.md
+      .col-md-1

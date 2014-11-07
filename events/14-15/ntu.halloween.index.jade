@@ -1,47 +1,58 @@
 extends ./ntu.halloween.layout.jade
 
 block title
-  title Halloween
+  title Amhallo
 
 block content
-  .panel.panel-danger.section
-    .panel-heading
-      h1 大家一起来halloween吧!  
-    .panel-body 
-      .question
-        h1
-          span.fa.fa-fw.fa-clock-o.red &nbsp;
-          | 活动日期 : 26th October
-        h1 
-          span.fa.fa-fw.fa-calendar.yellow &nbsp;
-          | 活动时间 : 8.00 p.m. - 10 p.m.
-        h1 
-          span.fa.fa-fw.fa-bullhorn.green &nbsp;
-          | 截至日期 : 17th October
-        h1 
-          span.fa.fa-fw.fa-building.blue &nbsp;
-          | 活动地点 : 
-          span.fa.fa-magic 
-          | 咳咳咳
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        img(src="../img/14-15/ntu.halloween/poster.photo.plain.jpg")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 南洋理工大学万圣节
+        h3 Amhallo @ NTU
+        .btn.btn-dark.description-btn 
+          h3 #活动详情
+        a(href="ntu.halloween.updates.html").white.btn.btn-dark.events-btn             
+          h3 #近期更新
+        :markdown
+          亮着昏黄灯光的南瓜车、古堡里的盛宴，西元2014年的万圣节，AMCISA史无前例地为大家准备了一个诡异与欢乐并存的万圣节之夜。
+          当您收到这封邀请函时，您已经是我们的特级贵宾。为了最大地照顾您的需要，我们将在上车地点准备各类换装设备。请您在预留车位时，勾选自己的换装安排，以方便我们为您提供更好的招待。 
+          2014年10月26日，当晚上7点30分的钟声响起，我们将在远处的古堡，等待着您与南瓜车的光临。
 
-//Custom Carousel 
-block carousel
-  #myCarousel.carousel.slide.carousel-fade.section
-    //Round page indicators
-    ol.carousel-indicators
-      li(data-target="#myCarousel",data-slide-to="0",class="active")
-      li(data-target="#myCarousel",data-slide-to="1")
-      //li(data-target="#myCarousel",data-slide-to="2")
-    //Wrapper for inner slides
-    .carousel-inner
-      .item.active
-        img(src="../img/14-15/ntu.halloween/live (13).jpg")
-        h1 我们等你
-      .item
-        img(src="../img/14-15/ntu.halloween/poster.png")
-        h1 NTU Halloween
-    //Buttons to slide right or left
-    a(class="carousel-control left" href="#myCarousel" data-slide="prev") 
-      span(class="glyphicon glyphicon-chevron-left")
-    a(class="carousel-control right" href="#myCarousel" data-slide="next")
-      span(class="glyphicon glyphicon-chevron-right")
+      .col-md-3
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 活动日期 : 26th October 2014
+          h2 
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 活动时间 : 8.00 p.m. - 10 p.m.
+          h2 
+            span.fa.fa-fw.fa-bullhorn.green &nbsp;
+            | 截至日期 : 17th October
+          h2
+            span.fa.fa-fw.fa-building.blue &nbsp;
+            | 活动地点 : 
+            span.fa.fa-magic 
+            | HSS Foyer
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })

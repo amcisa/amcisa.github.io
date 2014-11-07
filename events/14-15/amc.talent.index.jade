@@ -1,41 +1,55 @@
 extends ./amc.talent.layout.jade
 
 block title
-  title talent
+  title 才华之夜
 
 block content
-  .panel.panel-success.section
-    .panel-heading
-      h1 NTU Talent Night!  
-    .panel-body 
-      a(href="https://www.facebook.com/media/set/?set=oa.731244720291737&type=1")
-        h1 图库在此处！
-      .question        
-        h3 一年一度的 Talent Night即将引爆，为各位新一年的大学生活拉开序幕！
-        h3 你拥有什么talent，无论是唱歌、跳舞、戏剧或者是其它才华， Talent Night无任欢迎！ 
-        h3 大胆秀出自己的才艺，发掘自我吧！还在考虑什么？赶快报名吧！
-        h1 Date  : 23 / 08 /14
-        h1 Time  : 6.30 p.m. - 11.00 p.m.
-        h1 Venue : NTU LT 19
-  
-
-
-
-//Custom Carousel 
-block carousel
-  #myCarousel.carousel.section
-    //Round page indicators
-    ol.carousel-indicators
-      li(data-target="#myCarousel",data-slide-to="0",class="active")
-      li(data-target="#myCarousel",data-slide-to="1")
-      li(data-target="#myCarousel",data-slide-to="2")
-    //Wrapper for inner slides
-    .carousel-inner
-      .item.active
+  .wrapper
+    .poster#poster-label
+      .ps-img
         img(src="../img/14-15/amc.talent/poster.png")
-        h1 AMCISA Talent Night
-    //Buttons to slide right or left
-    a(class="carousel-control left" href="#myCarousel" data-slide="prev") 
-      span(class="glyphicon glyphicon-chevron-left")
-    a(class="carousel-control right" href="#myCarousel" data-slide="next")
-      span(class="glyphicon glyphicon-chevron-right")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 Amcisa 才华之夜
+        h3 Talent Night @ NTU & NUS
+        .btn.btn-dark.description-btn 
+          h3 #活动详情
+        a(href="amc.talent.updates.html").white.btn.btn-dark.events-btn             
+          h3 #近期更新
+        :markdown
+          一年一度的 Talent Night即将引爆，为各位新一年的大学生活拉开序幕！
+          你拥有什么talent，无论是唱歌、跳舞、戏剧或者是其它才华， Talent Night无任欢迎！ 
+          大胆秀出自己的才艺，发掘自我吧！还在考虑什么？赶快报名吧！
+      .col-md-3
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 活动日期 : 23th October 2014
+          h2 
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 活动时间 : 6.30 p.m. - 11.00 p.m.
+          h2
+            span.fa.fa-fw.fa-building.blue &nbsp;
+            | 活动地点 : 
+            span.fa.fa-magic 
+            | NTU LT 19
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })
+

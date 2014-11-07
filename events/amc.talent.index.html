@@ -5,58 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
   </head>
-  <title>talent</title>
+  <title>才华之夜</title>
   <body>
     <link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/cosmo/bootstrap.min.css" rel="stylesheet"/>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="../css/app.css" rel="stylesheet"/>
     <link href="../css/custom.css" rel="stylesheet"/>
     <!--Default navigation bar-->
     <div class="navbar-default navbar-fixed-top">
       <div class="navbar-header">
-        <button type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="../index.html" class="navbar-brand">
-           
-          Amcisa</a>
+        <button type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
       </div>
       <div class="navbar-collapse collapse navbar-responsive-collapse">
         <div class="nav navbar-nav navbar-left"><a href="../index.html"><img src="../img/amc.header.logo.full.png"/></a></div>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="amc.talent.gallery.html">图库</a></li>
-          <li><a href="amc.talent.updates.html">博客</a></li>
+          <li><a href="amc.talent.updates.html">活动更新</a></li>
           <li><a href="amc.talent.index.html">活动主页</a></li>
           <li><a href="../events.html">活动全集</a></li>
         </ul>
       </div>
     </div>
     <!--This is where our main content is inserted into.-->
-    <div id="myCarousel" class="carousel section">
-      <!--Round page indicators-->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <!--Wrapper for inner slides-->
-      <div class="carousel-inner">
-        <div class="item active"><img src="../img/14-15/amc.talent/poster.png"/>
-          <h1>AMCISA Talent Night</h1>
-        </div>
-      </div>
-      <!--Buttons to slide right or left--><a href="#myCarousel" data-slide="prev" class="carousel-control left"> <span class="glyphicon glyphicon-chevron-left"></span></a><a href="#myCarousel" data-slide="next" class="carousel-control right"><span class="glyphicon glyphicon-chevron-right"></span></a>
-    </div>
     <div class="content">
-      <div class="panel panel-success section">
-        <div class="panel-heading">
-          <h1>NTU Talent Night!  </h1>
+      <div class="wrapper">
+        <div id="poster-label" class="poster">
+          <div class="ps-img"><img src="../img/14-15/amc.talent/poster.png"/>
+            <div class="ps-cover"></div>
+          </div>
         </div>
-        <div class="panel-body"> <a href="https://www.facebook.com/media/set/?set=oa.731244720291737&amp;type=1">
-            <h1>图库在此处！</h1></a>
-          <div class="question">       
-            <h3>一年一度的 Talent Night即将引爆，为各位新一年的大学生活拉开序幕！</h3>
-            <h3>你拥有什么talent，无论是唱歌、跳舞、戏剧或者是其它才华， Talent Night无任欢迎！ </h3>
-            <h3>大胆秀出自己的才艺，发掘自我吧！还在考虑什么？赶快报名吧！</h3>
-            <h1>Date  : 23 / 08 /14</h1>
-            <h1>Time  : 6.30 p.m. - 11.00 p.m.</h1>
-            <h1>Venue : NTU LT 19</h1>
+        <div class="ps-well">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <h1>Amcisa 才华之夜</h1>
+            <h3>Talent Night @ NTU & NUS</h3>
+            <div class="btn btn-dark description-btn"> 
+              <h3>#活动详情</h3>
+            </div><a href="amc.talent.updates.html" class="white btn btn-dark events-btn">            
+              <h3>#近期更新</h3></a><p>一年一度的 Talent Night即将引爆，为各位新一年的大学生活拉开序幕！
+你拥有什么talent，无论是唱歌、跳舞、戏剧或者是其它才华， Talent Night无任欢迎！ 
+大胆秀出自己的才艺，发掘自我吧！还在考虑什么？赶快报名吧！</p>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+        <div id="description-label" class="container grey-bg full-pg">
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <h1 class="border-bottom-light">活动详情</h1>
+            </div>
+            <div class="col-md-3"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-5 align-left">
+              <h2><span class="fa fa-fw fa-clock-o red">&nbsp;</span>活动日期 : 23th October 2014</h2>
+              <h2> <span class="fa fa-fw fa-calendar yellow">&nbsp;</span>活动时间 : 6.30 p.m. - 11.00 p.m.</h2>
+              <h2><span class="fa fa-fw fa-building blue">&nbsp;</span>活动地点 : <span class="fa fa-magic"> </span>NTU LT 19</h2>
+            </div>
+            <div class="col-md-3"></div>
           </div>
         </div>
       </div>
@@ -66,7 +72,13 @@
     <!--Utility scripts-->
     <script src="../js/jquery-1.11.0.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/util.js"></script>
     <script src="../js/googlepage.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        pageScrollTo("description");
+        return false;
+      })
+    </script>
   </body>
 </html>

@@ -106,7 +106,7 @@ p{
   .poster>.ps-img>.ps-cover{
     position: absolute;
     top: 0px;
-    opacity: 0.28;
+    opacity: 0.26;
     background-color: black;
     z-index: 10;
     width: 100%;
@@ -117,6 +117,7 @@ p{
     min-width: 100%;
   }
   .ps-well{
+    min-width: 100%;
     position: absolute;
     color:white;
     background-color: rgba(0,0,0,0);
