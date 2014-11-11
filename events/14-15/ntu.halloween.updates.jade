@@ -17,14 +17,14 @@ block content
           li
             a(href='#houji', data-toggle='tab', aria-expanded='false') Amhallo 后记
       .col-md-9
-        #myTabContent.tab-content
-          #xuanchuan.tab-pane.fade.active.in
+        .tab-content#myTabContent
+          .tab-pane.fade.active.in#xuanchuan
             .align-left
               include:markdown ../14-15.includes/ntu.halloween.xuanchuan.md
-          #halloffame.tab-pane.fade
+          .tab-pane.fade#halloffame
             .align-left
               include ../14-15.includes/ntu.halloween.halloffame.jade
-          #houji.tab-pane.fade
+          .tab-pane.fade#houji
             .align-left
               include:markdown ../14-15.includes/ntu.halloween.houji.md
       .col-md-1
