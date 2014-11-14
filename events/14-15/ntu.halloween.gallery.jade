@@ -1,0 +1,27 @@
+extends ./ntu.halloween.layout.jade
+
+block title
+  title Gallery
+
+block content
+  link(href="http://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.2.2/css/nanogallery.min.css", rel="stylesheet")
+
+  .wrapper
+    .container.grey-bg.full-pg#services-label
+      .row
+        #nanoGallery1
+
+block script
+  script(src="http://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.2.2/jquery.nanogallery.min.js")
+  script(type="text/javascript").
+    $(document).ready(function () {
+      $("#nanoGallery1").nanoGallery({
+        kind:'flickr',
+        userID:'127695913@N03',
+        photoset:'72157648541944515',
+        thumbnailLazyLoad: true,
+        thumbnailWidth: 120, thumbnailHeight: 120,
+        thumbnailHoverEffect: 'scaleLabelOverImage,borderDarker'     
+      });
+    });
+    
