@@ -135,6 +135,9 @@ p{
   .mobile-only{
     display: none;
   }
+  .pc-only{
+    display: inherit;
+  }
 }
 
 @media(max-width: 992px){
@@ -148,6 +151,9 @@ p{
   .mobile-only{
     display: inherit;
   }
+  .pc-only{
+    display: none;
+  }
 }
 
 /*Modifiers*/
@@ -156,6 +162,12 @@ p{
 }
 .align-right{
   text-align: right;
+}
+.align-center{
+  text-align: center;
+}
+.align-mid-vertical{
+  vertical-align: middle;
 }
 .hide{
   display: none;
@@ -174,6 +186,9 @@ p{
 }
 .underline:hover{
   text-decoration: underline;  
+}
+.text-underline{
+  text-decoration: underline;
 }
 .zero-margin{
   margin: 0px;

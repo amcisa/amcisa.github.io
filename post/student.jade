@@ -16,79 +16,47 @@ block content
           span.fa.fa-group
           | &nbsp;点击以下问题开始了解吧！
       .col-md-2
-  .container.grey-bg.fillx.filly.align-left
-    .row
-      .col-md-1
-      .col-md-5.topic
-        br
-        include ../includes/registration.jade
-      .col-md-5
-        br
-        include ../includes/registration_2.jade
-      .col-md-1
-    .row
-      .col-md-1
-      .col-md-5.topic
-        br
-        include ../includes/tuition_grant.jade
-      .col-md-5
-        br
-        include ../includes/tuition_grant_2.jade
-      .col-md-1
-    .row
-      .col-md-1
-      .col-md-5.topic
-        br
-        include ../includes/tuition_fee_loan.jade
-      .col-md-5
-        br
-        include ../includes/tuition_fee_loan_2.jade
-      .col-md-1
-    .row
-      .col-md-1
-      .col-md-5.topic
-        br
-        include ../includes/student_pass.jade
-      .col-md-5
-        br
-        include ../includes/student_pass_2.jade
-      .col-md-1
-    .row
-      .col-md-1
-      .col-md-5.topic
-        br
-        include ../includes/accomodation.jade
-      .col-md-5
-        br
-        include ../includes/accomodation_2.jade
-      .col-md-1
-    .row
-      .col-md-1
-      .col-md-5.topic
-        br
-        include ../includes/medic_exam.jade
-      .col-md-5
-        br
-        include ../includes/medic_exam_2.jade
-      .col-md-1
-    .row
-      .col-md-1
-      .col-md-5.topic
-        br
-        include ../includes/bank_account.jade
-      .col-md-5
-        br
-        include ../includes/bank_account_2.jade
-      .col-md-1
-    .row
-      .col-md-1
-      .col-md-5.topic
-        br
-        include ../includes/amcisa_FOC.jade
-      .col-md-5
-        br
-        include ../includes/amcisa_FOC_2.jade
-      .col-md-1
+  .container.grey-bg.fillx.filly.align-left.qa-out
+    .container.fillx
+      h1.text-underline
+        i.fa.fa-fw.fa-location-arrow.red
+        | &nbsp;申请
+      include ../includes/registration_faq.jade
+    .container.fillx
+      h1.text-underline
+        i.fa.fa-fw.fa-legal.yellow
+        | &nbsp;Tuition Grant
+      include ../includes/tuition_grant_faq.jade
+    .container.fillx
+      h1.text-underline
+        i.fa.fa-fw.fa-money.yellow
+        | &nbsp;Tuition Fee Loan
+      include ../includes/tuition_fee_loan_faq.jade
+    .container.fillx
+      h1.text-underline
+        i.fa.fa-fw.fa-credit-card.green
+        | &nbsp;学生证明
+      include ../includes/student_pass_faq.jade
+    .container.fillx
+      h1.text-underline
+        i.fa.fa-fw.fa-building.blue
+        | &nbsp;住宿
+      include ../includes/accomodation_faq.jade
+    .container.fillx
+      h1.text-underline
+        i.fa.fa-fw.fa-hospital-o.blue
+        | &nbsp;身体检查
+      include ../includes/medic_exam_faq.jade
+    .container.fillx
+      h1.text-underline
+        i.fa.fa-fw.fa-dollar.green
+        | &nbsp;银行户口
+      include ../includes/bank_account_faq.jade
+    .container.fillx
+      h1.text-underline
+        i.fa.fa-fw.fa-fire.red
+        | &nbsp;AMCISA新生营
+      include ../includes/amcisa_FOC_faq.jade
 
 block script
   script(src="js/student.js")
