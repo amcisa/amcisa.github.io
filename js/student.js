@@ -13,9 +13,5 @@ function redirectUp(){
     $(".qa-panel-container").insertBefore(parent[parent.length-1]);
     scrollToElement($(".qa-panel"));
     $(".qa-panel").html(html);
-    /*
-    $(".qa-panel").fadeOut(function() {
-      $(this).html(html);
-    }).fadeIn();*/
   });
 }

@@ -1,3 +1,11 @@
+mixin faq_tab(title, included)
+  .container.fillx
+    h1.text-underline
+      i.fa.fa-fw&attributes(attributes)
+      | &nbsp;申请
+      =title
+    block
+
 extends ./layout.jade
 
 block title
@@ -17,45 +25,26 @@ block content
           | &nbsp;点击以下问题开始了解吧！
       .col-md-2
   .container.grey-bg.fillx.filly.align-left.qa-out
-    .container.fillx
-      h1.text-underline
-        i.fa.fa-fw.fa-location-arrow.red
-        | &nbsp;申请
+  
+    +faq_tab("申请")(class="fa-location-arrow red")
       include ../includes/registration_faq.jade
-    .container.fillx
-      h1.text-underline
-        i.fa.fa-fw.fa-legal.yellow
-        | &nbsp;Tuition Grant
+    
+    +faq_tab("Tuition Grant")(class="fa-legal yellow")
       include ../includes/tuition_grant_faq.jade
-    .container.fillx
-      h1.text-underline
-        i.fa.fa-fw.fa-money.yellow
-        | &nbsp;Tuition Fee Loan
+
+    +faq_tab("银行户口， Tuition Fee Loan")(class="fa-money yellow")
       include ../includes/tuition_fee_loan_faq.jade
-    .container.fillx
-      h1.text-underline
-        i.fa.fa-fw.fa-credit-card.green
-        | &nbsp;学生证明
+
+    +faq_tab("学生证明")(class="fa-credit-card green")
       include ../includes/student_pass_faq.jade
-    .container.fillx
-      h1.text-underline
-        i.fa.fa-fw.fa-building.blue
-        | &nbsp;住宿
+
+    +faq_tab("住宿")(class="fa-building blue")
       include ../includes/accomodation_faq.jade
-    .container.fillx
-      h1.text-underline
-        i.fa.fa-fw.fa-hospital-o.blue
-        | &nbsp;身体检查
+
+    +faq_tab("身体检查")(class="fa-hospital-o blue")
       include ../includes/medic_exam_faq.jade
-    .container.fillx
-      h1.text-underline
-        i.fa.fa-fw.fa-dollar.green
-        | &nbsp;银行户口
-      include ../includes/bank_account_faq.jade
-    .container.fillx
-      h1.text-underline
-        i.fa.fa-fw.fa-fire.red
-        | &nbsp;AMCISA新生营
+
+    +faq_tab("AMCISA新生营")(class="fa-fire red")
       include ../includes/amcisa_FOC_faq.jade
 
 block script
