@@ -47,5 +47,5 @@ def startRender(path,batfile):
 if __name__ == "__main__":
    server.serve(7000)
    startRender("post","rpost.bat")
-   startRender("events/14-15","revent.bat")
+   startRender("events/14-15.post","revent.bat")
    startLogger()
