@@ -6,7 +6,7 @@ pause
 rd /S originals
 cd ..
 cd events
-rd /S /Q 14-15
+rd /S /Q 14-15.post
 rd /S /Q 14-15.includes
 cd ..
 rd /S /Q data
