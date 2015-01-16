@@ -1,0 +1,20 @@
+extends ./ntu.amcny.layout.jade
+
+block title
+  title 注册
+
+block content
+  .wrapper
+    .container.grey-bg.full-pg#services-label
+      .row
+        h1 这儿注册!
+      .row
+        //- Replace "your-id-here" with the document key of your google form.
+        iframe(
+          src="https://docs.google.com/forms/d/10k7TShvPGhkkKUftXe5bmlsSlKaGg567sfKRWpxouH0/viewform?embedded=true"
+          width="730"
+          height="700"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          ) Loading...

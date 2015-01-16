@@ -1,0 +1,63 @@
+extends ./amc.mygather.layout.jade
+
+block title
+  title Event
+
+block content
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        //- Replace this with the poster image found in your images/amc.mygather folder.
+        img(src="../../img/14-15/amc.mygather/poster.photo.jpg")
+        .ps-cover(style="opacity: 0.3;")
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 南洋理工大学大马留新学生联谊会
+        h3 Malaysian Gathering @NTU
+        .btn.btn-dark.description-btn 
+          h3 #活动详情
+        a(href="amc.mygather.updates.html").white.btn.btn-dark.events-btn             
+          h3 #近期更新
+        :markdown
+          开学时期来临了，是时候恢复放假心情，准备上课了…. 
+          但是，你接下来的大学人生不会只是上课，读书，上课，读书吧…… 
+          所以，不妨加入这个由NTU AMCISA和NTU MSA联合精心举办一年一度的Malaysian Gathering吧!!! 
+          在这个活动，你不仅可以和同样来自马来西亚的朋友们玩游戏， 
+          还可以观看表演，歇息一会儿，为你为了读书而觉得紧绷的心情放松下来吧!!! 
+
+      .col-md-3
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 活动日期 : 
+            //- Replace the following date with event date
+            | 31th January 2015
+          h2 
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 活动时间 : 
+            //- Replace the following time with event time
+            | 6.30 p.m. - 10.00 p.m.
+          h2
+            span.fa.fa-fw.fa-building.blue &nbsp;
+            | 活动地点 : 
+            span.fa.fa-magic
+            //- Replace the following venue with event venue 
+            | HSS Foyer
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })

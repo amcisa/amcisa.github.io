@@ -1,0 +1,61 @@
+extends ./ntu.amcny.layout.jade
+
+block title
+  title Event
+
+block content
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        //- Replace this with the poster image found in your images/ntu.amcny folder.
+        img(src="../../img/14-15/ntu.amcny/poster.photo.jpg")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 南洋理工大学新春晚会
+        h3 AmCNY @ NTU
+        .btn.btn-dark.description-btn 
+          h3 #活动详情
+        a(href="ntu.amcny.updates.html").white.btn.btn-dark.events-btn             
+          h3 #近期更新
+        :markdown
+          羊年的脚步已临近​，当辞旧的钟声在大地回荡，当喜庆的焰花在星空绽放，一个崭新的春天，
+          已经向我们靠近。在这个喜庆的日子里，AMCISA决定引爆一年一度的新春联欢—AMCNY！
+          希望会员们踊跃参与，迎接新年、联络感情，想必更添春节气息。
+
+      .col-md-3
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 活动日期 : 
+            //- Replace the following date with event date
+            | 7th February 2015 
+          h2 
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 活动时间 : 
+            //- Replace the following time with event time
+            | 6.00 p.m. - 11 p.m.
+          h2
+            span.fa.fa-fw.fa-building.blue &nbsp;
+            | 活动地点 : 
+            span.fa.fa-magic
+            //- Replace the following venue with event venue 
+            | HSS Foyer
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })
