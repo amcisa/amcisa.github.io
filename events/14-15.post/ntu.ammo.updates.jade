@@ -1,0 +1,24 @@
+extends ./ntu.ammo.layout.jade
+
+block title
+  title 更新
+
+block content
+  .container.grey-bg.full-pg.filly
+    .row
+      h1 活动更新
+    .row
+      .col-md-2
+        ul.nav.nav-pills.nav-stacked.fixed
+          //- Add or replace the li elements with your own.
+          li.active
+            a(href='#xuanchuan', data-toggle='tab', aria-expanded='true') 首次宣传！
+      .col-md-9
+        .tab-content#myTabContent
+          //- Add your panes according to your li element.
+          .tab-pane.fade.active.in#xuanchuan
+            .align-left
+              h2 我们将于 1/2/2015 开放报名，敬请留意:)
+              a(href="http://goo.gl/MPSYcc") Facebook 宣传 Page
+              include ../14-15.includes/ntu.ammo.video.html
+      .col-md-1

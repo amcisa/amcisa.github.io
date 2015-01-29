@@ -1,0 +1,67 @@
+extends ./ntu.ammo.layout.jade
+
+block title
+  title Event
+
+block content
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        //- Replace this with the poster image found in your images/ntu.ammo folder.
+        img(src="../../img/14-15/ntu.ammo/poster.photo.jpg")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 南洋理工大学Amcisa出游记
+        h3 Amcisa Member Outing @ NTU
+        .btn.btn-dark.description-btn 
+          h3 #活动详情
+        .btn.btn-dark.video-btn 
+          h3 #活动详情
+        a(href="ntu.ammo.updates.html").white.btn.btn-dark.events-btn             
+          h3 #近期更新
+        :markdown
+          (AMMO)是一个以凝聚、团结AMCISA会员为目标的活动。 
+          在各自忙碌的大学生涯里，想找个喘息的空间？想和好朋友出走，却没有时间筹办？好机会来了！！
+          歡迎参加ammo！
+
+      .col-md-3
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-warning.red &nbsp;
+            | 报名截至 : 
+            //- Replace the following date with event date
+            | 18th February 2015 
+          h2
+            span.fa.fa-fw.fa-clock-o.yellow &nbsp;
+            | 活动日期 : 
+            //- Replace the following date with event date
+            | 6-8th March 2015 
+          h2
+            span.fa.fa-fw.fa-building.blue &nbsp;
+            | 活动地点 : 
+            span.fa.fa-magic
+            //- Replace the following venue with event venue 
+            | Eagle Ranch, Port Dickson
+        .col-md-3
+
+    .container.grey-bg.full-pg#video-label
+      include ../14-15.includes/ntu.ammo.video.html
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      pageScrollTo("video");
+      return false;
+    })
