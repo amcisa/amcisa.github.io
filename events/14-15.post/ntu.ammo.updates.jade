@@ -13,6 +13,8 @@ block content
           //- Add or replace the li elements with your own.
           li.active
             a(href='#xuanchuan', data-toggle='tab', aria-expanded='true') 首次宣传！
+          li
+            a(href='#openregister', data-toggle='tab', aria-expanded='false') 开放申请！
       .col-md-9
         .tab-content#myTabContent
           //- Add your panes according to your li element.
@@ -21,4 +23,7 @@ block content
               h2 我们将于 1/2/2015 开放报名，敬请留意:)
               a(href="http://goo.gl/MPSYcc") Facebook 宣传 Page
               include ../14-15.includes/ntu.ammo.video.html
+          .tab-pane.fade.in#openregister
+            .align-left
+              include:markdown ../14-15.includes/ntu.ammo.openregistration.md
       .col-md-1
