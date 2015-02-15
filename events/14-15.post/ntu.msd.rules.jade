@@ -1,0 +1,32 @@
+mixin faq_tab(title, included)
+  .container.fillx
+    h1.text-underline
+      i.fa.fa-fw&attributes(attributes)
+      | &nbsp;
+      =title
+    block
+
+extends ./ntu.msd.layout.jade
+
+block title
+  title FAQ
+
+block content
+  .container.grey-bg.fillx
+    h1 运动会项目规则
+    h4 Rules for each event in MSD 2015
+  .container.grey-bg.fillx
+    .row.qa-panel-container
+      .col-md-2
+      .col-md-8.qa-panel.align-left.black
+        h1 
+          span.fa.fa-group
+          | &nbsp;点击以下项目开始了解吧！
+      .col-md-2
+  .container.grey-bg.fillx.filly.align-left.qa-out
+  
+    +faq_tab("Rules")(class="fa-location-arrow red")
+      include ../14-15.includes/ntu.msd.gamerules.jade
+
+block script
+  script(src="../../js/student.js")
