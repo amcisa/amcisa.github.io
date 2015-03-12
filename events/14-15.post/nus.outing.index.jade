@@ -1,0 +1,62 @@
+extends ./nus.outing.layout.jade
+
+block title
+  title Event
+
+block content
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        //- Replace this with the poster image found in your images/nus.outing folder.
+        img(src="../../img/14-15/nus.outing/poster.photo.jpg")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 南洋理工大学考试解压宵夜
+        h3 Exam Welfare Refreshment @ NTU
+        .btn.btn-dark.description-btn 
+          h3 #活动详情
+        a(href="nus.outing.updates.html").white.btn.btn-dark.events-btn             
+          h3 #近期更新
+        :markdown
+          鸟语花香、风景宜人的 Southern Ridges, 期盼和大家进行一次愉悦的 Forest Walk, 
+          聆听 Singing Forest 里的曼妙音符， 走过 Alexandre Arch 的美丽弧度， 陶醉于主题繁趣的 Park。。。
+          自然也少不了为大家准备的一系列精彩活动， 升华彼此的友谊， 丰富生命的风景， 愿能为你们在新的学期里，
+          烙下一页感人的回忆~~
+
+      .col-md-3
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 活动日期 : 
+            //- Replace the following date with event date
+            | 13th November 2014 
+          h2 
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 活动时间 : 
+            //- Replace the following time with event time
+            | 9.00 p.m. - 11 p.m.
+          h2
+            span.fa.fa-fw.fa-building.blue &nbsp;
+            | 活动地点 : 
+            span.fa.fa-magic
+            //- Replace the following venue with event venue 
+            | TCT LT
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })
