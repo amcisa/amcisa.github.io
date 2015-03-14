@@ -12,11 +12,11 @@ block content
         ul.nav.nav-pills.nav-stacked.fixed
           //- Add or replace the li elements with your own.
           li.active
-            a(href='#xuanchuan', data-toggle='tab', aria-expanded='true') 上载中。。。
+            a(href='#houji', data-toggle='tab', aria-expanded='true') AMCNY新春联欢精彩后记
       .col-md-9
         .tab-content#myTabContent
           //- Add your panes according to your li element.
-          .tab-pane.fade.active.in#xuanchuan
+          .tab-pane.fade.active.in#houji
             .align-left
-              span.fa.fa-spinner.ico-large.fa-spin
+              include:markdown ../14-15.includes/ntu.amcny.houji.md
       .col-md-1
