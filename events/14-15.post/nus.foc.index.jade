@@ -1,0 +1,66 @@
+extends ./nus.foc.layout.jade
+
+block title
+  title Event
+
+block content
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        //- Replace this with the poster image found in your images/nus.foc folder.
+        img(src="../../img/14-15/nus.foc/poster.photo.jpg")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 NUS AMCISA 15/16 迎新营 Lumiere
+        h3 FOC 15/16 Lumiere @ NUS
+        .btn.btn-dark.description-btn 
+          h3 #活动详情
+        :markdown
+          为了让新生更快适应大学生活,认识更多来自相同背景的朋友，NUS AMCISA FOCComm 筹备了为期六天的迎新营，以迎接在 2015/16 学年进入NUS就读的学弟妹。
+
+          欲了解更多详情，请浏览网址 http://amcisa.org/events/nus/foc/15/lumiere/
+
+          我们不见不散！
+
+      .col-md-3
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 活动日期 : 
+            //- Replace the following date with event date
+            | 14 July 2015 - 19 July 2015
+          h2 
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 活动时间 : 
+            //- Replace the following time with event time
+            | 8.00 a.m. - 10.00p.m.
+          h2
+            span.fa.fa-fw.fa-building.blue &nbsp;
+            | 活动地点 : 
+            span.fa.fa-magic
+            //- Replace the following venue with event venue 
+            | NUS
+          h2
+            span.fa.fa-fw.fa-dollar.green &nbsp;
+            | 活动费用 : 
+            //- Replace the following venue with event price 
+            | $ 60.00
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })
