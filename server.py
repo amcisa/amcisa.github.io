@@ -13,9 +13,10 @@ else:
 
 def serve(port=8000,url=None):
    if url==None: url="http://localhost:%s"%port
+   print(url)
    try:
       #Check if the local server already exists.
-      exist=urlopen(url)
+      exist=urlopen(url, timeout=10)
       print("The port, %s is already open for %s"%(port,url))
       input("Press enter to exit.")
    except URLError:

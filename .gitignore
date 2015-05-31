@@ -3,7 +3,7 @@
 /data
 *.pyc
 *.psd
-/__pycache__
+/__pycache__/*.pyc
 # Logs
 logs
 *.log
