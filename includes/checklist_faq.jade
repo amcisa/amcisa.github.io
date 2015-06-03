@@ -1,0 +1,90 @@
+mixin tablebody(no, date, thing, add)
+  tr
+    td=no
+    td=date
+    td
+      if block
+        block
+      else 
+        =thing
+    td=add
+
+
+.col-md-12
+  ul.fa-ul.align-left
+    li.qa-li.underline
+      h3.white
+        i.fa.fa-li.fa-fw.fa-chevron-circle-right
+        p 
+          i.fa.fa-fw.fa-fire.red
+          | 2015年 NTU 行事历
+      .hide
+        table.table.table-striped.table-hover
+          thead
+            tr 
+              th 序 
+              th 日期(dd/mm)
+              th 事项
+              th(style="width:25%;") 备注
+          tbody
+            +tablebody(1, "2 月到 15/08", "网上申请 Tuition Fee Loan (TFL)")
+            +tablebody(2, "1/6 到 9/7")
+              :markdown
+                [网上申请 NTU Study Loan](http://admissions.ntu.edu.sg/UndergraduateAdmissions/FinancialAssistance/Pages/NTUStudyLoan.aspx)
+
+            +tablebody(3,"08/06（0900hrs)-06/07(1730hrs)")
+              :markdown
+                [网上申请宿舍](https://wis.ntu.edu.sg/webexe/owa/af_hostel.login)
+
+            +tablebody(4,"09/06 开始")
+              :markdown
+                [网上申请学生证 (Student Pass)\[指南链接\]](http://www3.ntu.edu.sg/oad2/website_files/international/Student_Pass_application_notes-1.pdf)
+
+            +tablebody(5, "15/6-19/7", "网上报名 FOA，填妥新生报到以及宿舍资料")
+            +tablebody(6, "到 22/06")
+              :markdown
+                [Online Declaration, Upload passportsize 照片](https://wis.ntu.edu.sg/pls/webexe/adm_acceptance_form.login)
+
+            +tablebody(7, "14/7(1000 hrs)–4/8","网上查询英文入学考试 QET 详情")
+            +tablebody(8, "20/7", "网上查询宿舍分配详情")
+            +tablebody(9, "28/7- 30/7(1000 hrs -2200hrs)","","若在 29/7 后才接获大学录取，必须在之后的一天 working day matriculate online")
+              :markdown
+                [网上申请入学许可证（online matriculation）](https://sso.wis.ntu.edu.sg/webexe88/owa/sso_login1.asp?t=1&p2=https://wish.wis.ntu.edu.sg/pls/webexe/aus_st ars_matriculate.freshmen_survey&ext ra=&pg)
+
+            //multiple blocks in mixins not available
+            tr.success
+              td 10
+              td 29/7-31/7
+              td
+                :markdown
+                  我们将带领你完成以下手续：
+
+                  1.完成 Tuition Fee Loan 的申请
+
+                  2.提交 Giro Form
+
+                  3.宿舍费缴交
+
+                  4.身体检查
+
+              td 
+                :markdown
+                  请携带：
+
+                  1.入学通知书（Admission Letter）
+
+                  2.护照
+
+                  3．白卡（embarkation card）
+
+                  4.Authorisation form of Medical Procedures
+
+                  5.Appointment of Local Guardian Form (若有)
+
+            +tablebody(11, "8月","申请 PC Loan")
+            +tablebody(12, "5/8-6/8","新生迎新仪式（Freshmen Welcome Ceremony）", "时间视各科系而定")
+            +tablebody(13, "12/8","进行体检的最后一天","Form MC1 必须交至Medical Centre")
+            +tablebody(14, "12/8-13/8","办理学生通行证（Student Pass）")
+            +tablebody(15, "01/09-10/09","网上申请 MOE Tuition Grant")
+            +tablebody(16, "9月中-10月初","文件证明")
+            +tablebody(17, "6/10-9/10","签署 Tuition Grant 同意书(若担保人不在新加坡，可于 12/9 从网站下载同意书让担保人签署后交会给校方)")

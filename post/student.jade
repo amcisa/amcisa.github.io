@@ -5,6 +5,7 @@ mixin faq_tab(title, included)
       | &nbsp;
       =title
     block
+  br
 
 extends ./layout.jade
 
@@ -25,6 +26,9 @@ block content
           | &nbsp;点击以下问题开始了解吧！
       .col-md-2
   .container.grey-bg.fillx.filly.align-left.qa-out
+
+    +faq_tab("新生注意")(class="fa-life-ring yellow")
+      include ../includes/checklist_faq.jade
   
     +faq_tab("申请")(class="fa-location-arrow red")
       include ../includes/registration_faq.jade
@@ -34,6 +38,9 @@ block content
 
     +faq_tab("银行户口， Tuition Fee Loan")(class="fa-money yellow")
       include ../includes/tuition_fee_loan_faq.jade
+
+    +faq_tab("其他财务援助")(class="fa-info-circle red")
+      include ../includes/other_loans_faq.jade
 
     +faq_tab("学生证明")(class="fa-credit-card green")
       include ../includes/student_pass_faq.jade
@@ -46,6 +53,7 @@ block content
 
     +faq_tab("AMCISA新生营")(class="fa-fire red")
       include ../includes/amcisa_FOC_faq.jade
+
 
 block script
   script(src="js/student.js")
