@@ -1,75 +1,34 @@
-mixin event_tab(eventlink,imgsrc, title, type,type_color, description)
-  a(href=eventlink).white.underline.row
-    .col-md-3
-    .col-md-2.top-margin
-      // for using icons instead of images
-      if block
-        block
-      else
-        img(src=imgsrc)
-    .col-md-4.align-left
-      .row.zero-margin
-        .col-md-10
-            h2=title
-        .col-md-2
-          h4(class=type_color)=type
-      .row
-        p=description
-    .col-md-3
-  .col-md-12
-    .col-md-3
-    .col-md-6.border-bottom-light
-    .col-md-3 
-
 extends ./layout.jade
 
 block title
   title Home
 
 block content
-  .wrapper
-    //poster
-    .poster#poster-label
-      .ps-img
-        img(src="./img/14-15/poster.photo.jpg")
-        .ps-cover
-    .ps-well
-      .col-md-3
-      .col-md-6
-        h1 留新大马独中生联谊会
-        h3 Association of Malaysian Chinese Independent School Alumni
-        .btn.btn-dark.services-btn 
-          h3 #常用服务
-        .btn.btn-dark.events-btn 
-          h3 #最新动态
+  link(href="./css/animate.min.css", rel="stylesheet")
+  link(href="./css/index.css", rel="stylesheet")
+  .wrapper 
+    section#logo.wow.zoomInUp
+      img(src='./img/amc.logo.big.png')
+    section#about-us
+      .col-md-2
+      .col-md-4.wow.fadeInUp
+        img(src="./img/dongzong(1).jpg")
+      .col-md-4.wow.fadeInDown
         include:markdown ../includes/amcisa_profile.md
-      .col-md-3
+      .col-md-2
 
-    //All services
-    .container.grey-bg.full-pg#services-label
-      .row
-        .col-md-3
-        .col-md-6.border-bottom-light
-          h1#service 常用服务
-        .col-md-3
-      .row.bottom-margin
-        .col-md-3
-        a(href="student.html").col-md-3.red.txt-shadow
-          span.fa.fa-compass.ico-large
-          h2 升学资讯
-        a(href="update.html").col-md-3.yellow.txt-shadow
-          span.fa.fa-pencil-square-o.ico-large
-          h2 NTU会员更新资料
-        .col-md-3
-    
-    //All events
-    .container.grey-bg.full-pg#events-label
-      .row
-        .col-md-3
-        .col-md-6.border-bottom-light
-          h1#event 最新动态
-        .col-md-3
+    section#recent-events.wow.rollIn
+      h1 最新动态
+      .line
+      a(href="http://foa.amcisa.org/").col-md-4.active
+        .image-text
+          h2 #NTU AMCISA FOC 15/16 D'Agent
+          p
+            | 现已开放给大马留学南大的新生参加。迎新营期间，学长姐将会协助学弟妹办理入学手续，
+            | 也将与学弟妹分享宝贵的经验以解除他们的困惑。当然少不了许多刺激好玩的游戏为你精彩的大学生活揭开序幕!!!
+        img(src='./img/14-15/ntu.foa/poster.photo.jpg')
 
+<<<<<<< HEAD
       +event_tab("http://foa.amcisa.org",
               "./img/ntu.foa1516.logo.png","#NTU迎新营小南国的钻石特务",
               "活动更新","red", 
@@ -87,44 +46,53 @@ block content
               "./img/14-15/nus.foc/logo.png","#NUS AMCISA FOC 15/16 Lumiere",
               "活动更新","red", 
               "为了让新生更快适应大学生活,认识更多来自相同背景的朋友，NUS AMCISA FOCComm筹备了为期五天的迎新营，以迎接于 2015/16 学年进入NUS就读的学弟妹。")
+=======
+      a(href="events/14-15/nus.foc.index.html").col-md-4
+        .image-text
+          h2 #NUS AMCISA FOC 15/16 Lumiere
+          p
+            | 为了让新生更快适应大学生活,认识更多来自相同背景的朋友，NUS AMCISA FOCComm筹备了为期六天的迎新营，
+            | 以迎接于 2015/16 学年进入NUS就读的学弟妹。
+        img(src='./img/14-15/nus.foc/poster.photo.jpg')
 
-      +event_tab("events/14-15/ntu.ewr2.index.html",
-              "./img/14-15/ntu.ewr2/logo.png","#NTU Exam Welfare Refereshment 2.0",
-              "活动更新","red", 
-              "Final和Assignment due date慢慢逼近，现在的你是不是非常紧绷呢？\
-              歇息充电一会后再继续冲刺吧!")
+      a(href="events/14-15/ntu.ewr2.index.html").col-md-4
+        .image-text
+          h2 #NTU Exam Welfare Refereshment 2.0
+          p
+            | Final和Assignment due date慢慢逼近，现在的你是不是非常紧绷呢？
+            | 歇息充电一会后再继续冲刺吧!
+        img(src='./img/14-15/ntu.ewr2/poster.photo.jpg')
+>>>>>>> origin/index2
 
-      +event_tab("events/14-15/ntu.msd.index.html",
-              "./img/14-15/ntu.msd/logo.png","#NTU Malaysian Sports Day",
-              "活动更新","red", 
-              "MSD is an annual event where Malaysian students currently\
-               studying in Singapore can get together and take part in a day of Sports and Games!")
+      a(href="events/14-15/ntu.msd.index.html").col-md-4
+        .image-text
+          h2 #NTU Malaysian Sports Day
+          p
+            | MSD is an annual event where Malaysian students currently
+            | studying in Singapore can get together and take part in a day of Sports and Games!"
+        img(src='./img/14-15/ntu.msd/poster.photo.jpg')
 
-      +event_tab("events/14-15/nus.cohesion.index.html",
-                "./img/14-15/nus.cohesion/logo.png","#NUS MSL-AMCISA Cohesion 2015",
-                "活动更新","red", 
-                "2GATHER 2.0 is baacck!!! XD. It is a great chance for all the Malaysians \
-                in NUS to bond with each other.This time we will be having station games, water games,\
-                 BBQ session and many more!")
+      a(href="events/14-15/nus.cohesion.index.html").col-md-4
+        .image-text
+          h2 #NUS MSL-AMCISA Cohesion 2015
+          p
+            | 2GATHER 2.0 is baacck!!! XD. It is a great chance for all the Malaysians 
+            | in NUS to bond with each other.This time we will be having station games, water games,
+            | BBQ session and many more!
+        img(src='./img/14-15/nus.cohesion/poster.photo.jpg')
 
-      +event_tab("events/14-15/ntu.ammo.index.html",
-                "./img/14-15/ntu.ammo/logo.png","#NTU AMCISA Member Outing",
-                "活动更新","red", 
-                "(AMMO)是一个以凝聚、团结AMCISA会员为目标的活动。 \
-                在各自忙碌的大学生涯里，想找个喘息的空间？想和好朋友出走，却没有时间筹办？好机会来了！！ \
-                歡迎参加ammo！")
+      a(href="events/14-15/ntu.ammo.index.html").col-md-4
+        .image-text
+          h2 #NTU AMCISA Member Outing
+          p
+            | (AMMO)是一个以凝聚、团结AMCISA会员为目标的活动。
+            | 在各自忙碌的大学生涯里，想找个喘息的空间？想和好朋友出走，却没有时间筹办？好机会来了！！ 
+            | 歡迎参加ammo！
+        img(src='./img/14-15/ntu.ammo/poster.photo.jpg')
 
-      //Link to all events
-      .col-md-12
-        a(href="events.html")
-          h2 活动全集
-      br
-  
+    
+
 block script
-  script(type='text/javascript').
-    $(document).ready(function(){
-      pageScrollTo("events");
-      pageScrollTo("services");
-      pageScrollTo("poster");
-      return false;
-    })
+  script(src='js/wow.min.js')
+  script.
+    new WOW().init({offset: 200});

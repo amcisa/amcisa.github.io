@@ -1,105 +1,109 @@
-mixin event_tab(eventlink,imgsrc, title, type,type_color, description)
-  a(href=eventlink).white.underline.row
-    .col-md-3
-    .col-md-2.top-margin
-      img(src=imgsrc)
-    .col-md-4.align-left
-      .row.zero-margin
-        .col-md-10
-            h2=title
-        .col-md-2
-          h4(class=type_color)=type
-      .row
-        p=description
-    .col-md-3
-  .col-md-12
-    .col-md-3
-    .col-md-6.border-bottom-light
-    .col-md-3 
-
 extends ./layout.jade
 
 block title
   title Events
 
 block content
-  //All events
-  .container.grey-bg.full-pg#events-label
-    .row
-      .col-md-3
-      .col-md-6.border-bottom-light
-        h1#event 活动全集
-      .col-md-3
+  link(href="./css/animate.min.css", rel="stylesheet")
+  link(href="./css/index.css", rel="stylesheet")
+  br
+  section#recent-events.wow.rollIn
+    h1 活动全集
+    .line
+    a(href="http://foa.amcisa.org/").col-md-4
+      .image-text
+        h2 #NTU AMCISA FOC 15/16 D'Agent
+        p
+          | 现已开放给大马留学南大的新生参加。迎新营期间，学长姐将会协助学弟妹办理入学手续，
+          | 也将与学弟妹分享宝贵的经验以解除他们的困惑。当然少不了许多刺激好玩的游戏为你精彩的大学生活揭开序幕!!!
+      img(src='./img/14-15/ntu.foa/poster.photo.jpg')
 
+    a(href="events/14-15/nus.foc.index.html").col-md-4
+      .image-text
+        h2 #NUS AMCISA FOC 15/16 Lumiere
+        p
+          | 为了让新生更快适应大学生活,认识更多来自相同背景的朋友，NUS AMCISA FOCComm筹备了为期六天的迎新营，
+          | 以迎接于 2015/16 学年进入NUS就读的学弟妹。
+      img(src='./img/14-15/nus.foc/poster.photo.jpg')
+
+<<<<<<< HEAD
     +event_tab("events/14-15/nus.foc.index.html",
               "./img/14-15/nus.foc/logo.png","#NUS AMCISA FOC 15/16 Lumiere",
               "活动更新","red", 
               "为了让新生更快适应大学生活,认识更多来自相同背景的朋友，NUS AMCISA FOCComm筹备了为期五天的迎新营，以迎接于 2015/16 学年进入NUS就读的学弟妹。")
+=======
+    a(href="events/14-15/ntu.ewr2.index.html").col-md-4
+      .image-text
+        h2 #NTU Exam Welfare Refereshment 2.0
+        p
+          | Final和Assignment due date慢慢逼近，现在的你是不是非常紧绷呢？
+          | 歇息充电一会后再继续冲刺吧!
+      img(src='./img/14-15/ntu.ewr2/poster.photo.jpg')
+>>>>>>> origin/index2
 
-    +event_tab("events/14-15/ntu.ewr2.index.html",
-              "./img/14-15/ntu.ewr2/logo.png","#NTU Exam Welfare Refreshment 2.0",
-              "活动更新","red", 
-              "Final和Assignment due date慢慢逼近，现在的你是不是非常紧绷呢？\
-              歇息充电一会后再继续冲刺吧!")
+    a(href="events/14-15/ntu.msd.index.html").col-md-4
+      .image-text
+        h2 #NTU Malaysian Sports Day
+        p
+          | MSD is an annual event where Malaysian students currently
+          | studying in Singapore can get together and take part in a day of Sports and Games!"
+      img(src='./img/14-15/ntu.msd/poster.photo.jpg')
 
-    +event_tab("events/14-15/ntu.msd.index.html",
-              "./img/14-15/ntu.msd/logo.png","#NTU Malaysian Sports Day",
-              "活动更新","red", 
-              "MSD is an annual event where Malaysian students currently\
-               studying in Singapore can get together and take part in a day of Sports and Games!")
+    a(href="events/14-15/nus.cohesion.index.html").col-md-4
+      .image-text
+        h2 #NUS MSL-AMCISA Cohesion 2015
+        p
+          | 2GATHER 2.0 is baacck!!! XD. It is a great chance for all the Malaysians 
+          | in NUS to bond with each other.This time we will be having station games, water games,
+          | BBQ session and many more!
+      img(src='./img/14-15/nus.cohesion/poster.photo.jpg')
 
-    +event_tab("events/14-15/nus.cohesion.index.html",
-              "./img/14-15/nus.cohesion/logo.png","#NUS MSL-AMCISA Cohesion 2015",
-              "活动更新","red", 
-              "2GATHER 2.0 is baacck!!! XD. It is a great chance for all the Malaysians \
-              in NUS to bond with each other.This time we will be having station games, water games,\
-               BBQ session and many more!")
+    a(href="events/14-15/ntu.ammo.index.html").col-md-4
+      .image-text
+        h2 #NTU AMCISA Member Outing
+        p
+          | (AMMO)是一个以凝聚、团结AMCISA会员为目标的活动。
+          | 在各自忙碌的大学生涯里，想找个喘息的空间？想和好朋友出走，却没有时间筹办？好机会来了！！ 
+          | 歡迎参加ammo！
+      img(src='./img/14-15/ntu.ammo/poster.photo.jpg')
 
-    +event_tab("events/14-15/ntu.ammo.index.html",
-              "./img/14-15/ntu.ammo/logo.png","#NTU AMCISA Member Outing",
-              "活动更新","red", 
-              "(AMMO)是一个以凝聚、团结AMCISA会员为目标的活动。 \
-              在各自忙碌的大学生涯里，想找个喘息的空间？想和好朋友出走，却没有时间筹办？好机会来了！！ \
-              歡迎参加ammo！")
-    
-    +event_tab("events/14-15/nus.outing.index.html",
-              "./img/14-15/nus.outing/logo.png","#NUS AMCISA Member Outing",
-              "活动更新","red", 
-              "一系列精彩活动， 升华彼此的友谊， 丰富生命的风景， 愿能为你们在新的学期里，烙下一页感人的回忆~~")
-    
-    +event_tab("events/14-15/amc.mygather.index.html",
-              "./img/14-15/amc.mygather/logo.png","#NTU Malaysian Gathering",
-              "活动更新","red", 
-              "开学时期来临了，是时候恢复放假心情，准备上课了…. \
-              但是，你接下来的大学人生不会只是上课，读书，上课，读书吧……  \
-              所以，不妨加入这个由NTU AMCISA和NTU MSA联合精心举办一年一度的Malaysian Gathering吧!!!")
+    a(href="events/14-15/nus.outing.index.html").col-md-4
+      .image-text
+        h2 #NUS AMCISA Member Outing
+        p
+          | 一系列精彩活动， 升华彼此的友谊， 丰富生命的风景， 愿能为你们在新的学期里，烙下一页感人的回忆~~
+      img(src='./img/14-15/nus.outing/poster.photo.jpg')
 
-    +event_tab("events/14-15/ntu.amcny.index.html",
-              "./img/14-15/ntu.amcny/logo.png","#NTU AmCNY",
-              "活动更新","red", 
-              "羊年的脚步已临近​，当辞旧的钟声在大地回荡，当喜庆的焰花在星空绽放，一个崭新的春天，\
-              已经向我们靠近。")
+    a(href="events/14-15/amc.mygather.index.html").col-md-4
+      .image-text
+        h2 #NTU Malaysian Gathering
+        p
+          | 开学时期来临了，是时候恢复放假心情，准备上课了…. 
+          | 但是，你接下来的大学人生不会只是上课，读书，上课，读书吧……  
+          | 所以，不妨加入这个由NTU AMCISA和NTU MSA联合精心举办一年一度的Malaysian Gathering吧!!!
+      img(src='./img/14-15/amc.mygather/poster.photo.jpg')
 
-    +event_tab("events/14-15/ntu.ewr.index.html",
-              "./img/14-15/ntu.ewr/logo.png","#NTU Exam Welfare Refreshment",
-              "活动更新","red", 
-              "Final要到了，现在的你是不是非常紧绷呢？ 新鲜出炉的AMCISA Exam Welfare Refreshment邀你来歇息充电，\
-              和朋友聊天，吃些精致的小点心，尽情地放松。")
+    a(href="events/14-15/ntu.amcny.index.html").col-md-4
+      .image-text
+        h2 #NTU AmCNY
+        p
+          | 羊年的脚步已临近​，当辞旧的钟声在大地回荡，当喜庆的焰花在星空绽放，一个崭新的春天，\
+          | 已经向我们靠近。
+      img(src='./img/14-15/ntu.amcny/poster.photo.jpg')
 
-    +event_tab("events/14-15/ntu.halloween.index.html",
-              "./img/14-15/ntu.halloween/amhallo.thumb.png","#NTU Amhallo",
-              "活动更新","red", 
-              "2014年10月26日，当晚上7点30分的钟声响起，我们将在远处的古堡，等待着您与南瓜车的光临。")
+    a(href="events/14-15/ntu.ewr.index.html").col-md-4
+      .image-text
+        h2 #NTU Exam Welfare Refreshment
+        p
+          | Final要到了，现在的你是不是非常紧绷呢？ 新鲜出炉的AMCISA Exam Welfare Refreshment邀你来歇息充电，\
+          | 和朋友聊天，吃些精致的小点心，尽情地放松。
+      img(src='./img/14-15/ntu.ewr/poster.photo.jpg')
 
-    +event_tab("http://amcisa.org/wp/nus-amcisa-%E4%B8%AD%E7%A7%8B%E6%99%9A%E4%BC%9A/",
-              "img/14-15/nus.ammaf/logo.png","#NUS 中秋晚会",
-              "活动更新","red", 
-              "配合今年的主题“AM的心代表月亮，CI奔到月球天堂，SA下一样的月光”，许多有趣的活动将给我们带来不一样的惊喜,\
-               包括吃月饼柚子赏月、猜灯谜、心心相印、嫦娥追玉兔等等。")
+    a(href="events/14-15/ntu.halloween.index.html").col-md-4
+      .image-text
+        h2 #NTU Amhallo
+        p
+          | 2014年10月26日，当晚上7点30分的钟声响起，我们将在远处的古堡，等待着您与南瓜车的光临。
+      img(src='./img/14-15/ntu.halloween/amhallo.thumb.png')
 
-    +event_tab("events/14-15/amc.talent.index.html",
-              "img/14-15/amc.talent/logo.png","#AMCISA 才华之夜",
-              "活动更新","red", 
-              "一年一度的 Talent Night即将引爆，为各位新一年的大学生活拉开序幕！\
-              你拥有什么talent，无论是唱歌、跳舞、戏剧或者是其它才华， Talent Night无任欢迎！ 大胆秀出自己的才艺，发掘自我吧！")
     

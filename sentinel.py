@@ -83,4 +83,4 @@ if __name__ == "__main__":
    print("Started Sentinel")
    startRender()
    print("Launching page")
-   server.serve(8000)
+   server.serve(7000)
