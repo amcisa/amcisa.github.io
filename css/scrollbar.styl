@@ -1,0 +1,26 @@
+// Scroll Bar Styles 
+
+//Variables
+bwidth = 5px
+bgalpha= 0.3
+
+//Mixins
+border-radius(get-width)
+  -webkit-border-radius get-width
+  border-radius get-width
+
+box-shadow(get-bgalpha)
+  -webkit-box-shadow inset 0 0 6px rgba(0,0,0,get-bgalpha)
+
+//Styles
+::-webkit-scrollbar
+  width bwidth
+
+::-webkit-scrollbar-track
+  box-shadow(bgalpha)
+  border-radius(2*bwidth)
+
+::-webkit-scrollbar-thumb
+  background rgba(0,0,0,bgalpha*2)
+  box-shadow(bgalpha)
+  border-radius(2*bwidth)

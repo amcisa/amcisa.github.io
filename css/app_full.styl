@@ -1,0 +1,72 @@
+@require 'scrollbar'
+@require 'color'
+@require 'fa-controls'
+@require 'events'
+@require 'modifiers'
+
+body
+  font-size 18px
+  width 100%
+  text-align center
+  margin-top 50px
+
+body,h1,h2,h3,h4,h5,h6
+  font-family "Source Sans Pro", "Microsoft Yahei","微软雅黑", STHeiti, 
+               "华文黑体",Calibri,Candara,Arial,sans-serif
+  font-weight inherit
+
+p
+  font-family "Source Sans Pro", "Microsoft JhengHei"
+  font-weight inherit
+
+.footer
+  margin-top 150px
+  background-color #888888
+  position absolute
+  bottom 0px
+
+@media(min-width:768px)
+  .navbar-nav.navbar-right last-child
+    margin-right: 0px
+    padding-right 10px
+
+  .navbar-nav
+    .navbar-left
+      padding-left 20px
+    
+img
+  max-width 100%
+  height auto
+
+.navbar-default
+  position fixed
+  z-index 100
+  background rgba(255,255,255,0.97)
+  box-shadow 0px 3px 3px rgba(0,0,0,0.3)
+  .navbar-nav
+    li
+      a
+        color rgba(0,0,0,1)
+  .navbar-brand
+    color rgb(0,0,0)
+    padding-left 14.5px
+    padding-top 12px
+    &:hover
+      color rgb(255,255,255)
+      background rgb(0,0,0)
+
+.navbar-toggle
+  background rgb(0,0,0)
+  .icon-bar
+    &:hover
+      background rgba(255,255,255,0.84)
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus
+  background rgba(0,0,0,0.7)
+
+.container-fluid
+  padding-left 0px
+  padding-right 0px
+  padding-top 5px
+  padding-bottom 5px
+

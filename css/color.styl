@@ -1,0 +1,25 @@
+//Font-Colour 
+
+//Variables
+alpha = 0.8 
+red   = 237 119 119
+yellow= 260 222 109
+green = 188 223 138
+blue  = 148 192 204
+white = 255 255 255
+black =   0   0   0
+
+//Mixins
+font-color(color-class,color-name)
+  .{color-class}
+    color rgb(color-name)
+    &:hover
+      color rgba(color-name,alpha)
+    
+//Styles
+font-color('red', red)
+font-color('yellow', yellow)
+font-color('green', green)
+font-color('blue', blue)
+font-color('white', white)
+font-color('black', black)
