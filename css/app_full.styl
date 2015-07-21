@@ -19,7 +19,11 @@ body,h1,h2,h3,h4,h5,h6
 p
   font-family "Source Sans Pro", "Microsoft JhengHei"
   font-weight inherit
-
+  
+img
+  max-width 100%
+  height auto
+  
 .footer
   margin-top 150px
   background-color #888888
@@ -30,23 +34,18 @@ p
   .navbar-nav.navbar-right last-child
     margin-right: 0px
     padding-right 10px
-
   .navbar-nav
     .navbar-left
       padding-left 20px
     
-img
-  max-width 100%
-  height auto
-
 .navbar-default
   position fixed
   z-index 100
   background rgba(255,255,255,0.97)
   box-shadow 0px 3px 3px rgba(0,0,0,0.3)
   .navbar-nav
-    li
-      a
+    & > li
+      & > a
         color rgba(0,0,0,1)
   .navbar-brand
     color rgb(0,0,0)
