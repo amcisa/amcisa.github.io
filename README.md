@@ -47,3 +47,9 @@ For sending google form data into email, use the [sendFormByEmail](./js/Google F
 
 docs.google.com/forms/d/__this is your key here__/edit
 
+###Stylus
+The site uses [Stylus](https://learnboost.github.io/stylus/) for generating CSS. The .styl files, can be processed through the sublime text stylus plugin or simply by installing it yourself through npm, `npm install stylus -g`.
+
+The purpose of using stylus is to created more object oriented CSS to reduce repeated code (though some may still occur) and also to create modular CSS so that developer will know what goes where in the CSS. A example can be seem in [color.styl](./css/color.styl) where the developer will only need to change the value of the variables instead of going through the entire CSS sheet.
+
+The entire site will move towards mixing and matching require stylus sheets instead of sending the whole sheet so that the page size will be reduced.
