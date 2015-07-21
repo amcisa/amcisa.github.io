@@ -1,9 +1,10 @@
 mixin faq_tab(title, included)
   .container.fillx
-    h1.text-underline
+    h1
       i.fa.fa-fw&attributes(attributes)
       | &nbsp;
       =title
+    .line
     block
   br
 
@@ -14,11 +15,12 @@ block title
 
 block content
   link(href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", rel="stylesheet")
-  .container.grey-bg.fillx
+  link(href="./css/student.css", rel="stylesheet")
+  .container.fillx
     h1 升学资讯
     h4 为了帮助有意到新加坡升学的同学，下方提供了一些相关的资料供参考。 
     h4 注: 以下资料必须以各个大学为准
-  .container.grey-bg.fillx
+  .container.fillx
     .row.qa-panel-container
       .col-md-2
       .col-md-8.qa-panel.align-left.black
@@ -26,7 +28,7 @@ block content
           span.fa.fa-group
           | &nbsp;点击以下问题开始了解吧！
       .col-md-2
-  .container.grey-bg.fillx.filly.align-left.qa-out
+  .container.fillx.filly.align-left.qa-out
 
     +faq_tab("新生注意")(class="fa-life-ring yellow")
       include ../includes/checklist_faq.jade
