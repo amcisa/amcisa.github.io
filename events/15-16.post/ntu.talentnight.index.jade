@@ -1,0 +1,44 @@
+extends ./ntu.talentnight.layout.jade
+
+block title
+  title Event
+
+block content
+  link(href="../15-16.css/ntu.talentnight.index.css", rel="stylesheet")
+  link(href="../../css/animate.min.css", rel="stylesheet")
+  .wrapper
+  section.container.filly
+    .card.card-flip-onhover.col-md-6.right.wow.rotateInDownLeft
+      .card-front
+        img(src="../../img/15-16/ntu.talentnight/poster.photo.min.jpg")
+      .card-back
+        .video-camera
+          a(href="#")
+            span.fa.fa-fw.fa-file-video-o
+            h1 全部影片
+    .card.card-flip-onhover.col-md-6.left.wow.rotateInUpRight
+      .card-front
+        .center
+          h2
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 活动日期 : 
+            | 31th January 2015
+          h2 
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 活动时间 : 
+            | 6.30 p.m. - 10.00 p.m.
+          h2
+            span.fa.fa-fw.fa-building.blue &nbsp;
+            | 活动地点 : 
+            span.fa.fa-magic
+            | HSS Foyer
+      .card-back
+        a(href="ntu.talentnight.register.html")
+          span.fa.fa-fw.fa-bullhorn
+          h2 点击报名
+
+block script
+  script(src='../../js/wow.min.js')
+  script.
+    new WOW().init({offset: 200});
+  
