@@ -1,0 +1,18 @@
+extends ./layout.jade
+
+//Once opened will list all available 
+block title
+  title Home
+
+block head
+
+block content  
+  .wrapper 
+    itemlist
+    
+
+block script
+  script(src="js/riot.min.js")
+  script(src="js/item-list.js")
+  script.
+    riot.mount("*");
