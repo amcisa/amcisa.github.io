@@ -21,7 +21,9 @@ function delegate(formdata, callback){
         url:"php/login_delegate.php",
         processData:false,
         contentType:false,
-        success: callback(data),
+        success: function(data){
+          callback(data);
+        },
         error:function(data){
           console.log("failed : ", data);
         }
