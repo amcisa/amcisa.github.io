@@ -13,7 +13,7 @@ $(document).ready(function(){
       function(data){
         if(data==1){
           $("#login-matric-no .btn").html("Go!");
-          $("#login-matric-no input.Password").show().focus();
+          $("#login-matric-no input.Password").removeClass("hide").focus();
         }        
       })
   })
