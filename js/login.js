@@ -1,23 +1,20 @@
 //login.js
 $(document).ready(
-  submitloginmatricno()
-)
-
-function submitloginmatricno(callback){
-  $("#login-matric-no").focus();
-  $("#submit-login-matric-no").click(function(e){
+  $("#login-matric-no input").focus();
+  $("#login-matric-no .btn").click(function(e){
     e.preventDefault();
     $(this).html("Loading...");
     var data_form= new FormData();
+    data_form.append("action", "checkuser");
     data_form.append("MatricNo", $("#login-matric-no").val());
     $.ajax({
         type:"POST",
         data:data_form,
-        url:"/secure/checkuser.php",
+        url:"php/login_delegate.php",
         processData:false,
         contentType:false,
         success: function(data){
-          callback(data);
+          console.log(data);
           $(this).html("Go!");
         },
         error:function(data){
@@ -25,4 +22,4 @@ function submitloginmatricno(callback){
         }
       })
   })
-}
+)
