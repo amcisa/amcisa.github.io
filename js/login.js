@@ -6,7 +6,7 @@ $(document).ready(function(){
     $(this).html("Loading...");
     delegate({
       "action": "checkuser",
-      "Matric_NO", $("#login-matric-no input").val()
+      "Matric_NO": $("#login-matric-no input").val()
     }, function(data){
       console.log(data);
       $("#login-matric-no .btn").html("Go!");
