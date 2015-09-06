@@ -14,7 +14,15 @@ $(document).ready(function(){
         if(data==1){
           $("#login-matric-no .btn").html("Go!");
           $("#login-matric-no input.Password").removeClass("hide").focus();
-        }        
+        }else if(data==2){
+          //First time login, prepare send email.
+        }else if(data==0){
+          //User not found, prompt to sign up.
+        }else if(data==-1){
+          $("#login-matric-no label").html("Matriculation Number : Format Error");
+          $("#login-matric-no input.Matric_NO").addClass("error");
+          $("#login-matric-no .btn").html("Go!");
+        }
       })
   })
 })
