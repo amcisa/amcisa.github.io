@@ -1,16 +1,21 @@
 //login.js
 $(document).ready(function(){
-  $("#login-matric-no input").focus();
+  $("#login-matric-no input.Matric_NO").focus();
   $("#login-matric-no .btn").click(function(e){
     e.preventDefault();
     $(this).html("Loading...");
-    delegate({
-      "action": "checkuser",
-      "Matric_NO": $("#login-matric-no input").val()
-    }, function(data){
-      console.log(data);
-      $("#login-matric-no .btn").html("Go!");
-    })
+    rpc(
+      "php/login_delegate.php",
+      {
+        "action": "checkuser",
+        "Matric_NO": $("#login-matric-no input").val()
+      }, 
+      function(data){
+        if(data==1){
+          $("#login-matric-no .btn").html("Go!");
+          $("#login-matric-no input.Password").show().focus();
+        }        
+      })
   })
 })
 
@@ -22,15 +27,15 @@ function formdata(get_data){
   return data_form;
 }
 
-function delegate(form_data, callback){
+function rpc(rpc_url,form_data, success_callback){
   return $.ajax({
         type:"POST",
         data:formdata(form_data),
-        url:"php/login_delegate.php",
+        url:rpc_url,
         processData:false,
         contentType:false,
         success: function(data){
-          callback(data);
+          success_callback(data);
         },
         error:function(data){
           console.log("failed : ", data);
