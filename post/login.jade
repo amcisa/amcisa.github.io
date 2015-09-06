@@ -1,0 +1,24 @@
+extends ./layout.jade
+
+block title
+  title Login
+
+block head
+  link(href="./css/animate.min.css", rel="stylesheet")
+  link(href="./css/login.css", rel="stylesheet")
+
+block content  
+  section
+    .form-horizontal-login
+      fieldset
+        legend Enter Your Matriculation Number to start
+      .form-group
+        label.col-lg-12.control-label Matriculation Number
+        input(type="text", placeholder="e.g. U1420001K").col-lg-12.form-control#login-matric-no
+        br
+        .col-lg-4
+        .btn.btn-primary.col-lg-4#submit-login-matric-no Go!
+        .col-lg-4
+
+block script
+  script(src="js/login.js")

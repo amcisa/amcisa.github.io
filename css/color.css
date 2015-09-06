@@ -1,0 +1,36 @@
+.red {
+  color: #ed7777;
+}
+.red:hover {
+  color: rgba(237,119,119,0.8);
+}
+.yellow {
+  color: #ffde6d;
+}
+.yellow:hover {
+  color: rgba(255,222,109,0.8);
+}
+.green {
+  color: #bcdf8a;
+}
+.green:hover {
+  color: rgba(188,223,138,0.8);
+}
+.blue {
+  color: #94c0cc;
+}
+.blue:hover {
+  color: rgba(148,192,204,0.8);
+}
+.white {
+  color: #fff;
+}
+.white:hover {
+  color: rgba(255,255,255,0.8);
+}
+.black {
+  color: #000;
+}
+.black:hover {
+  color: rgba(0,0,0,0.8);
+}
