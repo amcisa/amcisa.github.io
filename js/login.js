@@ -4,10 +4,10 @@ $(document).ready(function(){
   $("#login-matric-no .btn").click(function(e){
     e.preventDefault();
     $(this).html("Loading...");
-    delegate(formdata({
+    delegate({
       "action": "checkuser",
       "Matric_NO", $("#login-matric-no input").val()
-    }), function(data){
+    }, function(data){
       console.log(data);
       $("#login-matric-no .btn").html("Go!");
     })
@@ -22,10 +22,10 @@ function formdata(get_data){
   return data_form;
 }
 
-function delegate(formdata, callback){
+function delegate(form_data, callback){
   return $.ajax({
         type:"POST",
-        data:formdata,
+        data:formdata(form_data),
         url:"php/login_delegate.php",
         processData:false,
         contentType:false,
