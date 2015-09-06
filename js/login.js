@@ -1,5 +1,5 @@
 //login.js
-$(document).ready(
+$(document).ready(function(){
   $("#login-matric-no input").focus();
   $("#login-matric-no .btn").click(function(e){
     e.preventDefault();
@@ -22,4 +22,4 @@ $(document).ready(
         }
       })
   })
-)
+})
