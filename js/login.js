@@ -4,15 +4,23 @@ $(document).ready(function(){
   $("#login-matric-no .btn").click(function(e){
     e.preventDefault();
     $(this).html("Loading...");
-    var data_form= new FormData();
-    data_form.append("action", "checkuser");
-    data_form.append("Matric_NO", $("#login-matric-no input").val());
-    delegate(data_form, function(data){
+    delegate(formdata({
+      "action": "checkuser",
+      "Matric_NO", $("#login-matric-no input").val()
+    }), function(data){
       console.log(data);
       $("#login-matric-no .btn").html("Go!");
     })
   })
 })
+
+function formdata(get_data){
+  var data_form= new FormData();
+  for (key in get_data){
+    data_form.append(key,get_data[key]);
+  }
+  return data_form;
+}
 
 function delegate(formdata, callback){
   return $.ajax({
