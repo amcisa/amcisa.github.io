@@ -11,18 +11,18 @@ $(document).ready(function(){
         "Matric_NO": $("#login-matric-no input").val()
       }, 
       function(data){
-        console.log(data);
+        $("#login-matric-no label").html("Matriculation Number");
+        $("#login-matric-no").removeClass("has-error");
+        $("#login-matric-no .btn").html("Go!");
         if(data==1){
-          $("#login-matric-no .btn").html("Go!");
           $("#login-matric-no input.Password").removeClass("hide").focus();
         }else if(data==2){
-          //First time login, prepare send email.
+          console.log("First Time Login. Send Email to Confirm");
         }else if(data==0){
-          //User not found, prompt to sign up.
+          console.log("User Not Found. Prompt sign up");
         }else if(data==-1){
           $("#login-matric-no label").html("Matriculation Number : Format Error");
           $("#login-matric-no").addClass("has-error");
-          $("#login-matric-no .btn").html("Go!");
         }
       })
   })
