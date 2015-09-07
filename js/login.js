@@ -11,6 +11,7 @@ $(document).ready(function(){
         "Matric_NO": $("#login-matric-no input").val()
       }, 
       function(data){
+        console.log(data);
         if(data==1){
           $("#login-matric-no .btn").html("Go!");
           $("#login-matric-no input.Password").removeClass("hide").focus();
@@ -20,7 +21,7 @@ $(document).ready(function(){
           //User not found, prompt to sign up.
         }else if(data==-1){
           $("#login-matric-no label").html("Matriculation Number : Format Error");
-          $("#login-matric-no input.Matric_NO").addClass("error");
+          $("#login-matric-no").addClass("has-error");
           $("#login-matric-no .btn").html("Go!");
         }
       })
