@@ -252,7 +252,7 @@ img {
 }
 @media (min-width: 768px) {
   .navbar-nav.navbar-right last-child {
-    margin-right: 0px;
+    margin-right: 50px;
     padding-right: 10px;
   }
   .navbar-nav .navbar-left {

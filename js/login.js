@@ -15,6 +15,9 @@ $(document).ready(function(){
         console.log("Data received.");
         console.log(data);
         refreshPreLoginState();
+        if(data==1){
+          window.location.href="index.html";
+        }
       })
   })
 })
