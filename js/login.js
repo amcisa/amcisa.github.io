@@ -1,32 +1,28 @@
 //login.js
 $(document).ready(function(){
   $("#login-matric-no input.Matric_NO").focus();
-  $("#login-matric-no .btn").click(function(e){
+  $("#login-matric-no .btn.go").click(function(e){
     e.preventDefault();
     $(this).html("Loading...");
     rpc(
       "php/login_delegate.php",
       {
-        "action": "checkuser",
-        "Matric_NO": $("#login-matric-no input").val()
+        "action": "LOGIN",
+        "Matric_NO": $("#login-matric-no input.Matric_NO").val(),
+        "Password": $("#login-matric-no input.Password").val()
       }, 
       function(data){
-        $("#login-matric-no label").html("Matriculation Number");
-        $("#login-matric-no").removeClass("has-error");
-        $("#login-matric-no .btn").html("Go!");
-        if(data==1){
-          $("#login-matric-no input.Password").removeClass("hide").focus();
-        }else if(data==2){
-          console.log("First Time Login. Send Email to Confirm");
-        }else if(data==0){
-          console.log("User Not Found. Prompt sign up");
-        }else if(data==-1){
-          $("#login-matric-no label").html("Matriculation Number : Format Error");
-          $("#login-matric-no").addClass("has-error");
-        }
+        console.log("Data received.");
+        console.log(data);
+        refreshPreLoginState();
       })
   })
 })
+
+function refreshPreLoginState(){
+  $("#login-matric-no .btn.go span").html("Login").show();
+  $("#login-matric-no .btn.go i").hide();
+}
 
 function formdata(get_data){
   var data_form= new FormData();
@@ -37,6 +33,7 @@ function formdata(get_data){
 }
 
 function rpc(rpc_url,form_data, success_callback){
+  console.log("Sending data...");
   return $.ajax({
         type:"POST",
         data:formdata(form_data),

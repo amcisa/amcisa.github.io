@@ -6,20 +6,28 @@ block title
 block head
   link(href="./css/animate.min.css", rel="stylesheet")
   link(href="./css/login.css", rel="stylesheet")
+  link(href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", rel="stylesheet")
 
 block content  
   section
     .form-horizontal-login
       fieldset
-        legend Enter Your Matriculation Number to start
+        legend Log In 
       .form-group#login-matric-no
-        label.col-lg-12.control-label Matriculation Number
-        input(type="text", placeholder="e.g. U1420001K").col-lg-12.form-control.Matric_NO
-        input(type="password", placeholder="PASSWORD").col-lg-12.form-control.Password.hide
-        br
-        .col-lg-4
-        .btn.btn-primary.col-lg-4 Go!
-        .col-lg-4
+        input(type="text", placeholder="Matric Num : e.g. U1420001K").col-lg-12.form-control.Matric_NO
+        input(type="password", placeholder="PASSWORD").col-lg-12.form-control.Password
+        .col-lg-2
+        button(type="submit").btn.btn-primary.col-lg-4.go 
+          span Log in
+          i.fa.fa-fw.fa-circle-o-notch.fa-spin.hide 
+        a.btn.btn-info.col-lg-4.signup(href="signup.html") Sign up
+        .col-lg-2
+        .alert.alert-dismissible.alert-warning.col-lg-12.align-left
+          button.close(type='button', data-dismiss='alert') ×
+          p 
+            | For first time log in,
+            | just type in your matriculation number and press the blue 
+          strong log in button
 
 block script
   script(src="js/login.js")

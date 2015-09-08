@@ -12,3 +12,6 @@ section {
   height: 100%;
   margin-top: 75px;
 }
+.alert {
+  margin: 10px;
+}
