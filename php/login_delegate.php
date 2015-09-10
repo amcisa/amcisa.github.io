@@ -5,5 +5,9 @@
   //print_r(session_id());
   if($_POST["action"]=="LOGIN"){
     print_r(checkUserExists($_POST["Matric_NO"], $_POST["Password"]));
+  }elseif($_POST["action"]=="CHECKLOGINSTATUS"){
+    print_r(checkLoginStatus());
+  }elseif($_POST["action"]=="LOGOUT"){
+    print_r(signOutFromSession());
   }
 ?>

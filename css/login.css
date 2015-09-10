@@ -15,3 +15,6 @@ section {
 .alert {
   margin: 10px;
 }
+.btn {
+  height: 50px;
+}

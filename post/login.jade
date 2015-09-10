@@ -6,7 +6,6 @@ block title
 block head
   link(href="./css/animate.min.css", rel="stylesheet")
   link(href="./css/login.css", rel="stylesheet")
-  link(href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", rel="stylesheet")
 
 block content  
   section
@@ -20,8 +19,13 @@ block content
         button(type="submit").btn.btn-primary.col-lg-4.go 
           span Log in
           i.fa.fa-fw.fa-circle-o-notch.fa-spin.hide 
-        a.btn.btn-info.col-lg-4.signup(href="signup.html") Sign up
+        a(href="signup.html") 
+          button(type="submit").btn.btn-info.col-lg-4.signup
+            span Sign up
+            i.fa.fa-fw.fa-circle-o-notch.fa-spin.hide 
         .col-lg-2
+        .alert.alert-dismissible.alert-danger.col-lg-12.align-left.alert-tab.hide
+          strong 
         .alert.alert-dismissible.alert-warning.col-lg-12.align-left
           button.close(type='button', data-dismiss='alert') ×
           p 
