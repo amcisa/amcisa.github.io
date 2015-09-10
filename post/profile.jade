@@ -1,0 +1,32 @@
+extends ./layout.jade
+
+block title
+  title Login
+
+block head
+  link(href="./css/animate.min.css", rel="stylesheet")
+  link(href="./css/profile.css", rel="stylesheet")
+
+block content  
+  section
+    .form-horizontal-login
+      fieldset
+        legend Log In 
+      .form-group#login-matric-no
+        input(type="text", placeholder="Matric Num : e.g. U1420001K").col-lg-12.form-control.Matric_NO
+        input(type="password", placeholder="PASSWORD").col-lg-12.form-control.Password
+        .col-lg-2
+        button(type="submit").btn.btn-primary.col-lg-4.go 
+          span Log in
+          i.fa.fa-fw.fa-circle-o-notch.fa-spin.hide 
+        a.btn.btn-info.col-lg-4.signup(href="signup.html") Sign up
+        .col-lg-2
+        .alert.alert-dismissible.alert-warning.col-lg-12.align-left
+          button.close(type='button', data-dismiss='alert') ×
+          p 
+            | For first time log in,
+            | just type in your matriculation number and press the blue 
+          strong log in button
+
+block script
+  script(src="js/profile.js")
