@@ -9,5 +9,9 @@
     print_r(checkLoginStatus());
   }elseif($_POST["action"]=="LOGOUT"){
     print_r(signOutFromSession());
+  }elseif($_POST["action"]=="UPDATEINFO"){
+    //REMINDER TO SUBMIT TO DB TO UPDATE 
+    //REMINDER TO ESCAPE ALL CHARACTERS
+    print_r($_POST);
   }
 ?>

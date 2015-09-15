@@ -17,7 +17,7 @@ $(document).ready(function(){
         console.log(data);
         refreshPreLoginState();
         if(data==1){
-          window.location.href="index.html";
+          window.location.href="index.html"; 
         }else if(data==3){
           wrongPassword();
         }else if(data==-1){

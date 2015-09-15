@@ -1,5 +1,51 @@
 extends ./layout.jade
 
+mixin text-form(name)
+  .form-group&attributes(attributes)
+    label.col-lg-2.control-label=name
+    .col-lg-10
+      input.form-control(type='text', placeholder=name)
+
+mixin textArea-form(name)
+  .form-group&attributes(attributes)
+    label.col-lg-2.control-label=name
+    .col-lg-10
+      textarea.form-control(rows='3')
+    block
+
+mixin select-form(name,options,range)
+  .form-group&attributes(attributes)
+    label.col-lg-2.control-label=name
+    .col-lg-10
+      select.form-control
+        if block
+          block
+        if options
+          each o in options
+            option=o
+
+mixin password-form(name)
+  .form-group&attributes(attributes)
+    label.col-lg-2.control-label=name
+    .col-lg-10
+      input.form-control(type='password', placeholder="Only type this if you want to change your password")
+
+mixin modal()
+  .modal.animated.align-left
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+          h3.error 
+            i.fa.fa-fw.fa-exclamation-triangle.red 
+            span Error!
+          h3.success 
+            i.fa.fa-fw.fa-smile-o.green 
+            span Success!
+        .modal-body
+          p.red.body-content.error Error
+          p.green.body-content.success Success
+
 block title
   title Login
 
@@ -8,25 +54,79 @@ block head
   link(href="./css/profile.css", rel="stylesheet")
 
 block content  
-  section
-    .form-horizontal-login
-      fieldset
-        legend Log In 
-      .form-group#login-matric-no
-        input(type="text", placeholder="Matric Num : e.g. U1420001K").col-lg-12.form-control.Matric_NO
-        input(type="password", placeholder="PASSWORD").col-lg-12.form-control.Password
-        .col-lg-2
-        button(type="submit").btn.btn-primary.col-lg-4.go 
-          span Log in
-          i.fa.fa-fw.fa-circle-o-notch.fa-spin.hide 
-        a.btn.btn-info.col-lg-4.signup(href="signup.html") Sign up
-        .col-lg-2
-        .alert.alert-dismissible.alert-warning.col-lg-12.align-left
-          button.close(type='button', data-dismiss='alert') ×
-          p 
-            | For first time log in,
-            | just type in your matriculation number and press the blue 
-          strong log in button
+  .wrapper
+    section.container
+
+      .col-lg-2
+        ul.nav.nav-pills.nav-stacked
+            li.active
+              a(href='#profile', data-toggle='tab', aria-expanded='true') Profile
+            li
+              a(href='#registered', data-toggle='tab', aria-expanded='true') Registered events
+      .col-lg-10
+        .tab-content
+            .tab-pane.fade.active.in.align-left#profile
+              //fill in data obtained from the session.
+              form.form-horizontal
+                fieldset
+                  legend.align-center Personal Information
+                  //omitted secondary school
+                  +text-form("中文姓名")(class="Name_CH")
+                  +text-form("English Name")(class="Name_EN")
+                  +text-form("Personal Email")(class="Email_Personal")
+                  +text-form("School Email")(class="Email_School")
+                  +select-form("Hall")(class="Hall")
+                    option outside
+                    - var n = 1
+                    while n < 19
+                      option= n++
+                  +text-form("Block")(class="halldata Block hide")
+                  +text-form("Level")(class="halldata Level hide")
+                  +text-form("Room")(class="halldata Room hide")
+                  +textArea-form("Address Outside")(class="Address_Outside")
+                  +text-form("Phone (MY)")(class="Phone_MY")
+                  +text-form("Phone (SG)")(class="Phone_SG")
+                  +select-form("Gender", ["M","F"])(class="Gender")
+                  +select-form("Entry Year", ["1","2"])(class="Entry_Year")
+                  +select-form("Course")(class="Course")
+                    option ACC (Accounting)
+                    option ADM (Arts, Design and Media)
+                    option AERO (Aerospace Engineering)
+                    option BIE (Bioengineering)
+                    option BS (Biological sciences)
+                    option BUS (Business)
+                    option CBC (Chemical and Biological Chemistry)
+                    option CBE (Chemical and Biomolecular Engineering)
+                    option CEE (Civil Engineering)
+                    option CHIN (Chinese)
+                    option CSC (Computer Science)
+                    option ECONS (Economics)
+                    option EEE (Electrical & Electronic Engineering)
+                    option ENE (Environmental Engineering)
+                    option ENG (Common Engineering)
+                    option IEM (Information Engineering & Media)
+                    option LMS (Lee Kong Chien Medical School)
+                    option MAE (Mechanical Engineering)
+                    option MAEC (Mathematics and Economics)
+                    option MAFI (Mathematics and Finance)
+                    option MARI (Maritime Studies)
+                    option MAS (Mathematical Sciences)
+                    option MSE (Material Sciences)
+                    option NIE (National Institute of Education)
+                    option PAP (Physics and Applied Physics)
+                    option PPGA (Public Policy and Global Affairs)
+                    option PSY (Psychology)
+                    option WKW (Wee Kim Wee School Of Communication Studies)
+                  +password-form("Old Password")(class="oldPassword")
+                  +password-form("New Password")(class="Password")
+                  .form-group
+                    .col-lg-10.col-lg-offset-2
+                      button.btn.btn-primary(type='submit').submit
+                        span Update!
+                        i.fa.fa-fw.fa-circle-o-notch.fa-spin.hide
+            .tab-pane.fade.in.align-left#registered
+              h2 hello
+            +modal
 
 block script
   script(src="js/profile.js")
