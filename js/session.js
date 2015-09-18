@@ -1,11 +1,16 @@
 //session.js
 $(document).ready(function(){
   //Poll for session data
-  rpc("php/login_delegate.php",{"action":"CHECKLOGINSTATUS"})
-  .then(function(data){
-    replaceLoginButtonWithProfileLink(JSON.parse(data));
-    listenforsignOut();
-  })
+  rpc(
+    "php/login_delegate.php",
+    {
+      "action":"CHECKLOGINSTATUS"
+    },
+    function(data){
+      replaceLoginButtonWithProfileLink(JSON.parse(data));
+      listenforsignOut();
+    }
+  )
 })
 
 function replaceLoginButtonWithProfileLink(data){
@@ -21,8 +26,12 @@ function replaceLoginButtonWithProfileLink(data){
 function listenforsignOut(){
   $(".user-login").on('click',function(e){
     if($(e.target).attr("href")=="#signout"){
-      rpc("php/login_delegate.php",{"action":"LOGOUT"})
-      .then(function(data){
+      rpc(
+        "php/login_delegate.php",
+        {
+          "action":"LOGOUT"
+        },
+        function(data){
           window.location.href="index.html";
         }
       )
