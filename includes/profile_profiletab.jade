@@ -1,3 +1,36 @@
+
+mixin text-form(name)
+  .form-group&attributes(attributes)
+    label.col-lg-2.control-label=name
+    .col-lg-10
+      input.form-control(type='text', placeholder="Loading...")
+
+mixin textArea-form(name)
+  .form-group&attributes(attributes)
+    label.col-lg-2.control-label=name
+    .col-lg-10
+      textarea.form-control(rows='3')
+    block
+
+mixin select-form(name,options,range)
+  .form-group&attributes(attributes)
+    label.col-lg-2.control-label=name
+    .col-lg-10
+      select.form-control
+        if block
+          block
+        if options
+          each o in options
+            option=o
+
+mixin password-form(name)
+  .form-group&attributes(attributes)
+    label.col-lg-2.control-label=name
+    .col-lg-10
+      input.form-control(type='password', placeholder="Only type this if you want to change your password")
+
+
+
 form.form-horizontal
   fieldset
     legend.align-center Personal Information
