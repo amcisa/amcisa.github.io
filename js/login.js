@@ -5,13 +5,11 @@ $(document).ready(function(){
     e.preventDefault();
     $("#login-matric-no .btn.go span").html("");
     $("#login-matric-no .btn.go i").removeClass("hide");
-    rpc(
-      "php/login_delegate.php",
-      {
-        "action": "LOGIN",
+    rpc("php/login_delegate.php",
+      { "action": "LOGIN",
         "Matric_NO": $("#login-matric-no input.Matric_NO").val(),
-        "Password": $("#login-matric-no input.Password").val()
-      }, 
+        "Password": $("#login-matric-no input.Password").val()})
+    .then(
       function(data){
         console.log("Data received.");
         console.log(data);

@@ -6,19 +6,15 @@ function formdata(get_data){
   return data_form;
 }
 
-function rpc(rpc_url,form_data, success_callback){
+function rpc(rpc_url,form_data){
   console.log("Sending data...");
-  return $.ajax({
+  //using promises for waiting for data
+  return 
+      $.when($.ajax({
         type:"POST",
         data:formdata(form_data),
         url:rpc_url,
         processData:false,
-        contentType:false,
-        success: function(data){
-          success_callback(data);
-        },
-        error:function(data){
-          console.log("failed : ", data);
-        }
-      })
+        contentType:false
+      }));
 }

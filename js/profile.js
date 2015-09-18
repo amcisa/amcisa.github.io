@@ -1,12 +1,8 @@
 //session.js
 $(document).ready(function(){
   //Poll for session data
-  rpc(
-    "php/login_delegate.php",
-    {
-      "action":"CHECKLOGINSTATUS"
-    },
-    function(data){
+  rpc("php/login_delegate.php",{"action":"CHECKLOGINSTATUS"})
+  .then(function(data){
       if(data==0){
         window.location.href="index.html";
       }
@@ -78,10 +74,8 @@ function checkDataSubmitted(jsondata){
     if(!$(".has-error").html()){
       $(".submit span").html("");
       $(".submit i").removeClass("hide");
-      rpc(
-        "php/login_delegate.php",
-        formToCustomObj(jsondata),
-        function(data){
+      rpc("php/login_delegate.php",formToCustomObj(jsondata))
+      .then(function(data){
           console.log(data);
           $(".submit span").html("Update!");
           $(".submit i").addClass("hide");
