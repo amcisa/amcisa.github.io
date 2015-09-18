@@ -2,6 +2,7 @@
 $(document).ready(function(){
   $("#login-matric-no input.Matric_NO").focus();
   $("#login-matric-no .btn.go").click(function(e){
+    console.log("Hello");
     e.preventDefault();
     $("#login-matric-no .btn.go span").html("");
     $("#login-matric-no .btn.go i").removeClass("hide");
