@@ -12,6 +12,7 @@
   }elseif($_POST["action"]=="UPDATEINFO"){
     //REMINDER TO SUBMIT TO DB TO UPDATE 
     //REMINDER TO ESCAPE ALL CHARACTERS
-    print_r($_POST);
+    print_r(updateUserInfo(dissoc($_POST,"action")));
+    
   }
 ?>

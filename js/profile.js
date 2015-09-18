@@ -12,8 +12,19 @@ $(document).ready(function(){
       }
       replaceDataInPersonalInformation(JSON.parse(data));
       listenHallDataChanges();
-      listenTextInputChanges("Password","Password length should exceed 8 characters!", function(data){
-        return data.length>8;
+      listenTextInputChanges("Password","Password length should exceed 7 characters!", function(data){        
+        return data.length>=8 || data.length==0;
+      })
+      listenTextInputChanges("Password","Old Password is empty!", function(data){
+        var oldPasswordval = $(".oldPassword .col-lg-10").children().first().val();
+        var Passwordval = $(".Password .col-lg-10").children().first().val();
+        if((oldPasswordval!="" && Passwordval!="") || (oldPasswordval=="" && Passwordval=="")){
+          $(".oldPassword .col-lg-10").removeClass("has-error");
+          return true;
+        }else{
+          $(".oldPassword .col-lg-10").addClass("has-error");
+          return false;
+        }
       })
       listenTextInputChanges("Email_Personal","Email format is wrong!", function(data){
         return (data.match(/.+@\w+\.\w+$/i));
@@ -23,6 +34,9 @@ $(document).ready(function(){
       })
       listenTextInputChanges("Phone_SG","Phone format example: 87613173", function(data){
         return (data.match(/^\d{8}$/));
+      })
+      listenTextInputChanges("Phone_MY","Phone format example: 0161234567", function(data){
+        return (data.match(/^\d{10,11}$/) || data=="");
       })
       checkDataSubmitted(JSON.parse(data));
       
@@ -85,7 +99,15 @@ function checkDataSubmitted(jsondata){
           console.log(data);
           $(".submit span").html("Update!");
           $(".submit i").addClass("hide");
-          alertmodal("success","Your info has been successfully updated!");
+          if(data==1){
+            alertmodal("success","Your info has been successfully updated!");            
+          }else if(data==0){
+            alertmodal("error","Database update error! Try again later or contact <a href=\"contact.html\"> the web admin.</a>");
+          }else if(data==-1){
+            alertmodal("error","There is nothing to be updated.");
+          }else if(data==-2){
+            alertmodal("error","Wrong current password entered. Nothing have been updated.");
+          }
         }
       )
     }
@@ -94,34 +116,21 @@ function checkDataSubmitted(jsondata){
 
 function formToCustomObj(jsondata){
   var newjsondata={};
+  //note that the data from newjsondata does not contain the password.
+  //note of course, that we should be sending this over a secure protocol
+  //but that would have to depend on our budget to but a SSL certificate
+  jsondata["oldPassword"]="";
+  jsondata["Password"]="";
   for(key in jsondata){
     var targetchild = $("."+key+" .col-lg-10").children().first();
     if((targetchild.is("input") || targetchild.is("textarea")) && targetchild.val()){
-      newjsondata[key]=targetchild.attr("value");
+      newjsondata[key]=targetchild.val();
     }else if(targetchild.is("select")){
       newjsondata[key]=targetchild.find(":selected").text();
     }
   }
+  //note that the data from newjsondata does not contain the password.
   newjsondata["action"]="UPDATEINFO";
   return newjsondata;
 }
 
-function alertmodal(type,message){
-  if(type=="error"){
-    $(".modal .success").addClass("hide");
-    $(".modal .error").removeClass("hide");
-  }else if(type=="success"){
-    $(".modal .success").removeClass("hide");
-    $(".modal .error").addClass("hide");
-  }
-  $(".body-content").html(message);
-  $(".modal").removeClass("bounceOutUp").show().addClass("bounceInDown"); 
-  $("button[data-dismiss='modal']").click(function(){
-    $(".modal").removeClass("bounceInDown").addClass("bounceOutUp");
-  })
-  $("body").click(function(e){
-    if($(e.target).children().first().is(".modal-dialog")){
-      $(".modal").removeClass("bounceInDown").addClass("bounceOutUp");
-    }
-  })
-}
