@@ -6,6 +6,22 @@ mixin navlink(name,link)
   li&attributes(attributes)
     a(href=link)= name
 
+mixin modal()
+  .modal.animated.align-left
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+          h3.error 
+            i.fa.fa-fw.fa-exclamation-triangle.red 
+            span Error!
+          h3.success 
+            i.fa.fa-fw.fa-smile-o.green 
+            span Success!
+        .modal-body
+          p.red.body-content.error Error
+          p.green.body-content.success Success
+          
 doctype html5
 html
   head 

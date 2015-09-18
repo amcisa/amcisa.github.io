@@ -22,3 +22,23 @@ function rpc(rpc_url,form_data, success_callback){
         }
       })
 }
+
+function alertmodal(type,message){
+  if(type=="error"){
+    $(".modal .success").addClass("hide");
+    $(".modal .error").removeClass("hide");
+  }else if(type=="success"){
+    $(".modal .success").removeClass("hide");
+    $(".modal .error").addClass("hide");
+  }
+  $(".body-content").html(message);
+  $(".modal").removeClass("bounceOutUp").show().addClass("bounceInDown"); 
+  $("button[data-dismiss='modal']").click(function(){
+    $(".modal").removeClass("bounceInDown").addClass("bounceOutUp").fadeOut(1000);
+  })
+  $("body").click(function(e){
+    if($(e.target).children().first().is(".modal-dialog")){
+      $(".modal").removeClass("bounceInDown").addClass("bounceOutUp").fadeOut(1000);
+    }
+  })
+}
