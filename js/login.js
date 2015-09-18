@@ -23,6 +23,10 @@ $(document).ready(function(){
           wrongPassword();
         }else if(data==-1){
           userNameNotFound();
+        }else if(data==112){
+          alertmodal('success',"An email containing a random password has been sent to your school email.");
+        }else if(data==113){
+          alertmodal('success',"An email containing a random password has been sent to your personal email.");
         }
       })
   })
