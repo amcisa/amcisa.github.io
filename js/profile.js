@@ -118,7 +118,7 @@ function formToCustomObj(jsondata){
   var newjsondata={};
   //note that the data from newjsondata does not contain the password.
   //note of course, that we should be sending this over a secure protocol
-  //but that would have to depend on our budget to but a SSL certificate
+  //but that would have to depend on our budget to buy a SSL certificate
   jsondata["oldPassword"]="";
   jsondata["Password"]="";
   for(key in jsondata){
@@ -129,7 +129,6 @@ function formToCustomObj(jsondata){
       newjsondata[key]=targetchild.find(":selected").text();
     }
   }
-  //note that the data from newjsondata does not contain the password.
   newjsondata["action"]="UPDATEINFO";
   return newjsondata;
 }

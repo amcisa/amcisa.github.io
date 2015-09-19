@@ -1,5 +1,14 @@
 //login.js
 $(document).ready(function(){
+  rpc(
+    "php/login_delegate.php",
+    {
+      "action":"CHECKLOGINSTATUS"
+    },function(data){
+      if(data!=0){
+        window.location.href="index.html";
+      }
+    });
   $("#login-matric-no input.Matric_NO").focus();
   $("#login-matric-no .btn.go").click(function(e){
     console.log("Hello");
@@ -27,6 +36,8 @@ $(document).ready(function(){
           alertmodal('success',"An email containing a random password has been sent to your school email.");
         }else if(data==113){
           alertmodal('success',"An email containing a random password has been sent to your personal email.");
+        }else {
+          alertmodal('error',"Please contact amcisa.org/gh/contact.html for help. State your Matriculation Number.");
         }
       })
   })
