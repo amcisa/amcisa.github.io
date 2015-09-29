@@ -1,0 +1,73 @@
+extends ./ntu.amkidkid.layout.jade
+
+block title
+  title Event
+
+block content
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        //- Replace this with the poster image found in your images/ntu.amkidkid folder.
+        img(src="../../img/15-16/ntu.amkidkid/poster.photo.jpg")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 南洋理工大学儿童节
+        h3 AmKidKid @ NTU
+        .btn.btn-dark.description-btn 
+          h3 #活动详情
+        a(href="ntu.amkidkid.updates.html").white.btn.btn-dark.events-btn             
+          h3 #近期更新
+        :markdown
+          还记得吗？那些年, 那些天, 那些夜...... 那些不需要费尽心思,，用尽全力的日子。那时,，我们是爸妈贴心的小棉袄, 活泼天真得无忧无虑。童年的回忆不是四四方方硬邦邦的手机与平板电脑,而是丰富多采让人回味无穷的童玩。
+          如果有一天,小叮当的时光机出现了,你, 愿意给自己一个机会吗?你,愿意回到最单纯美好的那段时光吗？
+          AmKidKid 正是个时光机，给你我一个机会，共同穿越时光隧道，回到那个乐趣无穷的时代！
+          我们一起掀起疯狂无忧的童年！
+          18/10 相约在HSS游乐场,，不见不散！
+
+        .btn.btn-dark.description-btn 
+          h4 #我要搭乘时光机！ 
+        a(href="ntu.amkidkid.register.html").white.btn.btn-dark.events-btn
+
+
+      .col-md-3
+
+
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 搭乘日期 : 
+            //- Replace the following date with event date
+            | 18th October 2015 
+          h2 
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 搭乘时间 : 
+            //- Replace the following time with event time
+            | 7.00 p.m. - 10 p.m.
+          h2
+            span.fa.fa-fw.fa-building.blue &nbsp;
+            | 搭乘地点 : 
+            span.fa.fa-magic
+            //- Replace the following venue with event venue 
+            | HSS
+           h2 
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 截至日期 : 12nd October 2015
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })
