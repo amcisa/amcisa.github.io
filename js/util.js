@@ -42,3 +42,8 @@ function alertmodal(type,message){
     }
   })
 }
+
+function scrollToElement(ele) {
+    $('html,body').animate({scrollTop: ele.offset().top-50, duration: 300}).clearQueue();
+    return false;
+}
