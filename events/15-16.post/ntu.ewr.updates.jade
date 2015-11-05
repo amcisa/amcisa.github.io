@@ -1,0 +1,22 @@
+extends ./ntu.ewr.layout.jade
+
+block title
+  title 更新
+
+block content
+  .container.grey-bg.full-pg.filly
+    .row
+      h1 活动更新
+    .row
+      .col-md-2
+        ul.nav.nav-pills.nav-stacked.fixed
+          //- Add or replace the li elements with your own.
+          li.active
+            a(href='#xuanchuan', data-toggle='tab', aria-expanded='true') 上载中。。。
+      .col-md-9
+        .tab-content#myTabContent
+          //- Add your panes according to your li element.
+          .tab-pane.fade.active.in#xuanchuan
+            .align-left
+              span.fa.fa-spinner.ico-large.fa-spin
+      .col-md-1

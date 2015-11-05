@@ -1,0 +1,20 @@
+extends ./ntu.ewr.layout.jade
+
+block title
+  title Feedback
+
+block content
+  .wrapper
+    .container.grey-bg.full-pg#services-label
+      .row
+        h1 帮我们把活动办得更好吧!
+      .row
+        //- Replace the "your-key-here" with the document key found in your link. 
+        iframe.section(
+          src="https://docs.google.com/forms/d/your-key-here/viewform?embedded=true"
+          width="760"
+          height="960"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          ) Loading...

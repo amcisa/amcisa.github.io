@@ -1,0 +1,28 @@
+extends ./ntu.ewr.layout.jade
+
+block title
+  title Gallery
+
+block content
+  link(href="http://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.2.2/css/nanogallery.min.css", rel="stylesheet")
+
+  .wrapper
+    .container.grey-bg.full-pg#services-label
+      .row
+        #nanoGallery1(style="height=10px;")
+
+block script
+  script(src="http://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.2.2/jquery.nanogallery.min.js")
+  script(type="text/javascript").
+    $(document).ready(function () {
+      $("#nanoGallery1").nanoGallery({
+        kind:'flickr',
+        userID:'127695913@N03',
+        //- Replace photoset id with the your event flickr set id.
+        photoset:'123456789',
+        thumbnailLazyLoad: true,
+        thumbnailWidth: 120, thumbnailHeight: 120,
+        thumbnailHoverEffect: 'scaleLabelOverImage,borderDarker'
+      });
+    });
+    
