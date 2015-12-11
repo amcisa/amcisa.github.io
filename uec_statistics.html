@@ -8,10 +8,8 @@
     <link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/cosmo/bootstrap.min.css" rel="stylesheet"/>
     <link href="./css/app.css" rel="stylesheet"/>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
-    <link href="./css/animate.min.css" rel="stylesheet"/>
-    <link href="./css/login.css" rel="stylesheet"/>
   </head>
-  <title>Login</title>
+  <title>Update</title>
   <body>
     <!--Default navigation bar-->
     <div class="navbar-default navbar-fixed-top">
@@ -31,45 +29,10 @@
       </div>
     </div>
     <!--This is where our main content is inserted into.-->
-    <div class="modal animated align-left">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
-            <h3 class="error"> <i class="fa fa-fw fa-exclamation-triangle red"> </i><span>Error!</span></h3>
-            <h3 class="success"> <i class="fa fa-fw fa-smile-o green"> </i><span>Success!</span></h3>
-          </div>
-          <div class="modal-body">
-            <p class="body-content error">Error</p>
-            <p class="body-content success">Success</p>
-          </div>
-        </div>
-      </div>
+    <div class="wrapper">
+      <h1>AMICSA会员统考成绩统计</h1>
+      <iframe src="https://docs.google.com/forms/d/1GCTlb8aLpIzO6Vo9Wnju5TA_Bfm5E_PTp1FWiPMDLCY/viewform?embedded=true" width="760" height="1860" frameborder="0" marginheight="0" marginwidth="0" class="section">Loading...</iframe>
     </div>
-    <section>
-      <div class="form-horizontal-login">
-        <fieldset>
-          <legend>Log In </legend>
-        </fieldset>
-        <div id="login-matric-no" class="form-group">
-          <input type="text" placeholder="Matric Num : e.g. U1420001K (NTU) or A0126581 (NUS)" class="col-lg-12 form-control Matric_NO"/>
-          <input type="password" placeholder="PASSWORD" class="col-lg-12 form-control Password"/>
-          <div class="col-lg-2"></div>
-          <button type="submit" class="btn btn-primary col-lg-4 go"> <span>Log in</span><i class="fa fa-fw fa-circle-o-notch fa-spin hide"> </i></button><a href="signup.html"> 
-            <button type="submit" class="btn btn-info col-lg-4 signup"><span>Sign up</span><i class="fa fa-fw fa-circle-o-notch fa-spin hide"> </i></button></a>
-          <div class="col-lg-2"></div>
-          <div class="alert alert-dismissible alert-danger col-lg-12 align-left alert-tab hide"><strong> </strong></div>
-          <div class="alert alert-dismissible alert-warning col-lg-12 align-left">
-            <button type="button" data-dismiss="alert" class="close">×</button>
-            <p>
-               
-              For first time log in,
-              just type in your matriculation number and press the blue 
-            </p><strong>log in button</strong>
-          </div>
-        </div>
-      </div>
-    </section>
     <div class="container fillx"><br/></div>
     <div class="container align-left light-grey-bg fillx">
       <div class="col-md-2"></div>
@@ -99,6 +62,5 @@
     <script src="js/googlepage.js"></script>
     <script src="js/session.js"></script>
     <script src="js/util.js"></script>
-    <script src="js/login.js"></script>
   </body>
 </html>
