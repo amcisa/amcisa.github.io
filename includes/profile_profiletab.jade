@@ -41,6 +41,12 @@ form.form-horizontal
     +text-form("School Email")(class="Email_School")
     +select-form("Hall")(class="Hall")
       option outside
+      option Kent Ridge Hall
+      option Temasek Hall
+      option King Edward Vll Hall
+      option Ridge View Residence
+      option Prince George's Park Residence
+      option Eusoff Hall
       - var n = 1
       while n < 19
         option= n++
@@ -62,14 +68,17 @@ form.form-horizontal
       option CBC (Chemical and Biological Chemistry)
       option CBE (Chemical and Biomolecular Engineering)
       option CEE (Civil Engineering)
+      option CHEM (Chemical Engineering)
       option CHIN (Chinese)
       option CSC (Computer Science)
       option ECONS (Economics)
       option EEE (Electrical & Electronic Engineering)
       option ENE (Environmental Engineering)
       option ENG (Common Engineering)
+      option FS (Food Sciences)
       option IEM (Information Engineering & Media)
       option LMS (Lee Kong Chien Medical School)
+      option LS (Life Sciences)
       option MAE (Mechanical Engineering)
       option MAEC (Mathematics and Economics)
       option MAFI (Mathematics and Finance)
@@ -78,8 +87,10 @@ form.form-horizontal
       option MSE (Material Sciences)
       option NIE (National Institute of Education)
       option PAP (Physics and Applied Physics)
+      option PHY (Physics)
       option PPGA (Public Policy and Global Affairs)
       option PSY (Psychology)
+      option QF (Quantitative Finance)
       option WKW (Wee Kim Wee School Of Communication Studies)
     +password-form("Current Password")(class="oldPassword")
     +password-form("New Password")(class="Password")
