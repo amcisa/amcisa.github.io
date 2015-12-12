@@ -87,6 +87,7 @@ function listenSecondarySchoolChanges(){
   secelem.change(function(){
     Change();
   })
+
 }
 
 function listenTextInputChanges(tag, message, func){
@@ -115,7 +116,7 @@ function checkDataSubmitted(jsondata){
           console.log(data);
           $(".submit span").html("Update!");
           $(".submit i").addClass("hide");
-          if(data==1){
+          if(data == 1){
             alertmodal("success","Your info has been successfully updated!");            
           }else if(data==0){
             alertmodal("error","Database update error! Try again later or contact <a href=\"contact.html\"> the web admin.</a>");
@@ -137,22 +138,28 @@ function formToCustomObj(jsondata){
   //but that would have to depend on our budget to buy a SSL certificate
   jsondata["oldPassword"]="";
   jsondata["Password"]="";
+  jsondata["Secondary_School_Others"]="";
   for(key in jsondata){
     var targetchild = $("."+key+" .col-lg-10").children().first();
     if((targetchild.is("input") || targetchild.is("textarea")) && targetchild.val()){
-      newjsondata[key]=targetchild.val();
-    }else if(targetchild.is("select")){
+
+      //to avoid unwanted values in Secondary_School_Others
+
+      if (key == "Secondary_School_Others" && $(".Secondary_School .col-lg-10").children().first().val() != '其他'){
+        newjsondata["Secondary_School_Others"] = "";
+        }    
       
-      if (key == "Secondary_School" && targetchild.val() == '其他'){ 
-          var other_sec = $(".Secondary_School_Others .col-lg-10").children().first();
-          newjsondata["Secondary_School"] = other_sec.val();
-      
-      }else{
+      else{
+        newjsondata[key]=targetchild.val();
+      }
+    }
+
+    else if(targetchild.is("select")){     
         newjsondata[key]=targetchild.find(":selected").text();
       }
-      
     }
-  }
+      
+    //console.log(targetchild)
   newjsondata["action"]="UPDATEINFO";
   return newjsondata;
 }
