@@ -12,6 +12,7 @@ $(document).ready(function(){
       }
       replaceDataInPersonalInformation(JSON.parse(data));
       listenHallDataChanges();
+      listenSecondarySchoolChanges();
       listenTextInputChanges("Password","Password length should exceed 7 characters!", function(data){        
         return data.length>=8 || data.length==0;
       })
@@ -73,6 +74,21 @@ function listenHallDataChanges(){
   })
 }
 
+function listenSecondarySchoolChanges(){
+  var secelem = $(".Secondary_School .col-lg-10");
+  function Change(){
+    if(secelem.children().first().find(":selected:contains(其他)").html()){
+      $(".Secondary_School_Others").removeClass("hide");
+    }else{
+      $(".Secondary_School_Others").addClass("hide");
+    }
+  }
+  Change();
+  secelem.change(function(){
+    Change();
+  })
+}
+
 function listenTextInputChanges(tag, message, func){
   var genelem=$("."+tag+" .col-lg-10").children().first(); 
   genelem.change(function(){
@@ -126,7 +142,15 @@ function formToCustomObj(jsondata){
     if((targetchild.is("input") || targetchild.is("textarea")) && targetchild.val()){
       newjsondata[key]=targetchild.val();
     }else if(targetchild.is("select")){
-      newjsondata[key]=targetchild.find(":selected").text();
+      
+      if (key == "Secondary_School" && targetchild.val() == '其他'){ 
+          var other_sec = $(".Secondary_School_Others .col-lg-10").children().first();
+          newjsondata["Secondary_School"] = other_sec.val();
+      
+      }else{
+        newjsondata[key]=targetchild.find(":selected").text();
+      }
+      
     }
   }
   newjsondata["action"]="UPDATEINFO";
