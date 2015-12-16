@@ -1,0 +1,23 @@
+extends ./layout.jade
+
+block title
+  title AmTee Submission Portal
+
+block head
+  link(href="./css/animate.min.css", rel="stylesheet")
+  link(href="./css/profile.css", rel="stylesheet")
+
+block content  
+  .wrapper
+    section.container
+      .col-lg-12
+        .tab-content
+            .tab-pane.fade.active.in.align-left#profile
+              //fill in data obtained from the session.
+              include ../includes/amtee_profile.jade
+            +modal
+
+
+block script
+  script(src="js/amtee.js")
+

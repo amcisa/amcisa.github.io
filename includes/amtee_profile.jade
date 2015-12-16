@@ -1,0 +1,40 @@
+mixin person_name(name,id)
+  .form-group&attributes(attributes)
+    label.col-lg-2.control-label=name
+    .col-lg-10
+      input.form-control(type='text', placeholder="若作者多于一位，请用逗号间隔各个名字。eg. 黄晓明，邓超，李晨")
+
+
+mixin text-form(name)
+  .form-group&attributes(attributes)
+    label.col-lg-2.control-label=name
+    .col-lg-10
+      input.form-control(type='text', placeholder="")
+
+
+form.form-horizontal
+  fieldset
+    legend.align-center AmTee Submission Portal 
+    
+    +text-form("作品名称")(class="Group_Name")
+    +person_name("作者中文姓名")(class="Name")
+
+    .form-group
+      label.col-lg-2.control-label="上传文件"
+      .col-lg-10
+        input.form-control(type='file')(class = 'Shirt_Image')
+        p 请确保上传文件为JPEG格式。
+
+    .form-group
+      .col-lg-10.col-lg-offset-2
+        span 我已阅读并同意"AMTee 会服设计比赛”的所有细则。     
+        input#checkbox(type='checkbox')
+
+
+    .form-group
+        .col-lg-10.col-lg-offset-2.submit
+          button#submitButton.btn.btn-success
+            span 提交
+            i.fa.fa-fw.fa-circle-o-notch.fa-spin.hide
+
+
