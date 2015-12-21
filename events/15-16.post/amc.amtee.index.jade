@@ -1,0 +1,55 @@
+extends ./amc.amtee.layout.jade
+
+block title
+  title Event
+
+block content
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        //- Replace this with the poster image found in your images/amc.amtee folder.
+        img(src="../../img/15-16/amc.amtee/poster.jpg")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 AMTee会服设计比赛
+        //h3 Exam Welfare Refreshment @ NTU
+        .btn.btn-dark.description-btn 
+          h3 #活动详情
+        a(href="amc.amtee.updates.html").white.btn.btn-dark.events-btn             
+          h3 #近期更新
+        :markdown
+          AMCISA会员们，久违的 “ AMTee会服设计比赛 ” 2016年重磅来袭!!
+          我们再次号召极富艺术才华的会员们，以AMTee为画布，尽情挥洒你们的创作与想象力，为AMCISA设计更具张力的徽标～
+          AMTee一件，创意无限，敬请踊跃参与!!
+          请点击以下链接以查阅比赛细则～
+
+        a(href="amcisa.org/gh/AMTee-设计比赛.doc")
+          h3 AMTee-设计比赛细则
+
+      .col-md-3
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 上传比赛作品日期 : 
+            //- Replace the following date with event date
+            | 28th December 2015 - 15th February 2016 
+
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })
