@@ -8,11 +8,37 @@ $(document).ready(function(){
     function(data){
         if(data==0){
             console.log('Not login yet');
-            alertmodal("error","Please login before proceeding. Then, press the refresh button to proceed on this page.")
-            window.open("login.html");
-            }
+            
+            $('#login_frame').removeClass('hide');
+            $('.wrapper').addClass('hide');
 
-        })
+            $(".alert-tab strong").html("You have not successfully login in. Please login to continue.");
+            $(".alert-tab").removeClass("hide");
+
+            //$('#login_frame').contents().find('button').click(function() {
+                //console.log('button pressed')
+                //window.top.location.reload();
+            
+            //});
+
+            $('#login_frame').load(function(){
+                var iframe = $('#login_frame').contents();
+                iframe.find('button').click(function(e){
+                    console.log('button pressed');
+                    window.top.location.reload();
+                });
+            });
+
+            }
+        
+        else{
+            $('#login_frame').addClass('hide');
+            $('.wrapper').removeClass('hide');
+            }
+        }
+
+    )
+    
     $("form").submit(function(e){e.preventDefault();runRPC();});
     
 })
