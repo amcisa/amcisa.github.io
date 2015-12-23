@@ -1,4 +1,3 @@
-/*
 $(document).ready(function(){
   //Poll for session data
   rpc(
@@ -8,18 +7,19 @@ $(document).ready(function(){
     },
     function(data){
         if(data==0){
-            window.location.href="login.html";
-            if (data==1){
-                window.location.href="amtee.html"
+            console.log('Not login yet');
+            alertmodal("error","Please login before proceeding. Then, press the refresh button to proceed on this page.")
+            window.open("login.html");
             }
-        }
-        $("form").submit(function(e){e.preventDefault();runRPC();});
-    })
+
+        })
+    $("form").submit(function(e){e.preventDefault();runRPC();});
+    
 })
-*/
+
 
 //This line below should be activated to test this submission system without the login system
-$("form").submit(function(e){e.preventDefault();runRPC();});
+//$("form").submit(function(e){e.preventDefault();runRPC();});
 
 function sanitise(string){
     //trivial sanitising function, not for serious use
@@ -32,13 +32,13 @@ function runRPC(status) {
     
     this.value="Processing...";
 
+    $(".col-lg-10.col-lg-offset-2.submit i").removeClass('hide');
+
     //Refresh state
     $('.Group_Name').removeClass('has-error');
     $('.Name').removeClass('has-error');
     $('.Email').removeClass('has-error');
     $('.Shirt_Image').removeClass('has-error');
-    //document.getElementById('error').style.display = 'none';
-    //document.getElementById('output').style.display = 'none';
 
     //Standard error checking code
     //function checkEmptyInput(elementname, errorvalue) {
@@ -129,17 +129,21 @@ function runRPC(status) {
                             $(".col-lg-10.col-lg-offset-2.submit span").html("重新提交");
                         }
                     }
+                    $(".col-lg-10.col-lg-offset-2.submit i").addClass('hide');
                 },
                 error: function(xhr, status, error) {
                     console.log(status);
                     alertmodal("error","不好意思，上传失败！" + error);
                     $(".col-lg-10.col-lg-offset-2.submit span").html("重新提交");
+                    $(".col-lg-10.col-lg-offset-2.submit i").addClass('hide');
                 }
 
             });
         } else {
             alertmodal("error","请将所有的资料填妥完整。谢谢！");
             $(".col-lg-10.col-lg-offset-2.submit span").html("重新提交");
+            $(".col-lg-10.col-lg-offset-2.submit i").addClass('hide');
         }
     }
 }
+
