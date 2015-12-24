@@ -23,8 +23,7 @@ $(document).ready(function(){
 
             $('#login_frame').load(function(){
                 var iframe = $('#login_frame').contents();
-                iframe.find('button').click(function(e){
-                    console.log('button pressed');
+                iframe.find('.go').click(function(e){
                     window.top.location.reload();
                 });
             });
