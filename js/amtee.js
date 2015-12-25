@@ -24,7 +24,15 @@ $(document).ready(function(){
             $('#login_frame').load(function(){
                 var iframe = $('#login_frame').contents();
                 iframe.find('.go').click(function(e){
-                    window.top.location.reload();
+                    rpc(
+                    "php/login_delegate.php",
+                    {
+                      "action":"CHECKLOGINSTATUS"
+                    },function(data){
+                        if(data!=0){
+                            window.top.location.reload();
+                        }
+                    });
                 });
             });
 
