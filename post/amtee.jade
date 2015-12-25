@@ -17,10 +17,10 @@ block content
     section.container
       .col-lg-2
         ul.nav.nav-pills.nav-stacked
-            li.active
+            li.active.profile
               a(href='#profile', data-toggle='tab', aria-expanded='true') 上传作品
-            li
-              a(href='#registered', data-toggle='tab', aria-expanded='true') 我的作品集
+            li.registered
+              a(href='#registered', data-toggle='tab', aria-expanded='true', onclick = 'showImages()') 我的作品集
 
 
       .col-lg-10
@@ -29,7 +29,8 @@ block content
               //fill in data obtained from the session.
               include ../includes/amtee_profile.jade
             .tab-pane.fade.in.align-left#registered
-              h2 你还未上传任何作品。期待您的杰作！
+              //h2 你还未上传任何作品。期待您的杰作！
+              #img_row
             +modal
 
 

@@ -4,21 +4,29 @@
     
     //Add a timestamp to the files so that they remain unique submissions
     //maybe use GUID in the future?
-    
-    $old_dir="/home/amcisaor/public_html/gh/uploads/" . $_FILES["shirt"]["name"];
+    session_start();
+
+    require $_SERVER['DOCUMENT_ROOT']."secure/login_rpc.php";
+
+    $results= queryDB("SELECT * FROM `memberlist` WHERE Matric_NO=\"".$_SESSION["matricnum"]."\"");
+
+    $dir= "/home/amcisaor/public_html/gh/uploads/". $results["Name_CH"];
     
     //This line below is kept for testing on computer
-    //$old_dir="C:/wamp/www/amcisa.github.io/uploads/" . $_FILES["shirt"]["name"];
+    //dir = "C:/wamp/www/amcisa.github.io/uploads/" . $results["Name_EN"];
+    $old_dir = $dir .'/'.$_FILES["shirt"]["name"];
+
+    if (!(file_exists($dir))){
+      mkdir($dir);
+    } 
 
     $timestamp=date("Ymd_Gis");
     $imageFileType = pathinfo($old_dir,PATHINFO_EXTENSION);
 
 
     if($imageFileType =='jpg' || $imageFileType =='JPG' ){
-       $target_dir= "/home/amcisaor/public_html/gh/uploads/".$timestamp."_".$_FILES["shirt"]["name"];
+       $target_dir= $dir .'/'.$timestamp."_".$_FILES["shirt"]["name"];
 
-       //This line below is kept for testing on computer
-       //$target_dir= "C:/wamp/www/amcisa.github.io/uploads/".$timestamp."_".$_FILES["shirt"]["name"];
        if (move_uploaded_file($_FILES["shirt"]["tmp_name"], $target_dir)) {
         echo 0;
       
@@ -32,4 +40,6 @@
        //Error status '09' means wrong file type, but successful upload
        echo 9;
     }
+
+
 ?>

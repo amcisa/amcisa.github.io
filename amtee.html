@@ -37,8 +37,8 @@
       <section class="container">
         <div class="col-lg-2">
           <ul class="nav nav-pills nav-stacked">
-            <li class="active"><a href="#profile" data-toggle="tab" aria-expanded="true">上传作品</a></li>
-            <li><a href="#registered" data-toggle="tab" aria-expanded="true">我的作品集</a></li>
+            <li class="active profile"><a href="#profile" data-toggle="tab" aria-expanded="true">上传作品</a></li>
+            <li class="registered"><a href="#registered" data-toggle="tab" aria-expanded="true" onclick="showImages()">我的作品集</a></li>
           </ul>
         </div>
         <div class="col-lg-10">
@@ -81,7 +81,8 @@
               </form>
             </div>
             <div id="registered" class="tab-pane fade in align-left">
-              <h2>你还未上传任何作品。期待您的杰作！</h2>
+              <!--h2 你还未上传任何作品。期待您的杰作！-->
+              <div id="img_row"></div>
             </div>
             <div class="modal animated align-left">
               <div class="modal-dialog">

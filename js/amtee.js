@@ -54,9 +54,49 @@ $(document).ready(function(){
 //This line below should be activated to test this submission system without the login system
 //$("form").submit(function(e){e.preventDefault();runRPC();});
 
+
+function showImages(){
+    rpc(
+        "php/login_delegate.php",
+        {
+          "action":"READUSERNAME_CH"
+          //"action":"READUSERNAME_CH"
+        },
+        function(data){
+            var dir = "uploads/" + data;
+            console.log(dir);
+            var fileextension = ".jpg";
+            $.ajax({
+                //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+                url: dir,
+                success: function (data) {
+                    //List all .jpg file names in the page
+                    console.log('success show images');
+                    $("#img_row").empty();
+                    $(data).find("a").attr("href", function (i, val) {
+                        if(val.match(/\.jpg/) ) { 
+                            $("#img_row").append("<img src='" + dir + '/' + val + "'>");
+                            $("#img_row").append("<p> 作品名称与作者：" + val.slice(16,-4) + "</p>");
+                            $("#img_row").append("<p> 上传日期与时间：" + val.slice(0,15) + "</p>");
+                            console.log('here');
+                        }
+                
+                    });
+                },
+                error: function(data){
+                    //Not browsable means that there is not upload event before
+                    $("#img_row").empty();
+                    $("#img_row").append("<h2> 你还未上传任何作品。期待您的杰作！</h2>");
+                }
+            });
+
+        })
+
+}
+
 function sanitise(string){
     //trivial sanitising function, not for serious use
-    return string.replace(/[&\/\\#,+()$~%.:*?<>{}\s+]/g,'_');
+    return string.replace(/[ &\/\\#,+()$~%.:*?<>{}\s+]/g,'_');
 }
 
 function runRPC(status) {
@@ -152,7 +192,9 @@ function runRPC(status) {
                     console.log(status);
                     if (status == 0) {
                         console.log('successfully uploaded')
-                        alertmodal("success","上传成功！谢谢您的参与，祝你好运！")
+                        alertmodal("success","上传成功！谢谢您的参与，祝你好运！\n 请点击“我的作品集”浏览自己所上传过的作品。")
+
+                    
                     } else {
                         if(status== 09){
                             alertmodal("error","上传失败！请确保你的上传文件为JPEG格式。");
