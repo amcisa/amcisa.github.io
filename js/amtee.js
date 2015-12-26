@@ -30,6 +30,7 @@ $(document).ready(function(){
                       "action":"CHECKLOGINSTATUS"
                     },function(data){
                         if(data!=0){
+                            console.log("Refreshing");
                             window.top.location.reload();
                         }
                     });
