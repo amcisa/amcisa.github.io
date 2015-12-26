@@ -24,6 +24,7 @@ $(document).ready(function(){
             $('#login_frame').load(function(){
                 var iframe = $('#login_frame').contents();
                 iframe.find('.go').click(function(e){
+                    $('#login_frame').hide();
                     rpc(
                     "php/login_delegate.php",
                     {
@@ -32,6 +33,8 @@ $(document).ready(function(){
                         if(data!=0){
                             console.log("Refreshing");
                             window.top.location.reload();
+                        }else{
+                            $('#login_frame').show();
                         }
                     });
                 });
