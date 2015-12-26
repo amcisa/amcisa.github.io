@@ -77,7 +77,7 @@ function showImages(){
                         if(val.match(/\.jpg/) ) { 
                             $("#img_row").append("<img src='" + dir + '/' + val + "'>");
                             $("#img_row").append("<p> 作品名称与作者：" + val.slice(16,-4) + "</p>");
-                            $("#img_row").append("<p> 上传日期与时间：" + val.slice(0,15) + "</p>");
+                            $("#img_row").append("<p> 上传日期：" + val.slice(0,8) + "</p>");
                             console.log('here');
                         }
                 
