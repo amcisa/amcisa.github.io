@@ -59,8 +59,8 @@ function showImages(){
     rpc(
         "php/login_delegate.php",
         {
+          //"action":"READUSERNAME_EN"
           "action":"READUSERNAME_CH"
-          //"action":"READUSERNAME_CH"
         },
         function(data){
             var dir = "uploads/" + data;

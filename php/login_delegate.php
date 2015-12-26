@@ -15,7 +15,9 @@
     //REMINDER TO ESCAPE ALL CHARACTERS
     print_r(updateUserInfo(dissoc($_POST,"action")));
     
+  }elseif($_POST["action"]=="READUSERNAME_EN"){
+    print_r(returnUserNameEnglish());
   }elseif($_POST["action"]=="READUSERNAME_CH"){
-    print_r(returnUserName());
+    print_r(returnUserNameChinese());
   }
 ?>

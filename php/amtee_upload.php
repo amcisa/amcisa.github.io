@@ -13,7 +13,8 @@
     $dir= "/home/amcisaor/public_html/gh/uploads/". $results["Name_CH"];
     
     //This line below is kept for testing on computer
-    //dir = "C:/wamp/www/amcisa.github.io/uploads/" . $results["Name_EN"];
+    //$dir = "C:/wamp/www/amcisa.github.io/uploads/" . $results["Name_EN"];
+    
     $old_dir = $dir .'/'.$_FILES["shirt"]["name"];
 
     if (!(file_exists($dir))){
