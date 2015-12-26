@@ -76,7 +76,7 @@ function showImages(){
                     $(data).find("a").attr("href", function (i, val) {
                         if(val.match(/\.jpg/) ) { 
                             $("#img_row").append("<img src='" + dir + '/' + val + "'>");
-                            $("#img_row").append("<p> 作品名称与作者：" + val.slice(16,-4) + "</p>");
+                            $("#img_row").append("<p> 作品名称与作者：" + val.slice(15,-4) + "</p>");
                             $("#img_row").append("<p> 上传日期：" + val.slice(0,8) + "</p>");
                             console.log('here');
                         }
@@ -149,6 +149,8 @@ function runRPC(status) {
     
     //done all error checking and start file uploading
 
+        $('#loading').removeClass('hide');
+
         if (emptyEle.length == 0) {
             this.value = 'Uploading..';
             var file = ($('.Shirt_Image')[0]).files[0]; //only one file is uploaded, so get the first file.
@@ -190,6 +192,8 @@ function runRPC(status) {
                 success: function(status) {
                     console.log('Success');
                     console.log(status);
+                    $('#loading').addClass('hide');
+
                     if (status == 0) {
                         console.log('successfully uploaded')
                         alertmodal("success","上传成功！谢谢您的参与，祝你好运！\n 请点击“我的作品集”浏览自己所上传过的作品。")
@@ -208,6 +212,7 @@ function runRPC(status) {
                 },
                 error: function(xhr, status, error) {
                     console.log(status);
+                    $('#loading').addClass('hide');
                     alertmodal("error","不好意思，上传失败！" + error);
                     $(".col-lg-10.col-lg-offset-2.submit span").html("重新提交");
                     $(".col-lg-10.col-lg-offset-2.submit i").addClass('hide');
@@ -215,6 +220,8 @@ function runRPC(status) {
 
             });
         } else {
+            $('#loading').addClass('hide');
+
             alertmodal("error","请将所有的资料填妥完整。谢谢！");
             $(".col-lg-10.col-lg-offset-2.submit span").html("重新提交");
             $(".col-lg-10.col-lg-offset-2.submit i").addClass('hide');
