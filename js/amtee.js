@@ -12,7 +12,7 @@ $(document).ready(function(){
             $('#login_frame').removeClass('hide');
             $('.wrapper').addClass('hide');
 
-            $(".alert-tab strong").html("You have not successfully login in. Please login to continue.");
+            $(".alert-tab strong").html("You have not successfully login in. Please login to continue. \nPlease click the refresh button if you have successfully login but the page does not reload.");
             $(".alert-tab").removeClass("hide");
 
             //$('#login_frame').contents().find('button').click(function() {
