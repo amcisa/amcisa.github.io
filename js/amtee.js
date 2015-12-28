@@ -15,12 +15,6 @@ $(document).ready(function(){
             $(".alert-tab strong").html("You have not successfully login in. Please login to continue. \nPlease click the refresh button if you have successfully login but the page does not reload.");
             $(".alert-tab").removeClass("hide");
 
-            //$('#login_frame').contents().find('button').click(function() {
-                //console.log('button pressed')
-                //window.top.location.reload();
-            
-            //});
-
             $('#login_frame').load(function(){
                 var iframe = $('#login_frame').contents();
                 iframe.find('.go').click(function(e){

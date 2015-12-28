@@ -44,7 +44,6 @@ $(document).ready(function(){
       //console.log(JSON.stringify(formToCustomObj(JSON.parse(data))));
     }
   )
-})
 
 function replaceDataInPersonalInformation(jsondata){
   for(key in jsondata){
