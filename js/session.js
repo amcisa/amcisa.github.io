@@ -27,6 +27,7 @@ function replaceLoginButtonWithProfileLink(data){
 function listenforsignOut(){
   $(".user-login").on('click',function(e){
     if($(e.target).attr("href")=="#signout"){
+      console.log('here');
       rpc(
         "php/login_delegate.php",
         {
