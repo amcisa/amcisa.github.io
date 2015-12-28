@@ -73,8 +73,6 @@ $(document).ready(function(){
     return (data.match(/^\d{10,11}$/) || data=="");
   })
   checkDataSubmitted(JSON.parse(data));
-
-  console.log('here');
       
       //console.log(JSON.stringify(formToCustomObj(JSON.parse(data))));
 })
