@@ -18,6 +18,7 @@ function replaceLoginButtonWithProfileLink(data){
   console.log(data);
   if(data){
     $(".user-login").html("<a href=\"#\" class=\"user-login dropdown-toggle\" role=\"button\" aria-expanded=\"false\" data-toggle=\"dropdown\">Hi, "+data["Name_CH"]+"</a><ul class=\"dropdown-menu\" role=\"menu\"><li><a href=\"profile.html\"><i class=\"fa fa-fw fa-cog\"></i>个人资料</a></li><li><a href=\"#signout\"><i class=\"fa fa-fw fa-sign-out\"></i>登出</a></li></ul>");
+    $(".user-login .dropdown-menu>li>a").css("color","black").css("text-align","center");
   }else{
     $(".user-login").html("<a href=\"login.html\">登入戶口</a>");
   }
