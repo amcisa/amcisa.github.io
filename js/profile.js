@@ -7,43 +7,75 @@ $(document).ready(function(){
       "action":"CHECKLOGINSTATUS"
     },
     function(data){
-      console.log('here');  
-      login_iframe(data);
+      if(data==0){
+            console.log('Not login yet');
+            
+            $('#login_frame').removeClass('hide');
+            $('.wrapper').addClass('hide');
+
+            $(".alert-tab strong").html("You have not successfully login in. Please login to continue. \nPlease click the refresh button if you have successfully login but the page does not reload.");
+            $(".alert-tab").removeClass("hide");
+
+            $('#login_frame').load(function(){
+                var iframe = $('#login_frame').contents();
+                iframe.find('.go').click(function(e){
+                    $('#login_frame').hide();
+                    rpc(
+                    "php/login_delegate.php",
+                    {
+                      "action":"CHECKLOGINSTATUS"
+                    },function(data){
+                        if(data!=0){
+                            console.log("Refreshing");
+                            window.top.location.reload();
+                        }else{
+                            $('#login_frame').show();
+                        }
+                    });
+                });
+            });
+
+            }
+        
+        else{
+            $('#login_frame').addClass('hide');
+            $('.wrapper').removeClass('hide');
+            }
       })
-      replaceDataInPersonalInformation(JSON.parse(data));
-      listenHallDataChanges();
-      listenSecondarySchoolChanges();
-      listenTextInputChanges("Password","Password length should exceed 7 characters!", function(data){        
-        return data.length>=8 || data.length==0;
-      })
-      listenTextInputChanges("Password","Old Password is empty!", function(data){
-        var oldPasswordval = $(".oldPassword .col-lg-10").children().first().val();
-        var Passwordval = $(".Password .col-lg-10").children().first().val();
-        if((oldPasswordval!="" && Passwordval!="") || (oldPasswordval=="" && Passwordval=="")){
-          $(".oldPassword .col-lg-10").removeClass("has-error");
-          return true;
-        }else{
-          $(".oldPassword .col-lg-10").addClass("has-error");
-          return false;
-        }
-      })
-      listenTextInputChanges("Email_Personal","Email format is wrong!", function(data){
-        return (data.match(/.+@\w+\.\w+$/i));
-      })
-      listenTextInputChanges("Email_School","Email format is wrong, should end with e.ntu.edu.sg.", function(data){
-        return (data.match(/.+@e.ntu.edu.sg$/i));
-      })
-      listenTextInputChanges("Phone_SG","Phone format example: 87613173", function(data){
-        return (data.match(/^\d{8}$/));
-      })
-      listenTextInputChanges("Phone_MY","Phone format example: 0161234567", function(data){
-        return (data.match(/^\d{10,11}$/) || data=="");
-      })
-      checkDataSubmitted(JSON.parse(data));
+  
+  replaceDataInPersonalInformation(JSON.parse(data));
+  listenHallDataChanges();
+  listenSecondarySchoolChanges();
+  listenTextInputChanges("Password","Password length should exceed 7 characters!", function(data){        
+    return data.length>=8 || data.length==0;
+  })
+  listenTextInputChanges("Password","Old Password is empty!", function(data){
+    var oldPasswordval = $(".oldPassword .col-lg-10").children().first().val();
+    var Passwordval = $(".Password .col-lg-10").children().first().val();
+    if((oldPasswordval!="" && Passwordval!="") || (oldPasswordval=="" && Passwordval=="")){
+      $(".oldPassword .col-lg-10").removeClass("has-error");
+      return true;
+    }else{
+      $(".oldPassword .col-lg-10").addClass("has-error");
+      return false;
+    }
+  })
+  listenTextInputChanges("Email_Personal","Email format is wrong!", function(data){
+    return (data.match(/.+@\w+\.\w+$/i));
+  })
+  listenTextInputChanges("Email_School","Email format is wrong, should end with e.ntu.edu.sg.", function(data){
+    return (data.match(/.+@e.ntu.edu.sg$/i));
+  })
+  listenTextInputChanges("Phone_SG","Phone format example: 87613173", function(data){
+    return (data.match(/^\d{8}$/));
+  })
+  listenTextInputChanges("Phone_MY","Phone format example: 0161234567", function(data){
+    return (data.match(/^\d{10,11}$/) || data=="");
+  })
+  checkDataSubmitted(JSON.parse(data));
       
       //console.log(JSON.stringify(formToCustomObj(JSON.parse(data))));
-    }
-  )
+})
 
 function replaceDataInPersonalInformation(jsondata){
   for(key in jsondata){
