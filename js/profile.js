@@ -7,40 +7,8 @@ $(document).ready(function(){
       "action":"CHECKLOGINSTATUS"
     },
     function(data){
-      if(data==0){
-            console.log('Not login yet');
-            
-            $('#login_frame').removeClass('hide');
-            $('.wrapper').addClass('hide');
-
-            $(".alert-tab strong").html("You have not successfully login in. Please login to continue. \nPlease click the refresh button if you have successfully login but the page does not reload.");
-            $(".alert-tab").removeClass("hide");
-
-            $('#login_frame').load(function(){
-                var iframe = $('#login_frame').contents();
-                iframe.find('.go').click(function(e){
-                    $('#login_frame').hide();
-                    rpc(
-                    "php/login_delegate.php",
-                    {
-                      "action":"CHECKLOGINSTATUS"
-                    },function(data){
-                        if(data!=0){
-                            console.log("Refreshing");
-                            window.top.location.reload();
-                        }else{
-                            $('#login_frame').show();
-                        }
-                    });
-                });
-            });
-
-            }
-        
-        else{
-            $('#login_frame').addClass('hide');
-            $('.wrapper').removeClass('hide');
-            }
+      console.log('here');
+      login_iframe(data);
       })
   
   replaceDataInPersonalInformation(JSON.parse(data));
