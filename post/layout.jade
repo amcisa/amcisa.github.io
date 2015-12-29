@@ -21,6 +21,12 @@ mixin modal()
         .modal-body
           p.body-content.error Error
           p.body-content.success Success
+
+mixin login_iframe()
+    .alert.alert-dismissible.alert-danger.col-lg-12.align-left.alert-tab.hide
+        strong
+  
+    iframe#login_frame(width = '600px', height = '600px', src = "login.html").hide Loading...
           
 doctype html5
 html

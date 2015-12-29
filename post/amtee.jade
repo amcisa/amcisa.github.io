@@ -8,10 +8,7 @@ block head
   link(href="./css/profile.css", rel="stylesheet")
 
 block content  
-  .alert.alert-dismissible.alert-danger.col-lg-12.align-left.alert-tab.hide
-    strong
-  
-  iframe#login_frame(width = '600px', height = '600px', src = "login.html").hide Loading...
+  login_iframe()
   
   .wrapper
     section.container
