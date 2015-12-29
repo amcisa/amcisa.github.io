@@ -6,6 +6,8 @@ $(document).ready(function(){
       "action":"CHECKLOGINSTATUS"
     },
     function(data){
+        //use login_iframe in util.js
+
         console.log('here');
         login_iframe(data);
         }
