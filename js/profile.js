@@ -9,15 +9,13 @@ $(document).ready(function(){
     function(data){
       console.log('here');
       login_iframe(data);
-      })
-  
-  replaceDataInPersonalInformation(JSON.parse(data));
-  listenHallDataChanges();
-  listenSecondarySchoolChanges();
-  listenTextInputChanges("Password","Password length should exceed 7 characters!", function(data){        
+      replaceDataInPersonalInformation(JSON.parse(data));
+    listenHallDataChanges();
+    listenSecondarySchoolChanges();
+    listenTextInputChanges("Password","Password length should exceed 7 characters!", function(data){        
     return data.length>=8 || data.length==0;
-  })
-  listenTextInputChanges("Password","Old Password is empty!", function(data){
+    })
+    listenTextInputChanges("Password","Old Password is empty!", function(data){
     var oldPasswordval = $(".oldPassword .col-lg-10").children().first().val();
     var Passwordval = $(".Password .col-lg-10").children().first().val();
     if((oldPasswordval!="" && Passwordval!="") || (oldPasswordval=="" && Passwordval=="")){
@@ -27,20 +25,24 @@ $(document).ready(function(){
       $(".oldPassword .col-lg-10").addClass("has-error");
       return false;
     }
-  })
-  listenTextInputChanges("Email_Personal","Email format is wrong!", function(data){
+    })
+    listenTextInputChanges("Email_Personal","Email format is wrong!", function(data){
     return (data.match(/.+@\w+\.\w+$/i));
-  })
-  listenTextInputChanges("Email_School","Email format is wrong, should end with e.ntu.edu.sg.", function(data){
+    })
+    listenTextInputChanges("Email_School","Email format is wrong, should end with e.ntu.edu.sg.", function(data){
     return (data.match(/.+@e.ntu.edu.sg$/i));
-  })
-  listenTextInputChanges("Phone_SG","Phone format example: 87613173", function(data){
+    })
+    listenTextInputChanges("Phone_SG","Phone format example: 87613173", function(data){
     return (data.match(/^\d{8}$/));
-  })
-  listenTextInputChanges("Phone_MY","Phone format example: 0161234567", function(data){
+    })
+    listenTextInputChanges("Phone_MY","Phone format example: 0161234567", function(data){
     return (data.match(/^\d{10,11}$/) || data=="");
-  })
-  checkDataSubmitted(JSON.parse(data));
+    })
+    checkDataSubmitted(JSON.parse(data));
+    
+    })
+  
+  
       
       //console.log(JSON.stringify(formToCustomObj(JSON.parse(data))));
 })
