@@ -1,0 +1,67 @@
+extends ./ntu.debate.layout.jade
+
+block title
+  title Event
+
+block content
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        //- Replace this with the poster image found in your images/ntu.debate folder.
+        img(src="../../img/15-16/ntu.debate/poster.photo.jpg")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h2 南洋理工大学 
+        h1 《呛站，辩种人！》辩论赛
+        .btn.btn-dark.description-btn 
+          h3 #活动详情
+        a(href="ntu.debate.updates.html").white.btn.btn-dark.events-btn             
+          h3 #近期更新
+        :markdown
+          爱情，应该爱得伟大还是爱得快乐？重色轻友到底是利大于弊还是弊大于利？横刀夺爱到底有没有错？
+          
+          这些人生中的两难抉择，你自己有没有立场？你对于你的信念，到底够不够坚定？
+          没经过挑战的信念，好比没经过考验的爱情，看似坚定可能败絮其中。没经过挑战的信念，好比没心碎过的爱人，不知道真爱的可贵。
+
+          所以，请把握好这一次的机会！踊跃组队报名参加由AMCISA破天荒主办的第一届呛声辩论比赛《呛战，辩种人》！
+
+        a(href="ntu.debate.register.html").btn.btn-dark.btn-lg 
+          h3 我要呛战！
+
+
+      .col-md-3
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 报名截止日期 : 
+            //- Replace the following date with event date
+            | 12th February 2016 
+          h2 
+            span.fa.fa-fw.fa-comments.blue &nbsp;
+            | 初赛日期 : 
+            //- Replace the following time with event time
+            | 27th February 2016
+          h2
+            span.fa.fa-fw.fa-trophy.yellow &nbsp;
+            | 决赛日期 : 
+            //- Replace the following venue with event venue 
+            | 18th March 2016
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })

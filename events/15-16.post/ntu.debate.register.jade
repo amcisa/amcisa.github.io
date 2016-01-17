@@ -1,0 +1,20 @@
+extends ./ntu.debate.layout.jade
+
+block title
+  title 报名
+
+block content
+  .wrapper
+    .container.grey-bg.full-pg#services-label
+      .row
+        h1 这儿报名!
+      .row
+        //- Replace "your-id-here" with the document key of your google form.
+        iframe(
+          src="https://docs.google.com/forms/d/1yOaXfd_1zf_BBwvlTcewUVQR84_99Ky93spzHZCj7iA/viewform?embedded=true"
+          width="730"
+          height="900"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          ) Loading...
