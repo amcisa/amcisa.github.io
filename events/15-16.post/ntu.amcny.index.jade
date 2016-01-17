@@ -1,0 +1,70 @@
+extends ./ntu.amcny.layout.jade
+
+block title
+  title AmCNY
+
+block content
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        //- Replace this with the poster image found in your images/ntu.amcny folder.
+        img(src="../../img/15-16/ntu.amcny/poster.photo.jpg")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 南洋理工大学过肥年
+        h3 AmCNY @ NTU
+        .btn.btn-dark.description-btn 
+          h3 #活动详情
+        a(href="ntu.amcny.updates.html").white.btn.btn-dark.events-btn             
+          h3 #近期更新
+        :markdown
+          爆竹声中一岁除，春风送暖入屠苏；千门万户瞳瞳日，总把新桃换旧符。
+          在过去一年里感谢所有人的关怀，让我们又平安地度过了一年。送旧迎春迎新岁。在新的一年里，让自己再次整装出发。
+          不知你是否和大家一样在盼望着新年能回家见到家人，期待着与家人缘聚的时光。又或者因为种种原因这次新年您无法踏上归家的路。别忘记在小南岛里有着像家人一样温馨，像同伴一样的体贴，像挚友一样关心的小伙伴们。痴痴地等待着你，想与你分享每一份喜悦。
+          一年一度的AMCNY又回来！提供了一个平台让每个忙碌的小伙伴们趁新年将至而欢聚在一起。当天将有好玩的游戏、精彩绝伦的表演等你来参与。除此之外，我们还有营养晚餐免费提供哦！邀请大家前往支持!
+
+
+        a(href="ntu.amcny.register.html").btn.btn-dark.btn-lg 
+          h3 我要参加！
+      .col-md-3
+
+
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 活动日期 : 
+            //- Replace the following date with event date
+            | 31 January 2016 （星期日）
+          h2 
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 活动时间 : 
+            //- Replace the following time with event time
+            | 6.00 p.m. - 10.30 p.m.
+          h2
+            span.fa.fa-fw.fa-building.blue &nbsp;
+            | 活动地点 : 
+            span.fa.fa-magic
+            //- Replace the following venue with event venue 
+            | HSS Foyer
+           h2 
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 截至日期 : xx
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })
