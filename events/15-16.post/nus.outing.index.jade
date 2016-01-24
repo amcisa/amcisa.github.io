@@ -1,0 +1,66 @@
+extends ./nus.outing.layout.jade
+
+block title
+  title NUS Member Outing
+
+block content
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        //- Replace this with the poster image found in your images/ntu.amcny folder.
+        img(src="../../img/15-16/nus.outing/poster.photo.jpg")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 NUS AMCISA Member Outing 2016
+        h3 Member Outing @ NUS
+        .btn.btn-dark.description-btn 
+          h3 #活动详情
+        :markdown
+          HEY YO EVERYBODY!!!
+
+          久违的Member Outing 回来咯！！
+
+          趁着新学期的开始，赶快把握时机和大家相聚，一起玩一起出游！
+
+          我们这次将会一起去SENTOSA！
+
+          有风景宜人的沙滩，让你瞬间忘我的游戏，有你我他一起去！
+
+      .col-md-3
+
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 活动日期 : 
+            //- Replace the following date with event date
+            | 30th January 2016 （星期六）
+          h2 
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 活动时间 : 
+            //- Replace the following time with event time
+            | 1.30 p.m. - 8.00 p.m.
+          h2
+            span.fa.fa-fw.fa-building.blue &nbsp;
+            | 活动地点 : 
+            span.fa.fa-magic
+            //- Replace the following venue with event venue 
+            | Sentosa
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })
