@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
   </head>
-  <title>注册</title>
+  <title>Event</title>
   <body>
     <link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/cosmo/bootstrap.min.css" rel="stylesheet"/>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
@@ -18,10 +18,10 @@
       <div class="navbar-collapse collapse navbar-responsive-collapse">
         <div class="nav navbar-nav navbar-left"><a href="../../index.html"><img src="../../img/amc.header.logo.full.png"/></a></div>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="ntu.amcny.index.html">活动主页</a></li>
-          <li><a href="ntu.amcny.updates.html">活动更新</a></li>
-          <li><a href="ntu.amcny.gallery.html">活动图集</a></li>
-          <li><a href="ntu.amcny.feedback.html">活动反馈</a></li>
+          <li><a href="ntu.msd.index.html">活动主页</a></li>
+          <li><a href="ntu.msd.updates.html">活动更新</a></li>
+          <li><a href="ntu.msd.gallery.html">活动图集</a></li>
+          <li><a href="ntu.msd.feedback.html">活动反馈</a></li>
           <li><a href="../../events.html">活动全集</a></li>
           <li><a href="../../index.html">本会主页</a></li>
         </ul>
@@ -29,12 +29,51 @@
     </div>
     <!--This is where our main content is inserted into.-->
     <div class="wrapper">
-      <div id="services-label" class="container grey-bg full-pg">
+      <div id="poster-label" class="poster">
+        <div class="ps-img"><img src="../../img/15-16/ntu.msd/poster.photo.jpg"/>
+          <div class="ps-cover"></div>
+        </div>
+      </div>
+      <div class="ps-well">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <h1>南洋理工大学大马运动会</h1>
+          <h3>Malaysian Sports Day @ NTU</h3>
+          <div class="btn btn-dark description-btn"> 
+            <h3>#活动详情</h3>
+          </div><a href="ntu.msd.updates.html" class="white btn btn-dark events-btn">            
+            <h3>#近期更新</h3></a><p>Feeling tired of study? Wishing to make more friends? Looking for a break?
+Show us your sports talent! Ladies and gentlemen, hesitate no more and join us for Malaysian Sports Day 2016!</p>
+
+<p>For this year, we have basketball, dodgeball, futsal, frisbee and badminton games. And not to forget, 200m sprint for all the male sprinters and 4*100m mixed sprint relay (2 males and 2 females in one team)! Don’t miss this opportunity to grab them!</p>
+
+<p>Free MSD T-shirt and breakfast will be provided!</p><a href="ntu.msd.register.html" class="btn btn-dark btn-lg"> 
+            <h3>我要参加！</h3></a>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+      <div id="description-label" class="container grey-bg full-pg">
         <div class="row">
-          <h1>请填写资料</h1>
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <h1 class="border-bottom-light">活动详情</h1>
+          </div>
+          <div class="col-md-3"></div>
         </div>
         <div class="row">
-          <iframe src="https://kooltzh.typeform.com/to/RDXmTh" width="730" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+          <div class="col-md-4"></div>
+          <div class="col-md-5 align-left">
+            <h2><span class="fa fa-fw fa-clock-o red">&nbsp;</span>活动日期 : 13th March 2016 
+            </h2>
+            <h2> <span class="fa fa-fw fa-calendar yellow">&nbsp;</span>活动时间 : 8am - 6pm
+            </h2>
+            <h2><span class="fa fa-fw fa-building blue">&nbsp;</span>活动地点 : <span class="fa fa-magic"></span>NTU Sports & Recreation Centre
+            </h2>
+            <h2><span class="fa fa-fw fa-check red">&nbsp;</span>报名截止日期 :  
+              21st February 2016
+            </h2>
+          </div>
+          <div class="col-md-3"></div>
         </div>
       </div>
     </div>
@@ -66,5 +105,11 @@
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/googlepage.js"></script>
     <script src="../../js/util.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        pageScrollTo("description");
+        return false;
+      })
+    </script>
   </body>
 </html>

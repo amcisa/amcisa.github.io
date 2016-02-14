@@ -1,0 +1,74 @@
+extends ./ntu.msd.layout.jade
+
+block title
+  title Event
+
+block content
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        //- Replace this with the poster image found in your images/ntu.msd folder.
+        img(src="../../img/15-16/ntu.msd/poster.photo.jpg")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 南洋理工大学大马运动会
+        h3 Malaysian Sports Day @ NTU
+        .btn.btn-dark.description-btn 
+          h3 #活动详情
+        a(href="ntu.msd.updates.html").white.btn.btn-dark.events-btn             
+          h3 #近期更新
+        :markdown
+          Feeling tired of study? Wishing to make more friends? Looking for a break?
+          Show us your sports talent! Ladies and gentlemen, hesitate no more and join us for Malaysian Sports Day 2016!
+
+          For this year, we have basketball, dodgeball, futsal, frisbee and badminton games. And not to forget, 200m sprint for all the male sprinters and 4*100m mixed sprint relay (2 males and 2 females in one team)! Don’t miss this opportunity to grab them!
+
+          Free MSD T-shirt and breakfast will be provided!
+
+        a(href="ntu.msd.register.html").btn.btn-dark.btn-lg 
+          h3 我要参加！
+
+
+      .col-md-3
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 活动日期 : 
+            //- Replace the following date with event date
+            | 13th March 2016 
+          h2 
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 活动时间 : 
+            //- Replace the following time with event time
+            | 8am - 6pm
+          h2
+            span.fa.fa-fw.fa-building.blue &nbsp;
+            | 活动地点 : 
+            span.fa.fa-magic
+            //- Replace the following venue with event venue 
+            | NTU Sports & Recreation Centre
+
+          h2
+            span.fa.fa-fw.fa-check.red &nbsp;
+            | 报名截止日期 :  
+            | 21st February 2016
+
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })
