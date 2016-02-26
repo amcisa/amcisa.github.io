@@ -11,7 +11,7 @@
     <link href="./css/animate.min.css" rel="stylesheet"/>
     <link href="./css/profile.css" rel="stylesheet"/>
   </head>
-  <title>AmTee Submission Portal</title>
+  <title>AmTee Voting Result</title>
   <body>
     <!--Default navigation bar-->
     <div class="navbar-default navbar-fixed-top">
@@ -33,31 +33,92 @@
     <!--This is where our main content is inserted into.-->
     <div class="alert alert-dismissible alert-danger col-lg-12 align-left alert-tab hide"><strong></strong></div>
     <iframe id="login_frame" width="600px" height="600px" src="login.html" class="hide">Loading...</iframe>
-    <h1>Submission has closed.</h1>
-    <h1>比赛已截至！谢谢你的参与！</h1>
-    <!--
-    .wrapper
-    section.container
-      .col-lg-2
-        ul.nav.nav-pills.nav-stacked
-            li.active.profile
-              a(href='#profile', data-toggle='tab', aria-expanded='true') 上传作品
-            li.registered
-              a(href='#registered', data-toggle='tab', aria-expanded='true', onclick = 'showImages()') 我的作品集
-    
-    
-      .col-lg-10
-        .tab-content
-            .tab-pane.fade.active.in.align-left#profile
-              //fill in data obtained from the session.
-              include ../includes/amtee_profile.jade
-            .tab-pane.fade.in.align-left#registered
-              //h2 你还未上传任何作品。期待您的杰作！
-              #img_row
-            +modal
-    
-    
-    -->
+    <h1>AmTee Voting Result</h1><br/>
+    <p>感谢你的投票！</p>
+    <p>以下是截至目前为止 AmTee 的投票成绩。</p><br/>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10">
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label class="col-lg-2">
+            <h3>作品名称：AMTEE唯我第一</h3>
+            <h3>作者：陈淑婷、莫翠茵</h3>
+          </label>
+          <div class="col-lg-8"><img src="uploads/20160215_80619_AMTEE唯我第一_陈淑婷、莫翠茵.jpg"/></div>
+          <div class="col-lg-2">
+            <h3>票数 </h3>
+            <div id="result1"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-2">
+            <h3>作品名称：1</h3>
+            <h3>作者：陈淑婷</h3>
+          </label>
+          <div class="col-lg-8"><img src="uploads/20160215_92244_1_陈淑婷.jpg"/></div>
+          <div class="col-lg-2">
+            <h3>票数 </h3>
+            <div id="result2"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-2">
+            <h3>作品名称：2(1)</h3>
+            <h3>作者：陈淑婷</h3>
+          </label>
+          <div class="col-lg-8"><img src="uploads/20160215_93725_2_陈淑婷.jpg"/></div>
+          <div class="col-lg-2">
+            <h3>票数 </h3>
+            <div id="result3"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-2">
+            <h3>作品名称：2(2)</h3>
+            <h3>作者：陈淑婷</h3>
+          </label>
+          <div class="col-lg-8"><img src="uploads/20160215_93734_2_陈淑婷.jpg"/></div>
+          <div class="col-lg-2">
+            <h3>票数 </h3>
+            <div id="result4"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-2">
+            <h3>作品名称：3</h3>
+            <h3>作者：陈淑婷</h3>
+          </label>
+          <div class="col-lg-8"><img src="uploads/20160215_93739_3_陈淑婷.jpg"/></div>
+          <div class="col-lg-2">
+            <h3>票数 </h3>
+            <div id="result5"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-2">
+            <h3>作品名称：AMTEE</h3>
+            <h3>作者：陈安时</h3>
+          </label>
+          <div class="col-lg-8"><img src="uploads/20160216_03443_AMTee__陈安时.jpg"/></div>
+          <div class="col-lg-2">
+            <h3>票数 </h3>
+            <div id="result6"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-lg-2">
+            <h3>作品名称：Am服服</h3>
+            <h3>作者：他不想给你知道</h3>
+          </label>
+          <div class="col-lg-8"><img src="uploads/20160219_205627_Am服服_他不想给你知道.jpg"/></div>
+          <div class="col-lg-2">
+            <h3>票数 </h3>
+            <div id="result7"></div>
+          </div>
+        </div>
+      </form><br/><br/>
+    </div>
+    <div class="col-lg-1"></div>
     <div class="container fillx"><br/></div>
     <div class="container align-left light-grey-bg fillx">
       <div class="col-md-2"></div>
@@ -87,6 +148,6 @@
     <script src="js/googlepage.js"></script>
     <script src="js/session.js"></script>
     <script src="js/util.js"></script>
-    <script src="js/amtee.js"></script>
+    <script src="js/amtee_result.js"></script>
   </body>
 </html>

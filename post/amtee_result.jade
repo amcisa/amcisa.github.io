@@ -1,0 +1,100 @@
+extends ./layout.jade
+
+block title
+  title AmTee Voting Result
+
+block head
+  link(href="./css/animate.min.css", rel="stylesheet")
+  link(href="./css/profile.css", rel="stylesheet")
+
+block content  
+  +login_iframe()
+  h1 AmTee Voting Result
+  br
+  p 感谢你的投票！
+  p 以下是截至目前为止 AmTee 的投票成绩。
+  br
+
+  .col-lg-1
+  .col-lg-10
+    form.form-horizontal
+      .form-group
+        label.col-lg-2
+          h3 作品名称：AMTEE唯我第一
+          h3 作者：陈淑婷、莫翠茵
+        .col-lg-8
+          img(src="uploads/20160215_80619_AMTEE唯我第一_陈淑婷、莫翠茵.jpg")
+        .col-lg-2
+          h3 票数 
+          #result1
+
+
+      .form-group
+        label.col-lg-2
+          h3 作品名称：1
+          h3 作者：陈淑婷
+        .col-lg-8
+          img(src="uploads/20160215_92244_1_陈淑婷.jpg")
+        .col-lg-2
+          h3 票数 
+          #result2
+
+      .form-group
+        label.col-lg-2
+          h3 作品名称：2(1)
+          h3 作者：陈淑婷
+        .col-lg-8
+          img(src="uploads/20160215_93725_2_陈淑婷.jpg")
+        .col-lg-2
+          h3 票数 
+          #result3
+
+      .form-group
+        label.col-lg-2
+          h3 作品名称：2(2)
+          h3 作者：陈淑婷
+        .col-lg-8
+          img(src="uploads/20160215_93734_2_陈淑婷.jpg")
+        .col-lg-2
+          h3 票数 
+          #result4
+
+      .form-group
+        label.col-lg-2
+          h3 作品名称：3
+          h3 作者：陈淑婷
+        .col-lg-8
+          img(src="uploads/20160215_93739_3_陈淑婷.jpg")
+        .col-lg-2
+          h3 票数 
+          #result5
+
+      .form-group
+        label.col-lg-2
+          h3 作品名称：AMTEE
+          h3 作者：陈安时
+        .col-lg-8
+          img(src="uploads/20160216_03443_AMTee__陈安时.jpg")
+        .col-lg-2
+          h3 票数 
+          #result6
+
+      .form-group
+        label.col-lg-2
+          h3 作品名称：Am服服
+          h3 作者：他不想给你知道
+        .col-lg-8
+          img(src="uploads/20160219_205627_Am服服_他不想给你知道.jpg")
+        .col-lg-2
+          h3 票数 
+          #result7
+    
+    br
+    br
+
+  .col-lg-1
+  
+
+block script
+  script(src="js/amtee_result.js")
+
