@@ -50,7 +50,7 @@ function login_iframe(data){
     $('#login_frame').removeClass('hide');
     $('.wrapper').addClass('hide');
 
-    $(".alert-tab strong").html("You have not successfully login in. Please login to continue. \nPlease click the refresh button if you have successfully login but the page does not reload.");
+    $(".alert-tab strong").html("You have not successfully login in. Please login to continue. \nPlease click the REFRESH button if you have successfully login but only the content in iframe changes.");
     $(".alert-tab").removeClass("hide");
 
     $('#login_frame').load(function(){
