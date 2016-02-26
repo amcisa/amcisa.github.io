@@ -1,6 +1,6 @@
 <?php
     //Get the database
-      $db = new mysqli("localhost", "root", "", "amcisaor_amcisa");
+      $db = new mysqli("localhost", "amcisaor", "1pleasing2sitter3likely", "amcisaor_amcisa");
       
       //$db= new mysqli ("localhost", "gudgud", "gudgud", "amcisaor_amcisa");
       // Check connection
