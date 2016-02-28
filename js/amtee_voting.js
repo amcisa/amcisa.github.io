@@ -1,7 +1,6 @@
 $(document).ready(function(){
   //Poll for session data
   //Require login. Function in util.js
-
   rpc(
     "php/login_delegate.php",
     {
@@ -43,7 +42,7 @@ function runRPC(){
             console.log(selection);
             if (selection["Vote"] == "0"){
                 console.log('no vote');
-                alertmodal("error","你尚未投票！");
+                alertmodal("error","你尚未选择你所想要的设计！");
             }
             else{
                 $.ajax({
@@ -59,7 +58,7 @@ function runRPC(){
                         window.location.href="amtee_result.html";
                     }
                     else if (data==-1){
-                        alertmodal("error","一人一票！");
+                        alertmodal("error","非常抱歉，一人只有一票！系统显示你之前已经投票！");
                         console.log('cannot vote');
                     }
                     else{
@@ -76,4 +75,8 @@ function runRPC(){
                 });
             }
         })
+}
+
+function click(){
+    console.log('hello');
 }

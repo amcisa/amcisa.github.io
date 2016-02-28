@@ -1,0 +1,21 @@
+.imgradio{
+  background-color: white;
+  border: 1px solid white;
+}
+.imgradio > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+.imgradio > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:10px solid transparent;
+}
+.imgradio > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:10px solid;
+  background-color: blue;
+}
+
+.imgradio:hover{
+  background-color: yellow;
+  border: 1px solid white;
+}

@@ -6,97 +6,92 @@ block title
 block head
   link(href="./css/animate.min.css", rel="stylesheet")
   link(href="./css/profile.css", rel="stylesheet")
+  link(href="./css/amteeVoting.css", rel="stylesheet")
 
 block content 
   +modal 
   +login_iframe()
   .wrapper
-    h1 AmTee Voting Portal
     br
-    p 请点击你所喜欢的设计右方的小圆圈投票，然后到底下点击“确认投票”。
-    p 一人一票，AmTee马上到！
+    h1 AmTee Voting Portal
+    h3 请点击选择你所喜欢的设计，然后到底下点击“确认投票”。
+    h3 一人一票，AmTee马上到！
     br
 
     .col-lg-1
     .col-lg-10
-      form.form-horizontal
+      form.form-horizontal.btn-group(data-toggle='buttons')
         .form-group
-          label.col-lg-2
+          label.col-lg-3
             h3 作品名称：AMTEE唯我第一
             h3 作者：陈淑婷、莫翠茵
-          .col-lg-8
-            img(src="uploads/20160215_80619_AMTEE唯我第一_陈淑婷、莫翠茵.jpg")
-          .col-lg-2
-            h3 我选择 
-            h3 AMTEE唯我第一
-            input(type="radio" name = "rdbtn" value="AMTEE唯我第一" id="1")
 
+          .col-lg-9
+            label.btn.btn-danger.imgradio
+              img(src="uploads/20160215_80619_AMTEE唯我第一_陈淑婷、莫翠茵.jpg")
+              input(type="radio" name = "rdbtn" value="AMTEE唯我第一" id="1" autocomplete="off")
 
         .form-group
-          label.col-lg-2
+          label.col-lg-3
             h3 作品名称：1
             h3 作者：陈淑婷
-          .col-lg-8
-            img(src="uploads/20160215_92244_1_陈淑婷.jpg")
-          .col-lg-2
-            h3 我选择 
-            h3 1
-            input(type="radio" name = "rdbtn" value="1" id="2")
+          .col-lg-9
+            label.btn.btn-danger.imgradio
+              img(src="uploads/20160215_92244_1_陈淑婷.jpg")
+              input(type="radio" name = "rdbtn" value="1" id="2")
+              
 
         .form-group
-          label.col-lg-2
+          label.col-lg-3
             h3 作品名称：2(1)
             h3 作者：陈淑婷
-          .col-lg-8
-            img(src="uploads/20160215_93725_2_陈淑婷.jpg")
-          .col-lg-2
-            h3 我选择 
-            h3 2(1)
-            input(type="radio" name = "rdbtn" value="2(1)" id="3")
+          .col-lg-9
+            label.btn.btn-danger.imgradio
+              img(src="uploads/20160215_93725_2_陈淑婷.jpg")
+              input(type="radio" name = "rdbtn" value="2(1)" id="3")
+              
 
         .form-group
-          label.col-lg-2
+          label.col-lg-3
             h3 作品名称：2(2)
             h3 作者：陈淑婷
-          .col-lg-8
-            img(src="uploads/20160215_93734_2_陈淑婷.jpg")
-          .col-lg-2
-            h3 我选择 
-            h3 2(2)
-            input(type="radio" name = "rdbtn" value="2(2)" id="4")
+          .col-lg-9
+            label.btn.btn-danger.imgradio
+              img(src="uploads/20160215_93734_2_陈淑婷.jpg")
+              input(type="radio" name = "rdbtn" value="2(2)" id="4")
+                          
 
         .form-group
-          label.col-lg-2
+          label.col-lg-3
             h3 作品名称：3
             h3 作者：陈淑婷
-          .col-lg-8
-            img(src="uploads/20160215_93739_3_陈淑婷.jpg")
-          .col-lg-2
-            h3 我选择 
-            h3 3
-            input(type="radio" name = "rdbtn" value="3" id="5")
+          .col-lg-9
+            label.btn.btn-danger.imgradio
+              img(src="uploads/20160215_93739_3_陈淑婷.jpg") 
+              input(type="radio" name = "rdbtn" value="3" id="5")
+                         
 
         .form-group
-          label.col-lg-2
+          label.col-lg-3
             h3 作品名称：AMTEE
             h3 作者：陈安时
-          .col-lg-8
-            img(src="uploads/20160216_03443_AMTee__陈安时.jpg")
-          .col-lg-2
-            h3 我选择 
-            h3 AMTEE
-            input(type="radio" name = "rdbtn" value="AMTEE" id="6")
+          .col-lg-9
+            label.btn.btn-danger.imgradio
+              img(src="uploads/20160216_03443_AMTee__陈安时.jpg")
+              input(type="radio" name = "rdbtn" value="AMTEE" id="6" onclick="click()")
+              
+            
 
         .form-group
-          label.col-lg-2
+          label.col-lg-3
             h3 作品名称：Am服服
             h3 作者：他不想给你知道
-          .col-lg-8
-            img(src="uploads/20160219_205627_Am服服_他不想给你知道.jpg")
-          .col-lg-2
-            h3 我选择 
-            h3 Am服服
-            input(type="radio" name = "rdbtn" value="Am服服" id="7")
+          .col-lg-9
+            label.btn.btn-danger.imgradio
+              img(src="uploads/20160219_205627_Am服服_他不想给你知道.jpg")
+              input(type="radio" name = "rdbtn" value="Am服服" id="7")
+              
+            
     
       button(onclick="runRPC()").btn.btn-success
         h3 确认投票

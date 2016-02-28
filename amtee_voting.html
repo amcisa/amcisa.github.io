@@ -10,6 +10,7 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="./css/animate.min.css" rel="stylesheet"/>
     <link href="./css/profile.css" rel="stylesheet"/>
+    <link href="./css/amteeVoting.css" rel="stylesheet"/>
   </head>
   <title>AmTee Voting Portal</title>
   <body>
@@ -48,95 +49,88 @@
     </div>
     <div class="alert alert-dismissible alert-danger col-lg-12 align-left alert-tab hide"><strong></strong></div>
     <iframe id="login_frame" width="600px" height="600px" src="login.html" class="hide">Loading...</iframe>
-    <div class="wrapper">
-      <h1>AmTee Voting Portal</h1><br/>
-      <p>请点击你所喜欢的设计右方的小圆圈投票，然后到底下点击“确认投票”。</p>
-      <p>一人一票，AmTee马上到！</p><br/>
+    <div class="wrapper"><br/>
+      <h1>AmTee Voting Portal</h1>
+      <h3>请点击选择你所喜欢的设计，然后到底下点击“确认投票”。</h3>
+      <h3>一人一票，AmTee马上到！</h3><br/>
       <div class="col-lg-1"></div>
       <div class="col-lg-10">
-        <form class="form-horizontal">
+        <form data-toggle="buttons" class="form-horizontal btn-group">
           <div class="form-group">
-            <label class="col-lg-2">
+            <label class="col-lg-3">
               <h3>作品名称：AMTEE唯我第一</h3>
               <h3>作者：陈淑婷、莫翠茵</h3>
             </label>
-            <div class="col-lg-8"><img src="uploads/20160215_80619_AMTEE唯我第一_陈淑婷、莫翠茵.jpg"/></div>
-            <div class="col-lg-2">
-              <h3>我选择 </h3>
-              <h3>AMTEE唯我第一</h3>
-              <input type="radio" name="rdbtn" value="AMTEE唯我第一" id="1"/>
+            <div class="col-lg-9">
+              <label class="btn btn-danger imgradio"><img src="uploads/20160215_80619_AMTEE唯我第一_陈淑婷、莫翠茵.jpg"/>
+                <input type="radio" name="rdbtn" value="AMTEE唯我第一" id="1" autocomplete="off"/>
+              </label>
             </div>
           </div>
           <div class="form-group">
-            <label class="col-lg-2">
+            <label class="col-lg-3">
               <h3>作品名称：1</h3>
               <h3>作者：陈淑婷</h3>
             </label>
-            <div class="col-lg-8"><img src="uploads/20160215_92244_1_陈淑婷.jpg"/></div>
-            <div class="col-lg-2">
-              <h3>我选择 </h3>
-              <h3>1</h3>
-              <input type="radio" name="rdbtn" value="1" id="2"/>
+            <div class="col-lg-9">
+              <label class="btn btn-danger imgradio"><img src="uploads/20160215_92244_1_陈淑婷.jpg"/>
+                <input type="radio" name="rdbtn" value="1" id="2"/>
+              </label>
             </div>
           </div>
           <div class="form-group">
-            <label class="col-lg-2">
+            <label class="col-lg-3">
               <h3>作品名称：2(1)</h3>
               <h3>作者：陈淑婷</h3>
             </label>
-            <div class="col-lg-8"><img src="uploads/20160215_93725_2_陈淑婷.jpg"/></div>
-            <div class="col-lg-2">
-              <h3>我选择 </h3>
-              <h3>2(1)</h3>
-              <input type="radio" name="rdbtn" value="2(1)" id="3"/>
+            <div class="col-lg-9">
+              <label class="btn btn-danger imgradio"><img src="uploads/20160215_93725_2_陈淑婷.jpg"/>
+                <input type="radio" name="rdbtn" value="2(1)" id="3"/>
+              </label>
             </div>
           </div>
           <div class="form-group">
-            <label class="col-lg-2">
+            <label class="col-lg-3">
               <h3>作品名称：2(2)</h3>
               <h3>作者：陈淑婷</h3>
             </label>
-            <div class="col-lg-8"><img src="uploads/20160215_93734_2_陈淑婷.jpg"/></div>
-            <div class="col-lg-2">
-              <h3>我选择 </h3>
-              <h3>2(2)</h3>
-              <input type="radio" name="rdbtn" value="2(2)" id="4"/>
+            <div class="col-lg-9">
+              <label class="btn btn-danger imgradio"><img src="uploads/20160215_93734_2_陈淑婷.jpg"/>
+                <input type="radio" name="rdbtn" value="2(2)" id="4"/>
+              </label>
             </div>
           </div>
           <div class="form-group">
-            <label class="col-lg-2">
+            <label class="col-lg-3">
               <h3>作品名称：3</h3>
               <h3>作者：陈淑婷</h3>
             </label>
-            <div class="col-lg-8"><img src="uploads/20160215_93739_3_陈淑婷.jpg"/></div>
-            <div class="col-lg-2">
-              <h3>我选择 </h3>
-              <h3>3</h3>
-              <input type="radio" name="rdbtn" value="3" id="5"/>
+            <div class="col-lg-9">
+              <label class="btn btn-danger imgradio"><img src="uploads/20160215_93739_3_陈淑婷.jpg"/>
+                <input type="radio" name="rdbtn" value="3" id="5"/>
+              </label>
             </div>
           </div>
           <div class="form-group">
-            <label class="col-lg-2">
+            <label class="col-lg-3">
               <h3>作品名称：AMTEE</h3>
               <h3>作者：陈安时</h3>
             </label>
-            <div class="col-lg-8"><img src="uploads/20160216_03443_AMTee__陈安时.jpg"/></div>
-            <div class="col-lg-2">
-              <h3>我选择 </h3>
-              <h3>AMTEE</h3>
-              <input type="radio" name="rdbtn" value="AMTEE" id="6"/>
+            <div class="col-lg-9">
+              <label class="btn btn-danger imgradio"><img src="uploads/20160216_03443_AMTee__陈安时.jpg"/>
+                <input type="radio" name="rdbtn" value="AMTEE" id="6" onclick="click()"/>
+              </label>
             </div>
           </div>
           <div class="form-group">
-            <label class="col-lg-2">
+            <label class="col-lg-3">
               <h3>作品名称：Am服服</h3>
               <h3>作者：他不想给你知道</h3>
             </label>
-            <div class="col-lg-8"><img src="uploads/20160219_205627_Am服服_他不想给你知道.jpg"/></div>
-            <div class="col-lg-2">
-              <h3>我选择 </h3>
-              <h3>Am服服</h3>
-              <input type="radio" name="rdbtn" value="Am服服" id="7"/>
+            <div class="col-lg-9">
+              <label class="btn btn-danger imgradio"><img src="uploads/20160219_205627_Am服服_他不想给你知道.jpg"/>
+                <input type="radio" name="rdbtn" value="Am服服" id="7"/>
+              </label>
             </div>
           </div>
         </form>
