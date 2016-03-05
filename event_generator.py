@@ -3,6 +3,8 @@ import os
 import re
 import shutil
 
+print("hello") 
+
 def templateAvailable():
   #The event templates should be placed outside the main folder
   return (os.path.exists("../event/event_year.post"))
