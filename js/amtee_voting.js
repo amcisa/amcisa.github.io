@@ -69,7 +69,7 @@ function runRPC(){
                   },
                   error:function(data){
                     console.log("Error");
-                    lertmodal('error',"Voting failed. Please contact amcisa.org/gh/contact.html for help. State your Matriculation Number.");
+                    alertmodal('error',"Voting failed. Please contact amcisa.org/gh/contact.html for help. State your Matriculation Number.");
                     console.log(data);
                   }
                 });
