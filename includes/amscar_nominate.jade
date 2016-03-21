@@ -1,0 +1,57 @@
+mixin textArea-form(name)
+  .form-group&attributes(attributes)
+    label.col-lg-2.control-label=name
+    .col-lg-10
+      textarea.form-control(rows='3')
+    block
+
+mixin text-form(name)
+  .form-group&attributes(attributes)
+    label.col-lg-2.control-label=name
+    .col-lg-10
+      input.form-control(type='text', placeholder="")
+
+mixin select-form(name,options,range)
+  .form-group&attributes(attributes)
+    label.col-lg-2.control-label=name
+    .col-lg-10
+      select.form-control
+        if block
+          block
+        if options
+          each o in options
+            option=o
+
+form.form-horizontal
+  fieldset
+    legend.align-center AmScar Nomination Portal 
+    
+    +select-form("提名奖项")(class="NomPrize")
+      option 柔佛－麻坡中化中学
+      option 柔佛－利丰港培华独立中学
+      option 柔佛－居銮中华中学
+      option 柔佛－永平中学
+      option 柔佛－峇株巴辖华仁中学 
+      option 柔佛－新文龙中华中学 
+      option 柔佛－笨珍培群独立中学 
+      option 柔佛－新山宽柔中学 
+      option 柔佛－宽柔中学古来分校 
+      option 马六甲－马六甲培风中学 
+    +text-form_name("提名人物")(class="Name")
+    +textArea-form("他值得获奖的理由")(class="Caption")
+
+    .form-group
+      label.col-lg-2.control-label="上传照片"
+      .col-lg-10
+        input.form-control(type='file')(class = 'Image')
+        p 请确保上传文件为JPEG格式。
+
+
+    .form-group
+        .col-lg-10.col-lg-offset-2.submit
+          button#submitButton.btn.btn-success
+            span 提交
+            i.fa.fa-fw.fa-circle-o-notch.fa-spin.hide
+
+h2#loading.hide 请稍后......
+
