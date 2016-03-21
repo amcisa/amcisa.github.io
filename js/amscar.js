@@ -114,7 +114,7 @@ function runRPC(status){
                 if (status == 0) {
                     console.log('successfully uploaded');
                     write_to_db(MyName_val,NomPrize_val,Name_val,Caption_val);
-                    alertmodal("success","上传成功！谢谢您的参与!");
+                    window.location.href="amscarRedirect.html"
 
                 
                 } else {
