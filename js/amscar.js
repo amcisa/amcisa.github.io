@@ -112,8 +112,9 @@ function runRPC(status){
                 $('#loading').addClass('hide');
 
                 if (status == 0) {
-                    console.log('successfully uploaded')
-                    alertmodal("success","上传成功！谢谢您的参与!")
+                    console.log('successfully uploaded');
+                    write_to_db(MyName_val,NomPrize_val,Name_val,Caption_val);
+                    alertmodal("success","上传成功！谢谢您的参与!");
 
                 
                 } else {
@@ -143,3 +144,24 @@ function runRPC(status){
 
 }
 
+function write_to_db(MyName_val,NomPrize_val,Name_val,Caption_val){
+    var nomination = {};
+    nomination["Nominator"] = MyName_val;
+    nomination["Prize"] = NomPrize_val;
+    nomination["Nominee"] = Name_val;
+    nomination["Caption"] = Caption_val;
+
+    console.log(nomination);
+    $.ajax({
+      type:"POST",
+      data:nomination,
+      url:"./php/amscarDB.php",
+      success:function(data){
+        console.log("Success");
+      },
+      error:function(data){
+        console.log("Error");
+        console.log(data);
+      }
+    });
+}
