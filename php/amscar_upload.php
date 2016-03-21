@@ -5,9 +5,6 @@
     //Add a timestamp to the files so that they remain unique submissions
     //maybe use GUID in the future?
     session_start();
-
-    require $_SERVER['DOCUMENT_ROOT']."secure/login_rpc.php";
-
     
     
     $name = $_FILES["nominate"]["name"];
