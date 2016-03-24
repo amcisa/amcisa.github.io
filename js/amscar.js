@@ -69,7 +69,7 @@ function runRPC(status){
         var MyName_val=sanitise($('.MyName .col-lg-10').children().first().val());
         var NomPrize_val = sanitise($('.NomPrize .col-lg-10').children().first().val());
         var Name_val=sanitise($('.Name .col-lg-10').children().first().val());
-        var Caption_val=sanitise($('.Caption .col-lg-10').children().first().val());
+        var Caption_val=$('.Caption .col-lg-10').children().first().val();
         var file = ($('.Image')[0]).files[0];
 
         var filename = $('.Image').val().split(".");
