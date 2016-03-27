@@ -9,7 +9,7 @@
     $name = $_FILES["nominate"]["name"];
     $timestamp=date("Ymd_Gis");
     $dir= "/home/amcisaor/public_html/gh/uploads/amscar2016/". preg_split('[_.]', $name)[0]."/".$timestamp.'_'.$name;
-    print_r($_FILES["caption"]);
+    print_r($_POST["caption"]);
     //This line below is kept for testing on computer
     //$dir = "C:/wamp/www/amcisa.github.io/uploads/amscar2016/" . preg_split('[_.]', $name)[0]."/".$name;
     if (move_uploaded_file($_FILES["nominate"]["tmp_name"], $dir)) {
