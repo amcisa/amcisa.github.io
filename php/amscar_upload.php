@@ -11,6 +11,7 @@
     //This line below is kept for testing on computer
     //$dir = "C:/wamp/www/amcisa.github.io/uploads/amscar2016/" . preg_split('[_.]', $name)[0]."/".$name;
     if (move_uploaded_file($_FILES["nominate"]["tmp_name"], $dir)) {
+      mail('TANH0207@e.ntu.edu.sg','AmScar2016 Nomination', $_FILES["nominate"]["name"]);
       echo 0;
     }
       

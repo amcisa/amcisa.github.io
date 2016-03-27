@@ -113,10 +113,8 @@ function runRPC(status){
 
                 if (status == 0) {
                     console.log('successfully uploaded');
-                    write_to_db(MyName_val,NomPrize_val,Name_val,Caption_val);
-                    window.location.href="amscarRedirect.html"
-
-                
+                    write_to_db(MyName_val,NomPrize_val,Name_val,Caption_val));
+                    window.location.href="amscarRedirect.html";
                 } else {
                     alertmodal("error","不好意思，提名失败！");
                     $("span").html("重新提交");
