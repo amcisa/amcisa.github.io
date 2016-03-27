@@ -2,12 +2,12 @@
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     color:white;
 }
-a {
-  color: white;
-}
 img{
     max-height: 300px;
 }
 h4{
     font-weight: bold;
+}
+.wrapper{
+    background-image: url("././img/15-16/ntu.amscar/poster.jpg")
 }
