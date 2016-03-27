@@ -1,5 +1,7 @@
 $(document).ready(function(){
   //Poll for session data
+  $("#votesleft").append('<h2>10</h2>');
+  $("#combination").append('<h2>无</h2>');
   rpc(
     "php/login_delegate.php",
     {
@@ -12,7 +14,6 @@ $(document).ready(function(){
         }
 
     )
-    
     $("form").submit(function(e){e.preventDefault();runRPC();});
     
 })
@@ -20,41 +21,6 @@ $(document).ready(function(){
 
 //This line below should be activated to test this submission system without the login system
 //$("form").submit(function(e){e.preventDefault();runRPC();});
-
-function showImages(prizeName){
-    var nominee = nominee || {};
-    nominee.Name = 'hihi';
-    console.log(nominee.Name);
-    //since js support oop this project should need to use oop paradigm
-
-    var dir = "uploads/amscar2016/" + prizeName;
-    console.log(dir);
-    $.ajax({
-        //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-        url: dir,
-        success: function (data) {
-            //List all .jpg file names in the page
-            console.log('success show images');
-            $("#img_row").empty();
-            $(data).find("a").attr("href", function (i, val) {
-                if(val.match(/\.jpg/) || val.match(/\.jpeg/) || val.match(/\.JPG/) ){
-                    console.log(dir + '/' + val);
-                    
-                    $("#img_row").append("<img src='" + dir + '/' + val + "'>");
-                    console.log('here');
-                }
-            });
-        
-        },
-        error: function(data){
-            //Not browsable means that there is not upload event before
-            $("#img_row").empty();
-            $("#img_row").append("<h2>No image</h2>");
-        }
-    });
-
-}
-
 function sanitise(string){
     //trivial sanitising function, not for serious use
     return string.replace(/[ &\/\\#,+()$~%.:*?<>{}\s+]/g,'_');
