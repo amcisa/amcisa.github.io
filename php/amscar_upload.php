@@ -14,7 +14,7 @@
     if (move_uploaded_file($_FILES["nominate"]["tmp_name"], $dir)) {
       $headers = "Content-Type: text/html; charset=UTF-8";
       $content = $_FILES["nominate"]["name"]."\n".$_POST['caption'];
-      mail('TANH0207@e.ntu.edu.sg','AmScar2016 Nomination', $content, $headers);
+      mail('ntuamcisa@gmail.com','AmScar2016 Nomination', $content, $headers);
       echo 0;
     }
       
