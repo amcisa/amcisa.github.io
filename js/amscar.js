@@ -96,6 +96,7 @@ function runRPC(status){
         //Prepares the data for transmission
         var data = new FormData();       
         data.append('nominate', file, fileUpload);
+        data.append('caption', Caption_val);
 
         console.log(data);
             
