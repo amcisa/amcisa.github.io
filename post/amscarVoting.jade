@@ -1,0 +1,97 @@
+extends ./layout.jade
+
+block title
+  title AmScar Voting Portal
+
+block head
+  link(href="./css/animate.min.css", rel="stylesheet")
+  link(href="./css/profile.css", rel="stylesheet")
+  link(href="./css/amscar.css", rel="stylesheet")
+
+
+block content  
+  +login_iframe()
+  +modal
+  .wrapper
+        .poster
+            .ps-img
+                img(src="././img/15-16/ntu.amscar/poster.jpg")
+        .ps-well 
+            h1 AmScar 2016 Voting Portal
+            h4 致胜一票，就在你的手上
+
+            .col-lg-1
+            .col-lg-2
+                section.container
+                    ul.nav.nav-pills.nav-stacked
+                        li.active
+                            a(href='#profile', data-toggle='tab', aria-expanded='true') 投票主页
+                        li
+                            a(href='#amcao', data-toggle='tab', aria-expanded='true', onclick = 'showImages("Am草")') Am草
+                        li
+                            a(href='#amhua', data-toggle='tab', aria-expanded='true', onclick = 'showImages("Am花")') Am花
+                        li
+                            a(href='#amkidkid', data-toggle='tab', aria-expanded='true', onclick = 'showImages("AmKidKid")') AmKidKid
+                        li
+                            a(href='#amamam', data-toggle='tab', aria-expanded='true', onclick = 'showImages("AmAMAM")') AmAMAM
+                        li
+                            a(href='#amcouple', data-toggle='tab', aria-expanded='true', onclick = 'showImages("Am荧幕情侣")') Am荧幕情侣
+                        li
+                            a(href='#amsleep', data-toggle='tab', aria-expanded='true', onclick = 'showImages("Am睡神")') Am睡神
+                        li
+                            a(href='#ammoqi', data-toggle='tab', aria-expanded='true', onclick = 'showImages("Am默契")') Am默契
+                        li
+                            a(href='#amjaychou', data-toggle='tab', aria-expanded='true', onclick = 'showImages("AmJayChou ")') AmJayChou 
+                        li
+                            a(href='#ampattern', data-toggle='tab', aria-expanded='true', onclick = 'showImages("AmPattern")') AmPattern 
+                        li
+                            a(href='#amdrydry', data-toggle='tab', aria-expanded='true', onclick = 'showImages("AmDryDry")') AmDryDry 
+
+            .col-lg-8
+                .tab-content
+                    .tab-pane.fade.active.in.align-left#profile
+                        h2 投票主页
+                        br
+                        h4 在投票前，请注意：
+                        h4 1. 请到左方点击各个奖项进行投票。投票完毕后，返回“投票主页”，点击：“确认投票”。
+                        h4 2. 一人拥有10张票，可任意分配至任何奖项的任何被提名者，自由发挥。
+                        br
+                        h4 你手上还有的票数为：
+                        #votesleft
+                        h4 你已经投选的组合为：
+                        #combination
+                        br 
+                        br
+                        button#submitButton.btn.btn-info.btn-lg
+                          span 确认投票
+                          i.fa.fa-fw.fa-circle-o-notch.fa-spin.hide
+                    
+                    .tab-pane.fade.in.align-left#amcao
+                        h2 Am草
+                    .tab-pane.fade.in.align-left#amhua
+                        h2 Am花
+                    .tab-pane.fade.in.align-left#amkidkid
+                        h2 AmKidKid
+                    .tab-pane.fade.in.align-left#amamam
+                        h2 AmAMAM
+                    .tab-pane.fade.in.align-left#amcouple
+                        h2 Am荧幕情侣
+                    .tab-pane.fade.in.align-left#amsleep
+                        h2 Am睡神 
+                    .tab-pane.fade.in.align-left#ammoqi
+                        h2 Am默契
+                    .tab-pane.fade.in.align-left#amjaychou
+                        h2 AmJayChou 
+                    .tab-pane.fade.in.align-left#ampattern
+                        h2 AmPattern 
+                    .tab-pane.fade.in.align-left#amdrydry
+                        h2 AmDryDry
+                    #img_row
+
+
+            .col-lg-1
+                
+               
+
+block script
+  script(src="js/amscarVoting.js")

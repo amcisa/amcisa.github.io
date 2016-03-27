@@ -1,7 +1,7 @@
 @media (min-width: 768px) {
   .nav-stacked {
     padding-top: 20px;
-    position: fixed;
+    position: absolute;
   }
 }
 @media (max-width: 768px) {
