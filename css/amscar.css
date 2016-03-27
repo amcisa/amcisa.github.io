@@ -5,3 +5,9 @@
 a {
   color: white;
 }
+img{
+    max-height: 300px;
+}
+h4{
+    font-weight: bold;
+}
