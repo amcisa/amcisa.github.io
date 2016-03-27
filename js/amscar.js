@@ -117,7 +117,7 @@ function runRPC(status){
                     write_to_db(MyName_val,NomPrize_val,Name_val,Caption_val);
                     window.location.href="amscarRedirect.html";
                 } else {
-                    alertmodal("error","不好意思，提名失败！");
+                    alertmodal("error","不好意思，提名失败！请联络网持以协助您。");
                     $("span").html("重新提交");
                     $(".col-lg-10 i").addClass('hide');
                     }
@@ -125,7 +125,7 @@ function runRPC(status){
             error: function(xhr, status, error) {
                 console.log(status);
                 $('#loading').addClass('hide');
-                alertmodal("error","不好意思，上传失败！" + error);
+                alertmodal("error","不好意思，提名失败！请联络网持以协助您。" + error);
                 $("span").html("重新提交");
                 $(".col-lg-10 i").addClass('hide');
             }
