@@ -1,0 +1,61 @@
+extends ./ntu.amscar.layout.jade
+
+block title
+  title AmScar 2016
+
+block content
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        //- Replace this with the poster image found in your images/ntu.amscar folder.
+        img(src="../../img/15-16/ntu.amscar/poster.jpg")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 南洋理工大学 Am斯卡 2016
+        h3 AmScar 2016 @ NTU
+        .btn.btn-dark.description-btn 
+          h3 #活动详情
+        a(href="ntu.amscar.updates.html").white.btn.btn-dark.events-btn             
+          h3 #近期更新
+        :markdown
+          又到了一年一度AMCISA的Am斯卡季节！
+          自己想要出名，还是想要朋友红遍AMCISA，这是你最好的机会!
+          提名奖项包括Am花, Am草, Amkidkid, AmAmAm, Am睡神, Am默契, AmJayChou, AmPattern, AmDryDry,Am荧幕情侣
+
+        a(href="../../amscar.html").btn.btn-dark.btn-lg 
+          h3 我要提名
+        br
+        a(href="../../404.html").btn.btn-dark.btn-lg 
+          h3 投票尚未开放
+
+      .col-md-3
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 提名日期 : 
+            //- Replace the following date with event date
+            | 2016年3月24日 至 2016年3月31日 
+          h2 
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 投票日期 : 
+            //- Replace the following time with event time
+            | 2016年4月1日 至 2016年4月3日
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })
