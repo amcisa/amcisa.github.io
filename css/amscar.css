@@ -10,7 +10,6 @@ img{
 h4{
     font-weight: bold;
 }
-
-.wrapper{
-    background-image: url("././img/15-16/ntu.amscar/poster.jpg")
+.disabled{
+    background-color: #2d529f;;
 }
