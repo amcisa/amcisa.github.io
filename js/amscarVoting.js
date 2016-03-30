@@ -18,7 +18,7 @@ $(document).ready(function(){
     //$("form").submit(function(e){e.preventDefault();runRPC();});
 })
 
-function runRPC(status){
+function runRPC(){
     var idlist = {};
     var counter = 0;
     $(".dropdown").each(function() {
@@ -30,11 +30,13 @@ function runRPC(status){
 }
 
 function checkvotes(idlist){
+    console.log(idlist);
     $("#submitButton").removeClass("disabled");
     var votesleft = 10;
     var votes = 0;
     var combination = '';
     var counter = 0;
+    var voteList = {};
 
     if($(".name").length != $(".dropdown").length)
         alertmodal("alignment error");
@@ -43,7 +45,17 @@ function checkvotes(idlist){
         var currentvote = parseInt($("#"+key+" option:selected").text());
         if (currentvote > 0){
             votes += currentvote;
-            combination += "<h5>"+key.split("_")[0]+" - "+idlist[key]+": "+currentvote+"票"+"</h5>";
+            combination += key.split("_")[0]+" - "+idlist[key]+": "+currentvote+"票"+"<br>";
+            var mapping = {};
+            mapping[idlist[key]] = currentvote;
+            console.log(mapping);
+            if ((key.split("_")[0]) in voteList){
+                voteList[key.split("_")[0]].push(mapping);
+            }
+            else{
+                voteList[key.split("_")[0]] = [];
+                voteList[key.split("_")[0]].push(mapping);
+            }
         }
         
     }
@@ -68,11 +80,39 @@ function checkvotes(idlist){
     $("#combination").append('<h2>'+combination+'</h2>');
 
     $("#submitButton").click(function(){
+        write_to_db(voteList);
         alertmodal("success","成功！");
     });
     
 }
 
+function write_to_db(voteList){
+    rpc(
+        "php/login_delegate.php",
+        {
+          //"action":"READUSERNAME_EN"
+          "action":"READUSERNAME_CH"
+        },
+        function(data){
+            var myVoteList = {};
+            myVoteList["selection"] = {"gudgud":voteList};
+            console.log(myVoteList);
+            $.ajax({
+                  type:"POST",
+                  data:myVoteList,
+                  url:"./php/amscarVoting.php",
+                  success:function(data){
+                    alertmodal("success","投票成功");
+                    console.log(data);
+                  },
+                  error:function(data){
+                    console.log("Error");
+                    alertmodal('error',"Voting failed. Please contact amcisa.org/gh/contact.html for help. State your Matriculation Number.");
+                    console.log(data);
+                  }
+                });
+        });
+}
 
 //This line below should be activated to test this submission system without the login system
 //$("form").submit(function(e){e.preventDefault();runRPC();});
