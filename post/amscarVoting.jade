@@ -2,8 +2,9 @@ mixin dropdown(name)
   form.form-inline
     .form-group
         label 我的票数:
-        select.form-control.align-left
-                - var n = 0
+        select.form-control.align-left.dropdown(id = name)
+                option(selected) 0
+                - var n = 1
                 while n < 11
                     option= n++
   br
@@ -23,6 +24,7 @@ block content
   +login_iframe()
   +modal
   .wrapper
+    #img_text.container-fluid
         h1 AmScar 2016 Voting Portal
         h4 致胜一票，就在你的手上
 
@@ -31,7 +33,7 @@ block content
             section.container
                 ul.nav.nav-pills.nav-stacked
                     li.active
-                        a(href='#profile', data-toggle='tab', aria-expanded='true') 投票主页
+                        a(href='#profile', data-toggle='tab', aria-expanded='true', onclick = "runRPC()") 投票主页
                     li
                         a(href='#amcao', data-toggle='tab', aria-expanded='true') Am草
                     li
@@ -80,98 +82,103 @@ block content
                     .container-fluid.align-center
                         .col-md-6
                           img(src="uploads/amscar2016/Am草/Tadayuki_Kojima_方志毅.jpg")
-                          h4 Tadayuki Kojima
+                          h4.name Tadayuki Kojima
                           h5 Caption
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("Am草_Tadayuki_Kojima")
                         .col-md-6
                           img(src="uploads/amscar2016/Am草/宋晓慧_李宜恩.jpeg")
-                          h4 宋晓慧
+                          h4.name 宋晓慧
                           h5 Caption
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("Am草_宋晓慧")
                         .col-md-6.align-center
                           img(src="uploads/amscar2016/Am草/尤竑鯕_JJ.jpg")
-                          h4 尤竑鯕
+                          h4.name 尤竑鯕
                           h5 帅得无法无天！
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("Am草_尤竑鯕")
                         .col-md-6.align-center
                           img(src="uploads/amscar2016/Am草/黄文聪_李宜恩.jpeg")
-                          h4 黄文聪
+                          h4.name 黄文聪
                           h5 Caption 
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("Am草_黄文聪")
                 .tab-pane.fade.in.align-left#amhua
                     h2 Am花
                     .container-fluid.align-center
                         .col-md-6
                           img(src="uploads/amscar2016/Am花/吴诗蕾_方志毅.jpg")
-                          h4 吴诗蕾
+                          h4.name 吴诗蕾
                           h5 Caption
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("Am花_吴诗蕾")
                         .col-md-6
                           img(src="uploads/amscar2016/Am花/房捷敏_小豐豐.jpg")
-                          h4 房捷敏
+                          h4.name 房捷敏
                           h5 她是一朵愛吃肉的萊佛士大王花。
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("Am花_房捷敏")
                         .col-md-6
                           img(src="uploads/amscar2016/Am花/陈伟龙_方志毅.jpg")
-                          h4 陈伟龙
+                          h4.name 陈伟龙
                           h5 Caption
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("Am花_陈伟龙")
 
                 .tab-pane.fade.in.align-left#amkidkid
                     h2 AmKidKid
                     .container-fluid.align-center
                         .col-md-6
                           img(src="uploads/amscar2016/AmKidKid/紀智勝_小豐豐.jpg")
-                          h4 紀智勝
+                          h4.name 紀智勝
                           h5 稚嫩不老高齡男神
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("AmKidKid_紀智勝")
                         .col-md-6
                           img(src="uploads/amscar2016/AmKidKid/郭建升_李宜恩.jpeg")
-                          h4 郭建升
+                          h4.name 郭建升
                           h5 Caption
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("AmKidKid_郭建升")
                         .col-md-6
                           img(src="uploads/amscar2016/AmKidKid/黄文聪_李宜恩.jpeg")
-                          h4 黄文聪
+                          h4.name 黄文聪
                           h5 Caption
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("AmKidKid_黄文聪")
                 .tab-pane.fade.in.align-left#amamam
                     h2 AmAMAM
                     .container-fluid.align-center
                         .col-md-6
                           img(src="uploads/amscar2016/AmAMAM/OneWayTeo_郑好好.jpg")
-                          h4 OneWayTeo
+                          h4.name OneWayTeo
                           h5 实在太干，我看不下去......
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("AmAMAM_OneWayTeo")
                 .tab-pane.fade.in.align-left#amcouple
                     h2 Am荧幕情侣
                     .container-fluid.align-center
                         .col-md-6
                           img(src="uploads/amscar2016/Am荧幕情侣/黄文聪，张韶晴_李宜恩.jpeg")
-                          h4 黄文聪，张韶晴
+                          h4.name 黄文聪，张韶晴
                           h5 Caption
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("Am荧幕情侣_黄文聪_张韶晴")
                 .tab-pane.fade.in.align-left#amsleep
                     h2 Am睡神
                     .container-fluid.align-center
                         .col-md-6
                           img(src="uploads/amscar2016/Am睡神/秉声_张王玮.jpg")
-                          h4 秉声
+                          h4.name 秉声
                           h5 说好的跑步呢？
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("Am睡神_秉声")
                         .col-md-6
                           img(src="uploads/amscar2016/Am睡神/覃子豪_蔡晓双.jpg")
-                          h4 覃子豪
+                          h4.name 覃子豪
                           h5 无论什么地点什么姿势都睡得着
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("Am睡神_覃子豪")
+                        .col-md-6
+                          img(src="uploads/amscar2016/Am睡神/Gladys与王玮_Gudgud.jpeg")
+                          h4.name Gladys与王玮
+                          h5 lee wee nam 是有这么好睡吗？
+                          +dropdown("Am睡神_Gladys与王玮")
                 .tab-pane.fade.in.align-left#ammoqi
                     h2 Am默契
                     .container-fluid.align-center
                         .col-md-6
                           img(src="uploads/amscar2016/Am默契/谢维杰___纪智胜_方志毅.jpg")
-                          h4 谢维杰，纪智胜
+                          h4.name 谢维杰，纪智胜
                           h5 Caption
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("Am默契_谢维杰___纪智胜")
                 .tab-pane.fade.in.align-left#amjaychou
                     h2 AmJayChou
                 .tab-pane.fade.in.align-left#ampattern
@@ -179,47 +186,47 @@ block content
                     .container-fluid.align-center
                         .col-md-6
                           img(src="uploads/amscar2016/AmPattern/吴诗蕾_方志毅.jpg")
-                          h4 吴诗蕾
+                          h4.name 吴诗蕾
                           h5 Caption
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("AmPattern_吴诗蕾")
                         .col-md-6
                           img(src="uploads/amscar2016/AmPattern/纪智胜_蔡晓双.jpg")
-                          h4 纪智胜
+                          h4.name 纪智胜
                           h5 拍照很多Pattern
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("AmPattern_纪智胜")
                         .col-md-6
                           img(src="uploads/amscar2016/AmPattern/郭建升_李宜恩.jpeg")
-                          h4 郭建升
+                          h4.name 郭建升
                           h5 AM神经就是我啦！
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("AmPattern_郭建升")
                         .col-md-6
                           img(src="uploads/amscar2016/AmPattern/20160325_23514_AmPattern__郭建升_李宜恩.jpeg")
-                          h4 郭建升
+                          h4.name 郭建升2
                           h5 亲爱的白马王子赶快来亲吻我这条肥滋滋的美人鱼吧！
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("AmPattern_郭建升2")
                         .col-md-6
                           img(src="uploads/amscar2016/AmPattern/陈卓彦_李宜恩.jpeg")
-                          h4 陈卓彦
+                          h4.name 陈卓彦
                           h5 Caption
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("AmPattern_陈卓彦")
                 .tab-pane.fade.in.align-left#amdrydry
                     h2 AmDryDry
                     .container-fluid.align-center
                         .col-md-6
                           img(src="uploads/amscar2016/AmDryDry/GARY_蔡晓双.jpg")
-                          h4 GARY
+                          h4.name GARY
                           h5 照片已说明了一切
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("AmDryDry_GARY")
                         .col-md-6
                           img(src="uploads/amscar2016/AmDryDry/梁理文_李宜恩.jpeg")
-                          h4 梁理文
+                          h4.name 梁理文
                           h5 Caption
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("AmDryDry_梁理文")
                         .col-md-6
                           img(src="uploads/amscar2016/AmDryDry/郑释恩_戴小婷.jpg")
-                          h4 郑释恩
+                          h4.name 郑释恩
                           h5 DRY了22年，就让他得奖吧！
-                          +dropdown(class = "Tadayuki")
+                          +dropdown("AmDryDry_郑释恩")
 
 
         .col-lg-1
