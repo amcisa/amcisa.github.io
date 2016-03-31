@@ -1,19 +1,6 @@
 <?php
     //Get the database
       //$db = new mysqli("localhost", "amcisaor", "1pleasing2sitter3likely", "amcisaor_amcisa");
-
-      $username = key($_POST["selection"]);
-      $keyList = array_keys($_POST["selection"][$username]);
-      
-      foreach($keyList as $prize){
-        $nomination = $_POST["selection"][$username][$prize];
-        for($i=0;$i<count($nomination);$i++){
-          $selection = $nomination[$i];
-          print_r($prize.key($selection).$selection[key($selection)]);
-        }
-        
-      }
-      /*
       $db= new mysqli ("localhost", "gudgud", "gudgud", "amcisaor_amcisa");
       // Check connection
       if (mysqli_connect_errno()){
@@ -22,21 +9,36 @@
       }
       $db->set_charset("utf8");
 
-      //check whether user voted before. Grant access only to first time voters
-      $sql = "SELECT * FROM `amteevoting` WHERE Username = '".$_POST["Username"]."'";
+      //parsing data received
+      $username = key($_POST["selection"]);
+      $keyList = array_keys($_POST["selection"][$username]);
+      $sql = "SELECT * FROM `amscarvoter` WHERE Username = '".$username."'";
       $exist = $db -> query($sql);
 
       if (mysqli_num_rows($exist) == 0){
-        print_r (1); //successful vote
-        $sql = "INSERT INTO `amteevoting`(`Username`,`Vote`) VALUES ('".$_POST["Username"]."','".$_POST["Vote"]."')";
+        $sql = "INSERT INTO `amscarvoter`(`Username`) VALUES ('".$username."')";
         $results= $db->query($sql);      
+        
+        foreach($keyList as $prize){
+          $nomination = $_POST["selection"][$username][$prize];
+          for($i=0;$i<count($nomination);$i++){
+            $selection = $nomination[$i];
+            $nominee = key($selection);
+            $vote = $selection[$nominee];
+            //print_r($prize.$nominee.$vote);
+            $sql = "INSERT INTO `amscarresult2016`(`Prize`,`Nominee`,`Vote`) VALUES ('".$prize."','".$nominee."','".$vote."')";
+            $results= $db->query($sql); 
+            print_r (1); //successful vote     
+            }
+          }
+        
       }
-
+      
       else{
         print_r (-1); //cannot vote duplicate
       }
       
-      $db->close();*/
+      $db->close();
       
     
     
