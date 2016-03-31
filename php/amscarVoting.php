@@ -25,8 +25,6 @@
             $selection = $nomination[$i];
             $nominee = key($selection);
             $vote = $selection[$nominee];
-            //print_r($prize.$nominee.$vote);
-            //$sql = "INSERT INTO `amscarresult2016`(`Prize`,`Nominee`,`Vote`) VALUES ('".$prize."','".$nominee."','".$vote."')";
             $sql = "SELECT Vote FROM `amscarresult2016` WHERE `Prize` = '".$prize."' and `Nominee` = '".$nominee."'";
             $results= $db->query($sql);
             $currentVote = $results->fetch_row();
