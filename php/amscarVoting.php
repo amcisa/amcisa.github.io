@@ -9,9 +9,6 @@
       }
       $db->set_charset("utf8");
 
-      $sql = "DELETE FROM `amscarvoter` WHERE 1";
-      $db->query($sql);
-
       //parsing data received
       $username = key($_POST["selection"]);
       $keyList = array_keys($_POST["selection"][$username]);
