@@ -93,20 +93,19 @@ function write_to_db(voteList){
         },
         function(data){
             var myVoteList = {};
-            myVoteList["selection"] = {"gudgud":voteList};
+            myVoteList["selection"] = {data:voteList};
             $.ajax({
                   type:"POST",
                   data:myVoteList,
                   url:"./php/amscarVoting.php",
                   success:function(data){
                     if (data == 1){             //first time voter
-                        alertmodal("success","投票成功");
+                        alertmodal("success","投票成功！");
                     }
                     else if (data == -1){
                         alertmodal("error","非常抱歉！系统显示你曾经投票了！");
                     }
                     else{
-                        console.log("Error");
                         alertmodal('error',"Voting failed. Please contact amcisa.org/gh/contact.html for help. State your Matriculation Number.");
                         console.log(data);
                     }

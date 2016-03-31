@@ -9,6 +9,9 @@
       }
       $db->set_charset("utf8");
 
+      $sql = "DELETE FROM `amscarvoter` WHERE 1";
+      $db->query($sql);
+
       //parsing data received
       $username = key($_POST["selection"]);
       $keyList = array_keys($_POST["selection"][$username]);
@@ -26,12 +29,16 @@
             $nominee = key($selection);
             $vote = $selection[$nominee];
             //print_r($prize.$nominee.$vote);
-            $sql = "INSERT INTO `amscarresult2016`(`Prize`,`Nominee`,`Vote`) VALUES ('".$prize."','".$nominee."','".$vote."')";
-            $results= $db->query($sql); 
-            print_r (1); //successful vote     
-            }
+            //$sql = "INSERT INTO `amscarresult2016`(`Prize`,`Nominee`,`Vote`) VALUES ('".$prize."','".$nominee."','".$vote."')";
+            $sql = "SELECT Vote FROM `amscarresult2016` WHERE `Prize` = '".$prize."' and `Nominee` = '".$nominee."'";
+            $results= $db->query($sql);
+            $currentVote = $results->fetch_row();
+            $currentVote = $vote + $currentVote[0];
+            $sql = "UPDATE `amscarresult2016` SET Vote = ".$currentVote." WHERE `Prize` = '".$prize."' and `Nominee` = '".$nominee."'";
+            $db->query($sql);  
           }
-        
+        }
+        print_r (1); //successful vote 
       }
       
       else{
