@@ -22,7 +22,6 @@
         foreach($keyList as $prize){
           $nomination = $_POST["selection"][$username][$prize];
           for($i=0;$i<count($nomination);$i++){
-            print_r(count($nomination));
             $selection = $nomination[$i];
             $nominee = key($selection);
             $vote = $selection[$nominee];
