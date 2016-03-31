@@ -22,6 +22,7 @@
         foreach($keyList as $prize){
           $nomination = $_POST["selection"][$username][$prize];
           for($i=0;$i<count($nomination);$i++){
+            print_r(count($nomination));
             $selection = $nomination[$i];
             $nominee = key($selection);
             $vote = $selection[$nominee];
@@ -31,18 +32,20 @@
             $results= $db->query($sql);
             $currentVote = $results->fetch_row();
             $currentVote = $vote + $currentVote[0];
-            $sql = "UPDATE `amscarresult2016` SET Vote = ".$currentVote." WHERE `Prize` = '".$prize."' and `Nominee` = '".$nominee."'";
+            //$sql = "UPDATE `amscarresult2016` SET Vote = ".$currentVote." WHERE `Prize` = '".$prize."' and `Nominee` = '".$nominee."'";
+            print_r($sql);
             $db->query($sql);  
           }
         }
-        print_r (1); //successful vote 
+        print_r (1); //successful vote
+
+        $db->close();
       }
       
       else{
         print_r (-1); //cannot vote duplicate
+        $db->close();
       }
-      
-      $db->close();
       
     
     
