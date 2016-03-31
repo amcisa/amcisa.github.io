@@ -1,8 +1,9 @@
 $(document).ready(function(){
   //Poll for session data
-  $("#votesleft").append('<h2>10</h2>');
-  $("#combination").append('<h2>无</h2>');
-  $("#submitButton").addClass("disabled");
+  $(".col-md-6").each(function() {
+    console.log(this);   
+  });
+  console.log('here');
   rpc(
     "php/login_delegate.php",
     {
