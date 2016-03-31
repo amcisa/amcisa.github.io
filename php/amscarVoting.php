@@ -15,8 +15,6 @@
       $sql = "SELECT * FROM `amscarvoter` WHERE Username = '".$username."'";
       $exist = $db -> query($sql);
 
-      print_r($username);
-
       if (mysqli_num_rows($exist) == 0){
         $sql = "INSERT INTO `amscarvoter`(`Username`) VALUES ('".$username."')";
         $results= $db->query($sql);      

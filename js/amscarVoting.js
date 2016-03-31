@@ -93,7 +93,6 @@ function write_to_db(voteList){
         },
         function(data){
             var myVoteList = {};
-            console.log(data);
             var select = {};
             select[data] = voteList;
             myVoteList["selection"] = select;
