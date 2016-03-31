@@ -102,6 +102,7 @@ function write_to_db(voteList){
                   success:function(data){
                     if (data == 1){             //first time voter
                         alertmodal("success","投票成功！");
+                        window.location.href="amscarVoteRedirect.html";
                     }
                     else if (data == -1){
                         alertmodal("error","非常抱歉！系统显示你曾经投票了！");
