@@ -29,9 +29,9 @@
             $results= $db->query($sql);
             $currentVote = $results->fetch_row();
             $currentVote = $vote + $currentVote[0];
-            //$sql = "UPDATE `amscarresult2016` SET Vote = ".$currentVote." WHERE `Prize` = '".$prize."' and `Nominee` = '".$nominee."'";
+            $sql = "UPDATE `amscarresult2016` SET Vote = ".$currentVote." WHERE `Prize` = '".$prize."' and `Nominee` = '".$nominee."'";
             //print_r($sql);
-            //$db->query($sql);  
+            $db->query($sql);  
           }
         }
         print_r (1); //successful vote

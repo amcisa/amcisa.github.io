@@ -79,7 +79,6 @@ function checkvotes(idlist){
 
     $("#submitButton").click(function(){
         write_to_db(voteList);
-        alertmodal("success","成功！");
     });
     
 }
