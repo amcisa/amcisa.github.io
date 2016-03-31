@@ -1,7 +1,18 @@
 <?php
     //Get the database
       //$db = new mysqli("localhost", "amcisaor", "1pleasing2sitter3likely", "amcisaor_amcisa");
-      print_r($_POST["selection"]);
+
+      $username = key($_POST["selection"]);
+      $keyList = array_keys($_POST["selection"][$username]);
+      
+      foreach($keyList as $prize){
+        $nomination = $_POST["selection"][$username][$prize];
+        for($i=0;$i<count($nomination);$i++){
+          $selection = $nomination[$i];
+          print_r($prize.key($selection).$selection[key($selection)]);
+        }
+        
+      }
       /*
       $db= new mysqli ("localhost", "gudgud", "gudgud", "amcisaor_amcisa");
       // Check connection

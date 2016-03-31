@@ -10,7 +10,6 @@ $(document).ready(function(){
     },
     function(data){
         //use login_iframe in util.js
-        console.log('here');
         login_iframe(data);
         }
 
@@ -48,7 +47,6 @@ function checkvotes(idlist){
             combination += key.split("_")[0]+" - "+idlist[key]+": "+currentvote+"票"+"<br>";
             var mapping = {};
             mapping[idlist[key]] = currentvote;
-            console.log(mapping);
             if ((key.split("_")[0]) in voteList){
                 voteList[key.split("_")[0]].push(mapping);
             }
@@ -96,7 +94,6 @@ function write_to_db(voteList){
         function(data){
             var myVoteList = {};
             myVoteList["selection"] = {"gudgud":voteList};
-            console.log(myVoteList);
             $.ajax({
                   type:"POST",
                   data:myVoteList,
