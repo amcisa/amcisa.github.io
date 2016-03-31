@@ -94,7 +94,9 @@ function write_to_db(voteList){
         function(data){
             var myVoteList = {};
             console.log(data);
-            myVoteList["selection"] = {data:voteList};
+            var select = {};
+            select[data] = voteList;
+            myVoteList["selection"] = select;
             $.ajax({
                   type:"POST",
                   data:myVoteList,
