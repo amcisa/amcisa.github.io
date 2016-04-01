@@ -50,68 +50,52 @@
       </div>
     </div>
     <div class="wrapper">
-      <div class="poster">
-        <div class="ps-img"><img src="././img/15-16/ntu.amscar/poster.jpg"/></div>
-      </div>
-      <div class="ps-well">
-        <div class="col-lg-1"></div>
-        <div class="col-lg-10">
-          <form class="form-horizontal">
-            <fieldset>
-              <div class="title"> 
-                <h1>AmScar 2016 Nomination Portal</h1>
-                <p>万中选一，非你莫属 </p>
-                <p>*上传照片必须是JPG,PNG或GIF。 *“提名理由”不能多于25字。</p>
-                <p>建议使用电脑浏览本页。</p>
-              </div>
-              <div class="form-group MyName">
-                <label class="col-lg-2 control-label">提名人姓名</label>
-                <div class="col-lg-10">
-                  <input type="text" placeholder="" class="form-control"/>
-                </div>
-              </div>
-              <div class="form-group NomPrize">
-                <label class="col-lg-2 control-label">提名奖项</label>
-                <div class="col-lg-10">
-                  <select class="form-control">
-                    <option>Am草</option>
-                    <option>Am花</option>
-                    <option>AmKidKid</option>
-                    <option>AmAMAM</option>
-                    <option>Am荧幕情侣</option>
-                    <option>Am睡神</option>
-                    <option>Am默契 </option>
-                    <option>AmJayChou </option>
-                    <option>AmPattern </option>
-                    <option>AmDryDry </option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group Name">
-                <label class="col-lg-2 control-label">被提名者</label>
-                <div class="col-lg-10">
-                  <input type="text" placeholder="" class="form-control"/>
-                </div>
-              </div>
-              <div class="form-group Caption" placeholder="字数最多为25字">
-                <label class="col-lg-2 control-label">提名理由</label>
-                <div class="col-lg-10">
-                  <textarea rows="3" class="form-control"></textarea>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-lg-2 control-label">上传照片</label>
-                <div class="col-lg-10">
-                  <input type="file" class="form-control Image"/>
-                </div>
-              </div>
-              <button id="submitButton" class="btn btn-info btn-lg"><span>提名! </span><i class="fa fa-fw fa-circle-o-notch fa-spin hide"></i></button>
-            </fieldset>
-          </form>
-          <h2 id="loading" class="hide">请稍后......</h2>
-        </div>
-        <div class="col-lg-1"></div>
-      </div>
+      <h2>Nomination closed.</h2>
+      <!--
+      .poster
+          .ps-img
+              img(src="././img/15-16/ntu.amscar/poster.jpg")
+      .ps-well
+          .col-lg-1
+          .col-lg-10
+              form.form-horizontal
+                fieldset
+                  .title 
+                      h1 AmScar 2016 Nomination Portal
+                      p 万中选一，非你莫属 
+                      p *上传照片必须是JPG,PNG或GIF。 *“提名理由”不能多于25字。
+                      p 建议使用电脑浏览本页。
+                  +text-form("提名人姓名")(class="MyName")
+                  +select-form("提名奖项")(class="NomPrize")
+                    option Am草
+                    option Am花
+                    option AmKidKid
+                    option AmAMAM
+                    option Am荧幕情侣
+                    option Am睡神
+                    option Am默契 
+                    option AmJayChou 
+                    option AmPattern 
+                    option AmDryDry 
+                  +text-form("被提名者")(class="Name")
+                  +textArea-form("提名理由")(class="Caption" placeholder="字数最多为25字")
+      
+                  .form-group
+                    label.col-lg-2.control-label="上传照片"
+                    .col-lg-10
+                      input.form-control(type='file')(class = 'Image')
+      
+                  
+                  button#submitButton.btn.btn-info.btn-lg
+                    span 提名! 
+                    i.fa.fa-fw.fa-circle-o-notch.fa-spin.hide
+      
+              h2#loading.hide 请稍后......
+          .col-lg-1
+          
+      
+      
+      -->
     </div>
     <div class="container fillx"><br/></div>
     <div class="container align-left light-grey-bg fillx">
