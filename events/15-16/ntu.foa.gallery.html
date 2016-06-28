@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
   </head>
-  <title>AmTee Rules and Regulations</title>
+  <title>Gallery</title>
   <body>
     <link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/cosmo/bootstrap.min.css" rel="stylesheet"/>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
@@ -18,63 +18,24 @@
       <div class="navbar-collapse collapse navbar-responsive-collapse">
         <div class="nav navbar-nav navbar-left"><a href="../../index.html"><img src="../../img/amc.header.logo.full.png"/></a></div>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="amc.amtee.index.html">活动主页</a></li>
-          <li><a href="amc.amtee.rules.html">活动规则</a></li>
+          <li><a href="ntu.foa.index.html">活动主页</a></li>
+          <li><a href="ntu.foa.updates.html">活动更新</a></li>
+          <li><a href="ntu.foa.gallery.html">活动图集</a></li>
+          <li><a href="ntu.foa.feedback.html">活动反馈</a></li>
           <li><a href="../../events.html">活动全集</a></li>
           <li><a href="../../index.html">本会主页</a></li>
         </ul>
       </div>
     </div>
     <!--This is where our main content is inserted into.-->
-    <div class="container grey-bg fillx">
-      <h1>“AMTee 会服设计比赛”细则</h1>
-      <h4>AMTee Rules and Regulations</h4><br/>
-    </div>
-    <div class="container grey-bg fillx">
-      <div class="col-md-3"></div>
-      <div class="col-md-6 align-left"><ol>
-<li><p>“AMTee 会服设计比赛”是由 留新大马独中生联谊会（以下简称 AMCISA ）举办，其宗旨是为了遴选出新一届AMCISA 会服AMTee 的设计暨鼓励AMCISA会员发挥创意并踊跃参与新一届AMTee的设计；</p></li>
-<li><p>此设计比赛只限AMCISA会员（在籍大学生与毕业生）参与；</p></li>
-<li><p>每组参赛者人数不限；</p></li>
-<li><p>每组提交参赛作品数量不限；</p></li>
-<li><p>比赛采取网上公开投票制，投票系统如下：</p>
-
-<p>（1） 所有AMCISA会员皆可参与投票；</p>
-
-<p>（2） 一人一票制；</p>
-
-<p>（3） 票数最高的作品获胜；</p></li>
-<li><p>作品要求：</p>
-
-<p>（1） 设计需呈现AMCISA 徽标（官方提供下载）、以及“留新大马独中生联谊会”与“AMCISA”字样；</p>
-
-<p>（2） 全部设计（包括衣服底色）不超过三种颜色；</p>
-
-<p>（3） 衣服前后都需设计，且只允许使用官方提供下载的衣服 Template （包括前，后）；</p>
-
-<p>（4） 所设计之图案实际印刷尺寸不超过A4（29.7 × 20.1cm）；</p>
-
-<p>（5） 为避免与厂方实际印刷颜色出现差异，我们鼓励参赛者采用CMYK 颜色格式；</p></li>
-<li><p>投稿方式与要求：</p>
-
-<p>（1） 参赛者请自行登录官网，并将设计上传到官网即可；</p>
-
-<p>（2） 上传稿件请转换成 JPEG 格式；</p>
-
-<p>（3） 请参赛者自存设计稿件原档；</p>
-
-<p>（4） 若欲撤下已上传的稿件，请联络官网负责人 ；</p></li>
-<li><p>优胜作品版权将归 AMCISA 所有；</p></li>
-<li><p>2015年12月28日开始接受投稿；</p></li>
-<li><p>截稿日期为2016年2月15日，逾期者不受理；</p></li>
-<li><p>网上公开投票日期为2016年2月18日至2月25日，2016年2月26日公布成绩；</p></li>
-<li><p>奖品 （待定）；</p></li>
-<li><p>以上所列之所有细则，主办当局有权增删之。</p></li>
-</ol>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.2.2/css/nanogallery.min.css" rel="stylesheet"/>
+    <div class="wrapper">
+      <div id="services-label" class="container grey-bg full-pg">
+        <div class="row">
+          <div id="nanoGallery1" style="height=10px;"></div>
+        </div>
       </div>
-      <div class="col-md-3"></div>
     </div>
-    <div class="container grey-bg fillx filly align-left qa-out"></div>
     <div class="container fillx"><br/></div>
     <div class="container align-left light-grey-bg fillx">
       <div class="col-md-2"></div>
@@ -103,5 +64,19 @@
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/googlepage.js"></script>
     <script src="../../js/util.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.2.2/jquery.nanogallery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#nanoGallery1").nanoGallery({
+          kind:'flickr',
+          userID:'127695913@N03',
+          //- Replace photoset id with the your event flickr set id.
+          photoset:'123456789',
+          thumbnailLazyLoad: true,
+          thumbnailWidth: 120, thumbnailHeight: 120,
+          thumbnailHoverEffect: 'scaleLabelOverImage,borderDarker'
+        });
+      });
+    </script>
   </body>
 </html>
