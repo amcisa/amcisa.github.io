@@ -1,0 +1,65 @@
+extends ./ntu.talentnight.layout.jade
+
+block title
+  title Event
+
+block content
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        //- Replace this with the poster image found in your images/ntu.talentnight folder.
+        img(src="../../img/16-17/ntu.talentnight/talentnight.jpg")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 南洋理工大学才华之夜
+        h3 Talent Night @ NTU
+        .btn.btn-dark.description-btn 
+          //h3 #活动详情
+          //a(href="ntu.talentnight.updates.html").white.btn.btn-dark.events-btn             
+          h3 #近期更新
+        :markdown
+          在紧张又刺激的FOA后，大家是不是还意犹未尽，心里还有股浓浓的热忱呢？就是现在！让才华洋溢、热力四射的你们展现不凡的自己的时候到了。
+          AMCISA TALENT NIGHT，为你们提供了一个华丽的舞台，让大家在舞台上尽情的奔放，绚烂夺目。青春不留白！赶快报名参加TALENT NIGHT一起狂欢吧!
+             
+            
+
+        a(href="ntu.talentnight.register.html").btn.btn-dark.btn-lg 
+          h3 我要报名!
+
+      .col-md-3
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 活动日期 : 
+            //- Replace the following date with event date
+            | 26th August 2016 
+          h2 
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 活动时间 : 
+            //- Replace the following time with event time
+            | 6.45 p.m. - 10.30 p.m.
+          h2
+            span.fa.fa-fw.fa-building.blue &nbsp;
+            | 活动地点 : 
+            span.fa.fa-magic
+            //- Replace the following venue with event venue 
+            | LT 19
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })

@@ -3,8 +3,6 @@ import os
 import re
 import shutil
 
-print("hello") 
-
 def templateAvailable():
   #The event templates should be placed outside the main folder
   return (os.path.exists("../event/event_year.post"))
@@ -49,8 +47,10 @@ def getEventInitials():
 
 def main():
   #main entry point
+  print("hello") 
   if not templateAvailable():
     return False
+  print("hello")
   
   #ask for year
   outputdir=getAcademicYear()
@@ -62,4 +62,5 @@ def main():
   input("Completed. Press Enter to exit")
  
 if __name__=="__main__":
+  
   main()
