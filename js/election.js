@@ -31,7 +31,7 @@ $(document).ready(function(){
       $.ajax({
         type:"POST",
         data:dataForm,
-        url:"php/checkpass.php",
+        url:"./php/checkpass.php",
         success:function(data){
           console.log(data);
           if(data=="true"){
@@ -66,7 +66,7 @@ function matricCheck(){
       $.ajax({
         type:"POST",
         data:dataForm,
-        url:"php/checkpass.php",
+        url:"./php/checkpass.php",
         success:function(data){
           console.log(data);
           if(data=="1"){
@@ -119,7 +119,7 @@ function submitForm() {
       $.ajax({
         type:"POST",
         data:selection,
-        url:"php/updatedb.php",
+        url:"./php/updatedb.php",
         success:function(data){
           console.log("Success");
           console.log(data);

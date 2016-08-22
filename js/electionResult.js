@@ -12,7 +12,7 @@ $(document).ready(function(){
       $.ajax({
         type:"POST",
         data:dataForm,
-        url:"php/checkpass.php",
+        url:"./php/checkpass.php",
         success:function(data){
           console.log(data);
           if(data=="true"){
@@ -38,7 +38,7 @@ $(document).ready(function(){
 function getResults(){
   $.ajax({
     type:"GET",
-    url:"php/countvote.php",
+    url:"./php/countvote.php",
     processData:false,
     contentType:false,
     success:function(data){
