@@ -11,10 +11,10 @@ mixin candidateNoSelect(name, position)
 
 mixin select(attr, position)
   .col-sm-3.choice(name=position, value=attr)
-    if attr.indexOf('赞成')  != -1
+    if attr == '赞成'
       img(src='http://placehold.it/99x128/00ff00?text=+', c='false')
-    else if attr.indexOf('反对')  != -1
-      img(src='http://placehold.it/99x128/ff0000?text=+', c='false')
+    else if attr == '反对'
+      img(src='http://placehold.it/99x128/ff0000?text=+')
     else
       img(src='http://placehold.it/99x128/999999?text=+', c='false')
     h3=attr
@@ -144,11 +144,11 @@ body
                 +candidateNoSelect('余惠滢', 'Programmer')
                 +select('余惠滢 - 赞成','Programmer')
                 +select('余惠滢 - 反对','Programmer')
-                .col-sm-3
+                
                 +candidateNoSelect('戴运荣', 'Programmer')
                 +select('戴运荣 - 赞成','Programmer')
                 +select('戴运荣 - 反对','Programmer')
-                .col-sm-3
+                
                 +candidateNoSelect('杨祖仪', 'Programmer')
                 +select('杨祖仪 - 赞成','Programmer')
                 +select('杨祖仪 - 反对','Programmer')
@@ -163,7 +163,7 @@ body
                 +candidateNoSelect('赖政樨', 'Editor')
                 +select('赖政樨 - 赞成','Editor')
                 +select('赖政樨 - 反对','Editor')
-                .col-sm-3
+                
                 +candidateNoSelect('陈凯宇', 'Editor')
                 +select('陈凯宇 - 赞成','Editor')
                 +select('陈凯宇 - 反对','Editor')
@@ -178,7 +178,6 @@ body
                 +candidateNoSelect('姚智升', 'Log')
                 +select('姚智升 - 赞成','Log')
                 +select('姚智升 - 反对','Log')
-                .col-sm-3
                 +candidateNoSelect('黄照财', 'Log')
                 +select('黄照财 - 赞成','Log')
                 +select('黄照财 - 反对','Log')
@@ -193,7 +192,6 @@ body
                 +candidateNoSelect('谢文轩', 'Webdev')
                 +select('谢文轩 - 赞成','Webdev')
                 +select('谢文轩 - 反对','Webdev')
-                .col-sm-3
                 +candidateNoSelect('吴明修', 'Webdev')
                 +select('吴明修 - 赞成','Webdev')
                 +select('吴明修 - 反对','Webdev')
