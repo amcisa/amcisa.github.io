@@ -1,11 +1,11 @@
 mixin candidate(name, position)
   .col-sm-3.choice(name=position, value=name)
-    img(src='img/election/'+name+'.png', c='false')
+    img(src='img/election/'+name+'.jpg', c='false')
     h3=name
 
 mixin candidateNoSelect(name, position)
   .col-sm-3.notChoice(name=position, value=name)
-    img(src='img/election/'+name+'.png', c='false')
+    img(src='img/election/'+name+'.jpg', c='false')
     h3=name
 
 
@@ -96,8 +96,9 @@ body
                   br
                   span 1位
               .col-sm-10
-                +candidate('纪智胜', 'President')
-                +candidate('陈富浩', 'President')
+                +candidateNoSelect('蔡欣学', 'President')
+                +select('蔡欣学 - 赞成','President')
+                +select('蔡欣学 - 反对','President')
             
             .col-sm-12
               label.col-sm-2.control-label
@@ -106,9 +107,9 @@ body
                   br
                   span 1位
               .col-sm-10
-                +candidateNoSelect('张毅盛', 'VicePresident')
-                +select('赞成','VicePresident')
-                +select('反对','VicePresident')
+                +candidateNoSelect('林文熙', 'VicePresident')
+                +select('林文熙 - 赞成','VicePresident')
+                +select('林文熙 - 反对','VicePresident')
 
 
             .col-sm-12
@@ -118,9 +119,10 @@ body
                   br
                   span 1位
               .col-sm-10
-                +candidate('陈婕妤', 'Secretary')
-                +candidate('林欣儿', 'Secretary')
-                +candidate('黄椲璇', 'Secretary')
+                +candidateNoSelect('陈静怡', 'Secretary')
+                +select('陈静怡 - 赞成','Secretary')
+                +select('陈静怡 - 反对','Secretary')
+
             .col-sm-12
               label.col-sm-2.control-label
                 h1
@@ -128,8 +130,9 @@ body
                   br
                   span 1位
               .col-sm-10
-                +candidate('庄顺杰', 'Treasurer')
-                +candidate('林佳颖', 'Treasurer')
+                +candidateNoSelect('黄雯静', 'Treasurer')
+                +select('黄雯静 - 赞成','Treasurer')
+                +select('黄雯静 - 反对','Treasurer')
             
             .col-sm-12
               label.col-sm-2.control-label
@@ -138,14 +141,17 @@ body
                   br
                   span 3位
               .col-sm-10
-                +candidate('汪素怡', 'Programmer')
-                +candidate('梅先状', 'Programmer')
-                +candidate('罗韵乐', 'Programmer')
-                +candidate('曾誴皓', 'Programmer')
-                +candidate('许靖耀', 'Programmer')
-                +candidate('蔡欣学', 'Programmer')
-                +candidate('吴诗蕾', 'Programmer')
-                +candidate('钟秉声', 'Programmer')
+                +candidateNoSelect('余惠滢', 'Programmer')
+                +select('余惠滢 - 赞成','Programmer')
+                +select('余惠滢 - 反对','Programmer')
+                
+                +candidateNoSelect('戴运荣', 'Programmer')
+                +select('戴运荣 - 赞成','Programmer')
+                +select('戴运荣 - 反对','Programmer')
+                
+                +candidateNoSelect('杨祖仪', 'Programmer')
+                +select('杨祖仪 - 赞成','Programmer')
+                +select('杨祖仪 - 反对','Programmer')
 
             .col-sm-12
               label.col-sm-2.control-label
@@ -154,9 +160,13 @@ body
                   br
                   span 2位
               .col-sm-10
-                +candidate('廖芷琪', 'Editor')
-                +candidate('卓思恬', 'Editor')
-                +candidate('颜佳煣', 'Editor')
+                +candidateNoSelect('赖政樨', 'Editor')
+                +select('赖政樨 - 赞成','Editor')
+                +select('赖政樨 - 反对','Editor')
+                
+                +candidateNoSelect('陈凯宇', 'Editor')
+                +select('陈凯宇 - 赞成','Editor')
+                +select('陈凯宇 - 反对','Editor')
             
             .col-sm-12
               label.col-sm-2.control-label
@@ -165,14 +175,12 @@ body
                   br
                   span 2位
               .col-sm-10
-                +candidate('覃子豪', 'Log')
-                +candidate('何世斌', 'Log')
-                +candidate('齐曼婷', 'Log')
-                +candidate('龚象宇', 'Log')
-                +candidate('郑家俊', 'Log')
-                +candidate('丘胜塬', 'Log')
-                +candidate('郑宗庆', 'Log')
-                +candidate('林文熙', 'Log')
+                +candidateNoSelect('姚智升', 'Log')
+                +select('姚智升 - 赞成','Log')
+                +select('姚智升 - 反对','Log')
+                +candidateNoSelect('黄照财', 'Log')
+                +select('黄照财 - 赞成','Log')
+                +select('黄照财 - 反对','Log')
                 
             .col-sm-12
               label.col-sm-2.control-label
@@ -181,14 +189,13 @@ body
                   br
                   span 2位
               .col-sm-10
-                +candidate('曾国颂', 'Webdev')
-                +candidate('林镇宇', 'Webdev')
-                +candidate('曹均发', 'Webdev')
-                +candidate('方志毅', 'Webdev')
-                +candidate('郑豪好', 'Webdev')
-                +candidate('卢俊源', 'Webdev')
-                +candidate('张王玮', 'Webdev')
-                +candidate('陈柏璋', 'Webdev')
+                +candidateNoSelect('谢文轩', 'Webdev')
+                +select('谢文轩 - 赞成','Webdev')
+                +select('谢文轩 - 反对','Webdev')
+                +candidateNoSelect('吴明修', 'Webdev')
+                +select('吴明修 - 赞成','Webdev')
+                +select('吴明修 - 反对','Webdev')
+
           
           .col-sm-4
           .col-sm-4
