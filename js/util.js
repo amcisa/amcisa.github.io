@@ -23,7 +23,6 @@ function rpc(rpc_url,form_data, success_callback){
       })
 }
 
-/*
 function alertmodal(type,message){
   if(type=="error"){
     $(".modal .success").addClass("hide");
@@ -43,13 +42,42 @@ function alertmodal(type,message){
     }
   })
 }
-*/
 
-function alertmodal(type,message){
-  swal({
-    text: message,
-    type: type
-  })
+function login_iframe(data){
+  if(data==0){
+    console.log('Not login yet');
+    
+    $('#login_frame').removeClass('hide');
+    $('.wrapper').addClass('hide');
+
+    $(".alert-tab strong").html("You have not successfully login in. Please login to continue. \nPlease click the REFRESH button if you have successfully login but only the content in iframe changes.");
+    $(".alert-tab").removeClass("hide");
+
+    $('#login_frame').load(function(){
+        var iframe = $('#login_frame').contents();
+        iframe.find('.go').click(function(e){
+            $('#login_frame').hide();
+            rpc(
+            "php/login_delegate.php",
+            {
+              "action":"CHECKLOGINSTATUS"
+            },function(data){
+                if(data!=0){
+                    console.log("Refreshing");
+                    window.top.location.reload();
+                }else{
+                    $('#login_frame').show();
+                }
+            });
+        });
+    });
+
+    }
+        
+  else{
+      $('#login_frame').addClass('hide');
+      $('.wrapper').removeClass('hide');
+      }
 }
 
 function scrollToElement(ele) {

@@ -21,6 +21,12 @@ mixin modal()
         .modal-body
           p.body-content.error Error
           p.body-content.success Success
+
+mixin login_iframe()
+    .alert.alert-dismissible.alert-danger.col-lg-12.align-left.alert-tab.hide
+        strong
+  
+    iframe#login_frame(width = '600px', height = '600px', src = "login.html").hide Loading...
           
 doctype html5
 html
@@ -31,9 +37,8 @@ html
     //meta(http-equiv="refresh" content="90")
     
     link(href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/cosmo/bootstrap.min.css", rel="stylesheet")
-    link(href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", rel="stylesheet")
-    link(href="./css/sweetalert.css", rel="stylesheet")
     link(href="./css/app.css", rel="stylesheet")
+    link(href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", rel="stylesheet")
     
     block head
 
@@ -61,8 +66,9 @@ html
           +navlink("登入戶口","login.html")(class="user-login")
 
     //This is where our main content is inserted into.
-
+    
     block content
+
     include ../includes/footer.jade
 
     //Utility scripts
@@ -71,6 +77,5 @@ html
     script(src="js/googlepage.js")
     script(src="js/session.js")
     script(src="js/util.js")
-    script(src="js/sweetalert.min.js")
     block script
 

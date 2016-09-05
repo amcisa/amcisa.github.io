@@ -1,1 +1,351 @@
-<!DOCTYPE html5><html><head> <meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="chrome=1"/><meta name="viewport" content="width=device-width,initial-scale=1"/><!--meta(http-equiv="refresh" content="90")--><link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/cosmo/bootstrap.min.css" rel="stylesheet"/><link href="./css/app.css" rel="stylesheet"/><link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/><link href="./css/animate.min.css" rel="stylesheet"/><link href="./css/profile.css" rel="stylesheet"/></head><title>Login</title><body><!--Default navigation bar--><div class="navbar-default navbar-fixed-top"><div class="navbar-header"><button type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.html" class="navbar-brand mobile-only"><h3 class="zero-margin">主页</h3></a></div><div class="navbar-collapse collapse navbar-responsive-collapse"><div class="nav navbar-nav navbar-left"><a href="index.html"><img src="./img/amc.header.logo.full.png"/></a></div><ul class="nav navbar-nav navbar-right"><li class="poster-btn"><a href="index.html">本会主页</a></li><li class="services-btn"><a href="student.html">升学咨询</a></li><li><a href="events.html">活动全集</a></li><li><a href="contact.html">联络我们</a></li><li class="user-login"><a href="login.html">登入戶口</a></li></ul></div></div><!--This is where our main content is inserted into.--><div class="alert alert-dismissible alert-danger col-lg-12 align-left alert-tab hide"><strong></strong></div><iframe id="login_frame" width="600px" height="600px" src="login.html" class="hide">Loading...</iframe><div class="wrapper"><section class="container"><div class="col-lg-2"><ul class="nav nav-pills nav-stacked"><li class="active"><a href="#profile" data-toggle="tab" aria-expanded="true">Profile</a></li><li><a href="#registered" data-toggle="tab" aria-expanded="true">Registered events</a></li></ul></div><div class="col-lg-10"><div class="tab-content"><div id="profile" class="tab-pane fade active in align-left"><!--fill in data obtained from the session.--><form class="form-horizontal"><fieldset><legend class="align-center">Personal Information</legend><!--omitted secondary school--><div class="form-group Name_CH"><label class="col-lg-2 control-label">中文姓名</label><div class="col-lg-10"><input type="text" placeholder="..." class="form-control"/></div></div><div class="form-group Name_EN"><label class="col-lg-2 control-label">English Name</label><div class="col-lg-10"><input type="text" placeholder="..." class="form-control"/></div></div><div class="form-group Email_Personal"><label class="col-lg-2 control-label">Personal Email</label><div class="col-lg-10"><input type="text" placeholder="..." class="form-control"/></div></div><div class="form-group Email_School"><label class="col-lg-2 control-label">School Email</label><div class="col-lg-10"><input type="text" placeholder="..." class="form-control"/></div></div><div class="form-group Hall"><label class="col-lg-2 control-label">Hall</label><div class="col-lg-10"><select class="form-control"><option>outside</option><option>Kent Ridge Hall</option><option>Temasek Hall</option><option>King Edward Vll Hall</option><option>Ridge View Residence</option><option>Prince George's Park Residence</option><option>Eusoff Hall</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option></select></div></div><div class="form-group halldata Block hide"><label class="col-lg-2 control-label">Block</label><div class="col-lg-10"><input type="text" placeholder="..." class="form-control"/></div></div><div class="form-group halldata Level hide"><label class="col-lg-2 control-label">Level</label><div class="col-lg-10"><input type="text" placeholder="..." class="form-control"/></div></div><div class="form-group halldata Room hide"><label class="col-lg-2 control-label">Room</label><div class="col-lg-10"><input type="text" placeholder="..." class="form-control"/></div></div><div class="form-group Address_Outside"><label class="col-lg-2 control-label">Address Outside</label><div class="col-lg-10"><textarea rows="3" class="form-control"></textarea></div></div><div class="form-group Phone_MY"><label class="col-lg-2 control-label">Phone (MY)</label><div class="col-lg-10"><input type="text" placeholder="..." class="form-control"/></div></div><div class="form-group Phone_SG"><label class="col-lg-2 control-label">Phone (SG)*</label><div class="col-lg-10"><input type="text" placeholder="..." class="form-control"/></div></div><div class="form-group Gender"><label class="col-lg-2 control-label">Gender</label><div class="col-lg-10"><select class="form-control"><option>M</option><option>F</option></select></div></div><div class="form-group Secondary_School"><label class="col-lg-2 control-label">Secondary School</label><div class="col-lg-10"><select class="form-control"><option>柔佛－麻坡中化中学</option><option>柔佛－利丰港培华独立中学</option><option>柔佛－居銮中华中学</option><option>柔佛－永平中学</option><option>柔佛－峇株巴辖华仁中学 </option><option>柔佛－新文龙中华中学 </option><option>柔佛－笨珍培群独立中学 </option><option>柔佛－新山宽柔中学 </option><option>柔佛－宽柔中学古来分校 </option><option>马六甲－马六甲培风中学 </option><option>森美兰－芙蓉中华中学 </option><option>森美兰－波德申中华中学 </option><option>吉隆坡－吉隆坡循人中学 </option><option>吉隆坡－吉隆坡坤成中学</option><option>吉隆坡－吉隆坡尊孔独立中学</option><option>吉隆坡－吉隆坡中华独立中学</option><option>雪兰莪－巴生光华独立中学</option><option>雪兰莪－巴生滨华中学</option><option>雪兰莪－巴生兴华中学</option><option>雪兰莪－巴生中华独立中学</option><option>霹雳－怡保深斋中学</option><option>霹雳－霹雳育才独立中学</option><option>霹雳－怡保培南中学</option><option>霹雳－班台育青中学</option><option>霹雳－江沙崇华独立中学</option><option>霹雳－曼绒南华独立中学</option><option>霹雳－金宝培元独立中学</option><option>霹雳－安顺三民独立中学</option><option>霹雳－太平华联中学</option><option>吉兰丹－吉兰丹中华独立中学</option><option>吉打－双溪大年新民独立中学</option><option>吉打－亚罗士打新民独立中学</option><option>吉打－亚罗士打吉华独立中学</option><option>槟城－大山脚日新独立中学</option><option>槟城－槟城韩江中学</option><option>槟城－槟城钟灵独立中学</option><option>槟城－槟城槟华女子独立中学</option><option>槟城－槟城菩提独立中学</option><option>砂拉越－古晋中华第一中学</option><option>砂拉越－古晋中华第三中学</option><option>砂拉越－古晋中华第四中学</option><option>砂拉越－石角民立中学</option><option>砂拉越－西连民众中学</option><option>砂拉越－诗巫光民中学</option><option>砂拉越－诗巫黄乃裳中学</option><option>砂拉越－诗巫建兴中学</option><option>砂拉越－诗巫公教中学</option><option>砂拉越－诗巫公民中学</option><option>砂拉越－民都鲁开智中学</option><option>砂拉越－美里培民中学</option><option>砂拉越－美里廉律中学</option><option>砂拉越－泗里奎民立中学</option><option>沙巴－沙巴崇正中学</option><option>沙巴－沙巴建国中学</option><option>沙巴－沙巴吧巴中学</option><option>沙巴－沙巴保佛中学</option><option>沙巴－丹南崇正中学</option><option>沙巴－斗湖巴华中学</option><option>沙巴－古达培正中学</option><option>沙巴－沙巴拿笃中学</option><option>沙巴－山打根育源中学</option><option>其他</option></select></div></div><div class="form-group Secondary_School_Others hide"><label class="col-lg-2 control-label">Secondary School (Others)</label><div class="col-lg-10"><input type="text" placeholder="..." class="form-control"/></div></div><div class="form-group Entry_Year"><label class="col-lg-2 control-label">Entry Year</label><div class="col-lg-10"><select class="form-control"><option>1</option><option>2</option></select></div></div><div class="form-group Course"><label class="col-lg-2 control-label">Course</label><div class="col-lg-10"><select class="form-control"><option>ACC (Accounting)</option><option>ADM (Arts, Design and Media)</option><option>AERO (Aerospace Engineering)</option><option>BIE (Bioengineering)</option><option>BS (Biological sciences)</option><option>BUS (Business)</option><option>CBC (Chemical and Biological Chemistry)</option><option>CBE (Chemical and Biomolecular Engineering)</option><option>CE (Computer Engineering)</option><option>CEE (Civil Engineering)</option><option>CHEM (Chemical Engineering)</option><option>CHIN (Chinese)</option><option>CSC (Computer Science)</option><option>ECONS (Economics)</option><option>EEE (Electrical & Electronic Engineering)</option><option>ENE (Environmental Engineering)</option><option>ENG (Common Engineering)</option><option>FS (Food Sciences)</option><option>IEM (Information Engineering & Media)</option><option>LMS (Linguistics and Multilingual Studies)</option><option>LS (Life Sciences)</option><option>MAE (Mechanical Engineering)</option><option>MAEC (Mathematics and Economics)</option><option>MAFI (Mathematics and Finance)</option><option>MARI (Maritime Studies)</option><option>MAS (Mathematical Sciences)</option><option>MSE (Material Sciences)</option><option>NIE (National Institute of Education)</option><option>PAP (Physics and Applied Physics)</option><option>PHY (Physics)</option><option>PPGA (Public Policy and Global Affairs)</option><option>PSY (Psychology)</option><option>QF (Quantitative Finance)</option><option>WKW (Wee Kim Wee School Of Communication Studies)</option></select></div></div><div class="form-group oldPassword"><label class="col-lg-2 control-label">Current Password</label><div class="col-lg-10"><input type="password" placeholder="Only type this if you want to change your password" class="form-control"/></div></div><div class="form-group Password"><label class="col-lg-2 control-label">New Password</label><div class="col-lg-10"><input type="password" placeholder="Only type this if you want to change your password" class="form-control"/></div></div><div class="form-group"><div class="col-lg-10 col-lg-offset-2"><button type="submit" class="btn btn-primary submit"><span>Update!</span><i class="fa fa-fw fa-circle-o-notch fa-spin hide"></i></button></div></div></fieldset></form></div><div id="registered" class="tab-pane fade in align-left"><h2>This place have not been constructed.</h2></div><div class="modal animated align-left"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button><h3 class="error"> <i class="fa fa-fw fa-exclamation-triangle red"> </i><span>Error!</span></h3><h3 class="success"> <i class="fa fa-fw fa-smile-o green"> </i><span>Success!</span></h3></div><div class="modal-body"><p class="body-content error">Error</p><p class="body-content success">Success</p></div></div></div></div></div></div></section></div><div class="container fillx"><br/></div><div class="container align-left light-grey-bg fillx"><div class="col-md-2"></div><div class="col-md-3"><h4 class="yellow">相关单位</h4><a href="http://www.dongzong.my/" class="white"><h5>董总</h5></a></div><div class="col-md-3"><h4 class="blue">快速链接</h4><a href="https://www.facebook.com/pages/Amcisa-%E7%BB%BF%E5%B2%9B/145514082199917?fref=ts" class="white"><h5>Amcisa 绿岛</h5></a><a href="https://www.facebook.com/groups/419331528149726/?fref=ts" class="white"><h5>NTU Facebook Page</h5></a><a href="https://www.facebook.com/amcisanusntu?fref=ts" class="white"><h5>AMCISA Facebook Page</h5></a><a href="https://www.facebook.com/groups/nusamcisa/?fref=ts" class="white"><h5>NUS Facebook Page</h5></a></div><div class="col-md-3"><h4 class="green">联络方式：</h4><a href="http://amcisa.org/gh/contact.html" class="white"><h5>amcisa.comm@gmail.com</h5></a></div><div class="col-md-1"></div></div><div class="container light-grey-bg align-right fillx"><h5>Association of Malaysian Chinese Independent School Alumni 2014</h5></div><!--Utility scripts--><script src="js/jquery-1.11.0.js"></script><script src="js/bootstrap.min.js"></script><script src="js/googlepage.js"></script><script src="js/session.js"></script><script src="js/util.js"></script><script src="js/profile.js"></script></body></html>
+<!DOCTYPE html5>
+<html>
+  <head> 
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <!--meta(http-equiv="refresh" content="90")-->
+    <link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/cosmo/bootstrap.min.css" rel="stylesheet"/>
+    <link href="./css/app.css" rel="stylesheet"/>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="./css/animate.min.css" rel="stylesheet"/>
+    <link href="./css/profile.css" rel="stylesheet"/>
+  </head>
+  <title>Login</title>
+  <body>
+    <!--Default navigation bar-->
+    <div class="navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.html" class="navbar-brand mobile-only">
+          <h3 class="zero-margin">主页</h3></a>
+      </div>
+      <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <div class="nav navbar-nav navbar-left"><a href="index.html"><img src="./img/amc.header.logo.full.png"/></a></div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="poster-btn"><a href="index.html">本会主页</a></li>
+          <li class="services-btn"><a href="student.html">升学咨询</a></li>
+          <li><a href="events.html">活动全集</a></li>
+          <li><a href="contact.html">联络我们</a></li>
+          <li class="user-login"><a href="login.html">登入戶口</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--This is where our main content is inserted into.-->
+    <div class="alert alert-dismissible alert-danger col-lg-12 align-left alert-tab hide"><strong></strong></div>
+    <iframe id="login_frame" width="600px" height="600px" src="login.html" class="hide">Loading...</iframe>
+    <div class="wrapper">
+      <section class="container">
+        <div class="col-lg-2">
+          <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="#profile" data-toggle="tab" aria-expanded="true">Profile</a></li>
+            <li><a href="#registered" data-toggle="tab" aria-expanded="true">Registered events</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-10">
+          <div class="tab-content">
+            <div id="profile" class="tab-pane fade active in align-left">
+              <!--fill in data obtained from the session.-->
+              <form class="form-horizontal">
+                <fieldset>
+                  <legend class="align-center">Personal Information</legend>
+                  <!--omitted secondary school-->
+                                <div class="form-group Name_CH">
+                                  <label class="col-lg-2 control-label">中文姓名</label>
+                                  <div class="col-lg-10">
+                                    <input type="text" placeholder="..." class="form-control"/>
+                                  </div>
+                                </div>
+                                <div class="form-group Name_EN">
+                                  <label class="col-lg-2 control-label">English Name</label>
+                                  <div class="col-lg-10">
+                                    <input type="text" placeholder="..." class="form-control"/>
+                                  </div>
+                                </div>
+                                <div class="form-group Email_Personal">
+                                  <label class="col-lg-2 control-label">Personal Email</label>
+                                  <div class="col-lg-10">
+                                    <input type="text" placeholder="..." class="form-control"/>
+                                  </div>
+                                </div>
+                                <div class="form-group Email_School">
+                                  <label class="col-lg-2 control-label">School Email</label>
+                                  <div class="col-lg-10">
+                                    <input type="text" placeholder="..." class="form-control"/>
+                                  </div>
+                                </div>
+                                <div class="form-group Hall">
+                                  <label class="col-lg-2 control-label">Hall</label>
+                                  <div class="col-lg-10">
+                                    <select class="form-control">
+                                      <option>outside</option>
+                                      <option>Kent Ridge Hall</option>
+                                      <option>Temasek Hall</option>
+                                      <option>King Edward Vll Hall</option>
+                                      <option>Ridge View Residence</option>
+                                      <option>Prince George's Park Residence</option>
+                                      <option>Eusoff Hall</option>
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                      <option>6</option>
+                                      <option>7</option>
+                                      <option>8</option>
+                                      <option>9</option>
+                                      <option>10</option>
+                                      <option>11</option>
+                                      <option>12</option>
+                                      <option>13</option>
+                                      <option>14</option>
+                                      <option>15</option>
+                                      <option>16</option>
+                                      <option>17</option>
+                                      <option>18</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="form-group halldata Block hide">
+                                  <label class="col-lg-2 control-label">Block</label>
+                                  <div class="col-lg-10">
+                                    <input type="text" placeholder="..." class="form-control"/>
+                                  </div>
+                                </div>
+                                <div class="form-group halldata Level hide">
+                                  <label class="col-lg-2 control-label">Level</label>
+                                  <div class="col-lg-10">
+                                    <input type="text" placeholder="..." class="form-control"/>
+                                  </div>
+                                </div>
+                                <div class="form-group halldata Room hide">
+                                  <label class="col-lg-2 control-label">Room</label>
+                                  <div class="col-lg-10">
+                                    <input type="text" placeholder="..." class="form-control"/>
+                                  </div>
+                                </div>
+                                <div class="form-group Address_Outside">
+                                  <label class="col-lg-2 control-label">Address Outside</label>
+                                  <div class="col-lg-10">
+                                    <textarea rows="3" class="form-control"></textarea>
+                                  </div>
+                                </div>
+                                <div class="form-group Phone_MY">
+                                  <label class="col-lg-2 control-label">Phone (MY)</label>
+                                  <div class="col-lg-10">
+                                    <input type="text" placeholder="..." class="form-control"/>
+                                  </div>
+                                </div>
+                                <div class="form-group Phone_SG">
+                                  <label class="col-lg-2 control-label">Phone (SG)*</label>
+                                  <div class="col-lg-10">
+                                    <input type="text" placeholder="..." class="form-control"/>
+                                  </div>
+                                </div>
+                                <div class="form-group Gender">
+                                  <label class="col-lg-2 control-label">Gender</label>
+                                  <div class="col-lg-10">
+                                    <select class="form-control">
+                                      <option>M</option>
+                                      <option>F</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="form-group Secondary_School">
+                                  <label class="col-lg-2 control-label">Secondary School</label>
+                                  <div class="col-lg-10">
+                                    <select class="form-control">
+                                      <option>柔佛－麻坡中化中学</option>
+                                      <option>柔佛－利丰港培华独立中学</option>
+                                      <option>柔佛－居銮中华中学</option>
+                                      <option>柔佛－永平中学</option>
+                                      <option>柔佛－峇株巴辖华仁中学 </option>
+                                      <option>柔佛－新文龙中华中学 </option>
+                                      <option>柔佛－笨珍培群独立中学 </option>
+                                      <option>柔佛－新山宽柔中学 </option>
+                                      <option>柔佛－宽柔中学古来分校 </option>
+                                      <option>马六甲－马六甲培风中学 </option>
+                                      <option>森美兰－芙蓉中华中学 </option>
+                                      <option>森美兰－波德申中华中学 </option>
+                                      <option>吉隆坡－吉隆坡循人中学 </option>
+                                      <option>吉隆坡－吉隆坡坤成中学</option>
+                                      <option>吉隆坡－吉隆坡尊孔独立中学</option>
+                                      <option>吉隆坡－吉隆坡中华独立中学</option>
+                                      <option>雪兰莪－巴生光华独立中学</option>
+                                      <option>雪兰莪－巴生滨华中学</option>
+                                      <option>雪兰莪－巴生兴华中学</option>
+                                      <option>雪兰莪－巴生中华独立中学</option>
+                                      <option>霹雳－怡保深斋中学</option>
+                                      <option>霹雳－霹雳育才独立中学</option>
+                                      <option>霹雳－怡保培南中学</option>
+                                      <option>霹雳－班台育青中学</option>
+                                      <option>霹雳－江沙崇华独立中学</option>
+                                      <option>霹雳－曼绒南华独立中学</option>
+                                      <option>霹雳－金宝培元独立中学</option>
+                                      <option>霹雳－安顺三民独立中学</option>
+                                      <option>霹雳－太平华联中学</option>
+                                      <option>吉兰丹－吉兰丹中华独立中学</option>
+                                      <option>吉打－双溪大年新民独立中学</option>
+                                      <option>吉打－亚罗士打新民独立中学</option>
+                                      <option>吉打－亚罗士打吉华独立中学</option>
+                                      <option>槟城－大山脚日新独立中学</option>
+                                      <option>槟城－槟城韩江中学</option>
+                                      <option>槟城－槟城钟灵独立中学</option>
+                                      <option>槟城－槟城槟华女子独立中学</option>
+                                      <option>槟城－槟城菩提独立中学</option>
+                                      <option>砂拉越－古晋中华第一中学</option>
+                                      <option>砂拉越－古晋中华第三中学</option>
+                                      <option>砂拉越－古晋中华第四中学</option>
+                                      <option>砂拉越－石角民立中学</option>
+                                      <option>砂拉越－西连民众中学</option>
+                                      <option>砂拉越－诗巫光民中学</option>
+                                      <option>砂拉越－诗巫黄乃裳中学</option>
+                                      <option>砂拉越－诗巫建兴中学</option>
+                                      <option>砂拉越－诗巫公教中学</option>
+                                      <option>砂拉越－诗巫公民中学</option>
+                                      <option>砂拉越－民都鲁开智中学</option>
+                                      <option>砂拉越－美里培民中学</option>
+                                      <option>砂拉越－美里廉律中学</option>
+                                      <option>砂拉越－泗里奎民立中学</option>
+                                      <option>沙巴－沙巴崇正中学</option>
+                                      <option>沙巴－沙巴建国中学</option>
+                                      <option>沙巴－沙巴吧巴中学</option>
+                                      <option>沙巴－沙巴保佛中学</option>
+                                      <option>沙巴－丹南崇正中学</option>
+                                      <option>沙巴－斗湖巴华中学</option>
+                                      <option>沙巴－古达培正中学</option>
+                                      <option>沙巴－沙巴拿笃中学</option>
+                                      <option>沙巴－山打根育源中学</option>
+                                      <option>其他</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="form-group Secondary_School_Others hide">
+                                  <label class="col-lg-2 control-label">Secondary School (Others)</label>
+                                  <div class="col-lg-10">
+                                    <input type="text" placeholder="..." class="form-control"/>
+                                  </div>
+                                </div>
+                                <div class="form-group Entry_Year">
+                                  <label class="col-lg-2 control-label">Entry Year</label>
+                                  <div class="col-lg-10">
+                                    <select class="form-control">
+                                      <option>1</option>
+                                      <option>2</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="form-group Course">
+                                  <label class="col-lg-2 control-label">Course</label>
+                                  <div class="col-lg-10">
+                                    <select class="form-control">
+                                      <option>ACC (Accounting)</option>
+                                      <option>ADM (Arts, Design and Media)</option>
+                                      <option>AERO (Aerospace Engineering)</option>
+                                      <option>BIE (Bioengineering)</option>
+                                      <option>BS (Biological sciences)</option>
+                                      <option>BUS (Business)</option>
+                                      <option>CBC (Chemical and Biological Chemistry)</option>
+                                      <option>CBE (Chemical and Biomolecular Engineering)</option>
+                                      <option>CE (Computer Engineering)</option>
+                                      <option>CEE (Civil Engineering)</option>
+                                      <option>CHEM (Chemical Engineering)</option>
+                                      <option>CHIN (Chinese)</option>
+                                      <option>CSC (Computer Science)</option>
+                                      <option>ECONS (Economics)</option>
+                                      <option>EEE (Electrical & Electronic Engineering)</option>
+                                      <option>ENE (Environmental Engineering)</option>
+                                      <option>ENG (Common Engineering)</option>
+                                      <option>FS (Food Sciences)</option>
+                                      <option>IEM (Information Engineering & Media)</option>
+                                      <option>LMS (Linguistics and Multilingual Studies)</option>
+                                      <option>LS (Life Sciences)</option>
+                                      <option>MAE (Mechanical Engineering)</option>
+                                      <option>MAEC (Mathematics and Economics)</option>
+                                      <option>MAFI (Mathematics and Finance)</option>
+                                      <option>MARI (Maritime Studies)</option>
+                                      <option>MAS (Mathematical Sciences)</option>
+                                      <option>MSE (Material Sciences)</option>
+                                      <option>NIE (National Institute of Education)</option>
+                                      <option>PAP (Physics and Applied Physics)</option>
+                                      <option>PHY (Physics)</option>
+                                      <option>PPGA (Public Policy and Global Affairs)</option>
+                                      <option>PSY (Psychology)</option>
+                                      <option>QF (Quantitative Finance)</option>
+                                      <option>WKW (Wee Kim Wee School Of Communication Studies)</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="form-group oldPassword">
+                                  <label class="col-lg-2 control-label">Current Password</label>
+                                  <div class="col-lg-10">
+                                    <input type="password" placeholder="Only type this if you want to change your password" class="form-control"/>
+                                  </div>
+                                </div>
+                                <div class="form-group Password">
+                                  <label class="col-lg-2 control-label">New Password</label>
+                                  <div class="col-lg-10">
+                                    <input type="password" placeholder="Only type this if you want to change your password" class="form-control"/>
+                                  </div>
+                                </div>
+                  <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                      <button type="submit" class="btn btn-primary submit"><span>Update!</span><i class="fa fa-fw fa-circle-o-notch fa-spin hide"></i></button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+            <div id="registered" class="tab-pane fade in align-left">
+              <h2>This place have not been constructed.</h2>
+            </div>
+            <div class="modal animated align-left">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+                    <h3 class="error"> <i class="fa fa-fw fa-exclamation-triangle red"> </i><span>Error!</span></h3>
+                    <h3 class="success"> <i class="fa fa-fw fa-smile-o green"> </i><span>Success!</span></h3>
+                  </div>
+                  <div class="modal-body">
+                    <p class="body-content error">Error</p>
+                    <p class="body-content success">Success</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="container fillx"><br/></div>
+    <div class="container align-left light-grey-bg fillx">
+      <div class="col-md-2"></div>
+      <div class="col-md-3">
+        <h4 class="yellow">相关单位</h4><a href="http://www.dongzong.my/" class="white">
+          <h5>董总</h5></a>
+      </div>
+      <div class="col-md-3">
+        <h4 class="blue">快速链接</h4><a href="https://www.facebook.com/pages/Amcisa-%E7%BB%BF%E5%B2%9B/145514082199917?fref=ts" class="white">
+          <h5>Amcisa 绿岛</h5></a><a href="https://www.facebook.com/groups/419331528149726/?fref=ts" class="white">
+          <h5>NTU Facebook Page</h5></a><a href="https://www.facebook.com/amcisanusntu?fref=ts" class="white">
+          <h5>AMCISA Facebook Page</h5></a><a href="https://www.facebook.com/groups/nusamcisa/?fref=ts" class="white">
+          <h5>NUS Facebook Page</h5></a>
+      </div>
+      <div class="col-md-3">
+        <h4 class="green">联络方式：</h4><a href="http://amcisa.org/gh/contact.html" class="white">
+          <h5>amcisa.comm@gmail.com</h5></a>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="container light-grey-bg align-right fillx">
+      <h5>Association of Malaysian Chinese Independent School Alumni 2014</h5>
+    </div>
+    <!--Utility scripts-->
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/googlepage.js"></script>
+    <script src="js/session.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/profile.js"></script>
+  </body>
+</html>

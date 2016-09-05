@@ -1,8 +1,12 @@
 .btn-dark {
   background: rgba(0,0,0,0.5);
+  min-height: 100%;
+  height: auto;
 }
 .btn-dark:hover {
   background: rgba(0,0,0,0.9);
+  min-height: 100%;
+  height: auto;
 }
 .poster {
   position: relative;

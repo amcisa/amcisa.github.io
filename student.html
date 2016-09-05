@@ -1,4 +1,139 @@
-<!DOCTYPE html5><html><head> <meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="chrome=1"/><meta name="viewport" content="width=device-width,initial-scale=1"/><!--meta(http-equiv="refresh" content="90")--><link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/cosmo/bootstrap.min.css" rel="stylesheet"/><link href="./css/app.css" rel="stylesheet"/><link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/><link href="./css/student.css" rel="stylesheet"/></head><title>FAQ</title><body><!--Default navigation bar--><div class="navbar-default navbar-fixed-top"><div class="navbar-header"><button type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.html" class="navbar-brand mobile-only"><h3 class="zero-margin">主页</h3></a></div><div class="navbar-collapse collapse navbar-responsive-collapse"><div class="nav navbar-nav navbar-left"><a href="index.html"><img src="./img/amc.header.logo.full.png"/></a></div><ul class="nav navbar-nav navbar-right"><li class="poster-btn"><a href="index.html">本会主页</a></li><li class="services-btn"><a href="student.html">升学咨询</a></li><li><a href="events.html">活动全集</a></li><li><a href="contact.html">联络我们</a></li><li class="user-login"><a href="login.html">登入戶口</a></li></ul></div></div><!--This is where our main content is inserted into.--><div class="container fillx"><h1>升学资讯</h1><h4>为了帮助有意到新加坡升学的同学，下方提供了一些相关的资料供参考。 </h4><h4>注: 以下资料必须以各个大学为准</h4></div><div class="container fillx"><div class="row qa-panel-container"><div class="col-md-2"></div><div class="col-md-8 qa-panel align-left black"><h1> <span class="fa fa-group"></span>&nbsp;点击以下问题开始了解吧！</h1></div><div class="col-md-2"></div></div></div><div class="container fillx align-left qa-out"><div class="container fillx"><h1><i class="fa fa-fw fa-life-ring yellow"></i>&nbsp;新生注意</h1><div class="line"></div><div class="col-md-12"><ul class="fa-ul align-left"><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p> <i class="fa fa-fw fa-fire red"></i>2015年 NTU 行事历</p></h3><div class="hide"><table class="table table-striped table-hover"><thead><tr> <th>序 </th><th>日期(dd/mm)</th><th>事项</th><th style="width:25%;">备注</th></tr></thead><tbody><tr><td>1</td><td>2 月到 15/08</td><td>申请 Tuition Fee Loan (TFL)</td><td></td></tr><tr><td>2</td><td>1/6 到 9/7</td><td><p><a href="http://admissions.ntu.edu.sg/UndergraduateAdmissions/FinancialAssistance/Pages/NTUStudyLoan.aspx">网上申请 NTU Study Loan</a></p></td><td></td></tr><tr><td>3</td><td>08/06（0900hrs)-06/07(1730hrs)</td><td><p><a href="https://wis.ntu.edu.sg/webexe/owa/af_hostel.login">网上申请宿舍</a></p></td><td></td></tr><tr><td>4</td><td>09/06 开始</td><td><p><a href="http://www3.ntu.edu.sg/oad2/website_files/international/Student_Pass_application_notes-1.pdf">网上申请学生证 (Student Pass)[指南链接]</a></p></td><td></td></tr><tr><td>5</td><td>15/6-19/7</td><td>网上报名 FOA，填妥新生报到以及宿舍资料</td><td></td></tr><tr><td>6</td><td>到 22/06</td><td><p><a href="https://wis.ntu.edu.sg/pls/webexe/adm_acceptance_form.login">Online Declaration, Upload passportsize 照片</a></p></td><td></td></tr><tr><td>7</td><td>14/7(1000 hrs)–4/8</td><td>网上查询英文入学考试 QET 详情</td><td></td></tr><tr><td>8</td><td>20/7</td><td>网上查询宿舍分配详情</td><td></td></tr><tr><td>9</td><td>28/7- 30/7(1000 hrs -2200hrs)</td><td><p><a href="https://sso.wis.ntu.edu.sg/webexe88/owa/sso_login1.asp?t=1&amp;p2=https://wish.wis.ntu.edu.sg/pls/webexe/aus_st ars_matriculate.freshmen_survey&amp;ext ra=&amp;pg">网上申请入学许可证（online matriculation）</a></p></td><td>若在 29/7 后才接获大学录取，必须在之后的一天 working day matriculate online</td></tr><!--multiple blocks in mixins not available--><tr class="success"><td>10</td><td>29/7-31/7</td><td><p>我们将带领你完成以下手续：</p>
+<!DOCTYPE html5>
+<html>
+  <head> 
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <!--meta(http-equiv="refresh" content="90")-->
+    <link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/cosmo/bootstrap.min.css" rel="stylesheet"/>
+    <link href="./css/app.css" rel="stylesheet"/>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="./css/student.css" rel="stylesheet"/>
+  </head>
+  <title>FAQ</title>
+  <body>
+    <!--Default navigation bar-->
+    <div class="navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.html" class="navbar-brand mobile-only">
+          <h3 class="zero-margin">主页</h3></a>
+      </div>
+      <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <div class="nav navbar-nav navbar-left"><a href="index.html"><img src="./img/amc.header.logo.full.png"/></a></div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="poster-btn"><a href="index.html">本会主页</a></li>
+          <li class="services-btn"><a href="student.html">升学咨询</a></li>
+          <li><a href="events.html">活动全集</a></li>
+          <li><a href="contact.html">联络我们</a></li>
+          <li class="user-login"><a href="login.html">登入戶口</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--This is where our main content is inserted into.-->
+    <div class="container fillx">
+      <h1>升学资讯</h1>
+      <h4>为了帮助有意到新加坡升学的同学，下方提供了一些相关的资料供参考。 </h4>
+      <h4>注: 以下资料必须以各个大学为准</h4>
+    </div>
+    <div class="container fillx">
+      <div class="row qa-panel-container">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 qa-panel align-left black">
+          <h1> <span class="fa fa-group"></span>&nbsp;点击以下问题开始了解吧！</h1>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+    <div class="container fillx align-left qa-out">
+      <div class="container fillx">
+        <h1><i class="fa fa-fw fa-life-ring yellow"></i>&nbsp;新生注意
+        </h1>
+        <div class="line"></div>
+        <div class="col-md-12">
+          <ul class="fa-ul align-left">
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p> <i class="fa fa-fw fa-fire red"></i>2015年 NTU 行事历</p>
+              </h3>
+              <div class="hide">
+                <table class="table table-striped table-hover">
+                  <thead>
+                    <tr> 
+                      <th>序 </th>
+                      <th>日期(dd/mm)</th>
+                      <th>事项</th>
+                      <th style="width:25%;">备注</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>2 月到 15/08</td>
+                      <td>申请 Tuition Fee Loan (TFL)
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>1/6 到 9/7</td>
+                      <td><p><a href="http://admissions.ntu.edu.sg/UndergraduateAdmissions/FinancialAssistance/Pages/NTUStudyLoan.aspx">网上申请 NTU Study Loan</a></p>
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>08/06（0900hrs)-06/07(1730hrs)</td>
+                      <td><p><a href="https://wis.ntu.edu.sg/webexe/owa/af_hostel.login">网上申请宿舍</a></p>
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>09/06 开始</td>
+                      <td><p><a href="http://www3.ntu.edu.sg/oad2/website_files/international/Student_Pass_application_notes-1.pdf">网上申请学生证 (Student Pass)[指南链接]</a></p>
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>15/6-19/7</td>
+                      <td>网上报名 FOA，填妥新生报到以及宿舍资料
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>到 22/06</td>
+                      <td><p><a href="https://wis.ntu.edu.sg/pls/webexe/adm_acceptance_form.login">Online Declaration, Upload passportsize 照片</a></p>
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>14/7(1000 hrs)–4/8</td>
+                      <td>网上查询英文入学考试 QET 详情
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>20/7</td>
+                      <td>网上查询宿舍分配详情
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td>28/7- 30/7(1000 hrs -2200hrs)</td>
+                      <td><p><a href="https://sso.wis.ntu.edu.sg/webexe88/owa/sso_login1.asp?t=1&amp;p2=https://wish.wis.ntu.edu.sg/pls/webexe/aus_st ars_matriculate.freshmen_survey&amp;ext ra=&amp;pg">网上申请入学许可证（online matriculation）</a></p>
+                      </td>
+                      <td>若在 29/7 后才接获大学录取，必须在之后的一天 working day matriculate online</td>
+                    </tr>
+                    <!--multiple blocks in mixins not available-->
+                    <tr class="success">
+                      <td>10</td>
+                      <td>29/7-31/7</td>
+                      <td><p>我们将带领你完成以下手续：</p>
 
 <p>1.完成 Tuition Fee Loan 的申请</p>
 
@@ -6,7 +141,9 @@
 
 <p>3.宿舍费缴交</p>
 
-<p>4.身体检查</p></td><td> <p>请携带：</p>
+<p>4.身体检查</p>
+                      </td>
+                      <td> <p>请携带：</p>
 
 <p>1.入学通知书（Admission Letter）</p>
 
@@ -16,29 +153,303 @@
 
 <p>4.Authorisation form of Medical Procedures</p>
 
-<p>5.Appointment of Local Guardian Form (若有)</p></td></tr><tr><td>11</td><td>8月</td><td>申请 PC Loan</td><td></td></tr><tr><td>12</td><td>5/8-6/8</td><td>新生迎新仪式（Freshmen Welcome Ceremony）</td><td>时间视各科系而定</td></tr><tr><td>13</td><td>12/8</td><td>进行体检的最后一天</td><td>Form MC1 必须交至Medical Centre</td></tr><tr><td>14</td><td>12/8-13/8</td><td>办理学生通行证（Student Pass）</td><td></td></tr><tr><td>15</td><td>01/09-10/09</td><td>网上申请 MOE Tuition Grant</td><td></td></tr><tr><td>16</td><td>9月中-10月初</td><td>文件证明</td><td></td></tr><tr><td>17</td><td>6/10-9/10</td><td>签署 Tuition Grant 同意书(若担保人不在新加坡，可于 12/9 从网站下载同意书让担保人签署后交会给校方)</td><td></td></tr></tbody></table></div></li></ul></div></div><br/><div class="container fillx"><h1><i class="fa fa-fw fa-location-arrow red"></i>&nbsp;申请</h1><div class="line"></div><div class="col-md-6"><ul class="fa-ul align-left"><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>如果我有意到新加坡升学，请问要如何获得相关资讯?</p></h3><div class="hide"><p>你可以浏览新加坡大学的官方网页:</p>
+<p>5.Appointment of Local Guardian Form (若有)</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>11</td>
+                      <td>8月</td>
+                      <td>申请 PC Loan
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>12</td>
+                      <td>5/8-6/8</td>
+                      <td>新生迎新仪式（Freshmen Welcome Ceremony）
+                      </td>
+                      <td>时间视各科系而定</td>
+                    </tr>
+                    <tr>
+                      <td>13</td>
+                      <td>12/8</td>
+                      <td>进行体检的最后一天
+                      </td>
+                      <td>Form MC1 必须交至Medical Centre</td>
+                    </tr>
+                    <tr>
+                      <td>14</td>
+                      <td>12/8-13/8</td>
+                      <td>办理学生通行证（Student Pass）
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>15</td>
+                      <td>01/09-10/09</td>
+                      <td>网上申请 MOE Tuition Grant
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>16</td>
+                      <td>9月中-10月初</td>
+                      <td>文件证明
+                      </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>17</td>
+                      <td>6/10-9/10</td>
+                      <td>签署 Tuition Grant 同意书(若担保人不在新加坡，可于 12/9 从网站下载同意书让担保人签署后交会给校方)
+                      </td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div><br/>
+      <div class="container fillx">
+        <h1><i class="fa fa-fw fa-location-arrow red"></i>&nbsp;申请
+        </h1>
+        <div class="line"></div>
+        <div class="col-md-6">
+          <ul class="fa-ul align-left">
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>如果我有意到新加坡升学，请问要如何获得相关资讯?</p>
+              </h3>
+              <div class="hide"><p>你可以浏览新加坡大学的官方网页:</p>
 
-<ul><li><p><a href="www.nus.edu.sg">新加坡国立大学(NUS)官网</a></p></li><li><p><a href="www.ntu.edu.sg">新加坡南洋理工大学(NTU)官网</a></p></li></ul></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>请问申请一般几时截止?</p></h3><div class="hide"><p>一般上, 持统考文凭(UEC)的申请在12月初开放, 12月末截止。申请时间必须以各大学官网为准。</p>
+<ul>
+<li><p><a href="www.nus.edu.sg">新加坡国立大学(NUS)官网</a></p></li>
+<li><p><a href="www.ntu.edu.sg">新加坡南洋理工大学(NTU)官网</a></p></li>
+</ul>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>请问申请一般几时截止?</p>
+              </h3>
+              <div class="hide"><p>一般上, 持统考文凭(UEC)的申请在12月初开放, 12月末截止。申请时间必须以各大学官网为准。</p>
 
-<ul><li><p><a href="http://www.nus.edu.sg/oam/apply/international/admissionreq/BYA-admissionreq.html">NUS 申请日期</a></p></li><li><p><a href="http://admissions.ntu.edu.sg/UndergraduateAdmissions/Pages/ApplytoNTU.aspx">NTU 申请日期</a></p></li></ul></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>请问大学提供些什么科系?</p></h3><div class="hide"><p>各个大学所提供的科系略有差异, 请到大学的官网查询。</p>
+<ul>
+<li><p><a href="http://www.nus.edu.sg/oam/apply/international/admissionreq/BYA-admissionreq.html">NUS 申请日期</a></p></li>
+<li><p><a href="http://admissions.ntu.edu.sg/UndergraduateAdmissions/Pages/ApplytoNTU.aspx">NTU 申请日期</a></p></li>
+</ul>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>请问大学提供些什么科系?</p>
+              </h3>
+              <div class="hide"><p>各个大学所提供的科系略有差异, 请到大学的官网查询。</p>
 
-<ul><li><p><a href="http://www.nus.edu.sg/oam/courses/course.html">NUS 科系</a></p></li><li><p><a href="http://admissions.ntu.edu.sg/UndergraduateAdmissions/Pages/undergrad.aspx">NTU 科系</a></p></li></ul></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>请问大学学费是多少？</p></h3><div class="hide"><p>新学年的学费暂未公布。下面链接提供历年的学杂费。</p>
+<ul>
+<li><p><a href="http://www.nus.edu.sg/oam/courses/course.html">NUS 科系</a></p></li>
+<li><p><a href="http://admissions.ntu.edu.sg/UndergraduateAdmissions/Pages/undergrad.aspx">NTU 科系</a></p></li>
+</ul>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>请问大学学费是多少？</p>
+              </h3>
+              <div class="hide"><p>新学年的学费暂未公布。下面链接提供历年的学杂费。</p>
 
-<ul><li><p><a href="https://share.nus.edu.sg/registrar/info/ug/UGTuitionCurrent.pdf">NUS 学费</a></p></li><li><p><a href="http://admissions.ntu.edu.sg/UndergraduateAdmissions/Pages/FeesTuitionGrant.aspx">NTU 学费</a></p></li></ul></div></li></ul></div><div class="col-md-6"><ul class="fa-ul align-left"><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>请问有哪些奖学金？</p></h3><div class="hide"><p>点击下面链接以获得相关资讯。</p>
+<ul>
+<li><p><a href="https://share.nus.edu.sg/registrar/info/ug/UGTuitionCurrent.pdf">NUS 学费</a></p></li>
+<li><p><a href="http://admissions.ntu.edu.sg/UndergraduateAdmissions/Pages/FeesTuitionGrant.aspx">NTU 学费</a></p></li>
+</ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="fa-ul align-left">
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>请问有哪些奖学金？</p>
+              </h3>
+              <div class="hide"><p>点击下面链接以获得相关资讯。</p>
 
-<ul><li><p><a href="http://www.nus.edu.sg//oam/scholarships/freshmen/scholarship-international.html">NUS 奖学金</a></p></li><li><p><a href="http://admissions.ntu.edu.sg/UndergraduateAdmissions/Pages/FreshmenNonSingapore.aspx">NTU 奖学金</a></p></li></ul></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>请问还有其他经济援助吗？</p></h3><div class="hide"><p>Financial Aid / Financial Assistance是由大学提供的经济援助。其中包括Tuition Fee Loan(TFL) 和Study Loan。</p>
+<ul>
+<li><p><a href="http://www.nus.edu.sg//oam/scholarships/freshmen/scholarship-international.html">NUS 奖学金</a></p></li>
+<li><p><a href="http://admissions.ntu.edu.sg/UndergraduateAdmissions/Pages/FreshmenNonSingapore.aspx">NTU 奖学金</a></p></li>
+</ul>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>请问还有其他经济援助吗？</p>
+              </h3>
+              <div class="hide"><p>Financial Aid / Financial Assistance是由大学提供的经济援助。其中包括Tuition Fee Loan(TFL) 和Study Loan。</p>
 
-<ul><li><p><a href="http://www.nus.edu.sg/oam/financialaid/index.html">NUS 经济援助</a></p></li><li><p><a href="http://admissions.ntu.edu.sg/UndergraduateAdmissions/FinancialAssistance/Pages/default.aspx">NTU 经济援助</a></p></li></ul></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>请问我几时可以知道被录取？</p></h3><div class="hide"><p>一般上录取通知会在2月左右开始发出。申请者会透过电邮或信件获得录取通知书。</p></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>请问英文最低要求是什么？</p></h3><div class="hide"><p>官方上，英文水平必须有如: EL1119，IELTS，TOEFL等等资格(请到官网查看最低要求)，统考英文为辅。据统计，统考英文获得A2或以上的录取率较高。</p></div></li></ul></div></div><br/><div class="container fillx"><h1><i class="fa fa-fw fa-legal yellow"></i>&nbsp;Tuition Grant</h1><div class="line"></div><div class="col-md-6"><ul class="fa-ul align-left"><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>什么是Tuition Grant？</p></h3><div class="hide"><p>Tuition Grant是由新加坡教育局提供给海外学生和本地学生的学费资助。申请者无须偿还费用，但条件是最少在新加坡注册的公司工作3年。</p>
+<ul>
+<li><p><a href="http://www.nus.edu.sg/oam/financialaid/index.html">NUS 经济援助</a></p></li>
+<li><p><a href="http://admissions.ntu.edu.sg/UndergraduateAdmissions/FinancialAssistance/Pages/default.aspx">NTU 经济援助</a></p></li>
+</ul>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>请问我几时可以知道被录取？</p>
+              </h3>
+              <div class="hide"><p>一般上录取通知会在2月左右开始发出。申请者会透过电邮或信件获得录取通知书。</p>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>请问英文最低要求是什么？</p>
+              </h3>
+              <div class="hide"><p>官方上，英文水平必须有如: EL1119，IELTS，TOEFL等等资格(请到官网查看最低要求)，统考英文为辅。据统计，统考英文获得A2或以上的录取率较高。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div><br/>
+      <div class="container fillx">
+        <h1><i class="fa fa-fw fa-legal yellow"></i>&nbsp;Tuition Grant
+        </h1>
+        <div class="line"></div>
+        <div class="col-md-6">
+          <ul class="fa-ul align-left">
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>什么是Tuition Grant？</p>
+              </h3>
+              <div class="hide"><p>Tuition Grant是由新加坡教育局提供给海外学生和本地学生的学费资助。申请者无须偿还费用，但条件是最少在新加坡注册的公司工作3年。</p>
 
-<p><strong>若不接受津贴，则不能申请校内其他贷款及财务援助</strong></p></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>请问我需要每年申请吗？</p></h3><div class="hide"><p>只需申请一次</p></div></li></ul></div><div class="col-md-6"><ul class="fa-ul align-left"><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>请问如何申请？</p></h3><div class="hide"><p>请留意官网的指示。</p>
+<p><strong>若不接受津贴，则不能申请校内其他贷款及财务援助</strong></p>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>请问我需要每年申请吗？</p>
+              </h3>
+              <div class="hide"><p>只需申请一次</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="fa-ul align-left">
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>请问如何申请？</p>
+              </h3>
+              <div class="hide"><p>请留意官网的指示。</p>
 
-<ul><li><p><a href="http://www.nus.edu.sg/oam/financialaid/faq-moe.html">NUS 申请指示</a></p></li><li><p><a href="http://admissions.ntu.edu.sg/UndergraduateAdmissions/Pages/TuitionGrant.aspx">NTU 申请指示</a></p></li></ul></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p> <i class="fa fa-fw fa-fire red"></i>申请TG时需要担保人吗?</p></h3><div class="hide"><p>申请TFL时需要两位担保人。在大约10月时（详细时间请参考官网与email，2015年日期为6/10-9/10)2位担保人需要陪同申请者到 NTU Function Room, SS3-B1-22, Level B1, South Academic Complex, South Spine 签署合同。</p>
+<ul>
+<li><p><a href="http://www.nus.edu.sg/oam/financialaid/faq-moe.html">NUS 申请指示</a></p></li>
+<li><p><a href="http://admissions.ntu.edu.sg/UndergraduateAdmissions/Pages/TuitionGrant.aspx">NTU 申请指示</a></p></li>
+</ul>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p> <i class="fa fa-fw fa-fire red"></i>申请TG时需要担保人吗?</p>
+              </h3>
+              <div class="hide"><p>申请TFL时需要两位担保人。在大约10月时（详细时间请参考官网与email，2015年日期为6/10-9/10)2位担保人需要陪同申请者到 NTU Function Room, SS3-B1-22, Level B1, South Academic Complex, South Spine 签署合同。</p>
 
-<p>若担保人不在新加坡，需从“TGonline”下载表格（2015年日期为12/9），2 名担保人在宣誓官面前签署后由申请者亲自提交（详细时间请参考官网与email，2015年日期为6/10-9/10)。</p></div></li></ul></div></div><br/><div class="container fillx"><h1><i class="fa fa-fw fa-money yellow"></i>&nbsp;银行户口， Tuition Fee Loan</h1><div class="line"></div><div class="col-md-6"><ul class="fa-ul align-left"><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>官网链接</p></h3><div class="hide"><ul><li><p><a href="http://www.nus.edu.sg/oam/financialaid/loans/financial-loans-tuitionfee.html">NUS官网链接</a> </p></li><li><p><a href="http://www.ntu.edu.sg/Finance/FinancialServices/StudentFinancialHandbook/Disbursement%20under%20FinancialAssistanceSchemes/Pages/TuitionFeeLoan.aspx">NTU官网链接</a></p></li></ul></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>请问什么是TFL?</p></h3><div class="hide"><p>TFL 即Tuition Fee Loan, 留学生可向银行贷款学费。注意, TFL只借新加坡公民学费的 90%， 不是我们 International Student 学费的 90%。</p></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>请问开银行户口来做什么?</p></h3><div class="hide"><p>你可以选择开或不开银行户口。一般上, 缴付学费和宿舍费可透过GIRO直接在银行户口扣帐。</p></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>请问开什么银行户口比较好和方便?</p></h3><div class="hide"><p>校园内都有银行的ATM:</p>
+<p>若担保人不在新加坡，需从“TGonline”下载表格（2015年日期为12/9），2 名担保人在宣誓官面前签署后由申请者亲自提交（详细时间请参考官网与email，2015年日期为6/10-9/10)。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div><br/>
+      <div class="container fillx">
+        <h1><i class="fa fa-fw fa-money yellow"></i>&nbsp;银行户口， Tuition Fee Loan
+        </h1>
+        <div class="line"></div>
+        <div class="col-md-6">
+          <ul class="fa-ul align-left">
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>官网链接</p>
+              </h3>
+              <div class="hide"><ul>
+<li><p><a href="http://www.nus.edu.sg/oam/financialaid/loans/financial-loans-tuitionfee.html">NUS官网链接</a> </p></li>
+<li><p><a href="http://www.ntu.edu.sg/Finance/FinancialServices/StudentFinancialHandbook/Disbursement%20under%20FinancialAssistanceSchemes/Pages/TuitionFeeLoan.aspx">NTU官网链接</a></p></li>
+</ul>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>请问什么是TFL?</p>
+              </h3>
+              <div class="hide"><p>TFL 即Tuition Fee Loan, 留学生可向银行贷款学费。注意, TFL只借新加坡公民学费的 90%， 不是我们 International Student 学费的 90%。</p>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>请问开银行户口来做什么?</p>
+              </h3>
+              <div class="hide"><p>你可以选择开或不开银行户口。一般上, 缴付学费和宿舍费可透过GIRO直接在银行户口扣帐。</p>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>请问开什么银行户口比较好和方便?</p>
+              </h3>
+              <div class="hide"><p>校园内都有银行的ATM:</p>
 
-<ul><li>NUS校园内DBS的ATM比较多</li><li>NTU校园内OCBC的ATM比较多</li></ul></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>如果我是向 OCBC 申请 TFL，那我是不是一定要开 OCBC 的银行户口?</p></h3><div class="hide"><p>没有规定必须在申请 TFL 的银行开户口，可以在往后开始工作还贷款时再开该银行户口。</p></div></li></ul></div><!-- SPLIT-->
-
-<div class="col-md-6"><ul class="fa-ul align-left"><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p> 请问我几时可以申请 TFL?</p></h3><div class="hide"><p>只要你拿到 Admission Offer Letter 后就能开始申请了，截止日期参考官网。可自行官网下载和打印申请表格。</p></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>TFL 需不需要每年重新申请?</p></h3><div class="hide"><p>不需要，TFL 只需要申请 1 次即可。</p></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>请问我几时才需要还 TFL 的债务?</p></h3><div class="hide"><p>毕业后两年内必须开始还钱，银行利息由毕业后开始算。每个月最少$100，最长期限为 20 年。</p></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>如果我不想带太多现金，怕被打抢骗财，怎么办?</p></h3><div class="hide"><p>若不想携带太多现金，可在马来西亚的银行购买新币的 Bankdraft。</p></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p> <i class="fa fa-fw fa-fire red"></i>申请TFL时需要担保人吗?</p></h3><div class="hide"><p>需要2位担保人。</p>
+<ul>
+<li>NUS校园内DBS的ATM比较多</li>
+<li>NTU校园内OCBC的ATM比较多</li>
+</ul>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>如果我是向 OCBC 申请 TFL，那我是不是一定要开 OCBC 的银行户口?</p>
+              </h3>
+              <div class="hide"><p>没有规定必须在申请 TFL 的银行开户口，可以在往后开始工作还贷款时再开该银行户口。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- SPLIT-->
+        
+        
+        <div class="col-md-6">
+          <ul class="fa-ul align-left">
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p> 请问我几时可以申请 TFL?</p>
+              </h3>
+              <div class="hide"><p>只要你拿到 Admission Offer Letter 后就能开始申请了，截止日期参考官网。可自行官网下载和打印申请表格。</p>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>TFL 需不需要每年重新申请?</p>
+              </h3>
+              <div class="hide"><p>不需要，TFL 只需要申请 1 次即可。</p>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>请问我几时才需要还 TFL 的债务?</p>
+              </h3>
+              <div class="hide"><p>毕业后两年内必须开始还钱，银行利息由毕业后开始算。每个月最少$100，最长期限为 20 年。</p>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>如果我不想带太多现金，怕被打抢骗财，怎么办?</p>
+              </h3>
+              <div class="hide"><p>若不想携带太多现金，可在马来西亚的银行购买新币的 Bankdraft。</p>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p> <i class="fa fa-fw fa-fire red"></i>申请TFL时需要担保人吗?</p>
+              </h3>
+              <div class="hide"><p>需要2位担保人。</p>
 
 <p><strong>情况 1：学生和担保人都在新加坡</strong></p>
 
@@ -53,7 +464,12 @@
 
 <p>在抵达新加坡后，（2015年为15/8 之前）学生可到 NTU 的 OCBC 分行呈交：</p>
 
-<ul><li><p>已填妥的 TFL 申请表格 </p></li><li><p>银行录取信 </p></li><li><p>护照 </p></li><li><p>经银行人员认证的担保人身份证复印版本 </p></li></ul>
+<ul>
+<li><p>已填妥的 TFL 申请表格 </p></li>
+<li><p>银行录取信 </p></li>
+<li><p>护照 </p></li>
+<li><p>经银行人员认证的担保人身份证复印版本 </p></li>
+</ul>
 
 <p><strong>情况 3: 学生在新加坡但是担保人都在马来西亚</strong></p>
 
@@ -63,29 +479,347 @@
 
 <p>在抵达新加坡后，（2015年为15/8 之前）学生可到 NTU 的 OCBC 分行呈交：</p>
 
-<ul><li><p>已填妥的 TFL 申请表格 </p></li><li><p>信</p></li><li><p>护照</p></li><li><p>经银行人员认证的担保人身份证复印版本 </p></li></ul></div></li></ul></div><div class="col-md-12"><h3>接下来的部分是供欲向OCBC申请的同学参考：</h3></div><div class="col-md-6"><ul class="fa-ul align-left"><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>我家附近有OCBC，我可以在这边处理申请TFL的手续吗？</p></h3><div class="hide"><p>可以，你必须在马来西亚 OCBC 银行的 Officer 见证下签名。签名时需携带 Borrower(Student) 和 Guarantor 的身份证/护照， 
+<ul>
+<li><p>已填妥的 TFL 申请表格 </p></li>
+<li><p>信</p></li>
+<li><p>护照</p></li>
+<li><p>经银行人员认证的担保人身份证复印版本 </p></li>
+</ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-12">
+          <h3>接下来的部分是供欲向OCBC申请的同学参考：</h3>
+        </div>
+        <div class="col-md-6">
+          <ul class="fa-ul align-left">
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>我家附近有OCBC，我可以在这边处理申请TFL的手续吗？</p>
+              </h3>
+              <div class="hide"><p>可以，你必须在马来西亚 OCBC 银行的 Officer 见证下签名。签名时需携带 Borrower(Student) 和 Guarantor 的身份证/护照， 
 Admission Letter 副本作为证明文件。Borrower 和 Guarantor 的身份证和护照副本需要有 OCBC 银行 Officer 的盖章。 
-抵新后，再把表格交到任何一间OCBC分行即可。</p></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>如果我家附近没有 OCBC， 而我的 Guarantor 无法来新加坡签名，怎么办?</p></h3><div class="hide"><p>若所住地区无 OCBC 银行，你自己本身需在新加坡 OCBC 银行签名，尔后再将表格寄回给 Guarantor。
-Guarantor须在 Notary Public 或 Officer of Singapore Embassy 见证下签名，所需携带 文件同上。</p></div></li></ul></div><div class="col-md-6"><ul class="fa-ul align-left"><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p> 如果我家住靠近新加坡 (如: JB)，那么我能不能先跟我的 Guarantor 自行到新加坡 OCBC 签名?</p></h3><div class="hide"><p>可以，不过必须确保带齐所需的文件，
+抵新后，再把表格交到任何一间OCBC分行即可。</p>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>如果我家附近没有 OCBC， 而我的 Guarantor 无法来新加坡签名，怎么办?</p>
+              </h3>
+              <div class="hide"><p>若所住地区无 OCBC 银行，你自己本身需在新加坡 OCBC 银行签名，尔后再将表格寄回给 Guarantor。
+Guarantor须在 Notary Public 或 Officer of Singapore Embassy 见证下签名，所需携带 文件同上。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="fa-ul align-left">
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p> 如果我家住靠近新加坡 (如: JB)，那么我能不能先跟我的 Guarantor 自行到新加坡 OCBC 签名?</p>
+              </h3>
+              <div class="hide"><p>可以，不过必须确保带齐所需的文件，
 如 Admission Letter以及自己和 Guarantor 的身份证/护照，不然就白走一趟了。 
-若资料符合，签名后，申请手续就完成了。</p></div></li></ul></div></div><br/><div class="container fillx"><h1><i class="fa fa-fw fa-info-circle red"></i>&nbsp;其他财务援助</h1><div class="line"></div><div class="col-md-6"><ul class="fa-ul align-left"><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p> <i class="fa fa-fw fa-fire red"></i>NTU Bursary 津贴</p></h3><div class="hide"><p>申请期限：在接受大学录取的两个星期内</p>
+若资料符合，签名后，申请手续就完成了。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div><br/>
+      <div class="container fillx">
+        <h1><i class="fa fa-fw fa-info-circle red"></i>&nbsp;其他财务援助
+        </h1>
+        <div class="line"></div>
+        <div class="col-md-6">
+          <ul class="fa-ul align-left">
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p> <i class="fa fa-fw fa-fire red"></i>NTU Bursary 津贴</p>
+              </h3>
+              <div class="hide"><p>申请期限：在接受大学录取的两个星期内</p>
 
 <p>申请方式：当有了学生证号码（matriculation number）后，会收到”NTU Online Acceptance Form”的 link。“Bursary”的链接就在里头。（若没有新加坡的联络号码和地址，只需要在空格 上填上”Not Available”即可）</p>
 
 <p>申请条件：此津贴视申请者的经济状况和各颁发者所设下的条件而定，因此其中颁发给永久居
 民与国际学生的津贴数目是有限的。</p>
 
-<p>申请过程：通过网上申请之后，请把所要求的文件在 7 天内以电邮或亲自缴交的方式交上。校 方将在八月尾通过学生邮件通知申请结果。成功的申请者需要在网上接受 offer。</p></div></li></ul></div><div class="col-md-6"><ul class="fa-ul align-left"><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p> <i class="fa fa-fw fa-fire red"></i>NTU PC Loan 电脑贷款</p></h3><div class="hide"><p>有了学生证号码后，新生可以通过 Student Link 申请电脑贷款，并在校内的电脑店购买手提电 脑。电脑贷款最高额为 S$1500,免利息但是必须在毕业后的 3 年内缴清贷款数额。</p>
+<p>申请过程：通过网上申请之后，请把所要求的文件在 7 天内以电邮或亲自缴交的方式交上。校 方将在八月尾通过学生邮件通知申请结果。成功的申请者需要在网上接受 offer。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="fa-ul align-left">
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p> <i class="fa fa-fw fa-fire red"></i>NTU PC Loan 电脑贷款</p>
+              </h3>
+              <div class="hide"><p>有了学生证号码后，新生可以通过 Student Link 申请电脑贷款，并在校内的电脑店购买手提电 脑。电脑贷款最高额为 S$1500,免利息但是必须在毕业后的 3 年内缴清贷款数额。</p>
 
-<p><a href="http://admissions.ntu.edu.sg/UndergraduateAdmissions/FinancialAssistance/Pages/PCLoan.aspx">请点击查阅更多详情</a></p></div></li></ul></div></div><br/><div class="container fillx"><h1><i class="fa fa-fw fa-credit-card green"></i>&nbsp;学生证明</h1><div class="line"></div><div class="col-md-6"><ul class="fa-ul align-left"><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>官网链接</p></h3><div class="hide"><p><a href="http://www.ica.gov.sg/services_centre_overview.aspx?pageid=256">Immigration and Checkpoints Authority 官网链接</a></p></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>请问申请Student Pass 有什么需要注意的吗?</p></h3><div class="hide"><p>记得更新国际护照，距离逾期时间超过 6 个月的护照才能申请Student Pass。 
-为了避免往后更新时出现麻烦，建议直接用新的 4 年国际护照来申请Student Pass。</p></div></li></ul></div><div class="col-md-6"><ul class="fa-ul align-left"><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>请问申请Student Pass 的照片有什么需要注意的吗?</p></h3><div class="hide"><p>准备至少4 张 Passport Size 照片及其电脑档。 
-为便利 Student Pass 之申请，照片建议以白色为背景，同时必须露出额头和耳朵。</p></div></li></ul></div></div><br/><div class="container fillx"><h1><i class="fa fa-fw fa-building blue"></i>&nbsp;住宿</h1><div class="line"></div><div class="col-md-6"><ul class="fa-ul align-left"><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>官网链接</p></h3><div class="hide"><ul><li><a href="http://nus.edu.sg/osa/has/undergraduate/eligibility">NUS 住宿官网链接</a></li><li><a href="http://www.ntu.edu.sg/CampusLife/Pages/Accommodation.aspx">NTU 住宿官网链接</a></li></ul></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>如果我要提早入宿该怎么办?</p></h3><div class="hide"><p>最早入宿日期一般在开学前两个星期，若要更早入宿请电邮联络宿舍管理层。在开学前提早入宿一样必须缴交相应天数的住宿费。</p></div></li></ul></div><div class="col-md-6"><ul class="fa-ul align-left"><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>住宿有怎样的选择？</p></h3><div class="hide"><ul><li><p>NUS的宿舍有几个不同的系统:</p><ol><li><p>Hall of Residence (Eusoff Hall, Raffles Hall, Temasek Hall等)
-有很多不同的课外活动可以参加，但是如果来年要继续住在Hall就必须非常活跃的参与课外活动。规定包伙食（Meal plans）</p></li><li><p>Residential College (Cinnamon College, Tembusu College等)
-较其他住宿选择不同的是住在Residential College的学生必须而外修课，且这些课程的成绩将直接影响大学文凭里面的总成绩。这些Residential College主要供给University Scholar Programme, University Town College Programme, Faculty of Arts and Social Science, Science, Engineering, Computing, Design and Environment的学生住宿。规定包伙食（Meal plans）</p></li><li><p>Student Residence (Prince George’s Park Residences)
-住在Student Residence的学生不须参加任何课外活动或而外修课。</p></li></ol></li><li><p>NTU只有一个系统，即Hall of Residence。相对NUS Hall of Residence不同的是，除了参与Hall of Residence的活动以外，还可以参加大学里各种不同的学会活社团已获得来年住在Hall of Residence的资格。申请时可选择单人或双人房，但是将视数量，由电脑随机分配学生到不同的Hall of Residence。</p></li></ul></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>每个月的住宿费多少？</p></h3><div class="hide"><table class="table table-hover table-bordered"><thead><tr> <th rowspan="2"></th><th rowspan="2"></th><th colspan="2" class="align-center">单人房</th><th colspan="2" class="align-center">双人房</th></tr><tr><th>无冷气</th><th>有冷气</th><th>无冷气</th><th>有冷气</th></tr></thead><tbody><tr> <td rowspan="3">NUS </td><td>Hall of Residence * </td><td>440</td><td></td><td>300</td><td> </td></tr><tr> <td>Residential College ** </td><td>480-520</td><td>540-580</td><td> </td><td> </td></tr><tr> <td>Student Residence </td><td>440-480</td><td>800</td><td></td><td></td></tr><tr> <td>NTU</td><td>Hall of Residence</td><td>305-325</td><td>340-375</td><td>225-250</td><td>240-280</td></tr></tbody></table><p>* 不包括伙食费每月$90。**不包括伙食费每月$192。</p></div></li></ul></div></div><br/><div class="container fillx"><h1><i class="fa fa-fw fa-hospital-o blue"></i>&nbsp;身体检查</h1><div class="line"></div><div class="col-md-6"><ul class="fa-ul align-left"><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>请问我可以在马来西亚的诊所进行吗?有什么事项需要特别注意的吗?</p></h3><div class="hide"><ul><li><p>NUS： 可以，但是有几项事情要特别注意:</p><ol><li><p>医药报告和 X-ray 报告要以英文书写</p></li><li>X-ray 一定要在入学前 3 个月内进行，意即早于入学日 3 个月内的 X-ray 报告不生效</li><li>一定要验 HIV 和 X-ray</li><li>确保医生填妥 Admission Medical Examination Report (Freshmen Guide p39-40) 和 Student Pass Form (Freshmen Guide p41) 并签名</li></ol></li><li>NTU： 不能。</li></ul></div></li></ul></div><div class="col-md-6"><ul class="fa-ul align-left"><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>请问在 UHC(University Health Center) 进行医药检查的费用是多少，有什么需要特别注意的吗?</p></h3><div class="hide"><p>费用是 S$50(NUS) 或者 S$45(NTU)。在 UHC 进行医药检查比较方便，而且可以避免因报告不符规格而需要 再重新检查的麻烦，所以建议到 UHC 进行，注意事项如下:</p>
+<p><a href="http://admissions.ntu.edu.sg/UndergraduateAdmissions/FinancialAssistance/Pages/PCLoan.aspx">请点击查阅更多详情</a></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div><br/>
+      <div class="container fillx">
+        <h1><i class="fa fa-fw fa-credit-card green"></i>&nbsp;学生证明
+        </h1>
+        <div class="line"></div>
+        <div class="col-md-6">
+          <ul class="fa-ul align-left">
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>官网链接</p>
+              </h3>
+              <div class="hide"><p><a href="http://www.ica.gov.sg/services_centre_overview.aspx?pageid=256">Immigration and Checkpoints Authority 官网链接</a></p>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>请问申请Student Pass 有什么需要注意的吗?</p>
+              </h3>
+              <div class="hide"><p>记得更新国际护照，距离逾期时间超过 6 个月的护照才能申请Student Pass。 
+为了避免往后更新时出现麻烦，建议直接用新的 4 年国际护照来申请Student Pass。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="fa-ul align-left">
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>请问申请Student Pass 的照片有什么需要注意的吗?</p>
+              </h3>
+              <div class="hide"><p>准备至少4 张 Passport Size 照片及其电脑档。 
+为便利 Student Pass 之申请，照片建议以白色为背景，同时必须露出额头和耳朵。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div><br/>
+      <div class="container fillx">
+        <h1><i class="fa fa-fw fa-building blue"></i>&nbsp;住宿
+        </h1>
+        <div class="line"></div>
+        <div class="col-md-6">
+          <ul class="fa-ul align-left">
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>官网链接</p>
+              </h3>
+              <div class="hide"><ul>
+<li><a href="http://nus.edu.sg/osa/has/undergraduate/eligibility">NUS 住宿官网链接</a></li>
+<li><a href="http://www.ntu.edu.sg/CampusLife/Pages/Accommodation.aspx">NTU 住宿官网链接</a></li>
+</ul>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>如果我要提早入宿该怎么办?</p>
+              </h3>
+              <div class="hide"><p>最早入宿日期一般在开学前两个星期，若要更早入宿请电邮联络宿舍管理层。在开学前提早入宿一样必须缴交相应天数的住宿费。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="fa-ul align-left">
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>住宿有怎样的选择？</p>
+              </h3>
+              <div class="hide"><ul>
+<li><p>NUS的宿舍有几个不同的系统:</p>
 
-<ol><li>当天要带 Admission Medical Examination Report 和 Student Pass Form 并填妥基 本资料</li><li>有特殊健康问题者当天要带相关的医药报告</li><li>女性请在经期结束后 5-7 天才进行医药检查</li><li>在 UHC 进行医药检查前须到这网站预约时间</li></ol></div></li></ul></div></div><br/><div class="container fillx"><h1><i class="fa fa-fw fa-fire red"></i>&nbsp;AMCISA新生营</h1><div class="line"></div><div class="col-md-6"><ul class="fa-ul align-left"><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>请问什么是 FOC ?</p></h3><div class="hide"><p>FOC即Freshman Orientation Camp，是迎新营，开放给即将前来新加坡大学就读的马来西亚学生参加。
+<ol><li><p>Hall of Residence (Eusoff Hall, Raffles Hall, Temasek Hall等)
+有很多不同的课外活动可以参加，但是如果来年要继续住在Hall就必须非常活跃的参与课外活动。规定包伙食（Meal plans）</p></li>
+<li><p>Residential College (Cinnamon College, Tembusu College等)
+较其他住宿选择不同的是住在Residential College的学生必须而外修课，且这些课程的成绩将直接影响大学文凭里面的总成绩。这些Residential College主要供给University Scholar Programme, University Town College Programme, Faculty of Arts and Social Science, Science, Engineering, Computing, Design and Environment的学生住宿。规定包伙食（Meal plans）</p></li>
+<li><p>Student Residence (Prince George’s Park Residences)
+住在Student Residence的学生不须参加任何课外活动或而外修课。</p></li></ol></li>
+<li><p>NTU只有一个系统，即Hall of Residence。相对NUS Hall of Residence不同的是，除了参与Hall of Residence的活动以外，还可以参加大学里各种不同的学会活社团已获得来年住在Hall of Residence的资格。申请时可选择单人或双人房，但是将视数量，由电脑随机分配学生到不同的Hall of Residence。</p></li>
+</ul>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>每个月的住宿费多少？</p>
+              </h3>
+              <div class="hide">
+                <table class="table table-hover table-bordered">
+                  <thead>
+                    <tr> 
+                      <th rowspan="2"></th>
+                      <th rowspan="2"></th>
+                      <th colspan="2" class="align-center">单人房</th>
+                      <th colspan="2" class="align-center">双人房</th>
+                    </tr>
+                    <tr>
+                      <th>无冷气</th>
+                      <th>有冷气</th>
+                      <th>无冷气</th>
+                      <th>有冷气</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr> 
+                      <td rowspan="3">NUS </td>
+                      <td>Hall of Residence * </td>
+                      <td>440</td>
+                      <td></td>
+                      <td>300</td>
+                      <td> </td>
+                    </tr>
+                    <tr> 
+                      <td>Residential College ** </td>
+                      <td>480-520</td>
+                      <td>540-580</td>
+                      <td> </td>
+                      <td> </td>
+                    </tr>
+                    <tr> 
+                      <td>Student Residence </td>
+                      <td>440-480</td>
+                      <td>800</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr> 
+                      <td>NTU</td>
+                      <td>Hall of Residence</td>
+                      <td>305-325</td>
+                      <td>340-375</td>
+                      <td>225-250</td>
+                      <td>240-280</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>* 不包括伙食费每月$90。**不包括伙食费每月$192。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div><br/>
+      <div class="container fillx">
+        <h1><i class="fa fa-fw fa-hospital-o blue"></i>&nbsp;身体检查
+        </h1>
+        <div class="line"></div>
+        <div class="col-md-6">
+          <ul class="fa-ul align-left">
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>请问我可以在马来西亚的诊所进行吗?有什么事项需要特别注意的吗?</p>
+              </h3>
+              <div class="hide"><ul>
+<li><p>NUS： 可以，但是有几项事情要特别注意:</p>
+
+<ol><li>医药报告和 X-ray 报告要以英文书写</li>
+<li>X-ray 一定要在入学前 3 个月内进行，意即早于入学日 3 个月内的 X-ray 报告不生效</li>
+<li>一定要验 HIV 和 X-ray</li>
+<li>确保医生填妥 Admission Medical Examination Report (Freshmen Guide p39-40) 和 Student Pass Form (Freshmen Guide p41) 并签名</li></ol></li>
+<li>NTU： 不能。</li>
+</ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="fa-ul align-left">
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>请问在 UHC(University Health Center) 进行医药检查的费用是多少，有什么需要特别注意的吗?</p>
+              </h3>
+              <div class="hide"><p>费用是 S$50(NUS) 或者 S$45(NTU)。在 UHC 进行医药检查比较方便，而且可以避免因报告不符规格而需要 再重新检查的麻烦，所以建议到 UHC 进行，注意事项如下:</p>
+
+<ol>
+<li>当天要带 Admission Medical Examination Report 和 Student Pass Form 并填妥基 本资料</li>
+<li>有特殊健康问题者当天要带相关的医药报告</li>
+<li>女性请在经期结束后 5-7 天才进行医药检查</li>
+<li>在 UHC 进行医药检查前须到这网站预约时间</li>
+</ol>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div><br/>
+      <div class="container fillx">
+        <h1><i class="fa fa-fw fa-fire red"></i>&nbsp;AMCISA新生营
+        </h1>
+        <div class="line"></div>
+        <div class="col-md-6">
+          <ul class="fa-ul align-left">
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>请问什么是 FOC ?</p>
+              </h3>
+              <div class="hide"><p>FOC即Freshman Orientation Camp，是迎新营，开放给即将前来新加坡大学就读的马来西亚学生参加。
 在迎新营期间，学长姐会协助学弟妹处理学生证的申请、身体检查、贷款等繁杂手续；直系学长姐将与学弟妹分享宝贵的经验，
 解除学弟妹的困惑；同时也能透过营期间的各种刺激好玩的游戏，认识其他来自马来西亚各州的留新大马生，
-彼此进行交流，因而为你精彩的大学生活掀开序幕。</p></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>请问我如何获得 FOC 资讯?</p></h3><div class="hide"><p>敬请留意本官网的更新，以跟进 FOC 最新的资讯。谢谢！</p></div></li></ul></div><div class="col-md-6"><ul class="fa-ul align-left"><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>请问在 FOC 期间我要住在哪里?</p></h3><div class="hide"><p>如果有亲戚住在新加坡，可以选择住在亲戚家，但是由于 FOC 的活动时间一般从早上 8 点至晚上 10 点，所以建议住在学校宿舍。</p></div></li><li class="qa-li underline"><h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i><p>如果我要提早入宿该怎么办?</p></h3><div class="hide"><p>提早入宿者请提前 email 给相关宿舍的管理层要求 Early Check-in。
- 由于住宿费会从 Early Check-in Date 开始算起，直到该学期结束，所以建议 跟朋友 share room 以节省开销。</p></div></li></ul></div></div><br/></div><div class="container fillx"><br/></div><div class="container align-left light-grey-bg fillx"><div class="col-md-2"></div><div class="col-md-3"><h4 class="yellow">相关单位</h4><a href="http://www.dongzong.my/" class="white"><h5>董总</h5></a></div><div class="col-md-3"><h4 class="blue">快速链接</h4><a href="https://www.facebook.com/pages/Amcisa-%E7%BB%BF%E5%B2%9B/145514082199917?fref=ts" class="white"><h5>Amcisa 绿岛</h5></a><a href="https://www.facebook.com/groups/419331528149726/?fref=ts" class="white"><h5>NTU Facebook Page</h5></a><a href="https://www.facebook.com/amcisanusntu?fref=ts" class="white"><h5>AMCISA Facebook Page</h5></a><a href="https://www.facebook.com/groups/nusamcisa/?fref=ts" class="white"><h5>NUS Facebook Page</h5></a></div><div class="col-md-3"><h4 class="green">联络方式：</h4><a href="http://amcisa.org/gh/contact.html" class="white"><h5>amcisa.comm@gmail.com</h5></a></div><div class="col-md-1"></div></div><div class="container light-grey-bg align-right fillx"><h5>Association of Malaysian Chinese Independent School Alumni 2014</h5></div><!--Utility scripts--><script src="js/jquery-1.11.0.js"></script><script src="js/bootstrap.min.js"></script><script src="js/googlepage.js"></script><script src="js/session.js"></script><script src="js/util.js"></script><script src="js/util.js"></script><script src="js/student.js"></script></body></html>
+彼此进行交流，因而为你精彩的大学生活掀开序幕。</p>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>请问我如何获得 FOC 资讯?</p>
+              </h3>
+              <div class="hide"><p>敬请留意本官网的更新，以跟进 FOC 最新的资讯。谢谢！</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="fa-ul align-left">
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>请问在 FOC 期间我要住在哪里?</p>
+              </h3>
+              <div class="hide"><p>如果有亲戚住在新加坡，可以选择住在亲戚家，但是由于 FOC 的活动时间一般从早上 8 点至晚上 10 点，所以建议住在学校宿舍。</p>
+              </div>
+            </li>
+            <li class="qa-li underline">
+              <h3><i class="fa fa-li fa-fw fa-chevron-circle-right"></i>
+                <p>如果我要提早入宿该怎么办?</p>
+              </h3>
+              <div class="hide"><p>提早入宿者请提前 email 给相关宿舍的管理层要求 Early Check-in。
+ 由于住宿费会从 Early Check-in Date 开始算起，直到该学期结束，所以建议 跟朋友 share room 以节省开销。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div><br/>
+    </div>
+    <div class="container fillx"><br/></div>
+    <div class="container align-left light-grey-bg fillx">
+      <div class="col-md-2"></div>
+      <div class="col-md-3">
+        <h4 class="yellow">相关单位</h4><a href="http://www.dongzong.my/" class="white">
+          <h5>董总</h5></a>
+      </div>
+      <div class="col-md-3">
+        <h4 class="blue">快速链接</h4><a href="https://www.facebook.com/pages/Amcisa-%E7%BB%BF%E5%B2%9B/145514082199917?fref=ts" class="white">
+          <h5>Amcisa 绿岛</h5></a><a href="https://www.facebook.com/groups/419331528149726/?fref=ts" class="white">
+          <h5>NTU Facebook Page</h5></a><a href="https://www.facebook.com/amcisanusntu?fref=ts" class="white">
+          <h5>AMCISA Facebook Page</h5></a><a href="https://www.facebook.com/groups/nusamcisa/?fref=ts" class="white">
+          <h5>NUS Facebook Page</h5></a>
+      </div>
+      <div class="col-md-3">
+        <h4 class="green">联络方式：</h4><a href="http://amcisa.org/gh/contact.html" class="white">
+          <h5>amcisa.comm@gmail.com</h5></a>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="container light-grey-bg align-right fillx">
+      <h5>Association of Malaysian Chinese Independent School Alumni 2014</h5>
+    </div>
+    <!--Utility scripts-->
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/googlepage.js"></script>
+    <script src="js/session.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/student.js"></script>
+  </body>
+</html>
