@@ -7,7 +7,6 @@ $(document).ready(function(){
       "action":"CHECKLOGINSTATUS"
     },
     function(data){
-      console.log('here');
       login_iframe(data);
       replaceDataInPersonalInformation(JSON.parse(data));
     listenHallDataChanges();

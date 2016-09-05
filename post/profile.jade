@@ -18,6 +18,8 @@ block content
               a(href='#profile', data-toggle='tab', aria-expanded='true') Profile
             li
               a(href='#registered', data-toggle='tab', aria-expanded='true') Registered events
+            li.admin.hidden
+              a(href='#admin-emails', data-toggle='tab', aria-expanded='true') Admin - All Member Emails
       .col-lg-10
         .tab-content
             .tab-pane.fade.active.in.align-left#profile
@@ -25,7 +27,10 @@ block content
               include ../includes/profile_profiletab.jade
             .tab-pane.fade.in.align-left#registered
               h2 This place have not been constructed.
+            .tab-pane.fade.in.align-left#admin-emails
+              include ../includes/profile_admin_emailstab.jade
             
 
 block script
   script(src="js/profile.js")
+  script(src="js/admin.js")
