@@ -12,7 +12,7 @@ Quick Setup for new Web Resource Managers (WRM)
 4. Clone the master github repo on your desktop through the github client.
 5. Log in to [FTPloy](https://ftploy.com) with your github account and create a new project with the server credentials from (1). (Note: the server path is **/public_html/gh**)
 1. [Install nodejs](http://nodejs.org/) on your local computer to get [npm](https://www.npmjs.org/) up and running.
-2. Install Jade by typing the following into your shell command line (not the nodejs command line). ```npm install -g jade```
+2. Install Jade by typing the following into your shell command line (not the nodejs command line). ```npm install -g jade-cli```
 3. Install watchdog for python with ```pip install watchdog```
 4. Install a version of markdown for your work. ```npm install -g markdown```
 
