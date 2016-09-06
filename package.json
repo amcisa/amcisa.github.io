@@ -1,0 +1,32 @@
+{
+  "name": "amcisa.github.io",
+  "version": "1.0.0",
+  "description": "amcisa.org\r ==================",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node index.js",
+    "refresh": "node index.js -a -e",
+    "main": "node index.js -a",
+    "stylus": "./node_modules/.bin/stylus -w ./css",
+    "server": "./node_modules/.bin/simplehttpserver .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amcisa/amcisa.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amcisa/amcisa.github.io/issues"
+  },
+  "homepage": "https://github.com/amcisa/amcisa.github.io#readme",
+  "dependencies": {
+    "jade-cli": "^0.1.1",
+    "markdown": "^0.5.0",
+    "watch": "^0.19.2"
+  },
+  "devDependencies": {
+    "simplehttpserver": "0.0.6"
+  }
+}
