@@ -1,14 +1,33 @@
 const fs = require('fs');
 const path = require('path');
 const rls = require('readline-sync');
+const replace = require('stream-replace');
 
-function templateAvailable(){
-  return fs.existsSync("../event/event_year.post")
+
+if(!fs.existsSync("../event/event_year.post")){
+  console.log("Template not found! Please copy it from the repo at https://github.com/amcisa/event.")
+  return false;
 }
+data=getData(); 
+copyFiles(data[1]+"."+data[2],"events\\"+data[0]);
 
 function copyFiles(prefix, outputdir, defaultname, defaultdir){
   defaultname = typeof defaultname !== 'undefined' ? defaultname : "org.event";
-  defaultdir = typeof defaultdir !== 'undefined' ? defaultdir : "../event/event_year.post";
+  defaultdir = typeof defaultdir !== 'undefined' ? defaultdir : "..\\event\\event_year.post";
+  if(!fs.existsSync(outputdir)){
+    fs.mkdirSync(outputdir);
+  }
+  fs.readdirSync(defaultdir).filter(function(file) {
+    return fs.statSync(path.join(defaultdir, file)).isFile();
+  }).forEach(function(f){
+    inputfile=defaultdir+"\\"+f;
+    outputfile=outputdir+"\\"+f.replace(defaultname, prefix);
+    //Replace all org.event by prefix.eventname before copying it to the destination folder
+    fs.createReadStream(inputfile)
+      .pipe(replace(defaultname, prefix))
+      .pipe(fs.createWriteStream(outputfile));
+    console.log(outputfile+" is created.");
+  });
 }
 
 function getData(cmd_args){
@@ -37,19 +56,3 @@ function getData(cmd_args){
   return data;
 }
 
-function main(){
-
-  if(!templateAvailable()){
-    console.log("Template not found! Please copy it from the repo.")
-    //return false;
-    console.log(getData());
-  }
-
-  
-
-
-
-}
-
-main();
-rls.question("Press Enter to exit");
