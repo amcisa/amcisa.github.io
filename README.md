@@ -37,7 +37,7 @@ Quick Setup for new Web Resource Managers (WRM)
 Workflow
 ------------------------
 
-1. Start Wampmanager.
+1. Start Wampmanager. You can use the `startwamp.cmd` to start it. It needs admin-level access to start, and the script will prompt you to give it access, so just double click it.
 2. Double-click sentinel.cmd to start. A detailed introduction is included in the appendix.
 3. Edit and save. 
 4. Go to http://localhost/amcisa.github.io to view your current state.
