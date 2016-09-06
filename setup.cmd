@@ -1,0 +1,3 @@
+@echo off
+echo installing npm modules...
+npm install
