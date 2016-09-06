@@ -7,8 +7,9 @@
     "watch": "node index.js",
     "refresh": "node index.js -a -e",
     "main": "node index.js -a",
+    "genevent": "node event_generator.js",
     "stylus": "./node_modules/.bin/stylus -w ./css",
-    "server": "./node_modules/.bin/simplehttpserver .",
+    "start": "./node_modules/.bin/simplehttpserver .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +25,7 @@
   "dependencies": {
     "jade-cli": "^0.1.1",
     "markdown": "^0.5.0",
+    "readline-sync": "^1.4.4",
     "watch": "^0.19.2"
   },
   "devDependencies": {

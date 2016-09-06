@@ -1,3 +1,12 @@
+#To be included
+There are several changes in this branch.
+
+1. No python will be used in this branch. 
+2. All dependencies have been packaged into `package.json`. No manual installation is needed. Double click setup.cmd and npm will do everything.
+3. WAMP is listed as one of the development tools now. The readme has been updated to include it, and two new scripts, `startwamp.cmd` and `stopwamp.cmd` is provided to turn on or off wampmanager once it is installed.
+4. `sentinel.cmd` is now the default workflow program, but you can also use `npm run watch` or other commands to organise your workflow.
+
+
 amcisa.org
 ==================
 
@@ -67,7 +76,7 @@ The following commands can be found in package.json.
 2. `refresh` : This prompts refreshing templates only.
 3. `main` : This refreshes the templates and then runs the main loop.
 4. `stylus`: This watches the css folder for any changes in the stylus files. Use this if you're only doing changes to the css files.
-5. `server`: This runs a local server. However, this server cannot execute any php files so it's only suitable for front-end work.
+5. `start`: This runs a local server. However, this server cannot execute any php files so it's only suitable for front-end work.
 
 ### Google API 
 
