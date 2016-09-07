@@ -301,7 +301,39 @@
             <div id="registered" class="tab-pane fade in align-left">
               <h2>This place have not been constructed.</h2>
             </div>
-            <div id="admin-emails" class="tab-pane fade in align-left"></div>
+            <div id="admin-emails" class="tab-pane fade in align-left">
+              <form class="form-horizontal">
+                <fieldset>
+                  <legend class="align-center">Email Generator</legend>
+                  <div class="form-group">
+                    <label class="col-lg-2 control-label">University</label>
+                    <div class="col-lg-10">
+                      <select id="admin_school" class="form-control">
+                        <option>NTU</option>
+                        <option>NUS</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-lg-2 control-label"> </label>
+                    <div class="col-lg-10">
+                      <div id="admin_copy" class="btn btn-primary">
+                         
+                        Press me to copy the emails
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2"></div>
+                  <label class="col-lg-10">Clicking on the text area below will also select the text. Press Ctrl+C to copy.</label>
+                  <div class="form-group">
+                    <label class="col-lg-2 control-label">Emails</label>
+                    <div class="col-lg-10">
+                      <textarea id="admin_emails" rows="10" class="form-control"></textarea>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
           </div>
         </div>
       </section>
