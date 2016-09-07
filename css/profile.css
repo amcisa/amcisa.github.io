@@ -6,7 +6,7 @@
   }
   .nav-stacked > li {
     word-wrap: break-word;
-    max-width: 100%;
+    max-width: 80%;
   }
 }
 @media (max-width: 768px) {
