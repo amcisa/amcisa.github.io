@@ -50,9 +50,9 @@ Appendix
 
 All modules and scripts used are contained within package.json. It is recommended that you go through it after you've completed the basic setup.
 
-### index.js
+### sentinel.js
 
-You can use node to run index.js like so : `node index.js`. There are command line arguments you can use.
+You can use node to run sentinel.js like so : `node sentinel.js`. There are command line arguments you can use.
 
 1. `-a` : This forces a refresh of jade and styl templates before the main monitor loop.
 2. `-e` : Placing this after `-a` forces it to stop before the main monitor loop.
