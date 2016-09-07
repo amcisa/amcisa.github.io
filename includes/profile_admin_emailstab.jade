@@ -1,0 +1,21 @@
+form.form-horizontal
+  fieldset
+    legend.align-center Email Generator
+    .form-group
+      label.col-lg-2.control-label University
+      .col-lg-10
+        select.form-control#admin_school
+          each o in ["NTU", "NUS"]
+            option=o
+    .form-group
+      label.col-lg-2.control-label 
+      .col-lg-10
+        .btn.btn-primary#admin_copy 
+          | Press me to copy the emails
+    .col-lg-2
+    label.col-lg-10
+      | Clicking on the text area below will also select the text. Press Ctrl+C to copy.
+    .form-group
+      label.col-lg-2.control-label Emails
+      .col-lg-10
+        textarea#admin_emails.form-control(rows='10')

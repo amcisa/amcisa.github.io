@@ -67,7 +67,7 @@ function generate_file_data(filepath){
   }
   //For any includes folder. Refresh the whole folder
   if(filepath.match(/includes/i)){
-    filedata.input=filedata.output+".post"
+    filedata.input=filedata.output+"post"
   }
   if(filepath.match(/css/i)){
     filedata.output=filedata.dirname;

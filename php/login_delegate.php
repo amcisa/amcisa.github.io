@@ -8,8 +8,6 @@
     print_r(checkUserExists($_POST["Matric_NO"], $_POST["Password"]));
   }elseif($_POST["action"]=="CHECKLOGINSTATUS"){
     print_r(checkLoginStatus());
-  }elseif($_POST["action"]=="CHECKIFADMIN"){
-    print_r(checkAdminStatus());
   }elseif($_POST["action"]=="LOGOUT"){
     print_r(signOutFromSession());
   }elseif($_POST["action"]=="UPDATEINFO"){
