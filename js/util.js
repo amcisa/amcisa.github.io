@@ -28,6 +28,7 @@ function alertmodal(type,message){
     title: "Hello!",
     html: true,
     text: "<h3>"+message+"</h3>",
+    allowOutsideClick: true,
     type: type
   })
 }
