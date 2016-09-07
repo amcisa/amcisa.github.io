@@ -1,7 +1,7 @@
 //admin.js
 $(document).ready(function(){
   rpc(
-    "php/login_delegate.php",
+    "php/admin_delegate.php",
     {
       "action":"CHECKIFADMIN"
     },
@@ -11,5 +11,5 @@ $(document).ready(function(){
         $(".admin").removeClass('hidden');
         console.log("???")
       }
-    })
+  })
 })
