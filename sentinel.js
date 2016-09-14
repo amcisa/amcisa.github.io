@@ -48,7 +48,7 @@ function refresh_allfiles(){
       }
       cp.execSync(["node_modules\\.bin\\jade -P .\\events\\"+f+" --out "+d],{cwd:".\\",stdio: 'inherit'});
   });
-  cp.execSync(["stylus .\\css"],{cwd:".\\",stdio: 'inherit'});
+  cp.execSync(["node_modules\\.bin\\stylus .\\css"],{cwd:".\\",stdio: 'inherit'});
 }
 
 function generate_file_data(filepath){
