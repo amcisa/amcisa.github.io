@@ -4,5 +4,6 @@ live:
     port: 21
     user: amcisaor
     pass: 4fetch5probable6archer
+    check: true
     path:
         remote: /public_html/gh
