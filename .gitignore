@@ -70,3 +70,5 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+
+ftploy.js
