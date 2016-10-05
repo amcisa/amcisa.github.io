@@ -13,6 +13,7 @@ var config = {
 }
     
 console.log("Start");
+/*
 ftpDeploy.deploy(config, function(err) {
     if (err) console.log(err)
     else console.log('finished');
@@ -29,3 +30,4 @@ ftpDeploy.on('uploading', function(data) {
 ftpDeploy.on('upload-error', function (data) {
     console.log(data.err); // data will also include filename, relativePath, and other goodies
 });
+*/

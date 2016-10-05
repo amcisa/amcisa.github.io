@@ -1,0 +1,9 @@
+live:
+    scheme: ftp
+    host: amcisa.org
+    port: 21
+    user: amcisaor
+    pass: 4fetch5probable6archer
+    path:
+        local: ./
+        remote: /public_html/gh
