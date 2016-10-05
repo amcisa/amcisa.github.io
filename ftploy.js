@@ -6,7 +6,7 @@ var config = {
     password: "4fetch5probable6archer", // optional, prompted if none given 
     host: "amcisa.org",
     port: 21,
-    localRoot: "C:\\wamp\\www\\amcisa.github.io",
+    localRoot: __dirname,
     remoteRoot: "/public_html/gh/",
     exclude: ['.git', '.idea', 'tmp/*','node_modules'],
     continueOnError : true
