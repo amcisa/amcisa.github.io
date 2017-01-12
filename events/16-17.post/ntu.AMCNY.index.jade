@@ -1,0 +1,71 @@
+extends ./ntu.AMCNY.layout.jade
+
+block title
+  title Event
+
+block content
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        //- Replace this with the poster image found in your images/org.event folder.
+        img(src="../../img/16-17/ntu.AMCNY/poster.photo.png")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 南洋理工大学 之 『鸡』星报喜贺新年
+        h3 AMCNY @ NTU
+        a(href="ntu.AMCNY.updates.html").white.btn.btn-dark.events-btn 
+          h3 #活动详情
+        a(href="ntu.AMCNY.updates.html").white.btn.btn-dark.events-btn             
+          h3 #近期更新
+        :markdown
+          岁月悠悠 光阴如箭
+          回首起一年下来发生的事 不知道有哪件事让你最刻骨铭心的呢?
+          有离家的无奈 有错过的风景 还是 有努力换来的收获 有无法抹去的难忘回忆?
+          
+          这一年的旅程经历 伴随在你身边陪你一起度过的又是谁呢?
+ 
+          一年又一年 不管多忙碌 别忘了趁着这个新春佳节为你关心的他送上祝福
+          让时间酝酿出来的酸甜苦辣 在踏上春运的列车回家过年前
+          叙旧团圆 欢聚一堂 共襄盛举 
+          把祝福分享给每一个你珍惜你在乎的他
+
+
+        a(href="ntu.AMCNY.register.html").btn.btn-dark.btn-lg 
+          h3 我要参加！
+      .col-md-3
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 活动日期 : 
+            //- Replace the following date with event date
+            | 22th January 2017 （星期日）
+          h2 
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 活动时间 : 
+            //- Replace the following time with event time
+            | 6.00 p.m. - 10 p.m.
+          h2
+            span.fa.fa-fw.fa-building.blue &nbsp;
+            | 活动地点 : 
+            span.fa.fa-magic
+            //- Replace the following venue with event venue 
+            | HSS Audi
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })
