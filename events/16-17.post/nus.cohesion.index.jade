@@ -1,0 +1,66 @@
+extends ./nus.cohesion.layout.jade
+
+block title
+  title Event
+
+block content
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        //- Replace this with the poster image found in your images/org.event folder.
+        img(src="../../img/16-17/nus.cohesion/cohesion_poster.jpg")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 AMCISA-MSL Cohesion 交流会
+        h3 Cohesion - AMCISA & MSL @ NUS
+        a(href="https://www.facebook.com/events/558449457681066/").white.btn.btn-dark.description-btn 
+          h3 #活动详情
+        a(href="http://nanxialieche.blogspot.sg/2017/02/nus-amcisa-ay-201617-cohesion.html").white.btn.btn-dark.events-btn             
+          h3 #近期更新
+        :markdown
+          在马来西亚，也许我们相距千里，也许我们不曾认识彼此。
+          然而，在新加坡这个小小的国度，NUS把我们都聚在一起了。
+          偶尔走在路上，在讲堂，在群组活动，在社团，我们会偶然地发现原来彼此都是马来西亚人，
+          都是同乡的，当下一股暖流淌过心底。趁着这个机会，就让我们认识更多与我们一样背井离
+          乡来到这里求学的马来西亚人吧，建立起我们在新加坡的手足情。活动内容多姿多彩哦，
+          进行方式是比较freestyle的，我们会进行球类活动，比如掷飞盘，踢球，
+          还有扑克牌，三国杀，这些活动都可以促进彼此的交流和提供一个平台让大家互相认识。
+          更重要的当然是食物啦（三文治，意大利面，水果）大家一定要踊跃参与哦！
+
+      .col-md-3
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 活动日期 : 
+            //- Replace the following date with event date
+            | 2016 年 10 月 15 日 
+          h2 
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 活动时间 : 
+            //- Replace the following time with event time
+            | 5 PM - 9 PM
+          h2
+            span.fa.fa-fw.fa-building.blue &nbsp;
+            | 活动地点 : 
+            span.fa.fa-magic
+            //- Replace the following venue with event venue 
+            | UTown Town Green
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })

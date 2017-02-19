@@ -1,0 +1,62 @@
+extends ./nus.examsupper.layout.jade
+
+block title
+  title Event
+
+block content
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        //- Replace this with the poster image found in your images/org.event folder.
+        img(src="../../img/16-17/nus.examsupper/examsupper_poster.jpg")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 1 千 1 百 1 十 1 夜 Exam Supper
+        h3 Exam Supper @ NUS
+        a(href="https://www.facebook.com/events/1777443472515237/").white.btn.btn-dark.description-btn 
+          h3 #活动详情
+        a(href="http://nanxialieche.blogspot.sg/2017/02/nus-amcisa-ay-201617-11-1-exam-supper.html").white.btn.btn-dark.events-btn             
+          h3 #近期更新
+        :markdown
+          1 个 Sem 就快结束了，接下来就只剩下 Final 和许多的 Projects，
+          周围的神人们给予的种种压力是否让你无法喘气并且让你对 CAP 5 的渴望加剧？
+          但是大学不只是 CAP 或竞争，在这个压力大的环境中不如大家一同歇下来与朋友聚一聚、聊一聊、放松心情
+          当我们充满了电才会有精神继续努力和奋斗！在这个1千1百1十1夜 就让大家聚在一起并放松心情地玩游戏吧！
+
+      .col-md-3
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 活动日期 : 
+            //- Replace the following date with event date
+            | 2016 年 11 月 11 日 
+          h2 
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 活动时间 : 
+            //- Replace the following time with event time
+            | 7.30 PM
+          h2
+            span.fa.fa-fw.fa-building.blue &nbsp;
+            | 活动地点 : 
+            span.fa.fa-magic
+            //- Replace the following venue with event venue 
+            | PGP R5 TV Room
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })
