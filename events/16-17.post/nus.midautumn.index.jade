@@ -1,0 +1,62 @@
+extends ./nus.midautumn.layout.jade
+
+block title
+  title Event
+
+block content
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        //- Replace this with the poster image found in your images/org.event folder.
+        img(src="../../img/16-17/nus.midautumn/midautumn_poster.png")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 薯仔与莎莎的月光舞会
+        h3 Mid Autumn Festival Celebration @ NUS
+        a(href="https://www.facebook.com/events/289735214742410/").white.btn.btn-dark.description-btn 
+          h3 #活动详情
+        a(href="http://nanxialieche.blogspot.sg/2017/02/nus-amcisa-ay-201617.html").white.btn.btn-dark.events-btn             
+          h3 #近期更新
+        :markdown
+          大家是否很怀念当年中秋赏月、提灯笼、吃月饼的日子咧？ 
+          一年一度的AMCISA中秋晚会又回来啦~ 这次我们将连同马来西亚日一起庆祝。
+          而今年的主题是《薯仔与莎莎的月光舞会》，以薯仔和莎莎分别代表来自马来半岛与沙巴沙拉越的大家！
+          新一届AMCISA Main Comm (AMtopia)将为大家尽心准备各种美食与节目！
+
+      .col-md-3
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 活动日期 : 
+            //- Replace the following date with event date
+            | 2016 年 9 月 16 日 
+          h2 
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 活动时间 : 
+            //- Replace the following time with event time
+            | 7 PM - 11 PM.
+          h2
+            span.fa.fa-fw.fa-building.blue &nbsp;
+            | 活动地点 : 
+            span.fa.fa-magic
+            //- Replace the following venue with event venue 
+            | PGP BBQ Pit
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })
