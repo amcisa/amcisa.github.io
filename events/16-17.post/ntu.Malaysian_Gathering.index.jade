@@ -1,0 +1,61 @@
+extends ./ntu.Malaysian_Gathering.layout.jade
+
+block title
+  title Event
+
+block content
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        //- Replace this with the poster image found in your images/org.event folder.
+        img(src="../../img/16-17/ntu.Malaysian_Gathering/bg.jpg")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 南洋理工大学马来西亚学生聚会
+        h3 2017 Malaysian Gathering @ NTU
+        .btn.btn-dark.description-btn 
+          h3 #活动详情
+        a(href="ntu.Malaysian_Gathering.updates.html").white.btn.btn-dark.events-btn             
+          h3 #近期更新
+        :markdown
+          Amcisa 和 MSA 联办的年度聚会再次来袭！不要错过这个与同乡人之间的bonding activity！
+          （注：活动已结束，点击下方按钮给予反馈！）
+        a(href="ntu.Malaysian_Gathering.feedback.html").btn.btn-dark.btn-lg 
+          h3 活动反馈
+      .col-md-3
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 活动日期 : 
+            //- Replace the following date with event date
+            | 17th February 2017 
+          h2 
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 活动时间 : 
+            //- Replace the following time with event time
+            | 6.00 p.m. - 10:00 p.m.
+          h2
+            span.fa.fa-fw.fa-building.blue &nbsp;
+            | 活动地点 : 
+            span.fa.fa-magic
+            //- Replace the following venue with event venue 
+            | HSS Foyer
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })

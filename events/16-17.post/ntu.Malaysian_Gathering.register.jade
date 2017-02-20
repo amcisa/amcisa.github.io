@@ -1,0 +1,20 @@
+extends ./ntu.Malaysian_Gathering.layout.jade
+
+block title
+  title 反馈
+
+block content
+  .wrapper
+    .container.grey-bg.full-pg#services-label
+      .row
+        h1 给予反馈!
+      .row
+        //- Replace "your-id-here" with the document key of your google form.
+        iframe(
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeRn2He3X2SR7KnDUlQSzAzDWZXDg0JQB3mzRYFoOh4UFEi_w/viewform?embedded=true"
+          width="730"
+          height="900"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          ) Loading...
