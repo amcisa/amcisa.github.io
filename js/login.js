@@ -20,8 +20,9 @@ $(document).ready(function(){
       {
         "action": "LOGIN",
         "Matric_NO": $("#login-matric-no input.Matric_NO").val(),
-        "Password": $("#login-matric-no input.Password").val()
-      }, 
+        "Password": $("#login-matric-no input.Password").val(),
+        //"Reset" : $("#login-matric-no input.checkbox").val()
+      }
       function(data){
         console.log("Data received.");
         console.log(data);
