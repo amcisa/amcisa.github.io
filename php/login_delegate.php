@@ -5,7 +5,7 @@
   //require $_SERVER['DOCUMENT_ROOT']."/secure/login_rpc.php";
   //print_r(session_id());
   if($_POST["action"]=="LOGIN"){
-    print_r(checkUserExists($_POST["Matric_NO"], $_POST["Password"]));
+    print_r(checkUserExists($_POST["Matric_NO"], $_POST["Password"], $_POST["Reset"]));
   }elseif($_POST["action"]=="CHECKLOGINSTATUS"){
     print_r(checkLoginStatus());
   }elseif($_POST["action"]=="LOGOUT"){
