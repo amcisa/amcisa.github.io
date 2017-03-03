@@ -1,4 +1,4 @@
-extends ./ntu.Malaysian_Gathering.layout.jade
+extends ./ntu.MSD.layout.jade
 
 block title
   title Event
@@ -8,22 +8,24 @@ block content
     .poster#poster-label
       .ps-img
         //- Replace this with the poster image found in your images/org.event folder.
-        img(src="../../img/16-17/ntu.Malaysian_Gathering/bg.JPG")
+        img(src="../../img/16-17/ntu.MSD/msd.poster.png")
         .ps-cover
     .ps-well
       .col-md-3
       .col-md-6
-        h1 南洋理工大学马来西亚学生聚会
-        h3 2017 Malaysian Gathering @ NTU
+        h1 南洋理工大学大马运动会
+        h3 Malaysian Sports Day(MSD)@ NTU
+        h3 Play Like A Champion!
         .btn.btn-dark.description-btn 
           h3 #活动详情
-        a(href="ntu.Malaysian_Gathering.updates.html").white.btn.btn-dark.events-btn             
+        a(href="ntu.MSD.updates.html").white.btn.btn-dark.events-btn             
           h3 #近期更新
         :markdown
-          Amcisa 和 MSA 联办的年度聚会再次来袭！不要错过这个与同乡人之间的bonding activity！
-          （注：活动已结束，点击下方按钮给予反馈！）
-        a(href="ntu.Malaysian_Gathering.feedback.html").btn.btn-dark.btn-lg 
-          h3 活动反馈
+          The long-awaited Malaysian Sports Day is back! As usual, we hope to bond the Malaysian students all around Singapore through fun and interesting sport activities! Hesitate no more and join us now!
+
+        a(href="ntu.MSD.register.html").btn.btn-dark.btn-lg 
+          h3 我要参加!  
+
       .col-md-3
 
     .container.grey-bg.full-pg#description-label
@@ -39,18 +41,18 @@ block content
             span.fa.fa-fw.fa-clock-o.red &nbsp;
             | 活动日期 : 
             //- Replace the following date with event date
-            | 17th February 2017 
+            | 12th March 2017 
           h2 
             span.fa.fa-fw.fa-calendar.yellow &nbsp;
             | 活动时间 : 
             //- Replace the following time with event time
-            | 6.00 p.m. - 10:00 p.m.
+            | 8.00 a.m onwards
           h2
             span.fa.fa-fw.fa-building.blue &nbsp;
             | 活动地点 : 
             span.fa.fa-magic
             //- Replace the following venue with event venue 
-            | HSS Foyer
+            | NTU Sports and Recreation Center
         .col-md-3
 
 block script

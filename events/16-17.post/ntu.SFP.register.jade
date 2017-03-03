@@ -1,0 +1,20 @@
+extends ./ntu.SFP.layout.jade
+
+block title
+  title 注册
+
+block content
+  .wrapper
+    .container.grey-bg.full-pg#services-label
+      .row
+        h1 这儿注册!
+      .row
+        //- Replace "your-id-here" with the document key of your google form.
+        iframe(
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeZ61yhTkAUgCv5q5a8va348TpLAI9wZKHy8vwLq4wv8YQafQ/viewform?embedded=true"
+          width="730"
+          height="900"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          ) Loading...
