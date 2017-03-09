@@ -1,0 +1,324 @@
+mixin dropdown(name)
+  form.form-inline
+    .form-group
+        label 我的票数:
+        select.form-control.align-left.dropdown(id = name)
+                option(selected) 0
+                - var n = 1
+                while n < 11
+                    option= n++
+  br
+
+extends ./layout.jade
+
+block title
+  title AmScar Voting Portal
+
+block head
+  link(href="./css/animate.min.css", rel="stylesheet")
+  link(href="./css/profile.css", rel="stylesheet")
+  link(href="./css/amscar.css", rel="stylesheet")
+
+
+block content  
+  +login_iframe()
+  
+  .wrapper
+    
+    #img_text.container-fluid
+        h1 AmScar 2017 Voting Portal
+        h4 致胜一票，就在你的手上
+        h2 Voting Closed
+        //
+          .col-lg-1
+          .col-lg-2
+              section.container
+                  ul.nav.nav-pills.nav-stacked
+                      li.active(style="width:150px")
+                        h3
+                          a(href='#profile', data-toggle='tab', aria-expanded='true', onclick = "runRPC()") 投票主页
+                      li 
+                        h4
+                          a(href='#amcao', data-toggle='tab', aria-expanded='true') Am草
+                      li
+                        h4
+                          a(href='#amhua', data-toggle='tab', aria-expanded='true') Am花
+                      li
+                        h4
+                          a(href='#amkidkid', data-toggle='tab', aria-expanded='true') AmSweetSweet
+                      li
+                        h4
+                          a(href='#amamam', data-toggle='tab', aria-expanded='true') AmTwins
+                      li
+                        h4
+                          a(href='#amcouple', data-toggle='tab', aria-expanded='true') AmSohai
+                      li
+                        h4
+                          a(href='#amsleep', data-toggle='tab', aria-expanded='true') Am神
+                      li
+                        h4
+                          a(href='#ammoqi', data-toggle='tab', aria-expanded='true') AmSap
+                      li
+                        h4
+                          a(href='#ampattern', data-toggle='tab', aria-expanded='true') AmPattern 
+                      li
+                        h4
+                          a(href='#amdrydry', data-toggle='tab', aria-expanded='true') AmDryDry 
+
+          .col-lg-8
+              .tab-content
+                  .tab-pane.fade.active.in.align-left#profile
+                      h2 投票主页
+                      br
+                      h5 在投票前，请注意：
+                      h5 1. 请到左方点击各个奖项进行投票。投票完毕后，返回“投票主页”，点击：“确认投票”。
+                      h5 2. 一人拥有10张票，可任意分配至任何奖项的任何被提名者，自由发挥。
+                      br
+                      form.form-inline
+                          .form-group
+                              label 我的票数:
+                              label 
+                                  #votesleft
+                      h4 你已经投选的组合为：
+                      #combination
+                      br 
+                      br
+                      button#submitButton.btn.btn-info.btn-lg
+                        span 确认投票
+                        i.fa.fa-fw.fa-circle-o-notch.fa-spin.hide
+                  
+                  .tab-pane.fade.in.align-left#amcao
+                      h2 Am草
+                      .container-fluid.align-center
+                          .col-md-6
+                            img(src="uploads/amscar2017/dummy.png")
+                            h4.name Tadayuki Kojima
+                            h5 天然卷发、优质血统、阳光正面
+                            +dropdown("Am草_Tadayuki_Kojima")
+                          .col-md-6
+                            img(src="uploads/amscar2017/dummy.png")
+                            h4.name 宋晓慧
+                            h5 年纪大了，扮起可爱有点矫情，但是who cares？素颜万岁！
+                            +dropdown("Am草_宋晓慧")
+                          .col-md-6
+                            img(src="uploads/amscar2017/dummy.png")
+                            h4.name 尤竑鯕
+                            h5 帅得无法无天！
+                            +dropdown("Am草_尤竑鯕")
+                          .col-md-6
+                            img(src="uploads/amscar2017/dummy.png")
+                            h4.name 黄文聪
+                            h5 睡神回归！立志蝉联AM睡神！ 
+                            +dropdown("Am草_黄文聪")
+                          .col-md-6
+                            img(src="uploads/amscar2017/dummy.png")
+                            h4.name 王诗捷
+                            h5 男神不解释 
+                            +dropdown("Am草_王诗捷")
+                          .col-md-6
+                            img(src="uploads/amscar2017/dummy.png")
+                            h4.name 颜佳煣
+                            h5 2015年5月23日 第一次看到你的时候 我觉得你好帅 想在开学的时候认识你 冥冥中却早已注定了我们的相遇相识 
+                            +dropdown("Am草_颜佳煣")
+                          .col-md-6
+                            img(src="uploads/amscar2017/dummy.png")
+                            h4.name 王益健
+                            h5 屌爆了，帅爆了 
+                            +dropdown("Am草_王益健")
+                  .tab-pane.fade.in.align-left#amhua
+                      h2 Am花
+                      .container-fluid.align-center
+                          .col-md-6
+                            img(src="uploads/amscar2017/dummy.png")
+                            h4.name 吴诗蕾
+                            h5 天使般的气质、唯美的存在
+                            +dropdown("Am花_吴诗蕾")
+                          .col-md-6
+                            img(src="uploads/amscar2017/dummy.png")
+                            h4.name 房捷敏
+                            h5 她是一朵愛吃肉的萊佛士大王花。
+                            +dropdown("Am花_房捷敏")
+                          .col-md-6
+                            img(src="uploads/amscar2017/dummy.png")
+                            h4.name 陈伟龙
+                            h5 一切纯属美丽的意外
+                            +dropdown("Am花_陈伟龙")
+                          .col-md-6
+                            img(src="uploads/amscar2017/dummy.png")
+                            h4.name 朱婉齐
+                            h5 婉齐最白最美哈哈哈！
+                            +dropdown("Am花_朱婉齐")
+                          .col-md-6
+                            img(src="uploads/amscar2017/dummy.png")
+                            h4.name Gladys Loh
+                            h5 格蕾蒂丝，MAE之花！
+                            +dropdown("Am花_Gladys_Loh")
+
+                  .tab-pane.fade.in.align-left#amkidkid
+                      h2 AmKidKid
+                      .container-fluid.align-center
+                          .col-md-6
+                            img(src="uploads/amscar2016/AmKidKid/紀智勝_小豐豐.jpg")
+                            h4.name 紀智勝
+                            h5 稚嫩不老高齡男神
+                            +dropdown("AmKidKid_紀智勝")
+                          .col-md-6
+                            img(src="uploads/amscar2016/AmKidKid/郭建升_李宜恩.jpeg")
+                            h4.name 郭建升
+                            h5 既然肥肉甩不走，那就做个chubby的美男子吧！
+                            +dropdown("AmKidKid_郭建升")
+                          .col-md-6
+                            img(src="uploads/amscar2016/AmKidKid/黄文聪_李宜恩.jpeg")
+                            h4.name 黄文聪
+                            h5 Yummy yummy 炸鸡，我的至爱！
+                            +dropdown("AmKidKid_黄文聪")
+                          .col-md-6
+                            img(src="uploads/amscar2016/AmKidKid/纪智胜_zdank.jpg")
+                            h4.name 纪智胜2
+                            h5 幼稚可爱 车见车载 这么sohai的老人去哪里找
+                            +dropdown("AmKidKid_纪智胜2")
+                  .tab-pane.fade.in.align-left#amamam
+                      h2 AmAMAM
+                      .container-fluid.align-center
+                          .col-md-6
+                            img(src="uploads/amscar2016/AmAMAM/OneWayTeo_郑好好.jpg")
+                            h4.name OneWayTeo
+                            h5 实在太干，我看不下去......
+                            +dropdown("AmAMAM_OneWayTeo")
+                  .tab-pane.fade.in.align-left#amcouple
+                      h2 Am荧幕情侣
+                      .container-fluid.align-center
+                          .col-md-6
+                            img(src="uploads/amscar2016/Am荧幕情侣/黄文聪，张韶晴_李宜恩.jpeg")
+                            h4.name 黄文聪，张韶晴
+                            h5 跟你一起望着前方，想着我们的未来 何时，我们才能从荧幕走出来，成为真正的情侣？ 
+
+                            +dropdown("Am荧幕情侣_黄文聪_张韶晴")
+                          .col-md-6
+                            img(src="uploads/amscar2016/Am荧幕情侣/Gladys_士安_张王玮.jpg")
+                            h4.name Gladys，士安
+                            h5 Love is in the air
+                            +dropdown("Am荧幕情侣_Gladys_士安")
+                          .col-md-6
+                            img(src="uploads/amscar2016/Am荧幕情侣/李宜恩_陈祥潮_张子恒.jpg")
+                            h4.name 李宜恩，陈祥潮
+                            h5  真的是“荧幕”情侣嘛！
+                            +dropdown("Am荧幕情侣_李宜恩_陈祥潮")
+                          .col-md-6
+                            img(src="uploads/amscar2016/Am荧幕情侣/长智与长智右手_郑德威.jpg")
+                            h4.name 长智与长智右手
+                            h5  左手只是辅助，这是一个正宫当道的年代。右手对长智意义非凡，在他们许多照片影片中记载着。虽然看起来蛮dry的，然而长智并不孤单，右手在细心的照料下茁壮的成长，不仅对他不离不弃，甚至为他任劳任怨，何等情谊！实在让我为之动容。
+                            +dropdown("Am荧幕情侣_长智与长智右手")
+                          .col-md-6
+                            img(src="uploads/amscar2016/Am荧幕情侣/OneWay，彦桦_Gladys.jpg")
+                            h4.name OneWay，彦桦
+                            h5  两小无猜呀
+                            +dropdown("Am荧幕情侣_OneWay，彦桦")
+                  .tab-pane.fade.in.align-left#amsleep
+                      h2 Am睡神
+                      .container-fluid.align-center
+                          .col-md-6
+                            img(src="uploads/amscar2016/Am睡神/秉声_张王玮.jpg")
+                            h4.name 秉声
+                            h5 说好的跑步呢？
+                            +dropdown("Am睡神_秉声")
+                          .col-md-6
+                            img(src="uploads/amscar2016/Am睡神/覃子豪_蔡晓双.jpg")
+                            h4.name 覃子豪
+                            h5 无论什么地点什么姿势都睡得着
+                            +dropdown("Am睡神_覃子豪")
+                          .col-md-6
+                            img(src="uploads/amscar2016/Am睡神/Gladys与王玮_Gudgud.jpeg")
+                            h4.name Gladys与王玮
+                            h5 lee wee nam 是有这么好睡吗？
+                            +dropdown("Am睡神_Gladys与王玮")
+                          .col-md-6
+                            img(src="uploads/amscar2016/Am睡神/张子恒_陈仕平.jpg")
+                            h4.name 张子恒
+                            h5 神一般的睡姿
+                            +dropdown("Am睡神_张子恒")
+                          .col-md-6
+                            img(src="uploads/amscar2016/Am睡神/Martin_Loh__Rachel_Ng.jpeg")
+                            h4.name Martin Loh
+                            h5 Martin实至名归 哈哈哈 😝😝😝
+                            +dropdown("Am睡神_Martin_Loh")
+                  .tab-pane.fade.in.align-left#ammoqi
+                      h2 Am默契
+                      .container-fluid.align-center
+                          .col-md-6
+                            img(src="uploads/amscar2016/Am默契/谢维杰___纪智胜_方志毅.jpg")
+                            h4.name 谢维杰，纪智胜
+                            h5 同样的肌肤、同样的款式、最佳搭档 
+                            +dropdown("Am默契_谢维杰___纪智胜")
+                  .tab-pane.fade.in.align-left#amjaychou
+                      h2 AmJayChou
+                      .container-fluid.align-center
+                          .col-md-6
+                            img(src="uploads/amscar2016/AmJayChou/方志毅_児岛忠幸.jpg")
+                            h4.name 方志毅
+                            h5 我觉得被提名者全身上下带着男神气息，多才多艺，音乐·运动·摄影·成绩都是他手掌下的领域 ！ 
+                            +dropdown("AmJayChou_方志毅")
+                  .tab-pane.fade.in.align-left#ampattern
+                      h2 AmPattern
+                      .container-fluid.align-center
+                          .col-md-6
+                            img(src="uploads/amscar2016/AmPattern/吴诗蕾_方志毅.jpg")
+                            h4.name 吴诗蕾
+                            h5 欸老姐，拍个照干嘛那么装啊喂
+                            +dropdown("AmPattern_吴诗蕾")
+                          .col-md-6
+                            img(src="uploads/amscar2016/AmPattern/纪智胜_蔡晓双.jpg")
+                            h4.name 纪智胜
+                            h5 拍照很多Pattern
+                            +dropdown("AmPattern_纪智胜")
+                          .col-md-6
+                            img(src="uploads/amscar2016/AmPattern/郭建升_李宜恩.jpeg")
+                            h4.name 郭建升
+                            h5 AM神经就是我啦！
+                            +dropdown("AmPattern_郭建升")
+                          .col-md-6
+                            img(src="uploads/amscar2016/AmPattern/20160325_23514_AmPattern__郭建升_李宜恩.jpeg")
+                            h4.name 郭建升2
+                            h5 亲爱的白马王子赶快来亲吻我这条肥滋滋的美人鱼吧！
+                            +dropdown("AmPattern_郭建升2")
+                          .col-md-6
+                            img(src="uploads/amscar2016/AmPattern/陈卓彦_李宜恩.jpeg")
+                            h4.name 陈卓彦
+                            h5 CP大人，一鸣惊人！ 
+                            +dropdown("AmPattern_陈卓彦")
+                          .col-md-6
+                            img(src="uploads/amscar2016/AmPattern/郑德威_黄佳娴.jpg")
+                            h4.name 郑德威
+                            h5 “谁吃蛋糕有我帅？” 
+                            +dropdown("AmPattern_郑德威")
+                  .tab-pane.fade.in.align-left#amdrydry
+                      h2 AmDryDry
+                      .container-fluid.align-center
+                          .col-md-6
+                            img(src="uploads/amscar2016/AmDryDry/GARY_蔡晓双.jpg")
+                            h4.name GARY
+                            h5 照片已说明了一切
+                            +dropdown("AmDryDry_GARY")
+                          .col-md-6
+                            img(src="uploads/amscar2016/AmDryDry/梁理文_李宜恩.jpeg")
+                            h4.name 梁理文
+                            h5 诚招女友宣言：洗碗煮饭我样样都会，做我女友包管能享有女王待遇！冰山美人是我最爱！！
+                            +dropdown("AmDryDry_梁理文")
+                          .col-md-6
+                            img(src="uploads/amscar2016/AmDryDry/郑释恩_戴小婷.jpg")
+                            h4.name 郑释恩
+                            h5 DRY了22年，就让他得奖吧！
+                            +dropdown("AmDryDry_郑释恩")
+                          .col-md-6
+                            img(src="uploads/amscar2016/AmDryDry/张王玮_陈安时.jpg")
+                            h4.name 张王玮
+                            h5 比沙漠还干
+                            +dropdown("AmDryDry_张王玮")
+
+
+        .col-lg-1
+                
+               
+
+block script
+  script(src="js/amscarVoting.js")

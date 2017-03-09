@@ -1,0 +1,85 @@
+mixin textArea-form(name)
+  .form-group&attributes(attributes)
+    label.col-lg-2.control-label=name
+    .col-lg-10
+      textarea.form-control(rows='3')
+    block
+
+mixin text-form(name)
+  .form-group&attributes(attributes)
+    label.col-lg-2.control-label=name
+    .col-lg-10
+      input.form-control(type='text', placeholder="")
+
+mixin select-form(name,options,range)
+  .form-group&attributes(attributes)
+    label.col-lg-2.control-label=name
+    .col-lg-10
+      select.form-control
+        if block
+          block
+        if options
+          each o in options
+            option=o
+
+extends ./layout.jade
+
+block title
+  title AmScar Nomination Portal
+
+block head
+  link(href="./css/animate.min.css", rel="stylesheet")
+  link(href="./css/profile.css", rel="stylesheet")
+  link(href="./css/amscar.css", rel="stylesheet")
+
+
+block content  
+  +login_iframe()
+  
+  .wrapper
+    
+    
+    .poster
+        .ps-img
+            img(src="././img/16-17/ntu.amscar/oscar2015.jpg")
+    .ps-well
+        .col-lg-1
+        .col-lg-10
+            form.form-horizontal
+              fieldset
+                .title 
+                    h1 AmScar 2017 Nomination Portal
+                    p 万中选一，非你莫属 
+                    p *上传照片必须是JPG,PNG或GIF。 *“提名理由”不能多于25字。
+                    p 建议使用电脑浏览本页。
+                +text-form("提名人姓名")(class="MyName")
+                +select-form("提名奖项")(class="NomPrize")
+                  option Am草
+                  option Am花
+                  option AmSweetSweet
+                  option AmTwins
+                  option AmSohai
+                  option Am神
+                  option AmSap
+                  option AmPattern 
+                  option AmDryDry 
+                +text-form("被提名者")(class="Name")
+                +textArea-form("提名理由")(class="Caption" placeholder="字数最多为25字")
+
+                .form-group
+                  label.col-lg-2.control-label="上传照片"
+                  .col-lg-10
+                    input.form-control(type='file')(class = 'Image')
+
+                
+                button#submitButton.btn.btn-info.btn-lg
+                  span 提名! 
+                  i.fa.fa-fw.fa-circle-o-notch.fa-spin.hide
+
+            h2#loading.hide 请稍后......
+        .col-lg-1
+            
+
+
+block script
+  script(src="js/amscar.js")

@@ -1,34 +1,46 @@
-mixin dropdown(name)
-  form.form-inline
-    .form-group
-        label 我的票数:
-        select.form-control.align-left.dropdown(id = name)
-                option(selected) 0
-                - var n = 1
-                while n < 11
-                    option= n++
-  br
-
-extends ./layout.jade
-
-block title
-  title AmScar Voting Portal
-
-block head
-  link(href="./css/animate.min.css", rel="stylesheet")
-  link(href="./css/profile.css", rel="stylesheet")
-  link(href="./css/amscar.css", rel="stylesheet")
-
-
-block content  
-  +login_iframe()
-  
-  .wrapper
-    
-    #img_text.container-fluid
-        h1 AmScar 2016 Voting Portal
-        h4 致胜一票，就在你的手上
-
+<!DOCTYPE html5>
+<html>
+  <head> 
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <!--meta(http-equiv="refresh" content="90")-->
+    <link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/cosmo/bootstrap.min.css" rel="stylesheet"/>
+    <link href="./css/app.css" rel="stylesheet"/>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="./css/sweetalert.css" rel="stylesheet"/>
+    <link href="./css/animate.min.css" rel="stylesheet"/>
+    <link href="./css/profile.css" rel="stylesheet"/>
+    <link href="./css/amscar.css" rel="stylesheet"/>
+  </head>
+  <title>AmScar Voting Portal</title>
+  <body>
+    <!--Default navigation bar-->
+    <div class="navbar-default navbar-fixed-top">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.html" class="navbar-brand mobile-only">
+          <h3 class="zero-margin">主页</h3></a>
+      </div>
+      <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <div class="nav navbar-nav navbar-left"><a href="index.html"><img src="./img/amc.header.logo.full.png"/></a></div>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="poster-btn"><a href="index.html">本会主页</a></li>
+          <li class="services-btn"><a href="student.html">升学咨询</a></li>
+          <li><a href="events.html">活动全集</a></li>
+          <li><a href="contact.html">联络我们</a></li>
+          <li class="user-login"><a href="login.html">登入戶口</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--This is where our main content is inserted into.-->
+    <div class="alert alert-dismissible alert-danger col-lg-12 align-left alert-tab hide"><strong></strong></div>
+    <iframe id="login_frame" width="600px" height="600px" src="login.html" class="hide">Loading...</iframe>
+    <div class="wrapper">
+      <div id="img_text" class="container-fluid">
+        <h1>AmScar 2017 Voting Portal</h1>
+        <h4>致胜一票，就在你的手上</h4>
+        <h2>Voting Closed</h2>
+        <!--
         .col-lg-1
         .col-lg-2
             section.container
@@ -44,29 +56,26 @@ block content
                         a(href='#amhua', data-toggle='tab', aria-expanded='true') Am花
                     li
                       h4
-                        a(href='#amkidkid', data-toggle='tab', aria-expanded='true') AmKidKid
+                        a(href='#amkidkid', data-toggle='tab', aria-expanded='true') AmSweetSweet
                     li
                       h4
-                        a(href='#amamam', data-toggle='tab', aria-expanded='true') AmAMAM
+                        a(href='#amamam', data-toggle='tab', aria-expanded='true') AmTwins
                     li
                       h4
-                        a(href='#amcouple', data-toggle='tab', aria-expanded='true') Am荧幕情侣
+                        a(href='#amcouple', data-toggle='tab', aria-expanded='true') AmSohai
                     li
                       h4
-                        a(href='#amsleep', data-toggle='tab', aria-expanded='true') Am睡神
+                        a(href='#amsleep', data-toggle='tab', aria-expanded='true') Am神
                     li
                       h4
-                        a(href='#ammoqi', data-toggle='tab', aria-expanded='true') Am默契
-                    li
-                      h4
-                        a(href='#amjaychou', data-toggle='tab', aria-expanded='true') AmJayChou 
+                        a(href='#ammoqi', data-toggle='tab', aria-expanded='true') AmSap
                     li
                       h4
                         a(href='#ampattern', data-toggle='tab', aria-expanded='true') AmPattern 
                     li
                       h4
                         a(href='#amdrydry', data-toggle='tab', aria-expanded='true') AmDryDry 
-
+        
         .col-lg-8
             .tab-content
                 .tab-pane.fade.active.in.align-left#profile
@@ -93,37 +102,37 @@ block content
                     h2 Am草
                     .container-fluid.align-center
                         .col-md-6
-                          img(src="uploads/amscar2016/Am草/Tadayuki_Kojima_方志毅.jpg")
+                          img(src="uploads/amscar2017/dummy.png")
                           h4.name Tadayuki Kojima
                           h5 天然卷发、优质血统、阳光正面
                           +dropdown("Am草_Tadayuki_Kojima")
                         .col-md-6
-                          img(src="uploads/amscar2016/Am草/宋晓慧_李宜恩.jpeg")
+                          img(src="uploads/amscar2017/dummy.png")
                           h4.name 宋晓慧
                           h5 年纪大了，扮起可爱有点矫情，但是who cares？素颜万岁！
                           +dropdown("Am草_宋晓慧")
                         .col-md-6
-                          img(src="uploads/amscar2016/Am草/尤竑鯕_JJ.jpg")
+                          img(src="uploads/amscar2017/dummy.png")
                           h4.name 尤竑鯕
                           h5 帅得无法无天！
                           +dropdown("Am草_尤竑鯕")
                         .col-md-6
-                          img(src="uploads/amscar2016/Am草/黄文聪_李宜恩.jpeg")
+                          img(src="uploads/amscar2017/dummy.png")
                           h4.name 黄文聪
                           h5 睡神回归！立志蝉联AM睡神！ 
                           +dropdown("Am草_黄文聪")
                         .col-md-6
-                          img(src="uploads/amscar2016/Am草/王诗捷_陈安时.jpg")
+                          img(src="uploads/amscar2017/dummy.png")
                           h4.name 王诗捷
                           h5 男神不解释 
                           +dropdown("Am草_王诗捷")
                         .col-md-6
-                          img(src="uploads/amscar2016/Am草/颜佳煣_Rachel_Ng.jpeg")
+                          img(src="uploads/amscar2017/dummy.png")
                           h4.name 颜佳煣
                           h5 2015年5月23日 第一次看到你的时候 我觉得你好帅 想在开学的时候认识你 冥冥中却早已注定了我们的相遇相识 
                           +dropdown("Am草_颜佳煣")
                         .col-md-6
-                          img(src="uploads/amscar2016/Am草/王益健_李德生.jpeg")
+                          img(src="uploads/amscar2017/dummy.png")
                           h4.name 王益健
                           h5 屌爆了，帅爆了 
                           +dropdown("Am草_王益健")
@@ -131,31 +140,31 @@ block content
                     h2 Am花
                     .container-fluid.align-center
                         .col-md-6
-                          img(src="uploads/amscar2016/Am花/吴诗蕾_方志毅.jpg")
+                          img(src="uploads/amscar2017/dummy.png")
                           h4.name 吴诗蕾
                           h5 天使般的气质、唯美的存在
                           +dropdown("Am花_吴诗蕾")
                         .col-md-6
-                          img(src="uploads/amscar2016/Am花/房捷敏_小豐豐.jpg")
+                          img(src="uploads/amscar2017/dummy.png")
                           h4.name 房捷敏
                           h5 她是一朵愛吃肉的萊佛士大王花。
                           +dropdown("Am花_房捷敏")
                         .col-md-6
-                          img(src="uploads/amscar2016/Am花/陈伟龙_方志毅.jpg")
+                          img(src="uploads/amscar2017/dummy.png")
                           h4.name 陈伟龙
                           h5 一切纯属美丽的意外
                           +dropdown("Am花_陈伟龙")
                         .col-md-6
-                          img(src="uploads/amscar2016/Am花/朱婉齐_Rachel_Ng.jpeg")
+                          img(src="uploads/amscar2017/dummy.png")
                           h4.name 朱婉齐
                           h5 婉齐最白最美哈哈哈！
                           +dropdown("Am花_朱婉齐")
                         .col-md-6
-                          img(src="uploads/amscar2016/Am花/Gladys_Loh_GudGud.jpg")
+                          img(src="uploads/amscar2017/dummy.png")
                           h4.name Gladys Loh
                           h5 格蕾蒂丝，MAE之花！
                           +dropdown("Am花_Gladys_Loh")
-
+        
                 .tab-pane.fade.in.align-left#amkidkid
                     h2 AmKidKid
                     .container-fluid.align-center
@@ -194,7 +203,7 @@ block content
                           img(src="uploads/amscar2016/Am荧幕情侣/黄文聪，张韶晴_李宜恩.jpeg")
                           h4.name 黄文聪，张韶晴
                           h5 跟你一起望着前方，想着我们的未来 何时，我们才能从荧幕走出来，成为真正的情侣？ 
-
+        
                           +dropdown("Am荧幕情侣_黄文聪_张韶晴")
                         .col-md-6
                           img(src="uploads/amscar2016/Am荧幕情侣/Gladys_士安_张王玮.jpg")
@@ -316,11 +325,42 @@ block content
                           h4.name 张王玮
                           h5 比沙漠还干
                           +dropdown("AmDryDry_张王玮")
-
-
-        .col-lg-1
-                
-               
-
-block script
-  script(src="js/amscarVoting.js")
+        
+        
+        -->
+        <div class="col-lg-1"></div>
+      </div>
+    </div>
+    <div class="container fillx"><br/></div>
+    <div class="container align-left light-grey-bg fillx">
+      <div class="col-md-2"></div>
+      <div class="col-md-3">
+        <h4 class="yellow">相关单位</h4><a href="http://www.dongzong.my/" class="white">
+          <h5>董总</h5></a>
+      </div>
+      <div class="col-md-3">
+        <h4 class="blue">快速链接</h4><a href="https://www.facebook.com/pages/Amcisa-%E7%BB%BF%E5%B2%9B/145514082199917?fref=ts" class="white">
+          <h5>Amcisa 绿岛</h5></a><a href="https://www.facebook.com/groups/419331528149726/?fref=ts" class="white">
+          <h5>NTU Facebook Page</h5></a><a href="https://www.facebook.com/amcisanusntu?fref=ts" class="white">
+          <h5>AMCISA Facebook Page</h5></a><a href="https://www.facebook.com/groups/nusamcisa/?fref=ts" class="white">
+          <h5>NUS Facebook Page</h5></a>
+      </div>
+      <div class="col-md-3">
+        <h4 class="green">联络方式：</h4><a href="http://amcisa.org/gh/contact.html" class="white">
+          <h5>amcisa.comm@gmail.com</h5></a>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="container light-grey-bg align-right fillx">
+      <h5>Association of Malaysian Chinese Independent School Alumni 2014</h5>
+    </div>
+    <!--Utility scripts-->
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/googlepage.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/session.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/amscarVoting.js"></script>
+  </body>
+</html>
