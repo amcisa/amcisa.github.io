@@ -11,7 +11,7 @@
       }
       $db->set_charset("utf8");
 
-      $sql = "INSERT INTO `amscar2017`(`Nominator`,`Prize`,`Nominee`,`Caption`) VALUES ('".$_POST["Nominator"]."','".$_POST["Prize"]."','".$_POST["Nominee"]."','".$_POST["Caption"]."')";
+      $sql = "INSERT INTO `amscar2017`(`Nominator`,`Prize`,`Nominee`,`Caption`) VALUES (".$_POST["Nominator"].",".$_POST["Prize"].",".$_POST["Nominee"].",".$_POST["Caption"].")";
       $results= $db->query($sql);            
       $db->close();
       
