@@ -154,7 +154,7 @@ function write_to_db(MyName_val,NomPrize_val,Name_val,Caption_val){
     $.ajax({
       type:"POST",
       data:nomination,
-      url:'php/amscarDB.php',
+      url:"php/amscarDB.php",
       success:function(data){
         console.log("Success");
       },
