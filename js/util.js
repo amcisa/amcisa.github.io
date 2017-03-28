@@ -7,7 +7,6 @@ function formdata(get_data){
 }
 
 function rpc(rpc_url,form_data, success_callback){
-  console.log("Sending data...");
   return $.ajax({
         type:"POST",
         data:formdata(form_data),

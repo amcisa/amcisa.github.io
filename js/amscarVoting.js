@@ -24,12 +24,12 @@ function runRPC(){
         idlist[this.id] = ($(".name")[counter]).outerHTML.slice(17,-5);
         counter += 1;
     });
+    console.log("ID list:");
     console.log(idlist);
     $("#profile").onclick = checkvotes(idlist);
 }
 
 function checkvotes(idlist){
-    console.log(idlist);
     $("#submitButton").removeClass("disabled");
     var votesleft = 10;
     var votes = 0;
@@ -76,13 +76,12 @@ function checkvotes(idlist){
     $("#combination").empty();
     $("#votesleft").append('<h2>'+votesleft+'</h2>');
     $("#combination").append('<h2>'+combination+'</h2>');
-
+    $("#submitButton").unbind("click");
     $("#submitButton").click(function(){
         write_to_db(voteList);
     });
     
 }
-
 function write_to_db(voteList){
     rpc(
         "php/login_delegate.php",
@@ -93,7 +92,9 @@ function write_to_db(voteList){
         function(data){
             var myVoteList = {};
             var select = {};
+            data = data.slice(25,28);
             select[data] = voteList;
+       	    console.log("Name:"+data);
             myVoteList["selection"] = select;
             $.ajax({
                   type:"POST",
@@ -102,7 +103,7 @@ function write_to_db(voteList){
                   success:function(data){
                     if (data == 1){             //first time voter
                         alertmodal("success","投票成功！");
-                        window.location.href="amscarVoteRedirect.html";
+                        setTimeout(redirectVote,1000);
                     }
                     else if (data == -1){
                         alertmodal("error","非常抱歉！系统显示你曾经投票了！");
@@ -120,7 +121,9 @@ function write_to_db(voteList){
                 });
         });
 }
-
+function redirectVote(){
+    window.location.href = "amscarVoteRedirect.html";
+}
 //This line below should be activated to test this submission system without the login system
 //$("form").submit(function(e){e.preventDefault();runRPC();});
 
