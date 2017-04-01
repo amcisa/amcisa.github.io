@@ -31,6 +31,7 @@ block content
 
           .col-lg-1
           .col-lg-2
+              br
               section.container
                   ul.nav.nav-pills.nav-stacked
                       li.active(style="width:150px")
@@ -63,6 +64,11 @@ block content
                       li
                         h4
                           a(href='#amdrydry', data-toggle='tab', aria-expanded='true') AmDryDry 
+                      li
+                        br
+                      li
+                        h4
+                          a(href="amscarResult2017.html") 点击这里查看成绩！
 
           .col-lg-8
               .tab-content
@@ -72,7 +78,9 @@ block content
                       h5 在投票前，请注意：
                       h5 1. 请到左方点击各个奖项进行投票。投票完毕后，返回“投票主页”，点击：“确认投票”。
                       h5 2. 一人拥有10张票，可任意分配至任何奖项的任何被提名者，自由发挥。
-                      h5 3. 若在未用完10张选票的情况下按“确认投票”，剩余的票都将视为弃票。
+                      h5 3. 被重复提名的人的选票将被合计。
+                      h5 4. 若在未用完10张选票的情况下按“确认投票”，剩余的票都将视为弃票。
+                      h5 5. 投票于 4/4/2017 1159 截止，奖品将在接下来的EWR颁发。
                       br
                       form.form-inline
                           .form-group
@@ -101,11 +109,6 @@ block content
                             h5 不用多说，看照片
                             +dropdown("Am草_龚象宇")
                           .col-md-6
-                            img(src="uploads/amscar2017/Am草/20170328_205935_Am草_Lee_Han_Jian_KWS.jpg")
-                            h4.name Lee Han Jian
-                            h5 Mister EEE cum Mister Hall 2 
-                            +dropdown("Am草_LeeHanJian")
-                          .col-md-6
                             img(src="uploads/amscar2017/Am草/20170331_114431_Am草_Susu_hao_hao.jpg")
                             h4.name Susu
                             h5 帮衬一下amscar啦！大家多投会长一票！
@@ -115,6 +118,11 @@ block content
                             h4.name 黄照财
                             h5 无 与 伦 比 的 魅 力
                             +dropdown("Am草_黄照财")
+                          .col-md-12
+                            img(src="uploads/amscar2017/Am草/20170328_205935_Am草_Lee_Han_Jian_KWS.jpg")
+                            h4.name Lee Han Jian
+                            h5 Mister EEE cum Mister Hall 2 
+                            +dropdown("Am草_LeeHanJian")
                   .tab-pane.fade.in.align-left#amhua
                       h2 Am花
                       .container-fluid.align-center
@@ -129,25 +137,25 @@ block content
                             h5 羞涩驼顶级小鲜花一枚，盛世美颜，令人汗颜！
                             +dropdown("Am花_宋玉康")
                           .col-md-6
-                            img(src="uploads/amscar2017/Am花/20170319_01653_Am花_吴诗蕾_Rachel_SWL.jpg")
-                            h4.name 吴诗蕾
-                            h5 她是 AMCISA 刘诗诗，公认的大家姐。又漂亮又 active 的美女，大家一定要把票投给她喔
-                            +dropdown("Am花_吴诗蕾")
-                          .col-md-6
                             img(src="uploads/amscar2017/Am花/20170331_91918_Am花_顺怡_帅哥.jpg")
                             h4.name 顺怡
                             h5 呵呵。不投我就瞪死你。呵呵。
                             +dropdown("Am花_顺怡")
                           .col-md-6
-                            img(src="uploads/amscar2017/Am花/20170331_92705_Am花_my_wife_and_me_yingzheng.jpg")
-                            h4.name 迎祯
-                            h5 请祝福我们
-                            +dropdown("Am花_迎祯")
-                          .col-md-6
                             img(src="uploads/amscar2017/Am花/20170331_120351_Am花_陈婕妤_方志毅.jpg")
                             h4.name 陈婕妤
                             h5 AM花征室友，谁与争锋？
                             +dropdown("Am花_陈婕妤")
+                          .col-md-6
+                            img(src="uploads/amscar2017/Am花/20170319_01653_Am花_吴诗蕾_Rachel_SWL.jpg")
+                            h4.name 吴诗蕾
+                            h5 她是 AMCISA 刘诗诗，公认的大家姐。又漂亮又 active 的美女，大家一定要把票投给她喔
+                            +dropdown("Am花_吴诗蕾")
+                          .col-md-6
+                            img(src="uploads/amscar2017/Am花/20170331_92705_Am花_my_wife_and_me_yingzheng.jpg")
+                            h4.name 迎祯
+                            h5 请祝福我们
+                            +dropdown("Am花_迎祯")
                           
                   .tab-pane.fade.in.align-left#amsweetsweet
                       h2 AmSweetSweet
@@ -176,7 +184,7 @@ block content
                             img(src="uploads/amscar2017/AmSweetSweet/20170331_92227_AmSweetSweet_Mr_Susu_and_the_Mrs_Susu_帅哥.jpg")
                             h4.name Mr Susu X Mrs Susu
                             h5 闪死人 不提怎么可以
-                            +dropdown("AmSweetSweet_MrSuSu_Mrs_Susu")
+                            +dropdown("AmSweetSweet_Mr_Susu_X_Mrs_Susu")
                           .col-md-6
                             img(src="uploads/amscar2017/AmSweetSweet/20170331_121359_AmSweetSweet_理添_慧莹_方志毅.png")
                             h4.name 理添 X 慧莹
@@ -189,9 +197,9 @@ block content
                             img(src="uploads/amscar2017/AmTwins/20170330_45713_AmTwins_德威_德威弟_郭家圣.jpg")
                             h4.name 大德威 X 小德威
                             h5 你说咧
-                            +dropdown("AmTwins_德威_德威弟")
+                            +dropdown("AmTwins_大德威_X_小德威")
                           .col-md-6
-                            img(src="uploads/amscar2017/AmTwins/20170331_122730_AmTwins_大小德威_方志毅.png.jpg")
+                            img(src="uploads/amscar2017/AmTwins/20170331_122730_AmTwins_大小德威_方志毅.png")
                             h4.name 大德威 X 小德威
                             h5 看我72变
                             +dropdown("AmTwins_大小德威")
@@ -208,16 +216,11 @@ block content
                   .tab-pane.fade.in.align-left#amsohai
                       h2 AmSohai
                       .container-fluid.align-center
-                          .col-md-6
+                          .col-md-12
                             img(src="uploads/amscar2017/AmSohai/20170320_63259_AmSohai_牛奶妹joee_静静.jpg")
                             h4.name 牛奶妹joee
                             h5 她是我一辈子、目前为止见过最sohai的人
                             +dropdown("AmSohai_牛奶妹joee")
-                          .col-md-6
-                            img(src="uploads/amscar2017/dummy.png")
-                            h4.name -
-                            h5 -
-                            +dropdown("Am荧幕情侣_Gladys_士安")
                   .tab-pane.fade.in.align-left#amshen
                       h2 Am神
                       .container-fluid.align-center
@@ -245,11 +248,6 @@ block content
                       h2 AmSap
                       .container-fluid.align-center
                           .col-md-6
-                            img(src="uploads/amscar2017/AmSap/20170329_91354_AmSap_Gan_Sie_Huai_豆腐.jpg")
-                            h4.name Gan Sie Huai
-                            h5 思淮：“我当选的话，我脱！”
-                            +dropdown("AmSap_Gan_Sie_Huai")
-                          .col-md-6
                             img(src="uploads/amscar2017/AmSap/20170320_104658_AmSap_张洁恩_蔡茗怡.jpg")
                             h4.name 张洁恩
                             h5 鲜嫩多汁屁股狩猎者，还需要其他理由？
@@ -258,12 +256,17 @@ block content
                             img(src="uploads/amscar2017/AmSap/20170331_121016_AmSap_张洁恩_方志毅.png")
                             h4.name 张洁恩
                             h5 相信大家心噪不喧。
-                            +dropdown("AmSap_张洁恩")
+                            +dropdown("AmSap_张洁恩2")
                           .col-md-6
                             img(src="uploads/amscar2017/AmSap/20170331_201619_AmSap_張潔恩_匿名.jpg")
                             h4.name 张洁恩
                             h5 屁股大大屁股小小屁股結實屁股鬆鬆屁股翹翹我都要！
-                            +dropdown("AmSap_张洁恩")
+                            +dropdown("AmSap_张洁恩3")
+                          .col-md-12
+                            img(src="uploads/amscar2017/AmSap/20170329_91354_AmSap_Gan_Sie_Huai_豆腐.jpg")
+                            h4.name Gan Sie Huai
+                            h5 思淮：“我当选的话，我脱！”
+                            +dropdown("AmSap_Gan_Sie_Huai")
                   .tab-pane.fade.in.align-left#ampattern
                       h2 AmPattern
                       .container-fluid.align-center
@@ -276,7 +279,7 @@ block content
                             img(src="uploads/amscar2017/AmPattern/20170331_122302_AmPattern__杨祖仪_方志毅.jpg")
                             h4.name 杨祖仪
                             h5 你不投我试试看！
-                            +dropdown("AmPattern_杨祖仪")
+                            +dropdown("AmPattern_杨祖仪2")
                           .col-md-6
                             img(src="uploads/amscar2017/AmPattern/20170329_92842_AmPattern__赖宏政_赖宏政.png")
                             h4.name 赖宏政
@@ -293,10 +296,10 @@ block content
                             h5 照片会说话，The Reason is Within the Photo Itself.
                             +dropdown("AmPattern_梅先状")
                           .col-md-6
-                            img(src="uploads/amscar2017/dummy.png")
-                            h4.name -
-                            h5 - 
-                            +dropdown("AmPattern_郑德威")
+                            img(src="uploads/amscar2017/AmPattern/20170401_64126_AmPattern__冠宇_Ming_Xiu.jpg")
+                            h4.name 冠宇
+                            h5 看我华丽一跤！
+                            +dropdown("AmPattern_冠宇")
                   .tab-pane.fade.in.align-left#amdrydry
                       h2 AmDryDry
                       .container-fluid.align-center
@@ -306,20 +309,20 @@ block content
                             h5 作为一个专业的陪跑，装逼少不了！迎祯加油！
                             +dropdown("AmDryDry_林镇宇")
                           .col-md-6
-                            img(src="uploads/amscar2017/AmDryDry/20170331_92855_AmDryDry__yingzheng_yingzheng.jpg")
-                            h4.name 迎祯
-                            h5 呵呵
-                            +dropdown("AmDryDry_迎祯")
+                            img(src="uploads/amscar2017/AmDryDry/20170401_65441_AmDryDry__俊凯_Ming_Xiu.jpg")
+                            h4.name 俊凯
+                            h5 可能扮可爱一点可以快点找到？
+                            +dropdown("AmDryDry_俊凯")
                           .col-md-6
                             img(src="uploads/amscar2017/AmDryDry/20170331_122450_AmDryDry__吴迎镇_方志毅.jpg")
                             h4.name 迎祯
                             h5  干！我怎么那么干！
-                            +dropdown("AmDryDry_迎祯")
+                            +dropdown("AmDryDry_迎祯2")
                           .col-md-6
-                            img(src="uploads/amscar2017/dummy.png")
-                            h4.name -
-                            h5 -
-                            +dropdown("AmDryDry_张王玮")
+                            img(src="uploads/amscar2017/AmDryDry/20170331_92855_AmDryDry__yingzheng_yingzheng.jpg")
+                            h4.name 迎祯
+                            h5 呵呵
+                            +dropdown("AmDryDry_迎祯")
 
 
         .col-lg-1
