@@ -1,0 +1,66 @@
+extends ./ntu.EWR_2.0.layout.jade
+
+block title
+  title Event
+
+block content
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        //- Replace this with the poster image found in your images/org.event folder.
+        img(src="../../img/16-17/ntu.EWR_2.0/EWR_2.0.jpg")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 南洋理工大学考试解压宵夜
+        h3 Exam Welfare Refreshment @ NTU
+        a(href="ntu.EWR_2.0.updates.html").btn.btn-dark.description-btn 
+          h3 #活动详情
+        a(href="ntu.EWR_2.0.updates.html").white.btn.btn-dark.events-btn             
+          h3 #近期更新
+        :markdown
+          Hey yo！继EWR1.0的丰盛宵夜之后，所谓小别胜新欢，今次AMGELABABY将为大家带来阿莲米粉，势必让在各个角落K书的你充满更多正能量，战胜将至的期末考！ 
+
+          此活动保证让你大饱口福，欢迎大家参与。5.0，我们不见不散！ 
+
+          备注：价格不论新币马币，只论缅元——免费！
+
+        a(href="ntu.EWR_2.0.register.html").btn.btn-dark.btn-lg 
+          h3 給我來一份!
+
+      .col-md-3
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 活动日期 : 
+            //- Replace the following date with event date
+            | 6th April 2017 
+          h2 
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 活动时间 : 
+            //- Replace the following time with event time
+            | 9.30 p.m. - 11.30 p.m.
+          h2
+            span.fa.fa-fw.fa-building.blue &nbsp;
+            | 活动地点 : 
+            span.fa.fa-magic
+            //- Replace the following venue with event venue 
+            | TCT LT
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })
