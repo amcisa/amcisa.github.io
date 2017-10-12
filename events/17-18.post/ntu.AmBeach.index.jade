@@ -1,0 +1,63 @@
+extends ./ntu.AmBeach.layout.jade
+
+block title
+  title Event
+
+block content
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        //- Replace this with the poster image found in your images/org.event folder.
+        img(src="../../img/17-18/ntu.AmBeach/poster.photo.jpg")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 南洋理工大学超High海边趴
+        h3 AmBeach @ NTU
+        a(href="ntu.AmBeach.updates.html").btn.btn-dark.description-btn 
+          h3 #活动详情          
+        :markdown
+          ⁠⁠⁠⁠⁠“晒一晒太阳天气晴朗哦沙滩，温暖的阳光不会缺氧！”
+          青春洋溢的歌词有没有让你们想起在沙滩尽情玩闹的欢乐时光呢？面对着浩瀚无垠的湛蓝海洋，踩在软软的沙子上、轻轻地踢着一朵朵浪花，即使晒伤了皮肤、累得筋疲力尽，也依旧感觉意犹未尽。
+          没错，AMCISA 17/18 Main Commitee就在这里为大家精心策划了一场既活力四射又清凉解暑的夏日派对，势必要带你清凉一“夏”！诚邀你出席这场AM Beach-Summer Party，与我们一同感受这盛夏的狂欢与激情！
+          读至此处，你是否已经感受到了夏天的热情，也对这场派对充满期待了呢？赶快点击以下链接报名，我们10月21日不见不散哟~！
+
+        a(href="ntu.AmBeach.register.html").white.btn.btn-dark.events-btn  
+          h3 #我要报名！
+
+      .col-md-3
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 活动日期 : 
+            //- Replace the following date with event date
+            | 21th October 2017 
+          h2 
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 活动时间 : 
+            //- Replace the following time with event time
+            | 7.00 p.m. - 10.00 p.m.
+          h2
+            span.fa.fa-fw.fa-building.blue &nbsp;
+            | 活动地点 : 
+            span.fa.fa-magic
+            //- Replace the following venue with event venue 
+            | HSS Foyer
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })
