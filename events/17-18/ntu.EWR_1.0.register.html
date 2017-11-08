@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
   </head>
-  <title>Gallery</title>
+  <title>注册</title>
   <body>
     <link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/cosmo/bootstrap.min.css" rel="stylesheet"/>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
@@ -18,21 +18,23 @@
       <div class="navbar-collapse collapse navbar-responsive-collapse">
         <div class="nav navbar-nav navbar-left"><a href="../../index.html"><img src="../../img/amc.header.logo.full.png"/></a></div>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="ntu.EWR 1.0.index.html">活动主页</a></li>
-          <li><a href="ntu.EWR 1.0.updates.html">活动更新</a></li>
-          <li><a href="ntu.EWR 1.0.updates.html">活动图集</a></li>
-          <li><a href="ntu.EWR 1.0.updates.html">活动反馈</a></li>
+          <li><a href="ntu.EWR_1.0.index.html">活动主页</a></li>
+          <li><a href="ntu.EWR_1.0.updates.html">活动更新</a></li>
+          <li><a href="ntu.EWR_1.0.updates.html">活动图集</a></li>
+          <li><a href="ntu.EWR_1.0.updates.html">活动反馈</a></li>
           <li><a href="../../events.html">活动全集</a></li>
           <li><a href="../../index.html">本会主页</a></li>
         </ul>
       </div>
     </div>
     <!--This is where our main content is inserted into.-->
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.2.2/css/nanogallery.min.css" rel="stylesheet"/>
     <div class="wrapper">
       <div id="services-label" class="container grey-bg full-pg">
         <div class="row">
-          <div id="nanoGallery1" style="height=10px;"></div>
+          <h1>这儿注册!</h1>
+        </div>
+        <div class="row">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScmsOSSdvQ59X0x4IidFPYimNw_753Pq2i6AYvsxCI4lkPzTw/viewform?embedded=true" width="730" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
         </div>
       </div>
     </div>
@@ -64,19 +66,5 @@
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../../js/googlepage.js"></script>
     <script src="../../js/util.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.2.2/jquery.nanogallery.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $("#nanoGallery1").nanoGallery({
-          kind:'flickr',
-          userID:'127695913@N03',
-          //- Replace photoset id with the your event flickr set id.
-          photoset:'123456789',
-          thumbnailLazyLoad: true,
-          thumbnailWidth: 120, thumbnailHeight: 120,
-          thumbnailHoverEffect: 'scaleLabelOverImage,borderDarker'
-        });
-      });
-    </script>
   </body>
 </html>
