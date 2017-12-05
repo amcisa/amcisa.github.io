@@ -36,19 +36,21 @@ watch.createMonitor('.',function(monitor){
 })
 
 function refresh_allfiles(){
-  //Common usage : cp.execSync(["command"],{cwd:".\\",stdio: 'inherit'})
-  cp.execSync(["node_modules\\.bin\\jade -P .\\post --out .\\"],{cwd:".\\",stdio: 'inherit'})
-  fs.readdirSync(".\\events")
+  cp.execSync(path.join("node_modules", ".bin", "jade")+" -P post --out .",{cwd:".",stdio: 'inherit', stderr:'inherit'})
+  
+  fs.readdirSync("events")
     .filter(function(f) {
       return f.match(/\.post/i);
     }).forEach(function(f){
-      var d=".\\events\\"+f.split(".")[0];
+      console.log(f)
+      var d=path.join("events",f.split(".")[0]);
       if(!fs.existsSync(d)){
         fs.mkdirSync(d);
       }
-      cp.execSync(["node_modules\\.bin\\jade -P .\\events\\"+f+" --out "+d],{cwd:".\\",stdio: 'inherit'});
+      cp.execSync(path.join("node_modules", ".bin", "jade")+" -P "+path.join("events",f)+" --out "+d,{cwd:".",stdio: 'inherit', stderr:'inherit'})
   });
-  cp.execSync(["node_modules\\.bin\\stylus .\\css"],{cwd:".\\",stdio: 'inherit'});
+  cp.execSync(path.join("node_modules", ".bin", "stylus")+" css",{cwd:".",stdio: 'inherit', stderr:'inherit'})
+  
 }
 
 function generate_file_data(filepath){
@@ -95,7 +97,7 @@ function generic_generator(fd, output_ext, starting_cmd){
     console.log("Old version : "+tempname+" not found.");
   }  
   console.log("Creating new file from "+fd.input+" in : "+fd.output);
-  cp.execSync([starting_cmd+" "+fd.input+" --out "+fd.output],{cwd:".\\",stdio: 'inherit'});
+  cp.execSync(starting_cmd+" "+fd.input+" --out "+fd.output,{cwd:".\\",stdio: 'inherit'});
 }
 
 function findExtInChildren(extension, watched_extensions){
