@@ -8,8 +8,10 @@ if(isset($_POST['submit']))
     $fileSize = $_FILES['file']['size'];
     $fileError = $_FILES['file']['error'];
     $fileType = $_FILES['file']['type'];
-    $name = $_POST['name'];
-    $matric = $_POST['matric'];
+    $DesignName = $_POST['DesignName'];
+    $GroupName = $_POST['GroupName'];
+    $MemberName = $_POST['MemberName'];
+    $LeaderName = $_POST['LeaderName'];
 
     $fileExt = explode('.',$fileName);
     $fileActualExt = strtolower(end($fileExt));
@@ -21,7 +23,7 @@ if(isset($_POST['submit']))
         {
             if($fileSize < 1000*1000*10 )
             {
-                $fileNameNew = $matric.".".$name.".".$fileActualExt;
+                $fileNameNew = $DesignName.".".$GroupName.".".$MemberName.".".$LeaderName.".".$fileActualExt;
                 $fileDestination = "../uploads/amtee2017/".$fileNameNew;
                 move_uploaded_file($fileTmpName,$fileDestination);
                 echo "Your design has been uploaded!";
