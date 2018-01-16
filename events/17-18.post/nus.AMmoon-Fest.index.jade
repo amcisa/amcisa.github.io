@@ -1,0 +1,61 @@
+﻿extends ./nus.AMmoon-Fest.layout.jade
+
+block title
+  title Event
+
+block content
+  .wrapper
+    .poster#poster-label
+      .ps-img
+        //- Replace this with the poster image found in your images/org.event folder.
+        img(src="../../img/17-18/nus.ammoon-fest/poster.jpg")
+        .ps-cover
+    .ps-well
+      .col-md-3
+      .col-md-6
+        h1 AMMOON Fest'17 @NUS
+        
+        .btn.btn-dark.description-btn 
+          h3 #活动详情
+        a(href="org.event.updates.html").white.btn.btn-dark.events-btn             
+          
+        :markdown
+          这天NUS AMCISA举办了AMMOON FEST’17 来弥补大家之前在忙碌中无法好好庆祝中秋节的遗憾。其中活动内容就包括了许多大家小时候玩过的游戏例如吹蜡烛比赛、烧菜、提灯笼等等。活动当天膳食组也为会员们精心准备了许多好吃的食物，其中最受欢迎的是冰皮月饼。在AMMOON FEST 上能与很久没有见面的朋友们相聚一起玩游戏、吃东西和聊天是件非常难得的，希望大家都乐在其中！
+
+          
+
+      .col-md-3
+
+    .container.grey-bg.full-pg#description-label
+      .row
+        .col-md-3
+        .col-md-6
+          h1.border-bottom-light 活动详情
+        .col-md-3
+      .row
+        .col-md-4
+        .col-md-5.align-left
+          h2
+            span.fa.fa-fw.fa-clock-o.red &nbsp;
+            | 活动日期: 
+            //- Replace the following date with event date
+            | 14th October 2017
+          h2 
+            span.fa.fa-fw.fa-calendar.yellow &nbsp;
+            | 活动时间: 
+            //- Replace the following time with event time
+            | 7.30 p.m. - 10.00 p.m.
+          h2
+            span.fa.fa-fw.fa-building.blue &nbsp;
+            | 活动地点: 
+            span.fa.fa-magic
+            //- Replace the following venue with event venue 
+            | PGP BBQ area
+        .col-md-3
+
+block script
+  script(type='text/javascript').
+    $(document).ready(function(){
+      pageScrollTo("description");
+      return false;
+    })
